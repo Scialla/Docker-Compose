@@ -1,0 +1,6 @@
+# myscripts
+
+#!/bin/bash
+ATTEMPTS=`grep -c 'Login attempt' /config/home-assistant.log`
+echo ${ATTEMPTS}
+exit 0

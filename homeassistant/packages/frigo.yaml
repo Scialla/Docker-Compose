@@ -1,0 +1,66 @@
+sensor:
+  - platform: template
+    sensors:
+      frigo:
+        friendly_name: "Frigo modified"
+        value_template: "{{ states('sensor.frigo_temperature')|float(0.0) - 0.00 }}"
+        unit_of_measurement: '°C'
+  - platform: statistics
+    name: "Temperatura media FRIGO"
+    entity_id: sensor.frigo
+    precision: 1
+    sampling_size: 50
+    state_characteristic: mean
+
+automation:
+  - alias: "Notifica temperatura frigo"
+    id: notifica_temperatura_frigo
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.temperatura_media_frigo
+        above: 9.0
+        for:
+          minutes: 30
+      - platform: numeric_state
+        entity_id: sensor.temperatura_media_frigo
+        below: 3.0
+        for:
+          minutes: 30
+    action:
+      - service: notify.scialla
+        data:
+          title: Domotica
+          message: >
+            {% if trigger.to_state.state|float(0.0) > 9.0 %}
+              Rilevata temperatura media frigorifero troppo alta.
+            {% elif trigger.to_state.state|float(0.0) < 3.0 %}
+              Rilevata temperatura media frigorifero troppo bassa.
+            {% endif %}
+      - condition: time
+        after: '08:00:00'
+        before: '23:00:00'
+      - service: notify.alexa_media
+        data_template:
+          target: media_player.ovunque
+          data:
+            type: announce
+            method: spoken
+          message: >
+            {% if trigger.to_state.state|float(0.0) > 9.0 %}
+            Rilevata temperatura media frigorifero troppo alta.
+            {% elif trigger.to_state.state|float(0.0) < 3.0 %}
+            Rilevata temperatura media frigorifero troppo bassa.
+            {% endif %}
+
+  - alias: Presa Frigo Off
+    id: presa_frigo_off
+    trigger:
+      - platform: state
+        entity_id: switch.presa_frigo
+        to: 'off'
+    action:
+      - service: notify.scialla
+        data:
+          title: 'Frigorifero'
+          message: 'La presa del Frigo è spenta!!'
+ 

@@ -1,0 +1,25 @@
+
+- platform: template
+  sensors:
+    stato_tv_samsung:
+      friendly_name: "Stato TV Samsung"
+      device_class: power
+      value_template: "{{ states('sensor.presa_samsung_power') | float(0) > 5 }}"
+    stato_tv_selecline:
+      friendly_name: "Stato TV Selecline"
+      device_class: power
+      value_template: "{{ states('sensor.presa_selecline_power') | float(0) > 1 }}"
+    stato_onkyo:
+      friendly_name: "Stato Onkyo"
+      device_class: power
+      value_template: "{{ states('sensor.presa_onkyo_power') | float(0) > 5 }}"
+
+- platform: ping
+  host: 192.168.1.110
+  name: "MacMini"
+- platform: ping
+  host: 192.168.1.200
+  name: "iMac"
+
+- platform: workday
+  country: IT

@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "*.yaml": "home-assistant"
+    },
+    "vscode-home-assistant.longLivedAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI3MDlkNDA0OWQyYzE0YTYyYTk3Y2NhNzQ5NmRkM2Q2OCIsImlhdCI6MTYwNTM4MzQyMiwiZXhwIjoxOTIwNzQzNDIyfQ.NHFy9ttS45gEcso5UNieBfNpNWmm9Gdzw8eO3fQsxhU",
+    "vscode-home-assistant.hostUrl": "http://localhost:8123",
+    "vscode-home-assistant.ignoreCertificates": true,
+    "yaml.customTags": [
+        "!secret",
+        "!include_dir_named",
+        "!include_dir_merge_named"
+        ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_store":true,
+        "**/home-assistant_v2.db": true,
+        "**/home-assistant_v2.db-shm": true,
+        "**/home-assistant_v2.db-wal": true,
+        "**/home-assistant.log": true
+    }
+}

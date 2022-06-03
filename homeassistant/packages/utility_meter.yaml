@@ -1,0 +1,94 @@
+utility_meter:
+   consumo_mensile:
+    source: sensor.casa_energia
+    cycle: monthly
+    tariffs:
+      - F1
+      - F2
+      - F3
+
+automation:
+
+  - alias: Tariffe Consumo
+    id: tariffe_consumo
+    trigger:
+      - platform: time
+        id: "7"
+        at: '07:00:00'
+        variables:
+          tariff: "F2"
+      - platform: time
+        id: "8"
+        at: '08:00:00'
+        variables:
+          tariff: "F1"
+      - platform: time
+        id: "19"
+        at: '19:00:00'
+        variables:
+          tariff: "F2"
+      - platform: time
+        id: "23"
+        at: '23:00:00'
+        variables:
+          tariff: "F3"
+    action:
+      - choose:
+          - conditions:
+              - condition: trigger
+                id: "7"
+            sequence:
+              - condition: time
+                weekday:
+                - mon
+                - tue
+                - wed
+                - thu
+                - fri
+                - sat
+              - service: select.select_option
+                target:
+                  entity_id: select.consumo_mensile
+                data:
+                  option: "{{ tariff }}"
+          - conditions:
+              - condition: trigger
+                id: "8"
+            sequence:
+              - condition: time
+                weekday:
+                - mon
+                - tue
+                - wed
+                - thu
+                - fri
+              - service: select.select_option
+                target:
+                  entity_id: select.consumo_mensile
+                data:
+                  option: "{{ tariff }}"
+          - conditions:
+              - condition: trigger
+                id: "19"
+            sequence:
+              - condition: time
+                weekday:
+                - mon
+                - tue
+                - wed
+                - thu
+                - fri
+              - service: select.select_option
+                target:
+                  entity_id: select.consumo_mensile
+                data:
+                  option: "{{ tariff }}"
+          - conditions:
+              - condition: trigger
+                id: "23"
+            sequence:
+              - service: select.select_option
+                target:
+                  entity_id: select.consumo_mensile
+                data:
+                  option: "{{ tariff }}"

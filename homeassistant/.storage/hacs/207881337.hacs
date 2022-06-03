@@ -1,0 +1,66 @@
+{
+    "version": "6",
+    "minor_version": 1,
+    "key": "hacs/207881337.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@pinkywafer"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": true,
+        "default_branch": "master",
+        "description": "Anniversary Countdown Sensor for Home Assistant",
+        "domain": "anniversaries",
+        "domains": [
+            "anniversaries",
+            "sensor"
+        ],
+        "downloads": 3495,
+        "etag_repository": "W/\"214a3834d156320de3d18f34ad5aec0b727748ab41b213805a5e34bf4252c578\"",
+        "file_name": "",
+        "filename": "anniversaries.zip",
+        "first_install": false,
+        "fork": false,
+        "full_name": "pinkywafer/Anniversaries",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": "0.109.0",
+        "id": "207881337",
+        "iot_class": null,
+        "installed": true,
+        "installed_commit": "aeeb9e9",
+        "installed_version": "4.5.0",
+        "open_issues": 12,
+        "last_commit": "aeeb9e9",
+        "last_version": "4.5.0",
+        "last_updated": "2022-01-11T19:14:57Z",
+        "manifest_name": "Anniversaries",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2022-01-11T19:14:57",
+        "releases": true,
+        "render_readme": false,
+        "published_tags": [
+            "4.5.0",
+            "4.4.2",
+            "4.4.0",
+            "4.3.1",
+            "4.3.0"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 109,
+        "topics": [
+            "anniversaries",
+            "hacktoberfest",
+            "hacs",
+            "home-assistant",
+            "sensor"
+        ],
+        "zip_release": true
+    }
+}

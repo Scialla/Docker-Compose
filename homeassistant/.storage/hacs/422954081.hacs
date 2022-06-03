@@ -1,0 +1,63 @@
+{
+    "version": "6",
+    "minor_version": 1,
+    "key": "hacs/422954081.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@DeebotUniverse",
+            "@edenhaus"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": true,
+        "default_branch": "dev",
+        "description": "Home Assistant integration for deebot vacuums",
+        "domain": "deebot",
+        "domains": [],
+        "downloads": 1655,
+        "etag_repository": "W/\"23ba6dda2cc76240e3305f9c665e1167866802968212976d1ad66490a1cee0d2\"",
+        "file_name": "",
+        "filename": "deebot.zip",
+        "first_install": false,
+        "fork": false,
+        "full_name": "DeebotUniverse/Deebot-4-Home-Assistant",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": "2022.5.0b0",
+        "id": "422954081",
+        "iot_class": "Cloud Polling",
+        "installed": true,
+        "installed_commit": "9c5ae06",
+        "installed_version": "1.3.1",
+        "open_issues": 7,
+        "last_commit": "c78a05c",
+        "last_version": "1.3.1",
+        "last_updated": "2022-05-16T09:30:30Z",
+        "manifest_name": "Deebot 4 Home Assistant",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2022-05-16T09:30:30",
+        "releases": true,
+        "render_readme": true,
+        "published_tags": [
+            "1.3.1",
+            "1.3.0",
+            "1.2.0",
+            "1.1.3",
+            "1.1.2"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 57,
+        "topics": [
+            "deebot",
+            "ecovacs",
+            "home-assistant",
+            "vacuum"
+        ],
+        "zip_release": true
+    }
+}

@@ -1,0 +1,168 @@
+homeassistant: true
+permit_join: false
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://localhost
+serial:
+  port: /dev/ttyACM0
+advanced:
+  network_key:
+    - 166
+    - 11
+    - 172
+    - 6
+    - 93
+    - 171
+    - 192
+    - 176
+    - 98
+    - 223
+    - 15
+    - 94
+    - 209
+    - 145
+    - 134
+    - 116
+  ikea_ota_use_test_url: true
+  log_level: info
+frontend:
+  port: 4000
+experimental:
+  new_api: true
+devices:
+  '0x842e14fffe366818':
+    friendly_name: Presa Samsung
+    measurement_poll_interval: 30
+    debounce: 1
+  '0x588e81fffeff5df4':
+    friendly_name: Presa Selecline
+    measurement_poll_interval: 10
+    debounce: 1
+  '0x086bd7fffe219622':
+    friendly_name: IkeaPresa
+    retain: true
+    debounce: 1
+  '0x00158d0005446d5f':
+    friendly_name: Balcone
+    retain: true
+    debounce: 1
+  '0x00158d00054b38ec':
+    friendly_name: PIR Scale
+    retain: true
+    debounce: 1
+  '0x680ae2fffec2023e':
+    friendly_name: IkeaSwitch
+    retain: true
+    debounce: 1
+  '0x00158d00058034f0':
+    friendly_name: Bagno Grande
+    retain: true
+    debounce: 1
+  '0x00158d000581a07f':
+    friendly_name: Porta Casa
+    retain: true
+    debounce: 1
+  '0x00158d0005803786':
+    friendly_name: Bagno Piccolo
+    retain: true
+    debounce: 1
+  '0x00158d0005819be8':
+    friendly_name: Condizionatore
+    retain: true
+    debounce: 1
+  '0x5c0272fffec3dc2e':
+    friendly_name: LCD BagnoGrande
+    retain: true
+    debounce: 1
+  '0x5c0272fffecbe82f':
+    friendly_name: LCD BagnoPiccolo
+    retain: true
+    debounce: 1
+  '0x842e14fffe1262dd':
+    friendly_name: Presa Onkyo
+    measurement_poll_interval: 30
+    debounce: 1
+  '0x842e14fffe1265ac':
+    friendly_name: Presa Phon
+    measurement_poll_interval: 30
+    debounce: 1
+  '0x588e81fffed39fdd':
+    friendly_name: Presa Mediaplayer
+    measurement_poll_interval: 30
+    debounce: 1
+  '0x588e81fffed393d7':
+    friendly_name: Presa Frigo
+    measurement_poll_interval: 30
+    debounce: 1
+  '0x842e14fffe3a42aa':
+    friendly_name: Presa Jolly
+    measurement_poll_interval: 30
+    debounce: 1
+  '0x00158d00028eafae':
+    friendly_name: Porta Balcone Studio
+    retain: true
+    debounce: 1
+  '0x00158d00028d39d9':
+    friendly_name: Porta Balcone Cucina
+    retain: true
+    debounce: 1
+  '0x00158d00028d3815':
+    friendly_name: Porta Balcone Ingresso
+    retain: true
+    debounce: 1
+  '0x00158d00069ae9ec':
+    friendly_name: Finestra Silvia
+    retain: true
+    debounce: 1
+  '0x00158d0006c4c071':
+    friendly_name: Porta Balcone Letto
+    retain: true
+    debounce: 1
+  '0xbc33acfffe516296':
+    friendly_name: CiabattaScrivania
+    debounce: 1
+  '0x60a423fffe3f6d3f':
+    friendly_name: Striscia Letto
+    retain: true
+    debounce: 1
+  '0x588e81fffed393c6':
+    friendly_name: Lampada Zanzare
+    homeassistant:
+      switch:
+        type: light
+        object_id: light
+      light:
+        name: lampada_zanzare
+        value_template: null
+        state_value_template: '{{ value_json.state }}'
+    debounce: 1
+  '0x00158d00063dd645':
+    friendly_name: Frigo
+    retain: true
+    debounce: 1
+  '0xbc33acfffef5ba82':
+    friendly_name: Cappa
+    debounce: 1
+  '0xcc86ecfffe9fb794':
+    friendly_name: IkeaMultiLightSwitch
+    retain: true
+    debounce: 1
+  '0x0c4314fffe483d67':
+    friendly_name: PulsanteIkea1
+    retain: true
+    debounce: 1
+  '0xb4e3f9fffe751ca1':
+    friendly_name: IkeaPIR1
+    illuminance_below_threshold_check: false
+    occupancy_timeout: 90
+    debounce: 1
+  '0x84fd27fffe4225c6':
+    friendly_name: PulsanteIkea2
+    retain: true
+    debounce: 1
+  '0x0c4314fffedbba1b':
+    friendly_name: IkeaMultiLightSwitch2
+    retain: true
+    debounce: 1
+  '0x84fd27fffecf68bd':
+    friendly_name: Antenna TV

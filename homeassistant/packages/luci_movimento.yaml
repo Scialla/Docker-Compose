@@ -1,0 +1,175 @@
+automation:
+  - alias: "attivazione luce specchiera di notte"
+    id: attivazione_luce_specchiera_di_notte
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.pir_ingresso
+        to: 'on'
+    condition:
+      - condition: state
+        entity_id: 'alarm_control_panel.allarme_casa'
+        state: 'armed_night'
+    action:
+      - service: light.turn_on
+        entity_id: light.sonoff_10009c0093
+      - delay:
+          minutes: 6
+      - service: light.turn_off
+        entity_id: light.sonoff_10009c0093
+
+  - alias: Accensione luce balcone
+    id: accensione_luce_balcone
+    mode: restart # così riparte senza aspettare il delay se una porta si apre o chiude
+    trigger:
+    # Se una porta si apre o si chiude
+      - platform: state
+        entity_id: 
+          - binary_sensor.porta_balcone_studio_contact 
+          - binary_sensor.porta_balcone_ingresso_contact
+        to:
+    # a condizione che sia buio
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: "below_horizon"
+    action:
+    # Spegni o accendi la luce Balcone
+      - service: light.turn_{{ trigger.to_state.state }}
+        entity_id: light.luce_balcone
+    # Aspetta 2 secondi (altrimenti la condition successiva fallisce)
+      - delay: '00:00:02'
+    # Se la luce Balcone è accesa
+      - condition: state
+        entity_id: light.luce_balcone
+        state: 'on'
+    # Aspetta che il PIR passi a off (quindi prima deve attivarsi)
+      - wait_for_trigger:
+        - platform: state
+          entity_id: binary_sensor.pir_balcone
+          to: "off"
+          for: "00:02:00"
+        timeout:
+          minutes: 30
+    # spegni la luce (anche se la porta è aperta)
+      - service: light.turn_off
+        entity_id: light.luce_balcone
+
+  - alias: Accendi Luce Scale Uscendo
+    id: accendi_luce_scale_uscendo
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.pir_scale_occupancy
+        to: 'on'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: binary_sensor.porta_casa_contact
+          state: 'on'
+        - condition: numeric_state
+          entity_id: sensor.pir_scale_illuminance
+          below: 10
+    action:
+      - service: light.turn_on
+        entity_id: light.luce_scale
+
+  - alias: Accensione automatica Piantana
+    id: accensione_automatica_piantana
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.porta_casa_contact
+        to: 'on'
+    condition: 
+      condition: or
+      conditions:
+        - condition: sun
+          after: sunset
+        - condition: sun
+          before: sunrise
+    action: 
+      - service: light.turn_on
+        data:
+          entity_id: light.koogeek_lb1_1f299c
+          brightness: 30
+          color_name: indigo
+      - service: light.turn_on
+        data:
+          entity_id: light.wled
+          brightness: 30
+          rgb_color: [0, 0, 255]
+          effect: "{{ state_attr('light.wled' ,'effect_list')|random }}"
+      - delay:
+          minutes: 1
+      - service: light.turn_off
+        entity_id: light.koogeek_lb1_1f299c
+      - delay:
+          minutes: 1
+      - service: light.turn_off
+        entity_id: light.wled
+
+  - alias: Reset Piantana e Ballerini in avvio HA
+    trigger:
+    - platform: homeassistant
+      event: start
+    action:
+    - service: light.turn_off
+      entity_id: light.ballerini, light.koogeek_lb1_1f299c, light.cappa, light.striscia_letto, light.wled
+
+  - alias: PIR Letto
+    id: pir_letto
+    mode: restart
+    trigger:
+    - platform: state
+      entity_id: binary_sensor.ikeapir1_occupancy
+      to: "on"
+    condition:
+      - condition: state
+        entity_id: light.striscia_letto
+        state: "off"
+      - condition: state
+        entity_id: sun.sun
+        state: "below_horizon"
+      - condition: state
+        entity_id: light.luce_letto
+        state: "off"
+    action:
+    - service: light.turn_on
+      entity_id: light.striscia_letto
+  # Aspetta che il PIR passi a off (quindi prima deve attivarsi)
+    - wait_for_trigger:
+      - platform: state
+        entity_id: binary_sensor.ikeapir1_occupancy
+        to: "off"
+        for: "00:02:00"
+      timeout:
+        minutes: 20
+  # spegne la luce
+    - service: light.turn_off
+      entity_id: light.striscia_letto
+
+
+  #- alias: Automazione Luci Ingresso ON
+  #  trigger:
+  #  - platform: state
+  #    entity_id: 
+  #      - light.led_ingresso
+  #    to: 'on'
+  #  condition: []
+  #  action:
+  #    - service: light.turn_on
+  #      data:
+  #        entity_id:
+  #          - group.led_ingresso
+    
+  #- alias: Automazione Luci Ingresso OFF
+  #  trigger:
+  #    platform: state
+  #    entity_id:
+  #      - light.led_ingresso
+  #    to: 'off'
+  #  condition: []
+  #  action:
+  #    - service: light.turn_off
+  #      data:
+  #        entity_id:
+  #          - group.led_ingresso

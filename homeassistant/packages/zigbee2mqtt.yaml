@@ -1,0 +1,233 @@
+# Input select for Zigbee2mqtt debug level
+input_select:
+  zigbee2mqtt_log_level:
+    name: Zigbee2mqtt Log Level
+    options:
+      - debug
+      - info
+      - warn
+      - error
+    initial: info
+    icon: mdi:format-list-bulleted
+
+# Input text to input Zigbee2mqtt friendly_name for scripts
+#input_text:
+#  zigbee2mqtt_old_name:
+#    name: Zigbee2mqtt Old Name
+#  zigbee2mqtt_new_name:
+#    name: Zigbee2mqtt New Name
+#  zigbee2mqtt_remove:
+#    name: Zigbee2mqtt Remove
+
+# Scripts for renaming & removing devices
+#script:
+#  zigbee2mqtt_rename:
+#    alias: Zigbee2mqtt Rename
+#    sequence:
+#      service: mqtt.publish
+#      data_template:
+#        topic: zigbee2mqtt/bridge/config/rename
+#        payload_template: >-
+#          {
+#            "old": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
+#            "new": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
+#          }
+#  zigbee2mqtt_remove:
+#    alias: Zigbee2mqtt Remove
+#    sequence:
+#      service: mqtt.publish
+#      data_template:
+#        topic: zigbee2mqtt/bridge/config/remove
+#        payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
+
+# Timer for joining time remaining (120 sec = 2 min)
+timer:
+  zigbee_permit_join:
+    name: Time remaining
+    duration: 120
+
+mqtt:
+  sensor:
+  # Sensor for monitoring the bridge state
+  - name: Zigbee2mqtt Bridge state
+    state_topic: "zigbee2mqtt/bridge/state"
+    icon: mdi:router-wireless
+  # Sensor for Showing the Zigbee2mqtt Version
+  - name: Zigbee2mqtt Version
+    state_topic: "zigbee2mqtt/bridge/config"
+    value_template: "{{ value_json.version }}"
+    icon: mdi:zigbee
+  # Sensor for Showing the Coordinator Version
+  - name: Coordinator Version
+    state_topic: "zigbee2mqtt/bridge/config"
+    value_template: 
+      "{{ value_json.coordinator.meta.maintrel }}.{{ value_json.coordinator.meta.majorrel }}.{{ value_json.coordinator.meta.minorrel }}"
+    icon: mdi:chip
+# Switch for enabling joining
+  switch:
+  - name: "Zigbee2mqtt Main join"
+    state_topic: "zigbee2mqtt/bridge/config/permit_join"
+    command_topic: "zigbee2mqtt/bridge/config/permit_join"
+    payload_on: "true"
+    payload_off: "false"
+
+# Esempio di Max per recuperare sensori non raggiungibili, ma a me non funge, cosa sono i namespace?
+#  - platform: template
+#    sensors:
+#      zigbee2mqtt_unreachable:
+#        friendly_name: "zigbee2mqtt - Sensori non raggiungibili"
+#        value_template: >
+#          {% set n = namespace(u=[]) %}
+#          {% set now = now() | as_timestamp %}
+#          {% set elapsedMax = 80 * 60 * 1000 %}
+#          {% set lastUpdatedMax = 12 * 60 * 60 %}
+#          {% for s in states.sensor
+#            if 'linkquality' in s.entity_id
+#            and now - (states('sensor.uptime') | as_timestamp) > 60 * 60 * 1
+#            and 'battery' in s.attributes
+#            and (
+#                  (now - s.last_updated | as_timestamp >= lastUpdatedMax) or
+#                  (s.attributes.elapsed | default(elapsedMax) | int >= elapsedMax)
+#                )
+#          %}
+#                {% set n.u = n.u + [ s.attributes.entity_id ] %}
+#          {% endfor %}
+#          {{ n.u | count > 0 }}
+#        attribute_templates:
+#          devices: >
+#            {% set n = namespace(u=[]) %}
+#            {% set now = now() | as_timestamp %}
+#            {% set elapsedMax = 80 * 60 * 1000 %}
+#            {% set lastUpdatedMax = 12 * 60 * 60 %}
+#            {% for s in states.sensor
+#              if 'linkquality' in s.entity_id
+#              and now - (states('sensor.uptime') | as_timestamp) > 60 * 60 * 1
+#              and 'battery' in s.attributes
+#              and (
+#                    (now - s.last_updated | as_timestamp >= lastUpdatedMax) or
+#                    (s.attributes.elapsed | default(elapsedMax) | int >= elapsedMax)
+#                  )
+#            %}
+#                {%
+#                  set n.u = n.u
+#                  + [ s.attributes.friendly_name | replace('Link Quality', '') ]
+#                %}
+#            {% endfor %}
+#            {{ n.u | join(', ') }}
+
+automation:
+  # Automation for sending MQTT message on input select change
+  - alias: Zigbee2mqtt Log Level
+    id: zigbee2mqtt_log_level
+    initial_state: on
+    trigger:
+      platform: state
+      entity_id: input_select.zigbee2mqtt_log_level
+    action:
+      - service: mqtt.publish
+        data:
+          payload_template: "{{ states('input_select.zigbee2mqtt_log_level') }}"
+          topic: zigbee2mqtt/bridge/config/log_level
+  # Automation to start timer when enable join is turned on
+  - id: zigbee_join_enabled
+    alias: Zigbee Join Enabled
+    trigger:
+      platform: state
+      entity_id: switch.zigbee2mqtt_main_join
+      to: "on"
+    action:
+      service: timer.start
+      entity_id: timer.zigbee_permit_join
+  # Automation to stop timer when switch turned off and turn off switch when timer finished
+  - id: zigbee_join_disabled
+    alias: Zigbee Join Disabled
+    trigger:
+      - platform: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.zigbee_permit_join
+      - platform: state
+        entity_id: switch.zigbee2mqtt_main_join
+        to: "off"
+    action:
+      - service: timer.cancel
+        data:
+          entity_id: timer.zigbee_permit_join
+      - service: switch.turn_off
+        entity_id: switch.zigbee2mqtt_main_join
+                
+  - alias: Avviso Zigbee down
+    id: avviso_zigbee_down
+    mode: queued
+    trigger:
+      - platform: state
+        entity_id: sensor.zigbee2mqtt_bridge_state
+    action:
+      - service: notify.scialla
+        data: 
+          title: 'Zigbee'
+          message: >
+            Il Coordinator è {{ states('sensor.zigbee2mqtt_bridge_state') }}
+
+  - alias: Announce Zigbee
+    id: announce_zigbee
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sensor.zigbee2mqtt_bridge_state
+    action:
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Presa Selecline/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Presa Samsung/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Presa Onkyo/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Presa Phon/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Presa Mediaplayer/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Presa Frigo/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Antenna TV/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Striscia Letto/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Cappa/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/Lampada Zanzare/get'
+          payload: '{"state":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/CiabattaScrivania/get'
+          payload: '{"state_l1":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/CiabattaScrivania/get'
+          payload: '{"state_l2":""}'
+      - service: mqtt.publish
+        data:
+          topic: 'zigbee2mqtt/CiabattaScrivania/get'
+          payload: '{"state_l3":""}'
+
+

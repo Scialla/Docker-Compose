@@ -1,0 +1,156 @@
+automation:
+
+- id: allarme
+  alias: telegram alarm
+  trigger:
+    - platform: event
+      event_type: telegram_callback
+      event_data:
+        data: /sicurezza
+  action:
+    - service: telegram_bot.answer_callback_query
+      data:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: Sicurezza
+    - service: notify.scialla
+      data:
+        title: Sicurezza
+        message: >
+          {% if is_state("alarm_control_panel.allarme_casa", "disarmed") %} 
+            Disabilitato 
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_home") %}
+            Attivo in Casa
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_away") %}
+            Attivo fuori Casa
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_night") %}
+            Attivo Notturno
+          {% elif is_state("alarm_control_panel.allarme_casa", "triggered") %}
+            Sta Suonando!  
+          {% else %} 
+            Allarme senza stato
+          {% endif %}
+        data:
+          inline_keyboard:
+            - 'Away ON:/away_on, Away OFF:/away_off'
+            - 'Home ON:/at_home_on, Home OFF:/away_off' 
+            - '{{ "\u21a9\ufe0f" }} Menú Principale:/stop'
+            
+###Automazione per attivazione allarme fuori casa
+- id: allarmeattivazione
+  alias: telegram attivazione allarme
+  trigger:
+    - platform: event
+      event_type: telegram_callback
+      event_data:
+        data: '/away_on'
+  action:
+    - service: alarm_control_panel.alarm_arm_away
+      data:  
+        entity_id: alarm_control_panel.allarme_casa
+#        code: !secret code
+    - service: telegram_bot.answer_callback_query
+      data:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: 'Sicurezza'
+    - service: notify.scialla
+      data:
+        title: 'Menù Allarme'
+        message: >
+          {% if is_state("alarm_control_panel.allarme_casa", "disarmed") %} 
+            Disabilitato 
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_home") %}
+            Attivo in Casa
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_away") %}
+            Attivo fuori Casa
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_night") %}
+            Attivo Notturno
+          {% elif is_state("alarm_control_panel.allarme_casa", "triggered") %}
+            Sta Suonando!  
+          {% else %} 
+            Allarme senza stato
+          {% endif %}
+        data:
+          inline_keyboard:
+            - 'Away ON:/away_on, Away OFF:/away_off'
+            - 'Home ON:/at_home_on, Home OFF:/away_off' 
+            - '{{ "\u21a9\ufe0f" }} Menú Principale:/stop'
+            
+###Automazione per disattivare allarme
+- id: allarmedisattivazione
+  alias: telegram disattivazione allarme
+  trigger:
+    - platform: event
+      event_type: telegram_callback
+      event_data:
+        data: '/away_off'
+  action:
+    - service: alarm_control_panel.alarm_disarm
+      data:  
+        entity_id: alarm_control_panel.allarme_casa
+#        code: !secret code
+    - service: telegram_bot.answer_callback_query
+      data:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: 'Menù Allarme'
+    - service: notify.scialla
+      data:
+        title: 'Sicurezza'
+        message: >
+          {% if is_state("alarm_control_panel.allarme_casa", "disarmed") %} 
+            Disabilitato 
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_home") %}
+            Attivo in Casa
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_away") %}
+            Attivo fuori Casa
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_night") %}
+            Attivo Notturno
+          {% elif is_state("alarm_control_panel.allarme_casa", "triggered") %}
+            Sta Suonando!  
+          {% else %} 
+            Allarme senza stato
+          {% endif %}
+        data:
+          inline_keyboard:
+            - 'Away ON:/away_on, Away OFF:/away_off'
+            - 'Home ON:/at_home_on, Home OFF:/away_off' 
+            - '{{ "\u21a9\ufe0f" }} Menú Principale:/stop'
+
+###Automazione per attivazione allarme in casa
+- id: allarmeattivazioneincasa
+  alias: telegram attivazione allarme in casa
+  trigger:
+    - platform: event
+      event_type: telegram_callback
+      event_data:
+        data: '/at_home_on'
+  action:
+    - service: alarm_control_panel.alarm_arm_home
+      data:  
+        entity_id: alarm_control_panel.allarme_casa
+#        code: !secret code
+    - service: telegram_bot.answer_callback_query
+      data:
+        callback_query_id: '{{ trigger.event.data.id }}'
+        message: 'Sicurezza'
+    - service: notify.scialla
+      data:
+        title: 'Sicurezza'
+        message: >
+          {% if is_state("alarm_control_panel.allarme_casa", "disarmed") %} 
+            Disabilitato 
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_home") %}
+            Attivo in Casa
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_away") %}
+            Attivo fuori Casa
+          {% elif is_state("alarm_control_panel.allarme_casa", "armed_night") %}
+            Attivo Notturno
+          {% elif is_state("alarm_control_panel.allarme_casa", "triggered") %}
+            Sta Suonando!  
+          {% else %} 
+            Allarme senza stato
+          {% endif %}
+        data:
+          inline_keyboard:
+            - 'Away ON:/away_on, Away OFF:/away_off'
+            - 'Home ON:/at_home_on, Home OFF:/away_off' 
+            - '{{ "\u21a9\ufe0f" }} Menú Principale:/stop'

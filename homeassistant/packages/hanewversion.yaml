@@ -1,0 +1,46 @@
+sensor:
+  - platform: rest
+    resource: https://pypi.python.org/pypi/homeassistant/json
+    name: ha_latest_rest
+    value_template: '{{ value_json.info.version }}'
+    scan_interval: 3600
+
+binary_sensor:
+  - platform: template
+    sensors:
+      ha_new_version:
+        friendly_name: "HA Version"
+        value_template: "{{ states('sensor.ha_current') < states('sensor.ha_latest_rest') }}"
+        device_class: moving
+        attribute_templates:
+          current_version: "{{ states('sensor.ha_current') }}"
+          latest_version: "{{ states('sensor.ha_latest_rest') }}"
+
+
+automation:
+  - alias: New HA Version available
+    id: ha_new_version_available
+    initial_state: true
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.ha_new_version
+        to: 'on'
+      - event: start
+        platform: homeassistant
+    condition:
+      - condition: state
+        entity_id: binary_sensor.ha_new_version
+        state: 'on'
+      - condition: template
+        value_template: "{{ states('sensor.ha_latest_rest') != 'unknown' }}"
+      - condition: template
+        value_template: "{{ states('sensor.ha_latest_rest') != 'unavailable' }}"
+    action:
+      - service: persistent_notification.create
+        data:
+          title: "New Version available!"
+          message:  "Version {{ states('sensor.ha_latest_rest') }} is available to download"
+      - service: notify.scialla
+        data: 
+          title: "New Version available!"
+          message: "Version {{ states('sensor.ha_latest_rest') }} is available to download"

@@ -1,0 +1,243 @@
+- alias: Shellies Announce
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - data:
+      payload: announce
+      topic: shellies/command
+    service: mqtt.publish
+  - data:
+      topic: cmnd/tasmotas/POWER
+    service: mqtt.publish
+  - data:
+      topic: cmnd/tasmotas/POWER1
+    service: mqtt.publish
+  - data:
+      topic: cmnd/tasmotas/POWER2
+    service: mqtt.publish
+  - data:
+      topic: cmnd/tasmotas/POWER3
+    service: mqtt.publish
+  - data:
+      topic: cmnd/tasmotas/POWER4
+    service: mqtt.publish
+  - data:
+      topic: cmnd/tasmotas/POWER5
+    service: mqtt.publish
+  id: fa181cc8a2c7458cb020d87127e9cfde
+
+- alias: Update Available Notification
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.updater
+    from: 'off'
+    to: 'on'
+  action:
+  - service: notify.notify
+    data:
+      message: Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version')
+        }} è disponibile.
+  id: 8561fcd9cd9348d284b7c263818f28fe
+
+- alias: Avviso Batterie Scariche
+  id: avviso_batterie_scariche
+  trigger:
+  - platform: numeric_state
+    entity_id:
+    - sensor.ble_battery_4c65a8ddd248
+    - sensor.ikeaswitch_battery
+    - sensor.ikeamultilightswitch_battery
+    - sensor.ikeamultilightswitch2_battery
+    - sensor.frigo_battery
+    - sensor.pir_scale_battery
+    - sensor.balcone_battery
+    - sensor.condizionatore_battery
+    - sensor.porta_casa_battery
+    - sensor.bagno_grande_battery
+    - sensor.bagno_piccolo_battery
+    - sensor.finestra_silvia_battery
+    - sensor.porta_balcone_cucina_battery
+    - sensor.porta_balcone_ingresso_battery
+    - sensor.porta_balcone_studio_battery
+    - sensor.porta_balcone_letto_battery
+    - sensor.lcd_bagnogrande_battery
+    - sensor.lcd_bagnopiccolo_battery
+    - sensor.pulsanteikea1_battery
+    - sensor.pulsanteikea2_battery
+    - sensor.ikeapir1_battery
+    below: 7
+    for: 00:10:00
+  action:
+  - service: notify.scialla
+    data:
+      title: Sostituire Batteria
+      message: "Si è scaricata la batteria di  {% for each in expand('group.sensori_batteria')\
+        \ if each.state|int < 7 or each.state == \"unavailable\" %}\n  {{ each.name\
+        \ }}\n{%- if not loop.last %}, {% endif -%} {% endfor %}\n"
+
+- alias: Antenna TV
+  id: antenna_tv
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.stato_tv_selecline
+  action:
+  - service: "{% if states('binary_sensor.stato_tv_selecline') == 'on' %}\n  switch.turn_on\n\
+      {% else %}\n  switch.turn_off\n{% endif %}\n"
+    entity_id: switch.antenna_tv
+
+- alias: Controllo device accesi
+  id: controllo_device_accesi
+  trigger:
+  - platform: numeric_state
+    entity_id: zone.home
+    below: 1
+  action:
+  - service: script.notifica_luci_accese
+  - service: script.notifica_device_accesi
+  - service: script.notifica_porte_aperte
+
+- alias: Temperatura RPi alta
+  id: temperatura_rpi_alta
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.cpu_temperature
+    above: 70
+  action:
+  - service: notify.scialla
+    data:
+      title: RPi Status
+      message: Temperatura CPU oltre i 70 gradi!
+
+- alias: Send notification upon failed login attempt
+  id: send_notification_upon_failed_login_attempt
+  trigger:
+  - platform: state
+    entity_id: persistent_notification.httplogin
+  condition:
+  - condition: template
+    value_template: '{{ trigger.to_state.state != ''None'' }}'
+  action:
+  - service: notify.scialla
+    data_template:
+      title: Failed Home Assistant login!
+      message: '{{ trigger.to_state.state }}'
+
+- alias: Errore Ambrogio
+  id: errore_ambrogio
+  trigger:
+  - platform: template
+    value_template: '{{ state_attr(''vacuum.ambrogio'',''last_error'') }}'
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(''vacuum.ambrogio'',''last_error'') != ''NoError:
+      Robot is operational (0)'' }}'
+  action:
+  - service: notify.scialla
+    data:
+      title: Ambrogio
+      message: '{{ state_attr(''vacuum.ambrogio'',''last_error'') }}'
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: Problemi con Ambrogio, "{{ state_attr('vacuum.ambrogio','last_error') }}"
+
+- id: avviso_aria_malsana
+  alias: Avviso Aria Malsana
+  trigger:
+  - platform: numeric_state
+    entity_id:
+    - sensor.qualita_aria_1
+    - sensor.qualita_aria_2
+    above: 60
+    for:
+      minutes: 15
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: group.famiglia
+      state: home
+    - condition: time
+      after: 08:00:00
+      before: '23:00:00'
+  action:
+  - service: notify.scialla
+    data:
+      title: Qualità Aria
+      message: "{% if trigger.entity_id == 'sensor.qualita_aria_1' %}\n  Aria malsana\
+        \ in studio, arieggiare\n{% else %}\n  Aria malsana in camera di Silvia, arieggiare\n\
+        {% endif %}\n"
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "{% if trigger.entity_id == 'sensor.qualita_aria_1' %}\n  Aria malsana\
+        \ in studio, arieggiare\n{% else %}\n  Aria malsana in camera di Silvia, arieggiare\n\
+        {% endif %}\n"
+
+- id: accendi_tv_lg
+  alias: Accendi TV LG
+  trigger:
+  - platform: webostv.turn_on
+    entity_id: media_player.lg_tv
+  action:
+  - service: wake_on_lan.send_magic_packet
+    data:
+      mac: a0:6f:aa:9c:57:e2
+
+- id: web_radio
+  alias: Web Radio
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.web_radio
+  action:
+    choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.to_state.state == 'on' }}"
+      sequence:
+      - service: media_player.play_media
+        target:
+          entity_id: media_player.ggmm_e3
+        data:
+          media_content_id: media-source://radio_browser/961f659a-0601-11e8-ae97-52543be04c81
+          media_content_type: audio/mpeg
+        metadata:
+          title: Radio 80
+          thumbnail: https://upload.wikimedia.org/wikipedia/it/1/1b/Radio80.jpg
+          media_class: music
+          children_media_class:
+          navigateIds:
+          - {}
+          - media_content_type: app
+            media_content_id: media-source://radio_browser
+          - media_content_type: music
+            media_content_id: media-source://radio_browser/country/IT
+    default:
+    - service: media_player.media_stop
+      target:
+        entity_id: media_player.ggmm_e3
+
+- id: new_image_alert
+  alias: "New Image Alert"
+  trigger:
+  - platform: mqtt
+    topic: "diun-watcher"
+  action:
+  - service: persistent_notification.create
+    data:
+      title: Nuova Immagine Disponibile!
+      message: "{{ trigger.payload_json.image }}"
+  - service: notify.scialla
+    data:
+      title: Nuova Immagine Disponibile!
+      message: "{{ trigger.payload_json.image }}"

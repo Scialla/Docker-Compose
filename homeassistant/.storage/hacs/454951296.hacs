@@ -1,0 +1,65 @@
+{
+    "version": "6",
+    "minor_version": 1,
+    "key": "hacs/454951296.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@thecode"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": false,
+        "default_branch": "main",
+        "description": "Home Assistant Raspberry Pi GPIO Integration",
+        "domain": "rpi_gpio",
+        "domains": [
+            "binary_sensor",
+            "cover",
+            "switch"
+        ],
+        "downloads": 0,
+        "etag_repository": "W/\"b4f07e556283082c8acb62feaa6d6cddad4c46c952a77534c7d8aa1002533634\"",
+        "file_name": "",
+        "filename": null,
+        "first_install": false,
+        "fork": false,
+        "full_name": "thecode/ha-rpi_gpio",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": "2022.2.0",
+        "id": "454951296",
+        "iot_class": "Local Push",
+        "installed": true,
+        "installed_commit": "151cf55",
+        "installed_version": "2022.4.0",
+        "open_issues": 1,
+        "last_commit": "1a714da",
+        "last_version": "2022.4.0",
+        "last_updated": "2022-05-16T18:34:05Z",
+        "manifest_name": "Raspberry Pi GPIO",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2022-05-16T18:34:05",
+        "releases": true,
+        "render_readme": false,
+        "published_tags": [
+            "2022.4.0",
+            "2022.3.0",
+            "2022.2.3",
+            "2022.2.2",
+            "2022.2.1"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 46,
+        "topics": [
+            "custom-component",
+            "home-assistant",
+            "rpi-gpio"
+        ],
+        "zip_release": false
+    }
+}

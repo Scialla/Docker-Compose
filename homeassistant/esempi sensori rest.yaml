@@ -1,0 +1,47 @@
+
+# sudo ln /home/homeassistant/.homeassistant/.storage/homekit-controller-entity-map /home/homeassistant/.homeassistant/www/scialla.json
+
+
+sensor:
+
+#- platform: rest
+#  name: "Air Quality"
+#  resource: http://localhost:8123/local/scialla.json
+#  value_template: "{{ value_json.data.pairings['90:E2:87:7B:54:2F'].accessories[0].services[1].characteristics[1].value }}/5" # Air Quality
+#  scan_interval: 3600
+
+- platform: rest
+  name: "Carbon Monoxide Level"
+  resource: http://localhost:8123/local/scialla.json
+  value_template: "{{ value_json.data.pairings['90:E2:87:7B:54:2F'].accessories[0].services[1].characteristics[2].value }}/100" # Carbon Monoxide Level
+  scan_interval: 3600
+
+- platform: rest
+  name: "Carbon Dioxide Level"
+  resource: http://localhost:8123/local/scialla.json
+  value_template: "{{ value_json.data.pairings['90:E2:87:7B:54:2F'].accessories[0].services[1].characteristics[3].value }}/100000" # Carbon Dioxide Level
+  scan_interval: 3600
+
+- platform: rest
+  name: "Ethanol Level"
+  resource: http://localhost:8123/local/scialla.json
+  value_template: "{{ value_json.data.pairings['90:E2:87:7B:54:2F'].accessories[0].services[1].characteristics[4].value }}/100" # Ethanol Level
+  scan_interval: 3600
+
+- platform: rest
+  name: "Ammonium Level"
+  resource: http://localhost:8123/local/scialla.json
+  value_template: "{{ value_json.data.pairings['90:E2:87:7B:54:2F'].accessories[0].services[1].characteristics[5].value }}/100" # Ammonium Level
+  scan_interval: 3600
+
+- platform: rest
+  name: "Toluene Level"
+  resource: http://localhost:8123/local/scialla.json
+  value_template: "{{ value_json.data.pairings['90:E2:87:7B:54:2F'].accessories[0].services[1].characteristics[6].value }}/100" # Toluene Level
+  scan_interval: 3600
+
+- platform: rest
+  name: "Acetone Level"
+  resource: http://localhost:8123/local/scialla.json
+  value_template: "{{ value_json.data.pairings['90:E2:87:7B:54:2F'].accessories[0].services[1].characteristics[7].value }}/100" # Acetone Level
+  scan_interval: 3600

@@ -1,0 +1,48 @@
+sensor:
+  - platform: template
+    sensors:
+      count_entities:
+        friendly_name: "Conteggio entità"
+        value_template: >-
+          {{ states | count }}
+        attribute_templates:
+          automation: >
+            {{ states.automation | count }}
+          automation_ON: >-
+            {{ states.automation | selectattr('state', 'eq', 'on') | list | count }}
+          binary_sensor: >-
+            {{ states.binary_sensor | count }}
+          camera: >-
+            {{ states.camera | count }}
+          climate: >-
+            {{ states.climate | count }}
+          device_tracker: >-
+            {{ states.device_tracker | count }}
+          group: >-
+            {{ states.group | count }}
+          input_boolean: >-
+            {{ states.automation | count }}
+          input_datetime: >-
+            {{ states.input_datetime | count }}
+          input_number: >-
+            {{ states.input_number | count }}
+          input_select: >-
+            {{ states.input_select | count }}
+          input_text: >-
+            {{ states.input_text | count }}
+          media_player: >-
+            {{ states.media_player | count }}
+          light: >-
+            {{ states.light | count }}
+          light_ON: >-
+            {{ states.light | selectattr('state', 'eq', 'on') | list | count }}
+          scene: >-
+            {{ states.scene | count }}
+          script: >-
+            {{ states.script | count }}
+          sensor: >-
+            {{ states.sensor | count }}
+          switch: >-
+            {{ states.switch | count }}
+          zone: >-
+            {{ states.zone | count }}

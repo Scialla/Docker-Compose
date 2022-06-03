@@ -1,0 +1,412 @@
+#sensor:
+
+#  - platform: version (deprecato
+
+#  - platform: command_line (tolto perché fa tutto caddy e uso i platform dopo)
+#    name: Scadenza certificato SSL
+#    #12 ore indicato in secondi
+#    scan_interval: 43200
+#    command: "/usr/bin/sudo ssl-cert-check -b -c /home/homeassistant/dehydrated/certs/scialla.duckdns.org/cert.pem | awk '{ print $NF }'"
+
+  - platform: cert_expiry
+    host: scialla.duckdns.org
+    port: 5000
+
+  - platform: cert_expiry
+    host: scialla.ddns.net
+    port: 5000
+
+  - platform: time_date
+    display_options:
+      - 'date'
+      - 'time'
+      - 'date_time'
+      - 'date_time_utc'
+
+  - platform: waqi
+    token: 343b84b95cae97861ca14b4e85ab718ef9ba47c5
+    locations:
+      - Rebaudengo, Torino, Piemonte
+
+  - platform: template
+    sensors:
+      oggi:
+        friendly_name: "oggi"
+        value_template: "{{ now().strftime('%A %d %B %Y' ) }}"
+      time_of_day:
+        value_template: >
+          {% if now().hour < 6 %}anotte{% elif now().hour < 12 %}, Mattino{% elif now().hour < 18 %}, Pomeriggio{% else %}asera{% endif %}
+      pretty_date:
+        friendly_name: Data di oggi
+        value_template: >-
+          {% set today = states("sensor.date") %}
+          {% set arr_week_days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"] %}
+          {% set arr_months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"] %}
+          {% set week_day = as_timestamp(today) | timestamp_custom('%w') | int %}
+          {% set day = as_timestamp(today) | timestamp_custom('%d') %}
+          {% set month = as_timestamp(today) | timestamp_custom('%m') | int %}
+          {% set year = as_timestamp(today) | timestamp_custom('%Y') | int %}
+          {{ arr_week_days[week_day] }}, {{ day }} {{ arr_months[month-1] }} {{ year }}
+        attribute_templates:
+          week_day: >-
+            {% set today = states("sensor.date") %}
+            {% set arr_week_days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"] %}
+            {% set week_day = as_timestamp(today) | timestamp_custom('%w') | int %}
+            {{ arr_week_days[week_day] }}    
+          day: >-
+            {% set today = states("sensor.date") %}
+            {% set day = as_timestamp(today) | timestamp_custom('%d') %}
+            {{ day }}      
+          month_num: >-
+            {% set today = states("sensor.date") %}
+            {% set month = as_timestamp(today) | timestamp_custom('%m') %}
+            {{ month }}  
+          month_name: >-
+            {% set today = states("sensor.date") %}
+            {% set arr_months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"] %}          
+            {% set month = as_timestamp(today) | timestamp_custom('%m') | int %}
+            {{ arr_months[month-1] }}  
+          year: >-
+            {% set today = states("sensor.date") %}
+            {% set year = as_timestamp(today) | timestamp_custom('%Y') | int %}
+            {{ year }}
+      temperatura_esterna:
+        friendly_name: "Temperatura Esterna"
+        value_template: "{{ state_attr('weather.openweathermap', 'temperature') }}"
+        unit_of_measurement: '°C'
+      umidita_esterna:
+        friendly_name: "Umidità Esterna"
+        value_template: "{{ state_attr('weather.openweathermap', 'humidity') }}"      
+        unit_of_measurement: '%'
+#      batteria_netatmo_ingresso:
+#        friendly_name: "Netatmo Ingresso"
+#        value_template: "{{ state_attr('climate.netatmo_ingresso', 'battery_level') }}"
+##        unit_of_measurement: '%'
+#        icon_template: >
+#          {% if state_attr('climate.netatmo_ingresso', 'battery_level') == 'empty' %}
+#            mdi:battery-outline
+#          {% elif state_attr('climate.netatmo_ingresso', 'battery_level') == 'low' %}
+#            mdi:battery-low
+#          {% elif state_attr('climate.netatmo_ingresso', 'battery_level') == 'medium' %}
+#            mdi:battery-medium
+#          {% elif state_attr('climate.netatmo_ingresso', 'battery_level') == 'high' %}
+#            mdi:battery-high
+#          {% else %}
+#            mdi:battery
+#          {% endif %}
+#      batteria_netatmo_cucina:
+#        friendly_name: "Netatmo Cucina"
+#        value_template: "{{ state_attr('climate.netatmo_cucina', 'battery_level') }}"
+##        unit_of_measurement: '%'
+#        icon_template: >
+#          {% if state_attr('climate.netatmo_cucina', 'battery_level') == 'empty' %}
+#            mdi:battery-outline
+#          {% elif state_attr('climate.netatmo_cucina', 'battery_level') == 'low' %}
+#            mdi:battery-low
+#          {% elif state_attr('climate.netatmo_cucina', 'battery_level') == 'medium' %}
+#            mdi:battery-medium
+#          {% elif state_attr('climate.netatmo_cucina', 'battery_level') == 'high' %}
+#            mdi:battery-high
+#          {% else %}
+#            mdi:battery
+#          {% endif %}
+#      batteria_netatmo_studio:
+#        friendly_name: "Netatmo Studio"
+#        value_template: "{{ state_attr('climate.netatmo_studio', 'battery_level') }}"
+##        unit_of_measurement: '%'
+#        icon_template: >
+#          {% if state_attr('climate.netatmo_studio', 'battery_level') == 'empty' %}
+#            mdi:battery-outline
+#          {% elif state_attr('climate.netatmo_studio', 'battery_level') == 'low' %}
+#            mdi:battery-low
+#          {% elif state_attr('climate.netatmo_studio', 'battery_level') == 'medium' %}
+#            mdi:battery-medium
+#          {% elif state_attr('climate.netatmo_studio', 'battery_level') == 'high' %}
+#            mdi:battery-high
+#          {% else %}
+#            mdi:battery
+#          {% endif %}
+#      batteria_netatmo_camera_da_letto:
+#        friendly_name: "Netatmo Camera da Letto"
+#        value_template: "{{ state_attr('climate.netatmo_camera_da_letto', 'battery_level') }}"
+##        unit_of_measurement: '%'
+#        icon_template: >
+#          {% if state_attr('climate.netatmo_camera_da_letto', 'battery_level') == 'empty' %}
+#            mdi:battery-outline
+#          {% elif state_attr('climate.netatmo_camera_da_letto', 'battery_level') == 'low' %}
+#            mdi:battery-low
+#          {% elif state_attr('climate.netatmo_camera_da_letto', 'battery_level') == 'medium' %}
+#            mdi:battery-medium
+#          {% elif state_attr('climate.netatmo_camera_da_letto', 'battery_level') == 'high' %}
+#            mdi:battery-high
+#          {% else %}
+#            mdi:battery
+#          {% endif %}
+#      batteria_netatmo_bagno_piccolo:
+#        friendly_name: "Netatmo Bagno Piccolo"
+#        value_template: "{{ state_attr('climate.netatmo_bagno_piccolo', 'battery_level') }}"
+##        unit_of_measurement: '%'
+#        icon_template: >
+#          {% if state_attr('climate.netatmo_bagno_piccolo', 'battery_level') == 'empty' %}
+#            mdi:battery-outline
+#          {% elif state_attr('climate.netatmo_bagno_piccolo', 'battery_level') == 'low' %}
+#            mdi:battery-low
+#          {% elif state_attr('climate.netatmo_bagno_piccolo', 'battery_level') == 'medium' %}
+#            mdi:battery-medium
+#          {% elif state_attr('climate.netatmo_bagno_piccolo', 'battery_level') == 'high' %}
+#            mdi:battery-high
+#          {% else %}
+#            mdi:battery
+#          {% endif %}
+#      batteria_netatmo_bagno_grande:
+#        friendly_name: "Netatmo Bagno Grande"
+#        value_template: "{{ state_attr('climate.netatmo_bagno_grande', 'battery_level') }}"
+##        unit_of_measurement: '%'
+#        icon_template: >
+#          {% if state_attr('climate.netatmo_bagno_grande', 'battery_level') == 'empty' %}
+#            mdi:battery-outline
+#          {% elif state_attr('climate.netatmo_bagno_grande', 'battery_level') == 'low' %}
+#            mdi:battery-low
+#          {% elif state_attr('climate.netatmo_bagno_grande', 'battery_level') == 'medium' %}
+#            mdi:battery-medium
+#          {% elif state_attr('climate.netatmo_bagno_grande', 'battery_level') == 'high' %}
+#            mdi:battery-high
+#          {% else %}
+#            mdi:battery
+#          {% endif %}
+#      batteria_netatmo_termostato:
+#        friendly_name: "Netatmo Termostato"
+#        value_template: "{{ state_attr('climate.netatmo_camera_di_silvia', 'battery_level') }}"
+##        unit_of_measurement: '%'
+#        icon_template: >
+#          {% if state_attr('climate.netatmo_camera_di_silvia', 'battery_level') == 'empty' %}
+#            mdi:battery-outline
+#          {% elif state_attr('climate.netatmo_camera_di_silvia', 'battery_level') == 'low' %}
+#            mdi:battery-low
+#          {% elif state_attr('climate.netatmo_camera_di_silvia', 'battery_level') == 'medium' %}
+#            mdi:battery-medium
+#          {% elif state_attr('climate.netatmo_camera_di_silvia', 'battery_level') == 'high' %}
+#            mdi:battery-high
+#          {% else %}
+#            mdi:battery
+#          {% endif %}
+      consumo_mensile_mese_precedente:
+        friendly_name: Consumo Mensile Mese Precedente
+        value_template: "{{ state_attr('sensor.consumo_mensile_f1', 'last_period') | float + state_attr('sensor.consumo_mensile_f2', 'last_period') | float + state_attr('sensor.consumo_mensile_f3', 'last_period') | float }}"
+        unit_of_measurement: 'kWh' 
+      consumo_mensile_totale:
+        friendly_name: Consumo Mensile Totale
+        value_template: "{{ states('sensor.consumo_mensile_f1') | float + states('sensor.consumo_mensile_f2') | float + states('sensor.consumo_mensile_f3') | float }}"
+        unit_of_measurement: 'kWh'   
+      qualita_aria_rebaudengo:
+        friendly_name: "Qualità Aria Piazza Rebaudengo"
+        value_template: >
+          {% if states('sensor.waqi_rebaudengo_torino_piemonte_italy')|int(0) <= 50 %}
+            Buona
+          {% elif states('sensor.waqi_rebaudengo_torino_piemonte_italy')|int(0) <=100 %}
+            Moderata
+          {% elif states('sensor.waqi_rebaudengo_torino_piemonte_italy')|int(0) <=150 %}
+            Malsano per gruppi sensibili
+          {% elif states('sensor.waqi_rebaudengo_torino_piemonte_italy')|int(0) <=200 %}
+            Insalubre
+          {% elif states('sensor.waqi_rebaudengo_torino_piemonte_italy')|int(0) <=300 %}
+            Molto Insalubre
+          {% else %}
+            PERICOLOSA
+          {% endif %}
+      qualita_aria_lingotto:
+        friendly_name: "Qualità Aria Lingotto"
+        value_template: >
+          {% if states('sensor.waqi_lingotto_torino_piemonte_italy')|int(0) <= 50 %}
+            Buona
+          {% elif states('sensor.waqi_lingotto_torino_piemonte_italy')|int(0) <=100 %}
+            Moderata
+          {% elif states('sensor.waqi_lingotto_torino_piemonte_italy')|int(0) <=150 %}
+            Malsano per gruppi sensibili
+          {% elif states('sensor.waqi_lingotto_torino_piemonte_italy')|int(0) <=200 %}
+            Insalubre
+          {% elif states('sensor.waqi_lingotto_torino_piemonte_italy')|int(0) <=300 %}
+            Molto Insalubre
+          {% else %}
+            PERICOLOSA
+          {% endif %}
+
+  - platform: command_line
+    name: IP pubblico
+    command: "curl -s ipinfo.io/ip"
+  - platform: command_line
+    name: "HA Start"
+    command: grep -m1 'Home Assistant initialized' /config/home-assistant.log | awk '{ print $10 }'  
+
+  - platform: mold_indicator
+    indoor_temp_sensor: sensor.lcd_bagnopiccolo_temperature
+    indoor_humidity_sensor: sensor.lcd_bagnopiccolo_humidity
+    outdoor_temp_sensor: sensor.balcone_temperature
+    calibration_factor: 1.5
+
+  - platform: moon # così restituisce gli stati in ita sul frontend ma in eng sulle automazioni
+#  - platform: template 
+#    sensors:
+#      moon_state:
+#        friendly_name: "Fasi Lunari"
+#        value_template: >-
+#          {{ {
+#            'new_moon' : 'Nuova',
+#            'waxing_crescent' : 'Crescente', 
+#            'first_quarter' : 'Primo Quarto',  
+#            'waxing_gibbous' : 'Gibbosa Crescente',  
+#            'full_moon' : 'Piena',  
+#            'waning_gibbous' : 'Gibbosa Calante',  
+#            'last_quarter' : 'Ultimo Quarto',  
+#            'waning_crescent' : 'Calante'  
+#            } [states('sensor.moon')] }}
+  - platform: anniversary
+    name: events
+    multiple: true
+    anniversaries:
+      - event: 'Davide'
+        date: '1966-12-06'
+      - event: 'Giovanna'
+        date: '1963-06-24'
+      - event: 'Silvia'
+        date: '1994-12-27'
+      - event: 'Elsa'
+        date: '1939-07-15'
+
+  - platform: template
+    sensors:
+      luci_cucina_attive:
+        value_template: >-
+          {% set lights = [states.light.alogena, states.light.luce_cucina, states.light.cappa] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }} accesa
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      luci_ingresso_attive:
+        value_template: >-
+          {% set lights = [states.light.led_ingresso, states.light.luce_ingresso, states.light.koogeek_lb1_1f299c, states.light.wled] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }} accesa
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      luci_camera_silvia_attive:
+        value_template: >-
+          {% set lights = [states.light.luce_silvia] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }} accesa
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      luci_studio_attive:
+        value_template: >-
+          {% set lights = [states.light.luce_studio, states.light.mensola, states.light.lampada_scrivania, states.light.neon, states.light.ballerini] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }} accesa
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      luci_camera_da_letto_attive:
+        value_template: >-
+          {% set lights = [states.light.luce_letto, states.light.lampada_zanzare, states.light.striscia_letto] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }} accesa
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      luci_bagno_grande_attive:
+        value_template: >-
+          {% set lights = [states.light.luce_bagno_grande, states.light.sonoff_10009c0093] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }} accesa
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      luci_bagno_piccolo_attive:
+        value_template: >-
+          {% set lights = [states.light.luce_bagno_piccolo] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }} accesa
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      luci_balcone_attive:
+        value_template: >-
+          {% set lights = [states.light.luce_balcone] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }} accesa
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      luci_casa_attive:
+        value_template: >-
+          {% set lights = [states.light.alogena, states.light.luce_cucina, states.light.cappa, states.light.led_ingresso, states.light.luce_ingresso, states.light.koogeek_lb1_1f299c, states.light.wled, states.light.luce_silvia, states.light.luce_studio, states.light.mensola, states.light.lampada_scrivania, states.light.neon, states.light.ballerini, states.light.luce_letto, states.light.lampada_zanzare, states.light.striscia_letto, states.light.luce_bagno_grande, states.light.sonoff_10009c0093, states.light.luce_bagno_piccolo, states.light.luce_balcone] %}
+          {% set lights_on = lights | selectattr('state','eq','on') | list %}
+          {% set lights_name = lights | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (lights_on | length ==1)%}
+          {{ lights_name }}
+          {% elif (lights_on | length >1 )%}
+          {{ lights_on | length}} luci accese
+          {% else %}
+          Spente
+          {% endif %}
+      porte_casa_aperte:
+        value_template: >-
+          {% set doors = [states.binary_sensor.porta_balcone_cucina_contact, states.binary_sensor.porta_balcone_ingresso_contact, states.binary_sensor.porta_balcone_studio_contact, states.binary_sensor.porta_balcone_letto_contact, states.binary_sensor.bagno_piccolo_contact, states.binary_sensor.bagno_grande_contact, states.binary_sensor.finestra_silvia_contact] %}
+          {% set doors_on = doors | selectattr('state','eq','on') | list %}
+          {% set doors_name = doors | selectattr('state','eq','on') | map(attribute='name') | join(', ') %}
+          {% if (doors_on | length ==1)%}
+          {{ doors_name }} 
+          {% elif (doors_on | length >1 )%}
+          {{ doors_on | length}} aperte
+          {% else %}
+          Chiuse
+          {% endif %}
+
+  - platform: feedparser
+    name: FeedRSS
+    feed_url: 'https://www.ansa.it/sito/ansait_rss.xml'
+    date_format: '%a, %d %b %Y %H:%M:%S %Z'
+    scan_interval:
+      hours: 3
+    inclusions:
+      - title
+      - link
+      - description
+      - image
+      - pubDate
+    exclusions:
+      - language  

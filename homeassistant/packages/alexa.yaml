@@ -1,0 +1,112 @@
+automation:
+
+  - alias: "saluto alexa al rientro"
+    id: saluto_alexa_al_rientro
+    mode: parallel
+    trigger:
+      - platform: zone
+        entity_id: 
+          - person.scialla
+          - person.silvia
+          - person.giovanna
+        zone: zone.home
+        event: enter
+    action:
+      - wait_for_trigger:
+          - platform: state
+            entity_id: binary_sensor.porta_casa_contact
+            to: 'on'
+        timeout:
+          minutes: 20
+        continue_on_timeout: false 
+      - delay: '00:00:03'
+      - service: notify.alexa_media
+        data:
+          target: 
+#            - media_player.echo_dot_ingresso
+            - media_player.altoparlante #aggiunto per prova
+          data:
+            type: tts
+            method: spoken
+          message: >
+            {% if trigger.entity_id == 'person.scialla' %}
+              "Bentornato Scialla"
+            {% elif trigger.entity_id == 'person.silvia' %}
+              "Bentornata Silvia"
+            {% elif trigger.entity_id == 'person.giovanna' %}
+              "Bentornata Giovanna"
+            {% else %}
+              {{ states('trigger.entity_id') }}
+            {% endif %} 
+
+  - alias: qualcuno alla porta
+    id: qualcuno_alla_porta
+    trigger:
+      #si attiva il sensore aqara sulle scale
+      - platform: state
+        entity_id: binary_sensor.pir_scale_occupancy 
+        to: 'on'
+    condition:
+      condition: and
+      conditions:
+        #a condizione che la porta sia chiusa
+        - condition: state
+          entity_id: binary_sensor.porta_casa_contact 
+          state: 'off'
+        #e che sia di giorno
+        - condition: time 
+          after: '08:00:00'
+          before: '23:59:59'
+    action:
+      - choose: #sceglie
+          #se c'è già qualcuno a casa da 10 minuti (e quindi non è quello davanti alla porta)
+          - conditions:
+            - condition: state 
+              entity_id: group.famiglia
+              state: "home"
+              for:
+                minutes: 10
+            sequence:
+              - service: notify.alexa_media
+                data:
+                  target:
+                    - media_player.ovunque
+                  data:
+                    type: announce
+                    method: spoken
+                  message: "Ding Dong! Qualcuno è alla porta"
+          #se non c'è nessuno a casa verifica se io sono fuori casa (e quindi non sono io che sono davanti alla porta)
+          - conditions:
+            - condition: template
+              value_template: "{{ states('person.scialla') != 'home' }}"
+            sequence:
+              - service: notify.scialla
+                data: 
+                  title: 'Presenza'
+                  message: >
+                    {% if states('person.silvia') == 'home' %}
+                      "Silvia è davanti alla porta di casa"
+                    {% elif states('person.giovanna') == 'home' %}
+                      "Giovanna è davanti alla porta di casa"
+                    {% else %}
+                      "Un estraneo è davanti alla porta di casa"
+                    {% endif %}
+        default: #sono io davanti alla porta
+          delay: '00:00:01' #non mi avvisa, se sono fuori, solo nel caso che arrivi una mentre l'altra è in casa
+
+  - alias: Apertura Porta Camera Letto
+    id: apertura_porta_camera_letto
+    trigger:
+      platform: state
+      entity_id: binary_sensor.porta_balcone_letto_contact
+      to: 'on'
+    condition: []
+    action:
+      - service: notify.alexa_media
+        data: 
+          target:
+            - media_player.echo_dot_camera_letto
+          data:
+            method: spoken
+            type: tts
+          message: '{{ ["Una bella boccata di aria fresca", "Buongiorno Scialla", "Ce il sole?", "Che tempo fà?", "Chiudi che ho freddo!"] | random }}'

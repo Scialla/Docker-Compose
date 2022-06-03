@@ -1,0 +1,130 @@
+version: '3.9'
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: homeassistant/home-assistant:stable
+    volumes:
+    - ${PWD}/homeassistant:/config
+#    - ${PWD}/homeassistant/docker/run:/etc/services.d/home-assistant/run # Modifiche per docker-venv
+    - /dev/mem:/dev/mem
+    environment:
+    - TZ=Europe/Rome
+#    - PUID=1000
+#    - PGID=1000
+#    - UMASK=007
+#    - PACKAGES=iputils
+    network_mode: host
+    privileged: true
+    labels:
+    - "diun.enable=true"
+    - "diun.include.tags=stable"
+    restart: always
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    ports:
+    - "80:80"
+    - "443:443"
+    - "5000:5000"
+    environment:
+    - "TZ=Europe/Rome"
+    volumes:
+    - "${PWD}/caddy/Caddyfile:/etc/caddy/Caddyfile"
+    - "${PWD}/caddy/data:/data"
+    labels:
+    - "diun.enable=true"
+    - "diun.include.tags=latest"
+    restart: always
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto
+    volumes:
+    - "${PWD}/mosquitto/config:/mosquitto/config"
+    - "${PWD}/mosquitto/log:/mosquitto/log"
+    - "${PWD}/mosquitto/data/:/mosquitto/data"
+    ports:
+    - "1883:1883" 
+    labels:
+    - "diun.enable=true"
+    - "diun.include.tags=latest"
+    restart: always
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt:latest
+    privileged: true
+    volumes:
+    - "${PWD}/zigbee2mqtt:/app/data"
+    - "${PWD}/zigbee2mqtt/log:/var/log/zigbee2mqtt"
+    - "/run/udev:/run/udev:ro"
+    devices:
+    - "/dev/ttyACM0"
+    environment:
+    - "TZ=Europe/Rome"
+    network_mode: host
+    labels:
+    - "diun.enable=true"
+    - "diun.include.tags=latest"
+    restart: always
+  openvpn:
+    cap_add:
+     - NET_ADMIN
+    image: kylemanna/openvpn
+    container_name: openvpn
+    ports:
+     - "1194:1194/udp"
+    volumes:
+      - "${PWD}/openvpn:/etc/openvpn"
+    labels:
+    - "diun.enable=true"
+    - "diun.include.tags=latest"
+    restart: always
+  tasmoadmin:
+    container_name: tasmoadmin
+    image: raymondmm/tasmoadmin
+    environment:
+    - "TZ=Europe/Rome"
+    ports: 
+      - "9999:80"
+    volumes:
+     - "${PWD}/tasmoadmin:/data"
+    labels:
+    - "diun.enable=true"
+    - "diun.include.tags=latest"
+    restart: always
+  broadlinkmanager:
+    image: techblog/broadlinkmanager
+    network_mode: host
+    container_name: broadlinkmanager
+    volumes:
+      - /broadlinkmanager:/opt/broadlinkmanager/datays
+    labels:
+    - "diun.enable=true"
+    - "diun.include.tags=latest"
+    restart: unless-stopped
+  diun:
+    hostname: diun
+    image: crazymax/diun:latest
+    container_name: diun
+    environment:
+      - "TZ=Europe/Rome"
+      - "LOG_LEVEL=info"
+      - "LOG_JSON=false"
+      - "DIUN_WATCH_SCHEDULE=0/20 * * * *"
+      - "DIUN_PROVIDERS_DOCKER=true"
+      - "DIUN_PROVIDERS_DOCKER_WATCHSTOPPED=false"
+      - "DIUN_NOTIF_MQTT_HOST=192.168.1.122"
+      - "DIUN_NOTIF_MQTT_PORT=1883"
+#      - "DIUN_NOTIF_MQTT_USERNAME=username"
+#      - "DIUN_NOTIF_MQTT_PASSWORD=password"
+      - "DIUN_NOTIF_MQTT_CLIENT=diun"
+      - "DIUN_NOTIF_MQTT_TOPIC=diun-watcher"
+      - "DIUN_PROVIDERS_DOCKER_WATCHBYDEFAULT=true"
+      - "PROFILER=mem"
+    volumes:
+      - "/home/scialla/docker-compose/diun:/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    labels:
+      - "diun.enable=true"
+      - "diun.include.tags=latest"
+    restart: always
+

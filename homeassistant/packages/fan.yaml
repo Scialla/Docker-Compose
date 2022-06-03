@@ -1,0 +1,136 @@
+mqtt:
+  fan:
+  - name: "Ventilatore Studio"
+    unique_id: ventilatore_studio
+    state_topic: "stat/T1CH3Studio/POWER2"
+    command_topic: "cmnd/T1CH3Studio/POWER2"
+    availability_topic: "tele/T1CH3Studio/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Ventilatore Silvia"
+    unique_id: ventilatore_silvia
+    state_topic: "stat/VentilatoreSilvia/POWER"
+    command_topic: "cmnd/VentilatoreSilvia/POWER"
+    availability_topic: "tele/VentilatoreSilvia/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Ventilatore Letto"
+    unique_id: ventilatore_letto
+    state_topic: "stat/CameraLetto/POWER2"
+    command_topic: "cmnd/CameraLetto/POWER2"
+    availability_topic: "tele/CameraLetto/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+automation:
+
+  - alias: 'Gestione notturna ventilatore camera letto'
+    id: gestione_notturna_ventilatore_camera_letto
+    trigger:
+      # l'automazione scatta all'ora indicata
+      - platform: time
+        at: '06:00:00'
+      # ...oppure se la temperatura è inferiore a 29°C per 5 min
+      - platform: numeric_state
+        entity_id: sensor.netatmo_valve_7_current_temperature
+        below: 29
+        for:
+          minutes: 5 # sembra che la seconda lettura comunicata sotto i 29 spenga subito prima dei 5 minuti, colpa del BT, in wifi funziona
+      # ...oppure se la temperatura è superiore a 29°C per 5 min    
+      - platform: numeric_state
+        entity_id: sensor.netatmo_valve_7_current_temperature
+        above: 29
+        for:
+          minutes: 1
+    action:
+      - choose:
+        - conditions:
+          # se il trigger è stato di tipo numeric_state ed il valore è > 29
+          - condition: template
+            value_template: "{{ trigger.platform == 'numeric_state' and trigger.to_state.state | float > 29 }}"
+          # ...e scialla è a casa
+          - condition: state
+            entity_id: 'person.scialla'
+            state: 'home'
+          # ...e siamo nella fascia oraria 23:00 - 05:50
+          - condition: time
+            after: '23:00:00'
+            before: '05:50:00'
+          sequence:
+          # accende il ventilatore
+          - service: fan.turn_on
+            data:
+              entity_id: fan.ventilatore_letto
+        # QUESTA DI SEGUITO L'HO COMMENTATA PERCHE'...
+        # Questo perché se non viene verificata la condition per accenderlo, non essendoci condizioni da mettere in AND
+        # per dirgli di spegnerlo, l'unica condizione in cui si può trovare è legata per forza agli altri due trigger.
+        # Quindi puoi tranquillamente impostare lo spegnimento nel default.
+        #
+        #- conditions:
+        #  - condition: or
+        #    conditions: 
+        #    # se il trigger è di tipo numeric_state ed il valore è < 29
+        #    - condition: template
+        #      value_template: "{{ trigger.platform == 'numeric_state' and trigger.to_state.state | float < 29 }}"
+        #    # ...oppure se il trigger è di tipo time 
+        #    - condition: template
+        #      value_template: "{{ trigger.platform == 'time' }}"
+        #  sequence:
+        #    # spegne il ventilatore
+        #    - service: fan.turn_off
+        #      data:
+        #        entity_id: fan.ventilatore_letto
+        # in teoria non serve
+        default:
+          - service: fan.turn_off
+            data:
+              entity_id: fan.ventilatore_letto
+
+  - alias: 'Gestione notturna ventilatore Silvia'
+    id: gestione_notturna_ventilatore_silvia
+    trigger:
+    - platform: time
+      at: '06:30:00'
+    - platform: numeric_state
+      entity_id: sensor.temperatura_silvia
+      below: 30
+      for:
+        minutes: 5 
+    - platform: numeric_state
+      entity_id: sensor.temperatura_silvia
+      above: 30
+      for:
+        minutes: 1
+    action:
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{{ trigger.platform == 'numeric_state' and trigger.to_state.state | float > 30 }}"
+        - condition: state
+          entity_id: 'person.silvia'
+          state: 'home'
+        - condition: time
+          after: '23:00:00'
+          before: '06:20:00'
+        sequence:
+        - service: fan.turn_on
+          data:
+            entity_id: fan.ventilatore_silvia
+      default:
+        - service: fan.turn_off
+          data:
+            entity_id: fan.ventilatore_silvia

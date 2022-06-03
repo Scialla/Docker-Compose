@@ -1,0 +1,99 @@
+sensori_batteria:
+  name: Gruppo Sensori a Batteria
+  entities:
+  - sensor.ble_battery_4c65a8ddd248
+  - sensor.ikeaswitch_battery
+  - sensor.frigo_battery
+  - sensor.pir_scale_battery
+  - sensor.balcone_battery
+  - sensor.condizionatore_battery
+  - sensor.porta_casa_battery
+  - sensor.bagno_grande_battery
+  - sensor.bagno_piccolo_battery
+  - sensor.finestra_silvia_battery
+  - sensor.porta_balcone_cucina_battery
+  - sensor.porta_balcone_ingresso_battery
+  - sensor.porta_balcone_studio_battery
+  - sensor.porta_balcone_letto_battery
+  - sensor.lcd_bagnogrande_battery
+  - sensor.lcd_bagnopiccolo_battery
+  - sensor.ikeamultilightswitch_battery
+  - sensor.ikeamultilightswitch2_battery
+  - sensor.pulsanteikea1_battery
+  - sensor.ikeapir1_battery
+  - sensor.pulsanteikea2_battery
+
+famiglia:
+  name: Famiglia
+  entities:
+  - person.scialla
+  - person.silvia
+  - person.giovanna
+
+led_ingresso:
+  name: Interruttori Led Ingresso
+  entities:
+  - light.led_ingresso
+  - light.led_ingresso2
+  - light.led_ingresso3
+  - light.led_ingresso4
+  - light.led_ingresso5
+
+tutte_le_luci:
+  name: Tutte le luci
+  entities:
+  - light.mensola
+  - light.ballerini
+  - light.neon
+  - light.lampada_scrivania
+  - light.luce_studio
+  - light.led_ingresso
+  - light.luce_ingresso
+  - light.koogeek_lb1_1f299c # Piantana
+  - light.luce_cucina
+  - light.alogena
+  - light.cappa
+  - light.luce_bagno_grande
+  - light.sonoff_10009c0093 # Specchiera
+  - light.luce_bagno_piccolo
+  - light.luce_silvia
+  - light.luce_letto
+  - light.lampada_zanzare
+  - light.luce_balcone
+  - light.striscia_letto
+  - light.wled
+
+device_controllo_on:
+  name: Device da controllare se ON
+  entities:
+  - media_player.lg_tv
+  - media_player.selecline
+  - media_player.samsung
+  - media_player.onkyo
+  - climate.coolix
+  - switch.meross_mss425e_compressore
+  - switch.meross_mss425e_lampada_box
+  - switch.meross_mss425e_presa_box
+  - switch.meross_mss425e_usb_box
+  - switch.ferro_da_stiro
+  - switch.massaggiatore
+  - switch.usb_2
+  - switch.ciabattascrivania_l1
+  - switch.ciabattascrivania_l2
+  - switch.ciabattascrivania_l3
+  - switch.presa_phon
+  - switch.sonoff_10009c0093 # Deumidificatore
+  
+porte_finestre:
+  name: porte_finestre
+  entities:
+  - binary_sensor.bagno_grande_contact
+  - binary_sensor.bagno_piccolo_contact
+  - binary_sensor.porta_balcone_letto_contact
+  - binary_sensor.porta_balcone_cucina_contact
+  - binary_sensor.porta_balcone_ingresso_contact
+  - binary_sensor.porta_casa_contact
+  - binary_sensor.porta_balcone_studio_contact
+  - binary_sensor.finestra_silvia_contact
+
+  

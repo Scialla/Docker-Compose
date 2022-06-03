@@ -1,0 +1,1452 @@
+{
+    "version": 1,
+    "key": "homekit_controller-entity-map",
+    "data": {
+        "pairings": {
+            "90:E2:87:7B:54:2F": {
+                "accessories": [
+                    {
+                        "aid": 1,
+                        "services": [
+                            {
+                                "characteristics": [
+                                    {
+                                        "aid": 1,
+                                        "description": "Name",
+                                        "format": "string",
+                                        "iid": 2,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "value": "Air Quality Sensor-3C26CF"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Manufacturer",
+                                        "format": "string",
+                                        "iid": 3,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000020-0000-1000-8000-0026BB765291",
+                                        "value": "lizzus"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Serial Number",
+                                        "format": "string",
+                                        "iid": 4,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000030-0000-1000-8000-0026BB765291",
+                                        "value": "CC50E33C26CF"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Model",
+                                        "format": "string",
+                                        "iid": 5,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000021-0000-1000-8000-0026BB765291",
+                                        "value": "NODE MCU"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Firmware Revision",
+                                        "format": "string",
+                                        "iid": 6,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000052-0000-1000-8000-0026BB765291",
+                                        "value": "1.4.8"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Identify",
+                                        "format": "bool",
+                                        "iid": 7,
+                                        "perms": [
+                                            "pw"
+                                        ],
+                                        "type": "00000014-0000-1000-8000-0026BB765291"
+                                    }
+                                ],
+                                "hidden": false,
+                                "iid": 1,
+                                "primary": false,
+                                "stype": "accessory-information",
+                                "type": "0000003E-0000-1000-8000-0026BB765291"
+                            },
+                            {
+                                "characteristics": [
+                                    {
+                                        "aid": 1,
+                                        "description": "Name",
+                                        "format": "string",
+                                        "iid": 9,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "value": "Air Quality Sensor"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Air Quality",
+                                        "ev": true,
+                                        "format": "uint8",
+                                        "iid": 10,
+                                        "maxValue": 5,
+                                        "minStep": 1,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "00000095-0000-1000-8000-0026BB765291",
+                                        "valid-values": [
+                                            0,
+                                            1,
+                                            2,
+                                            3,
+                                            4,
+                                            5
+                                        ],
+                                        "value": 1
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Carbon Monoxide Level",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 11,
+                                        "maxValue": 100,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "00000090-0000-1000-8000-0026BB765291",
+                                        "value": 0
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Carbon Dioxide Level",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 12,
+                                        "maxValue": 100000,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "00000093-0000-1000-8000-0026BB765291",
+                                        "value": 255
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Ethanol Level",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 13,
+                                        "maxValue": 100,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "F0000108-03A1-4971-92BF-AF2B7D833922",
+                                        "value": 14
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Ammonium Level",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 14,
+                                        "maxValue": 100,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "F0000109-03A1-4971-92BF-AF2B7D833922",
+                                        "value": 10
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Toluene Level",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 15,
+                                        "maxValue": 100,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "F0000110-03A1-4971-92BF-AF2B7D833922",
+                                        "value": 0
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Acetone Level",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 16,
+                                        "maxValue": 100,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "F0000111-03A1-4971-92BF-AF2B7D833922",
+                                        "value": 12
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Show Setup",
+                                        "ev": false,
+                                        "format": "bool",
+                                        "iid": 17,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "type": "F0000106-03A1-4971-92BF-AF2B7D833922",
+                                        "value": true
+                                    }
+                                ],
+                                "hidden": false,
+                                "iid": 8,
+                                "primary": true,
+                                "stype": "air-quality",
+                                "type": "0000008D-0000-1000-8000-0026BB765291"
+                            },
+                            {
+                                "characteristics": [
+                                    {
+                                        "aid": 1,
+                                        "description": "Name",
+                                        "format": "string",
+                                        "iid": 19,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "value": "Temperature Sensor"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Current Temperature",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 20,
+                                        "maxValue": 100,
+                                        "minStep": 0.100000001490116,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "00000011-0000-1000-8000-0026BB765291",
+                                        "unit": "celsius",
+                                        "value": 22.2000007629395
+                                    }
+                                ],
+                                "hidden": false,
+                                "iid": 18,
+                                "primary": false,
+                                "stype": "temperature",
+                                "type": "0000008A-0000-1000-8000-0026BB765291"
+                            },
+                            {
+                                "characteristics": [
+                                    {
+                                        "aid": 1,
+                                        "description": "Name",
+                                        "format": "string",
+                                        "iid": 22,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "value": "Humidity Sensor"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "Current Relative Humidity",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 23,
+                                        "maxValue": 100,
+                                        "minStep": 1,
+                                        "minValue": 0,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "type": "00000010-0000-1000-8000-0026BB765291",
+                                        "unit": "percentage",
+                                        "value": 50.9000015258789
+                                    }
+                                ],
+                                "hidden": false,
+                                "iid": 21,
+                                "primary": false,
+                                "stype": "humidity",
+                                "type": "00000082-0000-1000-8000-0026BB765291"
+                            },
+                            {
+                                "characteristics": [
+                                    {
+                                        "aid": 1,
+                                        "description": "Name",
+                                        "format": "string",
+                                        "iid": 25,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "value": "Setup"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "1) Actual Dev Type",
+                                        "format": "string",
+                                        "iid": 107,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "F0000107-03A1-4971-92BF-AF2B7D833922",
+                                        "value": "Air Quality Sensor"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "3) Offset HUM",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 113,
+                                        "maxValue": 15,
+                                        "minStep": 1,
+                                        "minValue": -15,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "type": "F0000113-03A1-4971-92BF-AF2B7D833922",
+                                        "unit": "percentage",
+                                        "value": 0
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "2) Offset TEMP",
+                                        "ev": false,
+                                        "format": "float",
+                                        "iid": 112,
+                                        "maxValue": 15,
+                                        "minStep": 0.100000001490116,
+                                        "minValue": -15,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "type": "F0000112-03A1-4971-92BF-AF2B7D833922",
+                                        "unit": "celsius",
+                                        "value": 0
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "4) Wifi IP Addr",
+                                        "format": "string",
+                                        "iid": 114,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "type": "F0000114-03A1-4971-92BF-AF2B7D833922",
+                                        "value": "192.168.1.135"
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "5) Wifi Reset",
+                                        "ev": false,
+                                        "format": "bool",
+                                        "iid": 115,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "type": "F0000115-03A1-4971-92BF-AF2B7D833922",
+                                        "value": false
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "6) Reboot",
+                                        "ev": false,
+                                        "format": "bool",
+                                        "iid": 116,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "type": "F0000116-03A1-4971-92BF-AF2B7D833922",
+                                        "value": false
+                                    },
+                                    {
+                                        "aid": 1,
+                                        "description": "7) Firmware Update",
+                                        "ev": false,
+                                        "format": "bool",
+                                        "iid": 117,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "type": "F0000117-03A1-4971-92BF-AF2B7D833922",
+                                        "value": false
+                                    }
+                                ],
+                                "hidden": false,
+                                "iid": 24,
+                                "primary": false,
+                                "stype": "Unknown Service: F00000FF-03A1-4971-92BF-AF2B7D833922",
+                                "type": "F00000FF-03A1-4971-92BF-AF2B7D833922"
+                            }
+                        ]
+                    }
+                ],
+                "config_num": 1
+            },
+            "A6:8B:C0:53:8D:2F": {
+                "config_num": 1,
+                "accessories": [
+                    {
+                        "aid": 1,
+                        "services": [
+                            {
+                                "type": "0000003E-0000-1000-8000-0026BB765291",
+                                "iid": 1,
+                                "characteristics": [
+                                    {
+                                        "iid": 2,
+                                        "value": "Koogeek-LB1-1F299C",
+                                        "format": "string",
+                                        "maxLen": 64,
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr"
+                                        ]
+                                    },
+                                    {
+                                        "iid": 3,
+                                        "value": "Koogeek",
+                                        "format": "string",
+                                        "maxLen": 64,
+                                        "type": "00000020-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr"
+                                        ]
+                                    },
+                                    {
+                                        "iid": 4,
+                                        "value": "LB1",
+                                        "format": "string",
+                                        "maxLen": 64,
+                                        "type": "00000021-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr"
+                                        ]
+                                    },
+                                    {
+                                        "iid": 5,
+                                        "value": "EUCB091745001457",
+                                        "format": "string",
+                                        "maxLen": 64,
+                                        "type": "00000030-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr"
+                                        ]
+                                    },
+                                    {
+                                        "iid": 6,
+                                        "format": "bool",
+                                        "type": "00000014-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pw"
+                                        ]
+                                    },
+                                    {
+                                        "iid": 23,
+                                        "value": "2.2.2",
+                                        "format": "string",
+                                        "type": "00000052-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr"
+                                        ]
+                                    }
+                                ],
+                                "stype": "accessory-information"
+                            },
+                            {
+                                "type": "00000043-0000-1000-8000-0026BB765291",
+                                "iid": 7,
+                                "primary": true,
+                                "characteristics": [
+                                    {
+                                        "iid": 8,
+                                        "value": false,
+                                        "format": "bool",
+                                        "type": "00000025-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "ev": true
+                                    },
+                                    {
+                                        "iid": 9,
+                                        "value": 44.0,
+                                        "format": "float",
+                                        "unit": "arcdegrees",
+                                        "minValue": 0.0,
+                                        "maxValue": 359.0,
+                                        "minStep": 1.0,
+                                        "type": "00000013-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "ev": true
+                                    },
+                                    {
+                                        "iid": 10,
+                                        "value": 0.0,
+                                        "format": "float",
+                                        "unit": "percentage",
+                                        "minValue": 0.0,
+                                        "maxValue": 100.0,
+                                        "minStep": 1.0,
+                                        "type": "0000002F-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "ev": true
+                                    },
+                                    {
+                                        "iid": 11,
+                                        "value": 100,
+                                        "format": "int",
+                                        "unit": "percentage",
+                                        "minValue": 0,
+                                        "maxValue": 100,
+                                        "minStep": 1,
+                                        "type": "00000008-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "ev": true
+                                    },
+                                    {
+                                        "iid": 12,
+                                        "value": "Lightbulb",
+                                        "format": "string",
+                                        "maxLen": 64,
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "perms": [
+                                            "pr"
+                                        ]
+                                    }
+                                ],
+                                "stype": "lightbulb"
+                            },
+                            {
+                                "type": "4AAAF940-0DEC-11E5-B939-0800200C9A66",
+                                "iid": 13,
+                                "characteristics": [
+                                    {
+                                        "iid": 14,
+                                        "value": "AHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                                        "format": "tlv8",
+                                        "description": "TIMER_SETTINGS",
+                                        "type": "4AAAF942-0DEC-11E5-B939-0800200C9A66",
+                                        "perms": [
+                                            "pr",
+                                            "pw"
+                                        ]
+                                    }
+                                ],
+                                "stype": "Unknown Service: 4AAAF940-0DEC-11E5-B939-0800200C9A66"
+                            },
+                            {
+                                "type": "151909D0-3802-11E4-916C-0800200C9A66",
+                                "iid": 15,
+                                "hidden": true,
+                                "characteristics": [
+                                    {
+                                        "iid": 16,
+                                        "value": "url,data",
+                                        "format": "string",
+                                        "description": "FW Upgrade supported types",
+                                        "type": "151909D2-3802-11E4-916C-0800200C9A66",
+                                        "perms": [
+                                            "pr",
+                                            "hd"
+                                        ]
+                                    },
+                                    {
+                                        "iid": 17,
+                                        "format": "string",
+                                        "description": "FW Upgrade URL",
+                                        "maxLen": 256,
+                                        "type": "151909D1-3802-11E4-916C-0800200C9A66",
+                                        "perms": [
+                                            "pw",
+                                            "hd"
+                                        ]
+                                    },
+                                    {
+                                        "iid": 18,
+                                        "value": 0,
+                                        "format": "int",
+                                        "description": "FW Upgrade Status",
+                                        "type": "151909D6-3802-11E4-916C-0800200C9A66",
+                                        "perms": [
+                                            "pr",
+                                            "ev",
+                                            "hd"
+                                        ],
+                                        "ev": false
+                                    },
+                                    {
+                                        "iid": 19,
+                                        "format": "data",
+                                        "description": "FW Upgrade Data",
+                                        "type": "151909D7-3802-11E4-916C-0800200C9A66",
+                                        "perms": [
+                                            "pw",
+                                            "hd"
+                                        ]
+                                    }
+                                ],
+                                "stype": "Unknown Service: 151909D0-3802-11E4-916C-0800200C9A66"
+                            },
+                            {
+                                "type": "151909D3-3802-11E4-916C-0800200C9A66",
+                                "iid": 20,
+                                "characteristics": [
+                                    {
+                                        "iid": 21,
+                                        "value": 0,
+                                        "format": "int",
+                                        "description": "Timezone",
+                                        "type": "151909D5-3802-11E4-916C-0800200C9A66",
+                                        "perms": [
+                                            "pr",
+                                            "pw"
+                                        ]
+                                    },
+                                    {
+                                        "iid": 22,
+                                        "value": 1606750416,
+                                        "format": "int",
+                                        "description": "Time value since Epoch",
+                                        "type": "151909D4-3802-11E4-916C-0800200C9A66",
+                                        "perms": [
+                                            "pr",
+                                            "pw"
+                                        ]
+                                    }
+                                ],
+                                "stype": "Unknown Service: 151909D3-3802-11E4-916C-0800200C9A66"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "75:0D:BF:FF:DA:F5": {
+                "config_num": 29,
+                "accessories": [
+                    {
+                        "aid": 1,
+                        "services": [
+                            {
+                                "type": "0000003E-0000-1000-8000-0026BB765291",
+                                "iid": 1,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 2,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Relay"
+                                    },
+                                    {
+                                        "type": "00000020-0000-1000-8000-0026BB765291",
+                                        "iid": 3,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo"
+                                    },
+                                    {
+                                        "type": "00000021-0000-1000-8000-0026BB765291",
+                                        "iid": 4,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Relay"
+                                    },
+                                    {
+                                        "type": "00000030-0000-1000-8000-0026BB765291",
+                                        "iid": 5,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "g0a1e8c"
+                                    },
+                                    {
+                                        "type": "00000014-0000-1000-8000-0026BB765291",
+                                        "iid": 6,
+                                        "perms": [
+                                            "pw"
+                                        ],
+                                        "format": "bool"
+                                    },
+                                    {
+                                        "type": "00000052-0000-1000-8000-0026BB765291",
+                                        "iid": 7,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "216.0.0"
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": false
+                            },
+                            {
+                                "type": "000000A2-0000-1000-8000-0026BB765291",
+                                "iid": 8,
+                                "characteristics": [
+                                    {
+                                        "type": "00000037-0000-1000-8000-0026BB765291",
+                                        "iid": 9,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "1.1.0"
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": false
+                            },
+                            {
+                                "type": "EA22EA53-6227-55EA-AC24-73ACF3EEA0E8",
+                                "iid": 65535,
+                                "characteristics": [
+                                    {
+                                        "type": "4D05AE82-5A22-5BD6-A730-B7F8B4F3218D",
+                                        "iid": 32,
+                                        "perms": [
+                                            "pw"
+                                        ],
+                                        "format": "bool"
+                                    },
+                                    {
+                                        "type": "00F44C18-042E-5C4E-9A4C-561D44DCD804",
+                                        "iid": 30,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "g0a1e8c"
+                                    }
+                                ],
+                                "hidden": true,
+                                "primary": false
+                            }
+                        ]
+                    },
+                    {
+                        "aid": 2,
+                        "services": [
+                            {
+                                "type": "0000003E-0000-1000-8000-0026BB765291",
+                                "iid": 1,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 2,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Smart Thermostat"
+                                    },
+                                    {
+                                        "type": "00000020-0000-1000-8000-0026BB765291",
+                                        "iid": 3,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo"
+                                    },
+                                    {
+                                        "type": "00000021-0000-1000-8000-0026BB765291",
+                                        "iid": 4,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Smart Thermostat"
+                                    },
+                                    {
+                                        "type": "00000030-0000-1000-8000-0026BB765291",
+                                        "iid": 5,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "j0a33a0"
+                                    },
+                                    {
+                                        "type": "00000014-0000-1000-8000-0026BB765291",
+                                        "iid": 7,
+                                        "perms": [
+                                            "pw"
+                                        ],
+                                        "format": "bool"
+                                    },
+                                    {
+                                        "type": "00000052-0000-1000-8000-0026BB765291",
+                                        "iid": 6,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "73"
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": false
+                            },
+                            {
+                                "type": "0000004A-0000-1000-8000-0026BB765291",
+                                "iid": 8,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 9,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Thermostat"
+                                    },
+                                    {
+                                        "type": "0000000F-0000-1000-8000-0026BB765291",
+                                        "iid": 10,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 0,
+                                        "minValue": 0,
+                                        "maxValue": 1,
+                                        "minStep": 1,
+                                        "valid-values-range": [
+                                            0,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "type": "00000033-0000-1000-8000-0026BB765291",
+                                        "iid": 11,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 1,
+                                        "minValue": 0,
+                                        "maxValue": 1,
+                                        "minStep": 1,
+                                        "valid-values-range": [
+                                            0,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "type": "00000011-0000-1000-8000-0026BB765291",
+                                        "iid": 12,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "format": "float",
+                                        "value": 18.2,
+                                        "minValue": 0.0,
+                                        "maxValue": 50.0,
+                                        "minStep": 0.1,
+                                        "unit": "celsius"
+                                    },
+                                    {
+                                        "type": "00000035-0000-1000-8000-0026BB765291",
+                                        "iid": 13,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "float",
+                                        "value": 17.5,
+                                        "minValue": 5.0,
+                                        "maxValue": 30.0,
+                                        "minStep": 0.5,
+                                        "unit": "celsius"
+                                    },
+                                    {
+                                        "type": "00000036-0000-1000-8000-0026BB765291",
+                                        "iid": 14,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 0,
+                                        "maxValue": 0,
+                                        "minValue": 0,
+                                        "minStep": 1,
+                                        "valid-values": [
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": true
+                            }
+                        ]
+                    },
+                    {
+                        "aid": 3,
+                        "services": [
+                            {
+                                "type": "0000003E-0000-1000-8000-0026BB765291",
+                                "iid": 1,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 2,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Valve 1"
+                                    },
+                                    {
+                                        "type": "00000020-0000-1000-8000-0026BB765291",
+                                        "iid": 3,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo"
+                                    },
+                                    {
+                                        "type": "00000021-0000-1000-8000-0026BB765291",
+                                        "iid": 4,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Valve"
+                                    },
+                                    {
+                                        "type": "00000030-0000-1000-8000-0026BB765291",
+                                        "iid": 5,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "o046cd6"
+                                    },
+                                    {
+                                        "type": "00000014-0000-1000-8000-0026BB765291",
+                                        "iid": 7,
+                                        "perms": [
+                                            "pw"
+                                        ],
+                                        "format": "bool"
+                                    },
+                                    {
+                                        "type": "00000052-0000-1000-8000-0026BB765291",
+                                        "iid": 6,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "83"
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": false
+                            },
+                            {
+                                "type": "0000004A-0000-1000-8000-0026BB765291",
+                                "iid": 8,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 9,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Valve 1"
+                                    },
+                                    {
+                                        "type": "0000000F-0000-1000-8000-0026BB765291",
+                                        "iid": 10,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 0,
+                                        "minValue": 0,
+                                        "maxValue": 1,
+                                        "minStep": 1,
+                                        "valid-values-range": [
+                                            0,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "type": "00000033-0000-1000-8000-0026BB765291",
+                                        "iid": 11,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 1,
+                                        "minValue": 1,
+                                        "maxValue": 1,
+                                        "minStep": 1,
+                                        "valid-values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "type": "00000011-0000-1000-8000-0026BB765291",
+                                        "iid": 12,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "format": "float",
+                                        "value": 19.0,
+                                        "maxValue": 50.0,
+                                        "minValue": 0.0,
+                                        "minStep": 0.5,
+                                        "unit": "celsius"
+                                    },
+                                    {
+                                        "type": "00000035-0000-1000-8000-0026BB765291",
+                                        "iid": 13,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "float",
+                                        "value": 17.5,
+                                        "maxValue": 30.0,
+                                        "minValue": 5.0,
+                                        "minStep": 0.5,
+                                        "unit": "celsius"
+                                    },
+                                    {
+                                        "type": "00000036-0000-1000-8000-0026BB765291",
+                                        "iid": 14,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 0,
+                                        "maxValue": 0,
+                                        "minValue": 0,
+                                        "minStep": 1,
+                                        "valid-values": [
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": true
+                            }
+                        ]
+                    },
+                    {
+                        "aid": 4,
+                        "services": [
+                            {
+                                "type": "0000003E-0000-1000-8000-0026BB765291",
+                                "iid": 1,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 2,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Valve 2"
+                                    },
+                                    {
+                                        "type": "00000020-0000-1000-8000-0026BB765291",
+                                        "iid": 3,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo"
+                                    },
+                                    {
+                                        "type": "00000021-0000-1000-8000-0026BB765291",
+                                        "iid": 4,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Valve"
+                                    },
+                                    {
+                                        "type": "00000030-0000-1000-8000-0026BB765291",
+                                        "iid": 5,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "o1345c8"
+                                    },
+                                    {
+                                        "type": "00000014-0000-1000-8000-0026BB765291",
+                                        "iid": 7,
+                                        "perms": [
+                                            "pw"
+                                        ],
+                                        "format": "bool"
+                                    },
+                                    {
+                                        "type": "00000052-0000-1000-8000-0026BB765291",
+                                        "iid": 6,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "83"
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": false
+                            },
+                            {
+                                "type": "0000004A-0000-1000-8000-0026BB765291",
+                                "iid": 8,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 9,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Valve 2"
+                                    },
+                                    {
+                                        "type": "0000000F-0000-1000-8000-0026BB765291",
+                                        "iid": 10,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 0,
+                                        "minValue": 0,
+                                        "maxValue": 1,
+                                        "minStep": 1,
+                                        "valid-values-range": [
+                                            0,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "type": "00000033-0000-1000-8000-0026BB765291",
+                                        "iid": 11,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 1,
+                                        "minValue": 1,
+                                        "maxValue": 1,
+                                        "minStep": 1,
+                                        "valid-values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "type": "00000011-0000-1000-8000-0026BB765291",
+                                        "iid": 12,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "format": "float",
+                                        "value": 18.5,
+                                        "maxValue": 50.0,
+                                        "minValue": 0.0,
+                                        "minStep": 0.5,
+                                        "unit": "celsius"
+                                    },
+                                    {
+                                        "type": "00000035-0000-1000-8000-0026BB765291",
+                                        "iid": 13,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "float",
+                                        "value": 17.5,
+                                        "maxValue": 30.0,
+                                        "minValue": 5.0,
+                                        "minStep": 0.5,
+                                        "unit": "celsius"
+                                    },
+                                    {
+                                        "type": "00000036-0000-1000-8000-0026BB765291",
+                                        "iid": 14,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 0,
+                                        "maxValue": 0,
+                                        "minValue": 0,
+                                        "minStep": 1,
+                                        "valid-values": [
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": true
+                            }
+                        ]
+                    },
+                    {
+                        "aid": 5,
+                        "services": [
+                            {
+                                "type": "0000003E-0000-1000-8000-0026BB765291",
+                                "iid": 1,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 2,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Valve 3"
+                                    },
+                                    {
+                                        "type": "00000020-0000-1000-8000-0026BB765291",
+                                        "iid": 3,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo"
+                                    },
+                                    {
+                                        "type": "00000021-0000-1000-8000-0026BB765291",
+                                        "iid": 4,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Netatmo Valve"
+                                    },
+                                    {
+                                        "type": "00000030-0000-1000-8000-0026BB765291",
+                                        "iid": 5,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "o03b487"
+                                    },
+                                    {
+                                        "type": "00000014-0000-1000-8000-0026BB765291",
+                                        "iid": 7,
+                                        "perms": [
+                                            "pw"
+                                        ],
+                                        "format": "bool"
+                                    },
+                                    {
+                                        "type": "00000052-0000-1000-8000-0026BB765291",
+                                        "iid": 6,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "83"
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": false
+                            },
+                            {
+                                "type": "0000004A-0000-1000-8000-0026BB765291",
+                                "iid": 8,
+                                "characteristics": [
+                                    {
+                                        "type": "00000023-0000-1000-8000-0026BB765291",
+                                        "iid": 9,
+                                        "perms": [
+                                            "pr"
+                                        ],
+                                        "format": "string",
+                                        "value": "Valve 3"
+                                    },
+                                    {
+                                        "type": "0000000F-0000-1000-8000-0026BB765291",
+                                        "iid": 10,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 0,
+                                        "minValue": 0,
+                                        "maxValue": 1,
+                                        "minStep": 1,
+                                        "valid-values-range": [
+                                            0,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "type": "00000033-0000-1000-8000-0026BB765291",
+                                        "iid": 11,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 1,
+                                        "minValue": 1,
+                                        "maxValue": 1,
+                                        "minStep": 1,
+                                        "valid-values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "type": "00000011-0000-1000-8000-0026BB765291",
+                                        "iid": 12,
+                                        "perms": [
+                                            "pr",
+                                            "ev"
+                                        ],
+                                        "format": "float",
+                                        "value": 18.0,
+                                        "maxValue": 50.0,
+                                        "minValue": 0.0,
+                                        "minStep": 0.5,
+                                        "unit": "celsius"
+                                    },
+                                    {
+                                        "type": "00000035-0000-1000-8000-0026BB765291",
+                                        "iid": 13,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "float",
+                                        "value": 17.5,
+                                        "maxValue": 30.0,
+                                        "minValue": 5.0,
+                                        "minStep": 0.5,
+                                        "unit": "celsius"
+                                    },
+                                    {
+                                        "type": "00000036-0000-1000-8000-0026BB765291",
+                                        "iid": 14,
+                                        "perms": [
+                                            "pr",
+                                            "pw",
+                                            "ev"
+                                        ],
+                                        "format": "uint8",
+                                        "value": 0,
+                                        "maxValue": 0,
+                                        "minValue": 0,
+                                        "minStep": 1,
+                                        "valid-values": [
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "hidden": false,
+                                "primary": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

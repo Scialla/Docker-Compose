@@ -1,0 +1,392 @@
+Fatal Python error: Segmentation fault
+
+Thread 0x41de8440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x46cff440 (most recent call first):
+  File "/srv/homeassistant/lib/python3.8/site-packages/paho/mqtt/client.py", line 1167 in loop
+  File "/srv/homeassistant/lib/python3.8/site-packages/paho/mqtt/client.py", line 1779 in loop_forever
+  File "/srv/homeassistant/lib/python3.8/site-packages/paho/mqtt/client.py", line 3452 in _thread_main
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x431eb440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x34dcc440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x425e9440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x39bd6440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x449ee440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x365cf440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x459f0440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x494f8440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x4b4fc440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x49cf9440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x3cfdd440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x3bfdb440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x3dfdf440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x4a4fa440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x4acfb440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x4bcfd440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x4c4fe440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x51b3f440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x403e4440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x5077f440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x40be5440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x4ccff440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x54eb7440 (most recent call first):
+  File "/srv/homeassistant/lib/python3.8/site-packages/scapy/supersocket.py", line 259 in select
+  File "/srv/homeassistant/lib/python3.8/site-packages/scapy/sendrecv.py", line 1175 in _run
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x5643e440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x56c3f440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x57440440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x57c41440 (most recent call first):
+  File "/usr/local/lib/python3.8/threading.py", line 302 in wait
+  File "/usr/local/lib/python3.8/queue.py", line 170 in get
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 249 in _pooled
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x58442440 (most recent call first):
+  File "/usr/local/lib/python3.8/threading.py", line 302 in wait
+  File "/usr/local/lib/python3.8/queue.py", line 170 in get
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 249 in _pooled
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x58c43440 (most recent call first):
+  File "/usr/local/lib/python3.8/threading.py", line 302 in wait
+  File "/usr/local/lib/python3.8/queue.py", line 170 in get
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 249 in _pooled
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x59444440 (most recent call first):
+  File "/usr/local/lib/python3.8/ssl.py", line 1099 in read
+  File "/usr/local/lib/python3.8/ssl.py", line 1241 in recv_into
+  File "/usr/local/lib/python3.8/socket.py", line 669 in readinto
+  File "/usr/local/lib/python3.8/http/client.py", line 268 in _read_status
+  File "/usr/local/lib/python3.8/http/client.py", line 307 in begin
+  File "/usr/local/lib/python3.8/http/client.py", line 1347 in getresponse
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 398 in _make_request
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614 in urlopen
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244 in urlopen
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148 in request_encode_body
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68 in request
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/utils/request.py", line 252 in _request_wrapper
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/utils/request.py", line 349 in post
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/bot.py", line 245 in _post
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/bot.py", line 2638 in get_updates
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/bot.py", line 135 in decorator
+  File "<decorator-gen-31>", line 2 in get_updates
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/updater.py", line 416 in polling_action_cb
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/updater.py", line 465 in _network_loop_retry
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/updater.py", line 441 in _start_polling
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/updater.py", line 236 in _thread_wrapper
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x59c45440 (most recent call first):
+  File "/usr/local/lib/python3.8/threading.py", line 302 in wait
+  File "/usr/local/lib/python3.8/queue.py", line 170 in get
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 249 in _pooled
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x5a446440 (most recent call first):
+  File "/usr/local/lib/python3.8/threading.py", line 306 in wait
+  File "/usr/local/lib/python3.8/queue.py", line 179 in get
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 362 in start
+  File "/srv/homeassistant/lib/python3.8/site-packages/telegram/ext/updater.py", line 236 in _thread_wrapper
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x5ac47440 (most recent call first):
+  File "/usr/local/lib/python3.8/threading.py", line 302 in wait
+  File "/usr/local/lib/python3.8/threading.py", line 558 in wait
+  File "/srv/homeassistant/lib/python3.8/site-packages/apscheduler/schedulers/blocking.py", line 28 in _main_loop
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x5c731440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x5d53d440 (most recent call first):
+  File "/srv/homeassistant/lib/python3.8/site-packages/zeroconf/_services/browser.py", line 535 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x5ef78440 (most recent call first):
+  File "/srv/homeassistant/lib/python3.8/site-packages/tuya_iot/openmq.py", line 156 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x5fe2a440 (most recent call first):
+  File "/srv/homeassistant/lib/python3.8/site-packages/paho/mqtt/client.py", line 1167 in loop
+  File "/srv/homeassistant/lib/python3.8/site-packages/paho/mqtt/client.py", line 1779 in loop_forever
+  File "/srv/homeassistant/lib/python3.8/site-packages/paho/mqtt/client.py", line 3452 in _thread_main
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x6077d440 (most recent call first):
+  File "/home/homeassistant/.homeassistant/custom_components/webrtc/utils.py", line 180 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x61119440 (most recent call first):
+  File "/usr/local/lib/python3.8/selectors.py", line 468 in select
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1823 in _run_once
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 570 in run_forever
+  File "/home/homeassistant/.homeassistant/custom_components/ble_monitor/__init__.py", line 631 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x61d56440 (most recent call first):
+  File "/srv/homeassistant/lib/python3.8/site-packages/pyudev/_util.py", line 159 in eintr_retry_call
+  File "/srv/homeassistant/lib/python3.8/site-packages/pyudev/_os/poll.py", line 95 in poll
+  File "/srv/homeassistant/lib/python3.8/site-packages/pyudev/_util.py", line 159 in eintr_retry_call
+  File "/srv/homeassistant/lib/python3.8/site-packages/pyudev/monitor.py", line 522 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x6dff3440 (most recent call first):
+  File "/usr/local/lib/python3.8/logging/handlers.py", line 1431 in dequeue
+  File "/usr/local/lib/python3.8/logging/handlers.py", line 1482 in _monitor
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Current thread 0x6e834440 (most recent call first):
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717 in do_execute
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1771 in _execute_context
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1452 in _execute_clauseelement
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 323 in _execute_on_connection
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1583 in _execute_20
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1219 in _emit_insert_statements
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 242 in save_obj
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 630 in execute
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 456 in execute
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3398 in _flush
+  File "/srv/homeassistant/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3298 in flush
+  File "/srv/homeassistant/lib/python3.8/site-packages/homeassistant/components/recorder/__init__.py", line 917 in _commit_event_session
+  File "/srv/homeassistant/lib/python3.8/site-packages/homeassistant/components/recorder/__init__.py", line 898 in _commit_event_session_or_retry
+  File "/srv/homeassistant/lib/python3.8/site-packages/homeassistant/components/recorder/__init__.py", line 835 in _process_one_event
+  File "/srv/homeassistant/lib/python3.8/site-packages/homeassistant/components/recorder/__init__.py", line 697 in _process_one_event_or_recover
+  File "/srv/homeassistant/lib/python3.8/site-packages/homeassistant/components/recorder/__init__.py", line 688 in _run_event_loop
+  File "/srv/homeassistant/lib/python3.8/site-packages/homeassistant/components/recorder/__init__.py", line 679 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x6f5fd440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x6fdfe440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x705ff440 (most recent call first):
+  File "/srv/homeassistant/lib/python3.8/site-packages/paho/mqtt/client.py", line 1167 in loop
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57 in run
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 80 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x70fff440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x719ff440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x723ff440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x72dff440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x737bf440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x741ff440 (most recent call first):
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 78 in _worker
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x74ba9440 (most recent call first):
+  File "/usr/local/lib/python3.8/logging/handlers.py", line 1431 in dequeue
+  File "/usr/local/lib/python3.8/logging/handlers.py", line 1482 in _monitor
+  File "/usr/local/lib/python3.8/threading.py", line 870 in run
+  File "/usr/local/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/usr/local/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x76f94040 (most recent call first):
+  File "/usr/local/lib/python3.8/selectors.py", line 468 in select
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1823 in _run_once
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 570 in run_forever
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 603 in run_until_complete
+  File "/srv/homeassistant/lib/python3.8/site-packages/homeassistant/runner.py", line 121 in run
+  File "/srv/homeassistant/lib/python3.8/site-packages/homeassistant/__main__.py", line 318 in main
+  File "/srv/homeassistant/bin/hass", line 8 in <module>

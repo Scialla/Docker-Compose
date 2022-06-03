@@ -1,0 +1,41 @@
+automation:
+
+  - alias: "Test"
+    id: test
+    trigger:
+    - platform: state
+      entity_id: input_boolean.test
+      to: 'on'
+    action:
+    - service: media_player.volume_set
+      data: 
+        entity_id: media_player.altoparlante
+        volume_level: 1.0
+    - service: notify.alexa_media
+      data:
+        target: 
+          - media_player.altoparlante
+        data:
+          type: tts
+          method: speak
+        message: >-
+          <audio src="soundbank://soundlibrary/alarms/air_horns/air_horns_03"/>
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.test
+    - service: media_player.volume_set
+      data: 
+        entity_id: media_player.altoparlante
+        volume_level: 0.5
+
+  - alias: "Fake Call"
+    id: fake_call
+    trigger: 
+      - platform: state
+        entity_id: input_boolean.fake_call
+        to: 'on'
+    action:
+      - service: notify.telegram_call
+        data:
+          message: Ciao Davide, devi venire subito, abbiamo bisogno di te a lavoro immediatamente! Lascia perdere quello che stai facendo e vieni subito!
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.fake_call

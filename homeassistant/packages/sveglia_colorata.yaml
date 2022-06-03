@@ -1,0 +1,32 @@
+input_datetime:
+  sveglia_colorata:
+    name: "Sveglia Colorata"
+    has_date: false
+    has_time: true
+
+automation:
+- alias: "Sveglia colorata"
+  id: sveglia_colorata
+  trigger: 
+    platform: time
+    at: input_datetime.sveglia_colorata
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: "on"
+    - condition: template
+      value_template: "{{ states('person.scialla') == 'home' }}"    
+  action:
+    - service: light.turn_on
+      entity_id: light.striscia_letto
+      data:
+        hs_color:
+        - "{{ range(360)|random }}"
+        - "{{ range(80,101)|random }}"
+        brightness_pct: 100
+    - delay:
+        minutes: 5
+    - service: light.turn_off
+      entity_id: light.striscia_letto

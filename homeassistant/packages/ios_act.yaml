@@ -1,0 +1,101 @@
+automation:
+
+  - alias: Apertura automatica portone
+    id: apertura_automatica_portone
+    trigger:
+    - platform: zone
+      entity_id: 
+        - person.scialla
+        - person.silvia
+        - person.giovanna
+      zone: zone.home
+      event: enter
+    action:
+    - service: >
+        {% if trigger.entity_id == 'person.scialla' %}
+          notify.mobile_app_iphone_x_di_scialla
+        {% elif trigger.entity_id == 'person.silvia' %}
+          notify.mobile_app_iphone_di_silvia
+        {% else %}
+          notify.mobile_app_iphone_di_giovanna
+        {% endif %} 
+      data:
+        message: "Aprire il portone?"
+        data:
+          actions:
+            - action: "apri_portone"
+              title: "SI"
+              destructive: true
+            - action: "non_aprire_portone"
+              title: "NO"
+              destructive: true
+
+  - alias: "Risposta su apertura portone"
+    id: risposta_su_apertura_portone
+    trigger:
+      - platform: event
+        event_type: mobile_app_notification_action
+        event_data:
+          action: "apri_portone"
+    action:
+      - service: switch.turn_on
+        entity_id: switch.portone
+      - service: notify.scialla
+        data: 
+          title: 'Portone'
+          message: "Aperto"
+      - condition: or
+        conditions:
+          - condition: sun
+            after: sunset
+          - condition: sun
+            before: sunrise
+      - service: light.turn_on
+        entity_id: light.luce_scale
+      - service: notify.scialla
+        data: 
+          title: 'Luce Scale'
+          message: "Accesa"  
+
+  - alias: "Apertura Portone"
+    id: apertura_portone
+    initial_state: true
+    trigger:
+      - platform: event
+        event_type: ios.action_fired
+        event_data:
+          actionName: 'apertura_portone'
+    action:
+      service: switch.turn_on
+      entity_id: switch.portone
+
+  - alias: "Accensione Luce Scale"
+    id: accensione_luce_scala
+    initial_state: true
+    trigger:
+      - platform: event
+        event_type: ios.action_fired
+        event_data:
+          actionName: 'luce_scale'
+    action:
+      service: light.turn_on
+      entity_id: light.luce_scale
+
+  - alias: "Notifica rientro a casa"
+    id: notifica_rientro_a_casa
+    initial_state: true
+    trigger:
+      - platform: event
+        event_type: ios.action_fired
+        event_data:
+          actionName: 'sto_entrando'
+    action:
+      - service: notify.alexa_media
+        data:
+          target:
+            - media_player.ovunque
+          data:
+            type: announce
+            method: spoken
+          message: "Davide sta arrivando!"
+

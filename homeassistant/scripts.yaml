@@ -1,0 +1,420 @@
+#scripts:
+
+remco_awake:
+  alias: RDS Relax
+  sequence:
+  - data:
+      entity_id: "media_player.echo_studio"
+      media_content_id: "RDS Relax ovunque"
+      media_content_type: "AMAZON_MUSIC"
+    service: media_player.play_media
+
+rtlbest:
+  alias: RTL Best
+  sequence:
+  - data:
+      entity_id: "media_player.echo_studio"
+      media_content_id: "RTL Best ovunque"
+      media_content_type: "TUNEIN"
+    service: media_player.play_media
+sequenza_foto_ingresso:
+  alias: Raffica foto ingresso
+  sequence:
+    - service: camera.snapshot
+      data:
+        entity_id: camera.ingresso
+        filename: '/config/snapshots/ingresso.jpg'
+    - service: notify.scialla
+      data:
+        title: Telecamera
+        message: "Movimenti Ingresso"
+        data:
+          photo:
+            - file: /config/snapshots/ingresso.jpg
+              caption: Ingresso
+    - delay:
+        seconds: 6
+    - service: camera.snapshot
+      data:
+        entity_id: camera.ingresso
+        filename: '/config/snapshots/ingresso.jpg'
+    - service: notify.scialla
+      data:
+        title: Telecamera
+        message: "Movimenti Ingresso"
+        data:
+          photo:
+            - file: /config/snapshots/ingresso.jpg
+              caption: Ingresso
+    - delay:
+        seconds: 5
+    - service: camera.snapshot
+      data:
+        entity_id: camera.ingresso
+        filename: '/config/snapshots/ingresso.jpg'
+    - service: notify.scialla
+      data:
+        title: Telecamera
+        message: "Movimenti Ingresso"
+        data:
+          photo:
+            - file: /config/snapshots/ingresso.jpg
+              caption: Ingresso   
+    - delay:
+        seconds: 4
+    - service: camera.snapshot
+      data:
+        entity_id: camera.ingresso
+        filename: '/config/snapshots/ingresso.jpg'
+    - service: notify.scialla
+      data:
+        title: Telecamera
+        message: "Movimenti Ingresso"
+        data:
+          photo:
+            - file: /config/snapshots/ingresso.jpg
+              caption: Ingresso  
+
+sequenza_foto_box:
+  alias: Raffica foto Box
+  sequence:
+    - service: camera.snapshot
+      data:
+        entity_id: camera.box
+        filename: '/config/snapshots/box.jpg'
+    - service: notify.scialla
+      data:
+        title: Telecamera
+        message: "Movimenti Box"
+        data:
+          photo:
+            - file: /config/snapshots/box.jpg
+              caption: Box
+    - delay:
+        seconds: 6
+    - service: camera.snapshot
+      data:
+        entity_id: camera.box
+        filename: '/config/snapshots/box.jpg'
+    - service: notify.scialla
+      data:
+        title: Telecamera
+        message: "Movimenti Box"
+        data:
+          photo:
+            - file: /config/snapshots/box.jpg
+              caption: Box
+    - delay:
+        seconds: 5
+    - service: camera.snapshot
+      data:
+        entity_id: camera.box
+        filename: '/config/snapshots/box.jpg'
+    - service: notify.scialla
+      data:
+        title: Telecamera
+        message: "Movimenti Box"
+        data:
+          photo:
+            - file: /config/snapshots/box.jpg
+              caption: Box  
+    - delay:
+        seconds: 4
+    - service: camera.snapshot
+      data:
+        entity_id: camera.box
+        filename: '/config/snapshots/ingresso.jpg'
+    - service: notify.scialla
+      data:
+        title: Telecamera
+        message: "Movimenti Box"
+        data:
+          photo:
+            - file: /config/snapshots/box.jpg
+              caption: Box
+
+superamento_soglia:
+  alias: superamento Soglia
+  sequence:
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "Soglia consumi superata! Tra poco staccherò qualcosa"
+  - service: notify.scialla
+    data: 
+      title: 'Sovraccarico'
+      message: "Soglia superata"
+
+spegnimento_clima:
+  alias: Spegnimento Clima
+  sequence:
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "Spento il clima"
+  - service: notify.scialla
+    data: 
+      title: 'Sovraccarico'
+      message: "Spento il clima"
+
+spegnimento_ferro:
+  alias: Spegnimento Ferro
+  sequence:
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "Spento il ferro da stiro"    
+  - service: notify.scialla
+    data: 
+      title: 'Sovraccarico'
+      message: "Spento il ferro da stiro"
+
+spegnimento_phon:
+  alias: Spegnimento Phon
+  sequence:
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "Spento il phon"    
+  - service: notify.scialla
+    data: 
+      title: 'Sovraccarico'
+      message: "Spento il phon"   
+
+spegnimento_scaldabagno:
+  alias: Spegnimento Scaldabagno
+  sequence:
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "Spento lo scaldabagno"    
+  - service: notify.scialla
+    data: 
+      title: 'Sovraccarico'
+      message: "Spento lo scaldabagno"   
+
+spegnimento_forno_microonde:
+  alias: Spegnimento Forno Microonde
+  sequence:
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "Spento il forno microonde"    
+  - service: notify.scialla
+    data: 
+      title: 'Sovraccarico'
+      message: "Spento il forno microonde"
+      
+spegnimento_forno:
+  alias: Spegnimento Forno
+  sequence:
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "Spento il forno"    
+  - service: notify.scialla
+    data: 
+      title: 'Sovraccarico'
+      message: "Spento il forno"
+
+spegnimento_lavastoviglie:
+  alias: Spegnimento Lavastoviglie
+  sequence:
+    - service: notify.alexa_media
+      data:
+        target:
+          - media_player.ovunque
+        data:
+          type: announce
+          method: spoken
+        message: "Spenta la lavastoviglie"    
+    - service: notify.scialla
+      data: 
+        title: 'Sovraccarico'
+        message: "Spenta la lavastoviglie"
+
+spegnimento_lavatrice:
+  alias: Spegnimento Lavatrice
+  sequence:
+    - service: notify.alexa_media
+      data:
+        target:
+          - media_player.ovunque
+        data:
+          type: announce
+          method: spoken
+        message: "Spenta la lavatrice"    
+    - service: notify.scialla
+      data: 
+        title: 'Sovraccarico'
+        message: "Spenta la lavatrice"
+
+riaccensione_dispositivi:
+  alias: Riaccensione dispositivi
+  sequence:
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.ovunque
+      data:
+        type: announce
+        method: spoken
+      message: "Consumi scesi sotto 1 kW, ho riacceso tutto"
+  - service: notify.scialla
+    data:
+      title: 'Sovraccarico'
+      message: "Consumi scesi sotto 1 kW, ho riacceso tutto"
+
+attiva_sirena:
+  alias: Attiva Sirena
+  sequence:
+  - repeat:
+      while:
+      - condition: template
+        value_template: "{{ states('alarm_control_panel.allarme_casa') == 'triggered' }}"
+      sequence:
+      - service: switch.turn_on
+        entity_id: switch.ikeapresa
+      - delay:
+          seconds: 5
+      - service: switch.turn_off
+        entity_id: switch.ikeapresa
+      - delay:
+          seconds: 5
+
+notifica_luci_accese:
+  alias: Notifica luci accese
+  sequence:
+  - condition: state
+    entity_id: group.tutte_le_luci
+    state: 'on'
+  - service: notify.scialla
+    data: 
+      title: 'Domotica Casa'
+      message: >
+        Luci!
+        {% for each in expand('group.tutte_le_luci') if each.state == 'on' %}
+          {{ each.name }} è accesa!
+        {%- if not loop.last %}, {% endif -%}
+        {% endfor %}
+
+notifica_device_accesi:
+  alias: Notifica device accesi
+  sequence:
+  - condition: state
+    entity_id: group.device_controllo_on
+    state: 'on'
+  - service: notify.scialla
+    data: 
+      title: 'Domotica Casa'
+      message: >
+        Device!
+        {% for each in expand('group.device_controllo_on') if each.state != 'off' %}
+          {{ each.name }} è acceso/a!
+        {%- if not loop.last %}, {% endif -%}
+        {% endfor %}
+
+notifica_porte_aperte:
+  alias: Notifica porte aperte
+  sequence:
+  - condition: state
+    entity_id: group.porte_finestre
+    state: 'on'
+  - service: notify.scialla
+    data: 
+      title: 'Domotica Casa'
+      message: >
+        Porte e Finestre!
+        {% for each in expand('group.porte_finestre') if each.state != 'off' %}
+          {{ each.name }} è rimasta aperta!
+        {%- if not loop.last %}, {% endif -%}
+        {% endfor %}
+
+film_on:
+  alias: Film ON
+  icon: mdi:filmstrip
+  sequence:
+  - service: switch.turn_on
+    entity_id:
+    - switch.ciabattascrivania_l1
+    - switch.presa_mediaplayer
+  - service: automation.trigger
+    entity_id: automation.accendi_tv_lg
+  - service: media_player.turn_on
+    entity_id: media_player.onkyo
+  - service: light.turn_on
+    data:
+      color_name: blue
+      brightness_pct: 100
+    target:
+      entity_id: light.ballerini
+  - delay:
+      seconds: 40
+  - service: media_player.select_source
+    data:
+      source: MediaPlayer
+    target:
+      entity_id: media_player.onkyo    
+  - service: media_player.select_source
+    data:
+      source: HDMI2
+    target:
+      entity_id: media_player.lg_tv
+  - service: light.turn_off
+    entity_id: light.luce_studio
+
+film_off:
+  alias: Film OFF
+  icon: mdi:filmstrip-off
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_studio_remote
+      command: "b64:JgDQAAABKJEUEhQSFDUVERURFREVERU1FTUVERQSFDYUNhQ2FDYUEhQRFTUVERURFTUVERURFBIUNhQSFDUVNRURFTUVNRU1FQAFIQABKJAVERURFTUVERURFBIUEhQ2FDYUEhQRFTUVNRU1FTUVERURFTUVERQSFDYUEhQSFBEVNRURFTUVNRURFTUVNRU1FQAFIAABKUgUAAxDAAEoSBUADEIAAShJFAAMQwABKEgVAAxCAAEoSRQADEMAAShIFQAMQgABKEkUAAxDAAEoSBUADQUAAAAAAAAAAA=="
+  - service: media_player.select_source
+    data:
+      source: Canali TV
+    target:
+      entity_id: media_player.lg_tv
+  - service: media_player.turn_off
+    entity_id: 
+    - media_player.onkyo
+    - media_player.lg_tv
+  - service: light.turn_on
+    entity_id: light.luce_studio
+  - service: light.turn_off
+    entity_id: light.ballerini
+  - delay:
+      seconds: 30
+  - service: switch.turn_off
+    entity_id: 
+    - switch.presa_mediaplayer
+    - switch.ciabattascrivania_l1

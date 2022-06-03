@@ -1,0 +1,78 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "energy",
+    "data": {
+        "energy_sources": [
+            {
+                "type": "grid",
+                "flow_from": [
+                    {
+                        "stat_energy_from": "sensor.consumo_mensile_f1",
+                        "stat_cost": null,
+                        "entity_energy_from": "sensor.consumo_mensile_f1",
+                        "entity_energy_price": null,
+                        "number_energy_price": 0.282
+                    },
+                    {
+                        "stat_energy_from": "sensor.consumo_mensile_f2",
+                        "stat_cost": null,
+                        "entity_energy_from": "sensor.consumo_mensile_f2",
+                        "entity_energy_price": null,
+                        "number_energy_price": 0.282
+                    },
+                    {
+                        "stat_energy_from": "sensor.consumo_mensile_f3",
+                        "stat_cost": null,
+                        "entity_energy_from": "sensor.consumo_mensile_f3",
+                        "entity_energy_price": null,
+                        "number_energy_price": 0.282
+                    }
+                ],
+                "flow_to": [],
+                "cost_adjustment_day": 0.0
+            }
+        ],
+        "device_consumption": [
+            {
+                "stat_consumption": "sensor.presa_frigo_energy"
+            },
+            {
+                "stat_consumption": "sensor.presa_mediaplayer_energy"
+            },
+            {
+                "stat_consumption": "sensor.presa_onkyo_energy"
+            },
+            {
+                "stat_consumption": "sensor.presa_phon_energy"
+            },
+            {
+                "stat_consumption": "sensor.presa_samsung_energy"
+            },
+            {
+                "stat_consumption": "sensor.presa_selecline_energy"
+            },
+            {
+                "stat_consumption": "sensor.forno_microonde_energia"
+            },
+            {
+                "stat_consumption": "sensor.forno_energia"
+            },
+            {
+                "stat_consumption": "sensor.lavastoviglie_energia"
+            },
+            {
+                "stat_consumption": "sensor.lavatrice_energia"
+            },
+            {
+                "stat_consumption": "sensor.scaldabagno_energia"
+            },
+            {
+                "stat_consumption": "sensor.lampada_zanzare_energy"
+            },
+            {
+                "stat_consumption": "sensor.presa_jolly_energy"
+            }
+        ]
+    }
+}

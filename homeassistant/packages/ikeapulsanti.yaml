@@ -1,0 +1,41 @@
+automation:
+- alias: Pulsante Luce Silvia
+  id: pulsante_luce_silvia
+  trigger:
+  - platform: mqtt
+    topic: 'zigbee2mqtt/PulsanteIkea1/action'
+  action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.payload == 'on' }}"
+      sequence:
+      - service: light.toggle
+        entity_id: light.luce_silvia
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.payload == 'brightness_stop' }}"
+      sequence:
+      - service: media_player.turn_off
+        entity_id: media_player.samsung
+
+- alias: Pulsante Letto
+  id: pulsante_letto
+  trigger:
+  - platform: mqtt
+    topic: 'zigbee2mqtt/PulsanteIkea2/action'
+  action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.payload == 'on' }}"
+      sequence:
+      - service: light.toggle
+        entity_id: light.striscia_letto
+    - conditions:
+      - condition: template
+        value_template: "{{ trigger.payload == 'brightness_stop' }}"
+      sequence:
+      - service: media_player.turn_off
+        entity_id: media_player.samsung
+

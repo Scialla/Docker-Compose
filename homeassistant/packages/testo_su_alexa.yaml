@@ -1,0 +1,42 @@
+input_text:
+  annuncio_alexa:
+    name: Annuncio su Alexa
+    initial: Ciao
+
+input_select:
+  alexa_selection:
+    name: Seleziona dispositivo
+    options:
+      - Ovunque
+      - Studio
+      - Cucina
+      - CameraLetto
+      - Ingresso
+      - Altoparlante
+
+automation:
+  - alias: Riproduce_testo_su_Alexa
+    id: riproduce_testo_su_alexa
+    trigger: 
+      - platform: state
+        entity_id: input_text.annuncio_alexa
+    action:
+      - service: notify.alexa_media
+        data:
+          target: >
+            {% if is_state("input_select.alexa_selection", "Ovunque") %} media_player.ovunque
+            {% elif is_state("input_select.alexa_selection", "Studio") %} media_player.echo_studio
+            {% elif is_state("input_select.alexa_selection", "Cucina") %} media_player.echo_show
+            {% elif is_state("input_select.alexa_selection", "CameraLetto") %} media_player.echo_dot_camera_letto
+            {% elif is_state("input_select.alexa_selection", "Ingresso") %} media_player.echo_dot_ingresso
+            {% else %} media_player.altoparlante
+            {% endif %}
+
+          data:
+            type: >
+              {% if is_state("input_select.alexa_selection", "Ovunque") %} announce
+              {% else %} tts
+              {% endif %}
+            method: spoken
+          message: "{{states('input_text.annuncio_alexa')}}"
+    

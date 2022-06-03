@@ -1,0 +1,1457 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "core.config_entries",
+    "data": {
+        "entries": [
+            {
+                "entry_id": "df63284931684609881c09f983a4456d",
+                "version": 1,
+                "domain": "mqtt",
+                "title": "configuration.yaml",
+                "data": {
+                    "broker": "127.0.0.1",
+                    "port": 1883,
+                    "birth_message": {
+                        "topic": "homeassistant/status",
+                        "payload": "online",
+                        "qos": 0,
+                        "retain": false
+                    },
+                    "will_message": {
+                        "topic": "homeassistant/status",
+                        "payload": "offline",
+                        "qos": 0,
+                        "retain": false
+                    },
+                    "discovery": true
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "083e5d7ec40e4fbbbddaeaa13c4d17d1",
+                "version": 1,
+                "domain": "homekit",
+                "title": "Home Assistant Bridge:51827",
+                "data": {
+                    "port": 21063,
+                    "name": "Home Assistant Bridge"
+                },
+                "options": {
+                    "filter": {
+                        "exclude_domains": [
+                            "automation",
+                            "device_tracker",
+                            "person",
+                            "script",
+                            "group",
+                            "media_player",
+                            "remote",
+                            "camera",
+                            "input_select",
+                            "select",
+                            "button",
+                            "script"
+                        ],
+                        "include_entities": [
+                            "script.film_on",
+                            "script.film_off"
+                        ],
+                        "exclude_entities": [
+                            "climate.camera_da_letto",
+                            "climate.cucina",
+                            "climate.studio",
+                            "climate.ingresso",
+                            "climate.bagno_grande",
+                            "climate.bagno_piccolo",
+                            "climate.camera_di_silvia",
+                            "binary_sensor.telecomando_a",
+                            "binary_sensor.telecomando_b",
+                            "binary_sensor.telecomando_c",
+                            "binary_sensor.telecomando_d",
+                            "light.led_ingresso2",
+                            "light.led_ingresso3",
+                            "light.led_ingresso4",
+                            "light.led_ingresso5",
+                            "light.led_ingresso6",
+                            "switch.ovunque_do_not_disturb_switch",
+                            "switch.ovunque_repeat_switch",
+                            "switch.altoparlante_do_not_disturb_switch",
+                            "switch.davide_s_reverb_ai_do_not_disturb_switch",
+                            "switch.echo_studio_repeat_switch",
+                            "switch.dappertutto_do_not_disturb_switch",
+                            "switch.echo_dot_ingresso_repeat_switch",
+                            "switch.davide_s_reverb_ai_shuffle_switch",
+                            "switch.dappertutto_repeat_switch",
+                            "switch.this_device_do_not_disturb_switch",
+                            "switch.altoparlante_repeat_switch",
+                            "switch.davide_s_alexa_apps_do_not_disturb_switch",
+                            "switch.echo_dot_camera_letto_do_not_disturb_switch",
+                            "switch.echo_dot_camera_letto_shuffle_switch",
+                            "switch.echo_dot_ingresso_do_not_disturb_switch",
+                            "switch.echo_show_shuffle_switch",
+                            "switch.davide_s_reverb_ai_repeat_switch",
+                            "switch.echo_dot_camera_letto_repeat_switch",
+                            "switch.echo_dot_ingresso_shuffle_switch",
+                            "switch.altoparlante_shuffle_switch",
+                            "switch.dappertutto_shuffle_switch",
+                            "switch.ovunque_shuffle_switch",
+                            "switch.echo_show_repeat_switch",
+                            "switch.echo_studio_shuffle_switch",
+                            "switch.echo_show_do_not_disturb_switch",
+                            "switch.echo_studio_do_not_disturb_switch",
+                            "switch.fire_tv_stick_do_not_disturb_switch",
+                            "switch.presa_samsung",
+                            "switch.presa_selecline",
+                            "switch.presa_onkyo",
+                            "switch.presa_mediaplayer",
+                            "switch.bf59303c89ae38e766znbo",
+                            "binary_sensor.updater",
+                            "binary_sensor.ikeapresa_update_available",
+                            "binary_sensor.ikeaswitch_update_available",
+                            "sensor.cpu_temperature",
+                            "binary_sensor.condizionatore_contact",
+                            "binary_sensor.pulsante_ikea",
+                            "binary_sensor.stato_tv_samsung",
+                            "binary_sensor.stato_tv_selecline",
+                            "binary_sensor.stato_onkyo",
+                            "binary_sensor.rpi_power_status",
+                            "binary_sensor.macmini",
+                            "binary_sensor.imac",
+                            "binary_sensor.ha_new_version",
+                            "sensor.netatmo_smart_thermostat_current_temperature",
+                            "sensor.netatmo_valve_1_current_temperature",
+                            "sensor.netatmo_valve_2_current_temperature",
+                            "sensor.netatmo_valve_3_current_temperature",
+                            "sensor.netatmo_valve_4_current_temperature",
+                            "sensor.netatmo_valve_5_current_temperature",
+                            "sensor.netatmo_valve_7_current_temperature",
+                            "input_boolean.loop_riscaldamento",
+                            "switch.ambrogio_advanced_mode",
+                            "switch.ambrogio_carpet_auto_fan_speed_boost",
+                            "switch.ambrogio_continuous_cleaning",
+                            "button.ambrogio_life_span_brush_reset",
+                            "button.ambrogio_life_span_filter_reset",
+                            "button.ambrogio_life_span_side_brush_reset",
+                            "switch.wled_nightlight",
+                            "button.wled_restart",
+                            "switch.wled_reverse",
+                            "switch.wled_sync_receive",
+                            "switch.wled_sync_send",
+                            "button.wled_update"
+                        ],
+                        "include_domains": [],
+                        "exclude_entity_globs": [],
+                        "include_entity_globs": []
+                    },
+                    "entity_config": {
+                        "alarm_control_panel.allarme_casa": {
+                            "code": "271294",
+                            "low_battery_threshold": 20
+                        }
+                    },
+                    "mode": "bridge"
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "768a1a54fb2211ea8e662970566f9c2d",
+                "version": 1,
+                "domain": "broadlink",
+                "title": "Broadlink Studio",
+                "data": {
+                    "host": "192.168.1.102",
+                    "mac": "780f77181650",
+                    "type": 10141,
+                    "timeout": 5
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "780f77181650",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "cd8a675cfb2211ea8d329b6fc001a016",
+                "version": 1,
+                "domain": "broadlink",
+                "title": "Broadlink Cucina",
+                "data": {
+                    "host": "192.168.1.107",
+                    "mac": "780f77d649a1",
+                    "type": 10039,
+                    "timeout": 5
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "780f77d649a1",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "e9b42fa8fb2211eaaadddb8102a75477",
+                "version": 1,
+                "domain": "broadlink",
+                "title": "Broadlink Ingresso",
+                "data": {
+                    "host": "192.168.1.108",
+                    "mac": "780f77d643a2",
+                    "type": 10039,
+                    "timeout": 5
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "780f77d643a2",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "960729dcfb2611eab59d71c5ef5e8f55",
+                "version": 1,
+                "domain": "shelly",
+                "title": "Ignored",
+                "data": {
+                    "host": "192.168.1.142"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ignore",
+                "unique_id": "BCDDC2944984",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "0b4443a40d8f11ebaf3915c5e9197016",
+                "version": 1,
+                "domain": "shelly",
+                "title": "Ignored",
+                "data": {
+                    "host": "192.168.1.141"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ignore",
+                "unique_id": "BCDDC2944A46",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "557086c6be5f45ee69c89862e6e59794",
+                "version": 1,
+                "domain": "tasmota",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ignore",
+                "unique_id": "tasmota",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "9bade6edf4e81bd5367c7412c5c21514",
+                "version": 2,
+                "domain": "openweathermap",
+                "title": "OpenWeatherMap",
+                "data": {
+                    "name": "OpenWeatherMap",
+                    "latitude": 45.11016488561856,
+                    "longitude": 7.665452957153321,
+                    "mode": "onecall_daily",
+                    "language": "it",
+                    "api_key": "405eb7d218c96a532df5eb20a1a0b53f"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "45.11016488561856-7.665452957153321",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "43b4b3426ac0935de982d9a10c8ec9d9",
+                "version": 1,
+                "domain": "shopping_list",
+                "title": "Shopping List",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "shopping_list",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "7204d026c662a0ff8f73b1c19bd2c17f",
+                "version": 1,
+                "domain": "ios",
+                "title": "Home Assistant iOS",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "cecbfea8e55c1f6be43e702b170eeefd",
+                "version": 1,
+                "domain": "homekit_controller",
+                "title": "Koogeek-LB1-1F299C",
+                "data": {
+                    "AccessoryPairingID": "A6:8B:C0:53:8D:2F",
+                    "AccessoryLTPK": "2072c28b9b7d04d8fb85f70c8c770928bc73b44b6d84f83ff7a63a705348db31",
+                    "iOSPairingId": "6da12d26-3dcf-4133-9db5-6dd0c9b3b55d",
+                    "iOSDeviceLTSK": "15ace762082b9fb487b8edf9ea6a709dd015bf7e69f8a4861efa8d325ec95c3c",
+                    "iOSDeviceLTPK": "997a74fcdaf139cf3879c117c581dc9855aa1ecf9322e8fc8153c5109b0a3f7b",
+                    "AccessoryIP": "192.168.1.101",
+                    "AccessoryPort": 80,
+                    "Connection": "IP"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "zeroconf",
+                "unique_id": "a6:8b:c0:53:8d:2f",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "629cea43a7dc915ef40fa7991f9c855c",
+                "version": 1,
+                "domain": "apple_tv",
+                "title": "AppleTV Ingresso",
+                "data": {
+                    "protocol": 1,
+                    "name": "AppleTV Ingresso",
+                    "credentials": {
+                        "1": "00000000-11ac-2e39-4d69-87b1fd7244d3",
+                        "3": "A311724D6D25AA20:E8800227BF38F37EAC40D185B58D5E444F5F0AD305780CA7F14A1F6C7594410A"
+                    },
+                    "address": "192.168.1.58"
+                },
+                "options": {},
+                "pref_disable_new_entities": true,
+                "pref_disable_polling": false,
+                "source": "zeroconf",
+                "unique_id": "4665EA5761AF1FE6",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "e1bb7f50b722a743f111354fe638257d",
+                "version": 1,
+                "domain": "alexa_media",
+                "title": "scialla66@gmail.com - amazon.it",
+                "data": {
+                    "otp_secret": "2W3V4YKVPZF6II2TS2MPJCTPEX4G7S7RRKM5L6XD2LY6Y7MYNOZQ",
+                    "email": "scialla66@gmail.com",
+                    "password": "Silvia@94&Futura",
+                    "url": "amazon.it",
+                    "debug": false,
+                    "scan_interval": 60,
+                    "include_devices": "",
+                    "exclude_devices": "",
+                    "oauth": {
+                        "access_token": "Atna|EwICII-Tn1YwMC18fMft8uYbQiTugCT0OV4uJcErpdHd37YYMEQz3nqdfWQFuHR-rH6yY2L0lf_dBgtmXpGzKP57wtaBwI6YmL1Wx6_dPweDUvX14tRFIP1JJ5GKc0FMLWd3WtqdWXVD5M2QyiQISmni54sZZwBkMjyitZLCQruvtBPhglJJuyAhpJ9zmzWJWgDltiDg7cNVpW2gCOtk9mWlaqy1gK60mlmKhAaH9BMNEJDFRQe6wXOlhNy3XxfvjyFCSQdj4Hc2V46p_ebd3ct0gbz3LwfQxyjg_2Rd7DrtTOm7OcHzcMRmtjp7Xde6JPZKfF98_wvj5i6UcoSvtW2VEZYoqoFwUXB5dbJ_aZhKrpjCPg",
+                        "refresh_token": "Atnr|EwICINFwHPgfdaRjrTjgmeVkQi3YKp1wOZifiylGF8GsgyknXe2du7BVXx_J1HkiTDwXvFqXrqhKinkJ2fb_WxEt-N0C0sjWYWYVTtWKGNaubpGyuhM2g2rqpWSCBNTylLyXAbG65oPU7M3TpPuSPWOqx2tYydkl_9QPAtmgyJLmTFoloqV8kAZgtZZC26witBOKR8oTp82RBFOjVjIX19ZD4FiGT2FBtICGo0cZdquQhmcfJk0okU4xLKt_2KdfnMZB2J8s9_Vugc0h0InEyFwm2a_usNpcgM76xlCLQTFqH9ar8iZfYJNVWJOzkUqdKYF-NdPtN9INstscLgrcUI3kk9dJoh7N-Oel0w58qVikngAlrQ",
+                        "expires_in": 1654293218.875511
+                    }
+                },
+                "options": {
+                    "queue_delay": 1.5,
+                    "extended_entity_discovery": false
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "scialla66@gmail.com - amazon.it",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "297d0668ac5add63e1c56e7db4c835b1",
+                "version": 1,
+                "domain": "cert_expiry",
+                "title": "scialla.duckdns.org:5000",
+                "data": {
+                    "host": "scialla.duckdns.org",
+                    "port": 5000
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": "scialla.duckdns.org:5000",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "ce70c08dc9b7613ea62e461346e24e78",
+                "version": 1,
+                "domain": "cert_expiry",
+                "title": "scialla.ddns.net:5000",
+                "data": {
+                    "host": "scialla.ddns.net",
+                    "port": 5000
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": "scialla.ddns.net:5000",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "e9182f6d0b27fb62f7ac068311f3bb49",
+                "version": 1,
+                "domain": "homekit",
+                "title": "Bridge LG:51828",
+                "data": {
+                    "name": "Bridge LG",
+                    "port": 52000
+                },
+                "options": {
+                    "filter": {
+                        "include_entities": [
+                            "media_player.lg_tv"
+                        ],
+                        "include_entity_globs": [],
+                        "exclude_entity_globs": [],
+                        "exclude_entities": [],
+                        "include_domains": [],
+                        "exclude_domains": []
+                    },
+                    "entity_config": {},
+                    "mode": "accessory"
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "1976e92d595185a52e4a6c8a11028979",
+                "version": 1,
+                "domain": "homekit",
+                "title": "Bridge Camera Ingresso:51832",
+                "data": {
+                    "name": "Bridge Camera Ingresso",
+                    "port": 52400
+                },
+                "options": {
+                    "filter": {
+                        "include_entities": [
+                            "camera.ingresso"
+                        ],
+                        "include_entity_globs": [],
+                        "exclude_entity_globs": [],
+                        "exclude_entities": [],
+                        "include_domains": [],
+                        "exclude_domains": []
+                    },
+                    "entity_config": {},
+                    "mode": "accessory"
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "d3410ae91453457bd9a3c0b2d06793fd",
+                "version": 1,
+                "domain": "homekit",
+                "title": "Bridge Camera Box:51833",
+                "data": {
+                    "name": "Bridge Camera Box",
+                    "port": 52500
+                },
+                "options": {
+                    "filter": {
+                        "include_entities": [
+                            "camera.box"
+                        ],
+                        "include_entity_globs": [],
+                        "exclude_entity_globs": [],
+                        "exclude_entities": [],
+                        "include_domains": [],
+                        "exclude_domains": []
+                    },
+                    "entity_config": {},
+                    "mode": "accessory"
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "f61870d2e5fafa05e272f7aa07f6c7c5",
+                "version": 1,
+                "domain": "browser_mod",
+                "title": "Browser Mod",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "0324a909892abbd3015da0907c48b3d6",
+                "version": 1,
+                "domain": "homekit",
+                "title": "Bridge Onkyo:52100",
+                "data": {
+                    "name": "Bridge Onkyo",
+                    "port": 52100
+                },
+                "options": {
+                    "filter": {
+                        "include_entities": [
+                            "media_player.onkyo"
+                        ],
+                        "include_entity_globs": [],
+                        "exclude_entity_globs": [],
+                        "exclude_entities": [],
+                        "include_domains": [],
+                        "exclude_domains": []
+                    },
+                    "entity_config": {},
+                    "mode": "accessory"
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "0affc9b6805641c78434c3727f918fbc",
+                "version": 1,
+                "domain": "homekit",
+                "title": "Bridge Samsung:52300",
+                "data": {
+                    "name": "Bridge Samsung",
+                    "port": 52300
+                },
+                "options": {
+                    "filter": {
+                        "include_entities": [
+                            "media_player.samsung"
+                        ],
+                        "include_entity_globs": [],
+                        "exclude_entity_globs": [],
+                        "exclude_entities": [],
+                        "include_domains": [],
+                        "exclude_domains": []
+                    },
+                    "entity_config": {},
+                    "mode": "accessory"
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "8dac0317844aa2fcc319237c924ba805",
+                "version": 1,
+                "domain": "homekit",
+                "title": "Bridge Selecline:52200",
+                "data": {
+                    "name": "Bridge Selecline",
+                    "port": 52200
+                },
+                "options": {
+                    "filter": {
+                        "include_entities": [
+                            "media_player.selecline"
+                        ],
+                        "include_entity_globs": [],
+                        "exclude_entity_globs": [],
+                        "exclude_entities": [],
+                        "include_domains": [],
+                        "exclude_domains": []
+                    },
+                    "entity_config": {},
+                    "mode": "accessory"
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "163d42021c0e6413e628fb6eebbf2661",
+                "version": 1,
+                "domain": "upnp",
+                "title": "MediaAccess TG788vn v2 (1640RABGZ)",
+                "data": {
+                    "hostname": "192.168.1.254",
+                    "mac_address": "e0:b9:e5:b1:d0:c0",
+                    "location": "http://192.168.1.254:8000/shvdvb5effr/IGD/upnp/IGD.xml"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ignore",
+                "unique_id": "uuid:a4562934-4c82-5ed6-9eed-2bade0063050::urn:schemas-upnp-org:device:InternetGatewayDevice:2",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "9658bce1ed65d115f75174b94c86f2c2",
+                "version": 1,
+                "domain": "homekit_controller",
+                "title": "Netatmo Relay",
+                "data": {
+                    "AccessoryPairingID": "0B:E3:5F:38:1A:21",
+                    "AccessoryLTPK": "fbf99d12c063d4e4d37748e7047304ab5b7fef4a2c0fae88d99d055693996bce",
+                    "iOSPairingId": "4e12f4a6-d88c-4797-9946-d8683e6bb520",
+                    "iOSDeviceLTSK": "73581d1ab719c276cff9584b71720fd3f24935dcc72d618ba3826498ad2bb12b",
+                    "iOSDeviceLTPK": "1b8d8ed55b7082bca54afe00d7907a010285b478269fb52e84888d0fe1c1bd87",
+                    "AccessoryIP": "192.168.1.124",
+                    "AccessoryPort": 5001,
+                    "Connection": "IP"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "zeroconf",
+                "unique_id": "0b:e3:5f:38:1a:21",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "4a6fbe1b93153830931ac8ab59a5b34e",
+                "version": 1,
+                "domain": "hacs",
+                "title": "",
+                "data": {
+                    "token": "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"
+                },
+                "options": {
+                    "sidepanel_title": "HACS",
+                    "sidepanel_icon": "hacs:hacs",
+                    "release_limit": 5,
+                    "country": "ALL",
+                    "appdaemon": true,
+                    "netdaemon": true,
+                    "debug": false,
+                    "experimental": false
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "89e8dcef812953029759943484a2a213",
+                "version": 1,
+                "domain": "tuya",
+                "title": "scialla@me.com",
+                "data": {
+                    "endpoint": "https://openapi.tuyaeu.com",
+                    "auth_type": 0,
+                    "access_id": "q4qgvuraazjcbp2qr47z",
+                    "access_secret": "f1cfb8d699bb42eda1616ca15985be7b",
+                    "username": "scialla@me.com",
+                    "password": "Futura69",
+                    "country_code": "39",
+                    "tuya_app_type": "tuyaSmart"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "0c57b35f925b517a0e8921af96dd8287",
+                "version": 1,
+                "domain": "webrtc",
+                "title": "WebRTC Camera",
+                "data": {},
+                "options": {
+                    "udp_min": 550,
+                    "udp_max": 560
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "1b23c543d8c1576345267a685ebd2a92",
+                "version": 1,
+                "domain": "dlna_dmr",
+                "title": "GGMM-E3",
+                "data": {
+                    "url": "http://192.168.1.55:49152/description.xml",
+                    "device_id": "uuid:FF310080-2A8E-DE0B-8577-C3E7FF310080",
+                    "type": "urn:schemas-upnp-org:device:MediaRenderer:1"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ssdp",
+                "unique_id": "uuid:FF310080-2A8E-DE0B-8577-C3E7FF310080",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "322a809687918224f91b09cf68f719c6",
+                "version": 1,
+                "domain": "wled",
+                "title": "wled-3c26cf",
+                "data": {
+                    "host": "192.168.1.135",
+                    "mac": "cc50e33c26cf"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "zeroconf",
+                "unique_id": "cc50e33c26cf",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "3901b09b27ef003176d34922ecf8aaa3",
+                "version": 1,
+                "domain": "upnp",
+                "title": "192.168.1.3",
+                "data": {
+                    "hostname": "192.168.1.3",
+                    "mac_address": "50:c7:bf:ef:15:9c",
+                    "location": "http://192.168.0.1:1900/gatedesc.xml"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ignore",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37::urn:schemas-upnp-org:device:InternetGatewayDevice:1",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "8d1a6e1e1280a62c0301781ab136d12f",
+                "version": 5,
+                "domain": "ble_monitor",
+                "title": "Bluetooth Low Energy Monitor",
+                "data": {},
+                "options": {
+                    "bt_interface": [
+                        "AA:AA:AA:AA:AA:AA"
+                    ],
+                    "bt_auto_restart": false,
+                    "active_scan": false,
+                    "discovery": false,
+                    "period": 60,
+                    "use_median": false,
+                    "decimals": 1,
+                    "log_spikes": false,
+                    "restore_state": false,
+                    "report_unknown": "Off",
+                    "devices": [
+                        {
+                            "uuid": "1CA92E23-F087-4DF7-B9A2-FD4B716A4BF6",
+                            "name": "1ca92e23f0874df7b9a2fd4b716a4bf6"
+                        },
+                        {
+                            "mac": "4C:65:A8:DD:D2:48",
+                            "name": "4C65A8DDD248"
+                        },
+                        {
+                            "uuid": "50765CB7-4E00-2199-A4FA-879613A4928E",
+                            "name": "50765CB74E002199A4FA879613A4928E"
+                        },
+                        {
+                            "uuid": "50765CB7-D904-003E-1D02-010001C48DA7",
+                            "name": "50765CB7D904003E1D02010001C48DA7"
+                        },
+                        {
+                            "uuid": "50765CB7-D921-0099-A4FA-879613A4928E",
+                            "name": "50765cb7d9210099a4fa879613a4928e"
+                        },
+                        {
+                            "uuid": "50765CB7-D94E-0021-99A4-FA879613A492",
+                            "name": "50765cb7d94e002199a4fa879613a492"
+                        },
+                        {
+                            "uuid": "50765CB7-D999-00A4-FA87-9613A4928EE7",
+                            "name": "50765cb7d99900a4fa879613a4928ee7"
+                        },
+                        {
+                            "uuid": "50765CB7-D9A4-00FA-8796-13A4928EE71F",
+                            "name": "50765CB7D9A400FA879613A4928EE71F"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA8796131F00",
+                            "name": "50765CB7D9EA4E2199A4FA8796131F00"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA8796138E00",
+                            "name": "50765CB7D9EA4E2199A4FA8796138E00"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA8796139200",
+                            "name": "50765cb7d9ea4e2199a4fa8796139200"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA879613A492",
+                            "name": "50765cb7d9ea4e2199a4fa879613a492"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA879613A4E7",
+                            "name": "50765CB7D9EA4E2199A4FA879613A4E7"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA879613E700",
+                            "name": "50765CB7D9EA4E2199A4FA879613E700"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA87968E00E7",
+                            "name": "50765CB7D9EA4E2199A4FA87968E00E7"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA879692008E",
+                            "name": "50765CB7D9EA4E2199A4FA879692008E"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA8796A40092",
+                            "name": "50765CB7D9EA4E2199A4FA8796A40092"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-4E21-99A4-FA8796E7001F",
+                            "name": "50765CB7D9EA4E2199A4FA8796E7001F"
+                        },
+                        {
+                            "uuid": "50765CB7-D9EA-9900-A4FA-879613A4928E",
+                            "name": "50765CB7D9EA9900A4FA879613A4928E"
+                        },
+                        {
+                            "uuid": "50765CB7-D9FA-0087-9613-A4928EE71F1A",
+                            "name": "50765CB7D9FA00879613A4928EE71F1A"
+                        },
+                        {
+                            "uuid": "50765CB7-EA00-4E21-99A4-FA879613A492",
+                            "name": "50765cb7ea004e2199a4fa879613a492"
+                        },
+                        {
+                            "mac": "A8:1B:6A:B7:8F:C5",
+                            "name": "A81B6AB78FC5"
+                        },
+                        {
+                            "uuid": "E2C56DB5-DFFB-48D2-B060-D0F5A71096E0",
+                            "name": "E2C56DB5DFFB48D2B060D0F5A71096E0"
+                        }
+                    ],
+                    "is_flow": true,
+                    "hci_interface": [
+                        1
+                    ]
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "8d1a6e1e1280a62c0301781ab136d12f",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "7df27ab7f89b533abf52850f89d7b2a9",
+                "version": 3,
+                "domain": "deebot",
+                "title": "scialla@me.com",
+                "data": {
+                    "username": "scialla@me.com",
+                    "password": "Frida66",
+                    "country": "IT",
+                    "continent": "EU",
+                    "devices": [
+                        "E0CR14134B09HGBE0924"
+                    ]
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "f21bb52bd212b6b45878f59143175134",
+                "version": 1,
+                "domain": "dlna_dmr",
+                "title": "WDTVLive",
+                "data": {
+                    "url": "http://192.168.1.105:10184/",
+                    "device_id": "uuid:49f7b3fd-0090-a9c4-c21c-4dd7a87700ba",
+                    "type": "urn:schemas-upnp-org:device:MediaRenderer:1"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ssdp",
+                "unique_id": "uuid:49f7b3fd-0090-a9c4-c21c-4dd7a87700ba",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "608be10bfa92e10fb8aa969d76f5cda2",
+                "version": 1,
+                "domain": "co2signal",
+                "title": "IT-NO",
+                "data": {
+                    "api_key": "0c762c23519032da",
+                    "country_code": "IT-NO"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "af9521407a3548c0a7f5378e4678222a",
+                "version": 1,
+                "domain": "version",
+                "title": "Current Version",
+                "data": {
+                    "name": "Current Version",
+                    "channel": "stable",
+                    "image": "default",
+                    "board": "OVA",
+                    "version_source": "Local installation",
+                    "source": "local"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "9b22afd876018a439f729fd9b5f2f48b",
+                "version": 1,
+                "domain": "version",
+                "title": "Python Package Index (PyPI)",
+                "data": {
+                    "name": "ha_latest",
+                    "channel": "stable",
+                    "image": "default",
+                    "board": "OVA",
+                    "version_source": "Python Package Index (PyPI)",
+                    "source": "pypi"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "d3ce3ce93b345e6f8a4846b42559f716",
+                "version": 1,
+                "domain": "version",
+                "title": "Current Version",
+                "data": {
+                    "name": "ha_current",
+                    "channel": "stable",
+                    "image": "default",
+                    "board": "OVA",
+                    "version_source": "Local installation",
+                    "source": "local"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "fa43b289e8a20b7a869f304dae45b4b7",
+                "version": 1,
+                "domain": "webostv",
+                "title": "LG",
+                "data": {
+                    "host": "192.168.1.153",
+                    "client_secret": "362bf739a2c7fb9d42b4432d03176df7"
+                },
+                "options": {
+                    "sources": [
+                        "LG Content Store",
+                        "Cerca",
+                        "Netflix",
+                        "NOW",
+                        "Rakuten TV",
+                        "Amazon Prime Video",
+                        "DAZN",
+                        "CHILI",
+                        "Canali TV",
+                        "Guida TV",
+                        "Browser Web",
+                        "Manuale d'uso",
+                        "Musica",
+                        "Foto e video",
+                        "Registrazioni",
+                        "Attivit\u00e0",
+                        "Screen Share",
+                        "Connettore dispositivo",
+                        "Multi-view",
+                        "Accessibilit\u00e0",
+                        "Notifiche",
+                        "Plex",
+                        "infinity",
+                        "SS IPTV",
+                        "TV Cast",
+                        "Spotify - Musica e podcast",
+                        "YouTube",
+                        "HDMI2",
+                        "HDMI3",
+                        "AV",
+                        "Component",
+                        "HDMI1"
+                    ]
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": "ae18c3bd-c627-1c5a-eb5a-2b01d4005ffd",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "c6ce6abf9ce397ddbcc069b0e76a27bf",
+                "version": 1,
+                "domain": "anniversaries",
+                "title": "Pensione",
+                "data": {
+                    "unique_id": "de858d3a-482f-4afc-ac62-0a7d5a7debc9",
+                    "name": "Pensione",
+                    "date": "2023-11-01",
+                    "count_up": false,
+                    "one_time": true,
+                    "show_half_anniversary": false,
+                    "unit_of_measurement": "Days",
+                    "id_prefix": "anniversary_",
+                    "icon_normal": "mdi:calendar-blank",
+                    "icon_today": "mdi:calendar-star",
+                    "days_as_soon": 7,
+                    "icon_soon": "mdi:calendar"
+                },
+                "options": {
+                    "unique_id": "de858d3a-482f-4afc-ac62-0a7d5a7debc9",
+                    "name": "Pensione",
+                    "date": "2023-11-01",
+                    "count_up": false,
+                    "one_time": true,
+                    "show_half_anniversary": false,
+                    "unit_of_measurement": "Days",
+                    "id_prefix": "anniversary_",
+                    "icon_normal": "mdi:calendar-blank",
+                    "icon_today": "mdi:calendar-star",
+                    "days_as_soon": 7,
+                    "icon_soon": "mdi:calendar"
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "29aeee2cd5ce2496e4cd360e9dcfcb55",
+                "version": 1,
+                "domain": "dlna_dms",
+                "title": "MediaAccess TG788vn v2",
+                "data": {
+                    "url": "http://192.168.1.253:41952/b6hpdhijqwd/"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ignore",
+                "unique_id": "uuid:44e1af31-1630-5053-8807-71274724bff8::urn:schemas-upnp-org:device:MediaServer:1",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "5392e32b32b5f8ec6e59d51f46b1bd26",
+                "version": 1,
+                "domain": "radio_browser",
+                "title": "Radio Browser",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "4c1911a45f97932f3a03b863cd0393c6",
+                "version": 1,
+                "domain": "speedtestdotnet",
+                "title": "SpeedTest",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "f63a31156505323e7fddaa24098c0e20",
+                "version": 1,
+                "domain": "whois",
+                "title": "scialla.duckdns.org",
+                "data": {
+                    "domain": "scialla.duckdns.org"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "scialla.duckdns.org",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "2ad1fd2f0893c9331242bcf271f34b27",
+                "version": 1,
+                "domain": "whois",
+                "title": "scialla.ddns.net",
+                "data": {
+                    "domain": "scialla.ddns.net"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "scialla.ddns.net",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "32ea5c4bca6e97fd8870f9eb64a0fa23",
+                "version": 1,
+                "domain": "spotify",
+                "title": "Spotify",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "ignore",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "312a597bb49f7bd28d3d687abe39e18e",
+                "version": 1,
+                "domain": "sun",
+                "title": "Sun",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "0b6d4f26c5447d5689e8283973ff46c5",
+                "version": 1,
+                "domain": "generic",
+                "title": "Ultima pulizia",
+                "data": {},
+                "options": {
+                    "name": "Ultima pulizia",
+                    "still_image_url": "https://scialla.duckdns.org:5000/local/Ambrogio_liveMap.png",
+                    "stream_source": null,
+                    "authentication": "basic",
+                    "username": null,
+                    "password": null,
+                    "limit_refetch_to_url_change": false,
+                    "content_type": "image/png",
+                    "framerate": 2,
+                    "verify_ssl": true
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": "d8080f7cec2b484f15258cbf0fb79cf5",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "8d37accacca0fc3b0bda5ba4a595a9aa",
+                "version": 1,
+                "domain": "moon",
+                "title": "Moon",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "47414a84d8a9d37b4dd7e8eb7ea2d2eb",
+                "version": 1,
+                "domain": "uptime",
+                "title": "Uptime",
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "ac004ea263e423eea2e9369e8cec4374",
+                "version": 1,
+                "domain": "sonoff",
+                "title": "scialla@me.com",
+                "data": {
+                    "username": "scialla@me.com"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "scialla@me.com",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "867ebd3f688bb709995405d000aeddd7",
+                "version": 1,
+                "domain": "netatmo",
+                "title": "Configuration.yaml",
+                "data": {
+                    "auth_implementation": "netatmo",
+                    "token": {
+                        "scope": [
+                            "access_camera",
+                            "access_presence",
+                            "read_camera",
+                            "read_homecoach",
+                            "read_presence",
+                            "read_smokedetector",
+                            "read_station",
+                            "read_thermostat",
+                            "write_camera",
+                            "write_presence",
+                            "write_thermostat"
+                        ],
+                        "access_token": "56b6376445a1e3c8bad5b25d|8f77baf18d5027e67f3df3c11c3d57a7",
+                        "refresh_token": "56b6376445a1e3c8bad5b25d|8a0e343a013220150df0439117fc0cdc",
+                        "expires_in": 10800,
+                        "expire_in": 10800,
+                        "restricted_access_token": "56b6376445a1e3c8bad5b25d|53bb17f7c7281519092292e4b836e207",
+                        "restricted_refresh_token": "56b6376445a1e3c8bad5b25d|2fbe8186c6a3137d25fc0515dcfda23d",
+                        "expires_at": 1654300193.8251827
+                    },
+                    "webhook_id": "22a0154b429ed4aed51fd766de7ad2e642a34daf9f01b1db533918c83ce788e2"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "netatmo",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "004d7513094a295088e95612e743c925",
+                "version": 1,
+                "domain": "meross_cloud",
+                "title": "https://iot.meross.com",
+                "data": {
+                    "username": "scialla@me.com",
+                    "password": "Futura66",
+                    "http_api_endpoint": "https://iot.meross.com",
+                    "stored_credentials": {
+                        "token": "f548634eb4b6d9067afd1912c8ea0e7d37c2a6a22f04c95ab91e90b18e03d7d4",
+                        "key": "7920443c7755874ef44a0479984235f4",
+                        "user_id": "107633",
+                        "user_email": "scialla@me.com",
+                        "issued_on": "2022-05-09T16:32:07.257663"
+                    },
+                    "skip_mqtt_cert_validation": true
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "https://iot.meross.com",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "5b08d6e19a47328a875fb4aef449fe38",
+                "version": 1,
+                "domain": "watchman",
+                "title": "Watchman",
+                "data": {},
+                "options": {
+                    "service": "",
+                    "service_data": "{}",
+                    "included_folders": [],
+                    "report_header": "-== Watchman Report ==-",
+                    "report_path": "",
+                    "ignored_items": [],
+                    "ignored_states": [],
+                    "chunk_size": 3500,
+                    "ignored_files": [],
+                    "check_lovelace": false,
+                    "columns_width": [
+                        30,
+                        7,
+                        60
+                    ],
+                    "startup_delay": 0,
+                    "friendly_names": false
+                },
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            },
+            {
+                "entry_id": "471c40ef500a3ea963c27235d6baabf8",
+                "version": 1,
+                "domain": "apple_tv",
+                "title": "Studio",
+                "data": {
+                    "name": "Studio",
+                    "credentials": {
+                        "3": "b6b439e2d359595996fd55d1986f56f6771dd5a64cef21d6ed3dc3f41685f74f:3ff362ef58d0a9fb3f4146eec82ecf5507f58a4ec6a2ab21a2cbcaa14712d4dc:43353037364530362d443744372d344144412d393646442d343739343845463337454439:34343338366634392d626535392d343664372d613135662d333538353535393861393364",
+                        "4": "b6b439e2d359595996fd55d1986f56f6771dd5a64cef21d6ed3dc3f41685f74f:54285046242d9e306f54ceca5129aae92255230cc8dd7a27c9d17b5b4e3d58f6:43353037364530362d443744372d344144412d393646442d343739343845463337454439:36343364643233372d333833652d343564312d623733342d623230366339366561326262",
+                        "5": null
+                    },
+                    "address": "192.168.1.128",
+                    "identifiers": [
+                        "28:FF:3C:97:6F:3B",
+                        "7C1EA4BE-9CFB-48F9-985A-613EB29B77D5",
+                        "28FF3C976F3B"
+                    ]
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "zeroconf",
+                "unique_id": "7C1EA4BE-9CFB-48F9-985A-613EB29B77D5",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "fa9485314dfdb3996e2af1030be74814",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "iPhone x di Scialla",
+                "data": {
+                    "app_name": "Home Assistant",
+                    "app_id": "io.robbie.HomeAssistant",
+                    "device_id": "206F1F99-97B5-4F43-BD22-84757C503924",
+                    "os_name": "iOS",
+                    "device_name": "iPhone x di Scialla",
+                    "supports_encryption": true,
+                    "app_data": {
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification",
+                        "push_token": "dKcZxtr7u0NxpoxO2PjHzJ:APA91bFHiNVIdGSLOJhKGOnRFlueatORM7ICa20dmNGC9r1rVTWOofIuAu3-ibMo4pHYjD7zatWDJau8fcQfNChI21Y5uuXT7sZngDHyGanM96xKWYHkvv17sw4J7DP6LbRecNnb6JLm"
+                    },
+                    "app_version": "2022.3 (2022.358)",
+                    "model": "iPhone10,6",
+                    "manufacturer": "Apple",
+                    "os_version": "15.5",
+                    "webhook_id": "2edf3836952f24e2a6b1ebe5a1fef38c7ae14a163219e5c40ad13f5dbf0b38f6",
+                    "secret": "c66fe4192b2c2a8c1ab7f0cf52e1795e391a65f7da528f2a0ec212ba7f43e0f8",
+                    "user_id": "64655bf0b0d24f4ca411d5fdd9db24e9"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "registration",
+                "unique_id": "io.robbie.HomeAssistant-206F1F99-97B5-4F43-BD22-84757C503924",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "d85e4883fab13fb58ae0945b9641427d",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "iPhone di Silvia",
+                "data": {
+                    "device_id": "EAF9F881-2D6F-44BB-A131-310376BAB092",
+                    "app_version": "2022.3 (2022.358)",
+                    "app_data": {
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification",
+                        "push_token": "eSjbKNGHsEa2qrCjtT7xXo:APA91bFIMSc6J4eCoLZ1IrgdvxTV3IGfV2afaDnFEQyr-9ubZtgno_602y5Z__Ayps3y2qdN6y69j1ou39AzfSgtGbXBOVXZ0ylj414-OO-0EYH4cFmFNersafNZjXxW9u63v85znT_t"
+                    },
+                    "model": "iPhone14,5",
+                    "app_id": "io.robbie.HomeAssistant",
+                    "manufacturer": "Apple",
+                    "os_name": "iOS",
+                    "os_version": "15.5",
+                    "app_name": "Home Assistant",
+                    "device_name": "iPhone di Silvia",
+                    "supports_encryption": true,
+                    "webhook_id": "213768dc6323958f722a0a499f4aacfff5927d0aeec7563b4641fb8a8ff4b91e",
+                    "secret": "744131b0daa9b2da2020fec2f9f3039c18a5175144953eafce8209bbb723426a",
+                    "user_id": "8be48ae5ceb041cb9c50e2b40e354139"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "registration",
+                "unique_id": "io.robbie.HomeAssistant-EAF9F881-2D6F-44BB-A131-310376BAB092",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "9cd4196ba4a4cbbf390ee9dfe9564650",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "iPhone di Giovanna",
+                "data": {
+                    "device_name": "iPhone di Giovanna",
+                    "device_id": "A24842F7-9837-46FE-96DA-7C191FAD1187",
+                    "app_version": "2022.3 (2022.358)",
+                    "app_id": "io.robbie.HomeAssistant",
+                    "os_name": "iOS",
+                    "os_version": "12.5.5",
+                    "app_data": {
+                        "push_token": "dxShgbPsz0oWjFdpxguz4Y:APA91bGMArANw9xYmmzUxZqTGX8RExUB-J4tEOguudkPx6y5auh0XsJXtKxhejYyMQBVqj_pAmp43dRW9CiaQyopn46TXsdwV42x3UD4S2mVaeD3Go3J62EHSAx_-U5h4xRmNa-F8i_h",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+                    },
+                    "manufacturer": "Apple",
+                    "model": "iPhone7,2",
+                    "app_name": "Home Assistant",
+                    "supports_encryption": true,
+                    "webhook_id": "4bea05a69f4ec7ff187596645f8696c78c94d7448a54916b1b6ff26a70741c9e",
+                    "secret": "2d9bdef3a0519e0297eb30de15042f1e4757d2438be10196c9760ec50049f59d",
+                    "user_id": "de3b9c06e8674c01970033416c6333a1"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "registration",
+                "unique_id": "io.robbie.HomeAssistant-A24842F7-9837-46FE-96DA-7C191FAD1187",
+                "disabled_by": null
+            }
+        ]
+    }
+}

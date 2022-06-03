@@ -1,0 +1,145 @@
+# Gli altri sono in binary_sensor.yaml
+mqtt:
+  sensor:
+  # Sensor for monitoring the bridge state
+  - name: sonoffbridge state
+    state_topic: "tele/SonoffBridge/LWT"
+    icon: mdi:router-wireless
+
+automation:
+  - alias: Apertura CONTATTI e reset
+    trigger:
+    - platform: homeassistant
+      event: start 
+#    - platform: time
+#      at: "04:00:00"
+#    - platform: state       (non serve più avendo messo off_delay: 3 ai binary_sensor)
+#      entity_id: group.contatti_magnetici
+#      to: 'on'
+#      for:
+#        seconds: 3
+    condition: []
+    action:
+      service: mqtt.publish
+      data:
+        topic: tele/SonoffBridge/RESULT
+        payload: '{"RfReceived":{"Data":"key_clean"}}'
+        retain: true # Serve a evitare errori nel log all'avvio perché i sensori RF non hanno alcun stato
+
+  - alias: Apertura Box Davide
+    id: apertura_box_davide
+    trigger:
+      platform: state
+      entity_id: binary_sensor.box_davide
+      to: 'on'
+    condition: 
+      condition: or
+      conditions:
+        - condition: template
+          value_template: "{{ states('person.scialla') != 'home' }}"
+        - condition: and
+          conditions:
+            - condition: state
+              entity_id: person.scialla
+              state: 'home'
+            - condition: time
+              after: "07:30:00"
+              before: "07:00:00"
+    action:
+      - service: notify.alexa_media
+        data:
+          target:
+            - media_player.ovunque
+          data:
+            type: announce
+            method: spoken
+          message: "Box Davide aperto"
+      - service: notify.scialla
+        data: 
+          title: 'Box Davide'
+          message: "Aperto"
+
+  - alias: Apertura Box Giovanna
+    id: apertura_box_giovanna
+    trigger:
+      platform: state
+      entity_id: binary_sensor.box_giovanna
+      to: 'on'
+    action:
+      - service: notify.alexa_media
+        data:
+          target:
+            - media_player.ovunque 
+          data:
+            type: announce
+            method: spoken
+          message: "Box Giovanna aperto"
+      - service: notify.scialla
+        data: 
+          title: 'Box Giovanna'
+          message: "Aperto"
+
+  - alias: Apertura Cantina Grande
+    id: apertura_cantina_grande
+    trigger:
+      platform: state
+      entity_id: binary_sensor.cantina_grande
+      to: 'on'
+    action:
+      - service: notify.alexa_media
+        data:
+          target:
+            - media_player.ovunque 
+          data:
+            type: announce
+            method: spoken
+          message: "Cantina grande aperta"
+      - service: notify.scialla
+        data: 
+          title: 'Cantina grande'
+          message: "Aperta"
+
+  - alias: Apertura Cantina Piccola
+    id: apertura_cantina_piccola
+    trigger:
+      platform: state
+      entity_id: binary_sensor.cantina_piccola
+      to: 'on'
+    action:
+      - service: notify.alexa_media
+        data:
+          target:
+            - media_player.ovunque
+          data:
+            type: announce
+            method: spoken
+          message: "Cantina piccola aperta"
+      - service: notify.scialla
+        data: 
+          title: 'Cantina piccola'
+          message: "Aperta"
+
+  - alias: Apertura Sotto Scala
+    id: apertura_sotto_scala
+    trigger:
+      platform: state
+      entity_id: binary_sensor.sotto_scala
+      to: 'on'
+    action:
+      - service: notify.scialla
+        data: 
+          title: 'Sotto Scala'
+          message: "Aperto"
+
+  - alias: Avviso Sonoff RF Down
+    id: avviso_sonoff_rf_down
+    mode: queued
+    trigger:
+      - platform: state
+        entity_id: sensor.sonoffbridge_state
+    action:
+      - service: notify.scialla
+        data: 
+          title: 'Sonoff Bridge RF'
+          message: >
+              Il Bridge è {{ states('sensor.sonoffbridge_state') }}

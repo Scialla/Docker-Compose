@@ -1,0 +1,2482 @@
+title: Casa
+views:
+  - badges:
+      - entity: binary_sensor.updater
+      - entity: person.scialla
+        name: Scialla
+      - entity: person.silvia
+      - entity: person.giovanna
+      - entity: sun.sun
+      - entity: sensor.moon
+      - entity: sensor.cpu_temperature
+      - entity: sensor.disk_use_percent
+      - entity: sensor.memory_free
+      - entity: sensor.memory_use
+      - entity: sensor.processor_use
+      - entity: sensor.badlogin
+      - entity: sensor.ha_start
+      - entity: sensor.speedtest_download
+      - entity: sensor.speedtest_upload
+      - entity: sensor.speedtest_ping
+    cards:
+      - type: custom:sun-card
+      - type: iframe
+        url: /local/community/jdigiclock/clock.html
+        aspect_ratio: 60%
+      - type: weather-forecast
+        entity: weather.openweathermap
+        show_forecast: true
+        theme: yourname
+        secondary_info_attribute: wind_speed
+      - type: vertical-stack
+        cards:
+          - entity: alarm_control_panel.allarme_casa
+            type: alarm-panel
+            name: Antifurto
+          - type: entities
+            entities:
+              - type: custom:paper-buttons-row
+                buttons:
+                  - entity: alarm_control_panel.allarme_casa
+                    name: Antifurto
+                    layout: icon|state
+                    state_icons:
+                      armed_home: mdi:lock-open
+                      armed_away: mdi:lock
+                      armed_night: mdi:shield-moon
+                      disarmed: mdi:alarm-light-off-outline
+                    state_text:
+                      armed_home: Attivo in Casa
+                      armed_away: ATTIVO
+                      armed_night: Attivo Notte
+                      disarmed: Disattivo
+                    state_styles:
+                      armed_home:
+                        button:
+                          color: green
+                      armed_away:
+                        button:
+                          color: red
+                      armed_night:
+                        button:
+                          color: blue
+                      disarmed:
+                        button:
+                          color: yellow
+                    style:
+                      button:
+                        background-color: var(--table-row-alternative-background-color)
+                        border-radius: 40px
+                        padding: 10px
+                        font-size: 1.2rem
+      - animate: true
+        cards:
+          - entities:
+              - entity: sensor.casa_potenza
+                name: Watt/ora
+              - entity: sensor.casa_tensione
+                name: Volt
+              - entity: sensor.casa_corrente
+                name: Ampere
+            type: custom:mini-graph-card
+            name: Consumi Casa
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - entity: sensor.casa_potenza
+                name: Watt/ora
+            type: history-graph
+            hours_to_show: 72
+            title: Consumi Ultimi 3 Giorni
+        type: vertical-stack
+      - animate: true
+        entities:
+          - entity: sensor.forno_potenza
+            name: Forno
+          - entity: sensor.lavatrice_potenza
+            name: Lavatrice
+          - entity: sensor.forno_microonde_potenza
+            name: Micro
+          - entity: sensor.scaldabagno_potenza
+            name: Bagno
+          - entity: sensor.lavastoviglie_potenza
+            name: Lavastoviglie
+          - entity: sensor.presa_phon_power
+            name: Phon
+        type: custom:mini-graph-card
+        hour24: true
+      - type: entities
+        entities:
+          - entity: input_text.annuncio_alexa
+          - entity: input_select.alexa_selection
+      - type: iframe
+        url: >-
+          https://embed.windy.com/embed2.html?lat=42.618&lon=9.185&detailLat=45.464&detailLon=9.189&width=650&height=450&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=true&type=map&location=coordinates&detail=&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1
+        aspect_ratio: 80%
+      - type: entities
+        entities:
+          - input_number.max_consumo_permesso
+          - input_select.soglia_guardia
+          - input_select.soglia_tolleranza
+          - input_select.max_soglia_istantanea
+          - input_number.tempo_intervento
+        title: Controllo Carichi
+      - type: entities
+        entities:
+          - entity: sensor.stato_riscaldamento
+            secondary_info: last-updated
+      - type: entities
+        entities:
+          - entity: input_boolean.test
+            name: Horn
+            icon: mdi:air-horn
+      - type: entities
+        entities:
+          - entity: input_datetime.sveglia_colorata
+          - entity: automation.sveglia_colorata
+    icon: mdi:home
+    path: default_view
+    title: Home
+  - icon: mdi:home-outline
+    title: Home2
+    badges: []
+    cards:
+      - type: entities
+        entities:
+          - entity: sensor.date_time
+          - entity: sensor.ip_pubblico
+            secondary_info: last-changed
+          - entity: binary_sensor.rpi_power_status
+            secondary_info: last-changed
+          - entity: sensor.cert_expiry_timestamp_scialla_ddns_net_5000
+          - entity: sensor.cert_expiry_timestamp_scialla_duckdns_org_5000
+          - entity: sensor.current_version
+            secondary_info: last-updated
+          - entity: sensor.hacs
+            secondary_info: last-updated
+          - entity: sensor.moon
+          - entity: binary_sensor.imac
+          - entity: binary_sensor.macmini
+          - entity: sensor.last_boot
+        state_color: true
+      - entities:
+          - entity: sensor.qualita_aria_rebaudengo
+          - entity: sensor.waqi_rebaudengo_torino_piemonte_italy
+            name: Waqi Rebaudengo
+            secondary_info: last-changed
+          - entity: sensor.qualita_aria_lingotto
+          - entity: sensor.waqi_lingotto_torino_piemonte_italy
+            name: Waqi Lingotto
+            secondary_info: last-changed
+        type: entities
+      - type: entities
+        style: |
+          ha-card {
+            padding: 0;
+          }
+          .card-content {
+             --ha-card-background: none;
+             --ha-card-box-shadow: none;
+             padding: 0;
+          }
+        entities:
+          - type: custom:button-card
+            color: auto
+            aspect_ratio: 8/1
+            show_label: true
+            label: |
+              [[[ 
+                return 'Totale Entities: ' + states['sensor.count_entities'].state
+              ]]]
+          - type: custom:hui-horizontal-stack-card
+            cards:
+              - type: custom:button-card
+                color: auto
+                icon: mdi:ballot
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Auto: ' + states['sensor.count_entities'].attributes.automation; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:counter
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Auto ON: ' + states['sensor.count_entities'].attributes.automation_ON; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:ceiling-light
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Luci: ' + states['sensor.count_entities'].attributes.light; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:lightbulb-on
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Luci ON: ' + states['sensor.count_entities'].attributes.light_ON; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+          - type: custom:hui-horizontal-stack-card
+            cards:
+              - type: custom:button-card
+                color: auto
+                icon: mdi:nintendo-switch
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Binary: ' + states['sensor.count_entities'].attributes.binary_sensor; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:camera
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Camera: ' + states['sensor.count_entities'].attributes.camera; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:air-conditioner
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Clima: ' + states['sensor.count_entities'].attributes.climate; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:crosshairs-gps
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Tracker: ' + states['sensor.count_entities'].attributes.device_tracker; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+          - type: custom:hui-horizontal-stack-card
+            cards:
+              - type: custom:button-card
+                color: auto
+                icon: mdi:ab-testing
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Boolean: ' + states['sensor.count_entities'].attributes.input_boolean; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:timer-sand
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Datetime: ' + states['sensor.count_entities'].attributes.input_datetime; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:numeric
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Number: ' + states['sensor.count_entities'].attributes.input_number; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:format-list-bulleted-square
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Select: ' + states['sensor.count_entities'].attributes.input_select; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+          - type: custom:hui-horizontal-stack-card
+            cards:
+              - type: custom:button-card
+                color: auto
+                icon: mdi:card-text-outline
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Text: ' + states['sensor.count_entities'].attributes.input_text;
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:play-network-outline
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Media: ' + states['sensor.count_entities'].attributes.media_player;
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:image-area
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Scene: ' + states['sensor.count_entities'].attributes.scene; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:script-text-outline
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Script: ' + states['sensor.count_entities'].attributes.script; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+          - type: custom:hui-horizontal-stack-card
+            cards:
+              - type: custom:button-card
+                color: auto
+                icon: mdi:gauge-low
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Sensori: ' + states['sensor.count_entities'].attributes.sensor; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:power-socket-eu
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Switch: ' + states['sensor.count_entities'].attributes.switch; 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:group
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Gruppi: ' + states['sensor.count_entities'].attributes.group
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+              - type: custom:button-card
+                color: auto
+                icon: mdi:earth
+                aspect_ratio: 2/1
+                show_label: true
+                label: |
+                  [[[
+                    return 'Zone: ' + states['sensor.count_entities'].attributes.zone 
+                  ]]]
+                styles:
+                  label:
+                    - font-size: 12px
+      - type: entities
+        entities:
+          - entity: sensor.openweathermap_cloud_coverage
+          - entity: sensor.openweathermap_forecast_cloud_coverage
+          - entity: sensor.openweathermap_condition
+          - entity: sensor.openweathermap_forecast_condition
+          - entity: sensor.openweathermap_forecast_precipitation
+          - entity: sensor.openweathermap_forecast_temperature
+          - entity: sensor.openweathermap_forecast_temperature_low
+          - entity: sensor.openweathermap_forecast_time
+          - entity: sensor.openweathermap_forecast_wind_bearing
+          - entity: sensor.openweathermap_forecast_wind_speed
+          - entity: sensor.openweathermap_humidity
+          - entity: sensor.openweathermap_pressure
+          - entity: sensor.openweathermap_rain
+          - entity: sensor.openweathermap_snow
+          - entity: sensor.openweathermap_temperature
+          - entity: sensor.openweathermap_weather
+          - entity: sensor.openweathermap_weather_code
+          - entity: sensor.openweathermap_wind_bearing
+          - entity: sensor.openweathermap_wind_speed
+          - entity: sensor.openweathermap_forecast_pressure
+      - type: entities
+        entities:
+          - sensor.openweathermap_dew_point
+          - sensor.openweathermap_feels_like_temperature
+          - sensor.openweathermap_forecast_precipitation_probability
+          - sensor.openweathermap_precipitation_kind
+          - sensor.openweathermap_uv_index
+      - type: entities
+        entities:
+          - sensor.co2_intensity
+          - sensor.grid_fossil_fuel_percentage
+      - type: custom:battery-state-card
+        title: Livello Batterie
+        entities:
+          - sensor.lcd_bagnogrande_battery
+          - sensor.lcd_bagnopiccolo_battery
+          - sensor.porta_balcone_letto_battery
+          - sensor.porta_casa_battery
+          - sensor.frigo_battery
+          - sensor.ble_battery_4c65a8ddd248
+          - sensor.condizionatore_battery
+          - sensor.pir_scale_battery
+          - sensor.ikeaswitch_battery
+          - sensor.porta_balcone_studio_battery
+          - sensor.porta_balcone_ingresso_battery
+          - sensor.bagno_grande_battery
+          - sensor.bagno_piccolo_battery
+          - sensor.porta_balcone_cucina_battery
+          - sensor.finestra_silvia_battery
+          - sensor.ikeamultilightswitch_battery
+  - title: Ambrogio
+    path: ambrogio
+    icon: mdi:robot-vacuum
+    badges:
+      - entity: vacuum.ambrogio
+    cards:
+      - type: custom:vacuum-card
+        entity: vacuum.ambrogio
+        image: default
+        compact_view: false
+      - type: entities
+        entities:
+          - sensor.ambrogio_last_cleaning
+          - sensor.ambrogio_last_error
+          - sensor.ambrogio_life_span_brush
+          - sensor.ambrogio_life_span_filter
+          - sensor.ambrogio_life_span_side_brush
+          - binary_sensor.ambrogio_mop_attached
+          - sensor.ambrogio_stats_area
+          - sensor.ambrogio_stats_time
+          - sensor.ambrogio_stats_total_area
+          - sensor.ambrogio_stats_total_cleanings
+          - sensor.ambrogio_stats_total_time
+          - sensor.ambrogio_stats_type
+          - number.ambrogio_volume
+          - select.ambrogio_water_amount
+      - type: picture-entity
+        entity: camera.ambrogio_live_map
+      - type: picture-entity
+        entity: camera.ultima_pulizia
+  - badges: []
+    cards:
+      - channels:
+          - image: /local/lg_remote/tv_logo/Rai 1 HD.png
+            number: '501'
+          - image: /local/lg_remote/tv_logo/Rai 2 HD.png
+            number: '502'
+          - image: /local/lg_remote/tv_logo/Rai 3 HD.png
+            number: '3'
+          - image: /local/lg_remote/tv_logo/Rete4 HD.png
+            number: '504'
+          - image: /local/lg_remote/tv_logo/Canale5 HD.png
+            number: '505'
+          - image: /local/lg_remote/tv_logo/Italia1 HD.png
+            number: '506'
+          - image: /local/lg_remote/tv_logo/LA7 HD.png
+            number: '507'
+          - image: /local/lg_remote/tv_logo/TV8.png
+            number: '8'
+          - image: /local/lg_remote/tv_logo/NOVE.png
+            number: '9'
+          - image: /local/lg_remote/tv_logo/20.png
+            number: '20'
+          - image: /local/lg_remote/tv_logo/IRIS.png
+            number: '22'
+          - image: /local/lg_remote/tv_logo/Real Time HD.png
+            number: '31'
+          - image: /local/lg_remote/tv_logo/K2.png
+            number: '41'
+          - image: /local/lg_remote/tv_logo/Rai News 24.png
+            number: '48'
+          - image: /local/lg_remote/tv_logo/Spike.png
+            number: '49'
+          - image: /local/lg_remote/tv_logo/Sky TG24.png
+            number: '50'
+          - image: /local/lg_remote/tv_logo/TGCOM24.png
+            number: '51'
+          - image: /local/lg_remote/tv_logo/MotorTrend.png
+            number: '59'
+          - image: /local/lg_remote/tv_logo/DMAX.png
+            number: '52'
+          - image: /local/lg_remote/tv_logo/Focus.png
+            number: '35'
+          - image: /local/lg_remote/tv_logo/Cielo HD.png
+            number: '26'
+          - image: /local/lg_remote/tv_logo/HGTV.png
+            number: '56'
+          - image: /local/lg_remote/tv_logo/zelig.png
+            number: '63'
+        colors:
+          background: rgba(95,155,234)
+          texts: black
+        dimensions:
+          scale: 0.9
+        entity: media_player.lg_tv
+        sources:
+          - icon: mdi:video-vintage
+            name: Amazon Prime Video
+          - icon: mdi:youtube-tv
+            name: Foto e video
+          - icon: mdi:amplifier
+            name: HDMI2
+          - icon: mdi:television
+            name: Canali TV
+        type: custom:lg-remote-control
+      - entity: media_player.lg_tv
+        type: media-control
+      - type: media-control
+        entity: media_player.samsung
+      - type: media-control
+        entity: media_player.selecline
+      - entity: media_player.onkyo
+        type: media-control
+      - entity: media_player.echo_studio
+        type: media-control
+      - entity: media_player.altoparlante
+        type: media-control
+      - entity: media_player.echo_show
+        type: media-control
+      - entity: media_player.echo_dot_ingresso
+        type: media-control
+      - entity: media_player.echo_dot_camera_letto
+        type: media-control
+      - entity: media_player.ovunque
+        type: media-control
+      - entities:
+          - entity: script.remco_awake
+            icon: mdi:radio
+          - entity: script.rtlbest
+            icon: mdi:radio
+        type: entities
+      - type: media-control
+        entity: media_player.appletv_ingresso
+      - type: media-control
+        entity: media_player.studio
+      - type: entities
+        entities:
+          - remote.appletv_ingresso
+          - remote.studio
+      - type: media-control
+        entity: media_player.fire_tv_stick
+      - type: media-control
+        entity: media_player.ggmm_e3
+    icon: mdi:google-cardboard
+    path: media
+    title: Media
+  - badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: light.luce_studio
+                icon: mdi:globe-light
+              - entity: light.mensola
+                icon: mdi:lightbulb-cfl
+              - entity: light.lampada_scrivania
+                icon: mdi:track-light
+              - entity: light.neon
+                icon: mdi:car
+          - type: light
+            entity: light.ballerini
+            icon: mdi:floor-lamp
+        show_header_toggle: false
+        state_color: true
+        title: Studio
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: light.led_ingresso
+                icon: mdi:string-lights
+              - entity: light.luce_ingresso
+                icon: mdi:lightbulb-group
+          - type: light
+            entity: light.koogeek_lb1_1f299c
+            icon: mdi:floor-lamp
+        show_header_toggle: false
+        state_color: true
+        title: Ingresso
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: light.alogena
+                icon: mdi:spotlight-beam
+              - entity: light.luce_cucina
+                icon: mdi:ceiling-light
+            camera_image: camera.ambrogio_livemap
+          - type: light
+            entity: light.cappa
+            icon: mdi:led-strip-variant
+          - type: entities
+            entities:
+              - entity: sensor.cappa_linkquality
+        show_header_toggle: false
+        state_color: true
+        title: Cucina
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: light.luce_letto
+                icon: mdi:lightbulb-group
+              - entity: light.lampada_zanzare
+                icon: mdi:lightbulb-on-outline
+          - type: light
+            entity: light.striscia_letto
+            icon: mdi:led-strip-variant
+          - type: entities
+            entities:
+              - entity: sensor.striscia_letto_linkquality
+        show_header_toggle: false
+        state_color: true
+        title: Camera Letto
+      - entities:
+          - entity: light.luce_silvia
+            icon: mdi:string-lights
+        show_header_toggle: false
+        state_color: true
+        title: Camera di Silvia
+        type: entities
+      - entities:
+          - entity: light.luce_scale
+            icon: mdi:stairs
+        title: Scale
+        type: entities
+      - entities:
+          - entity: light.luce_balcone
+            icon: mdi:coach-lamp
+        show_header_toggle: false
+        state_color: true
+        title: Balcone
+        type: entities
+      - entities:
+          - entity: light.luce_bagno_grande
+            icon: mdi:ceiling-light
+          - entity: light.luce_bagno_piccolo
+            icon: mdi:ceiling-light
+          - entity: light.sonoff_10009c0093
+            icon: mdi:spotlight
+            name: Specchiera
+        show_header_toggle: false
+        state_color: true
+        title: Bagni
+        type: entities
+      - type: entities
+        entities:
+          - entity: light.lampada_zanzare
+          - entity: sensor.lampada_zanzare_current
+          - entity: sensor.lampada_zanzare_voltage
+          - entity: sensor.lampada_zanzare_energy
+          - entity: sensor.lampada_zanzare_power
+          - entity: sensor.lampada_zanzare_linkquality
+          - entity: sensor.lampada_zanzare_power_outage_memory
+          - entity: select.lampada_zanzare_power_outage_memory
+        title: Lampada Zanzare
+    icon: mdi:lightbulb-outline
+    path: luci
+    title: Luci
+  - badges: []
+    cards:
+      - animate: true
+        entities:
+          - entity: sensor.presa_frigo_power
+            name: Frigo
+          - entity: sensor.antenna_tv_power
+            name: Antenna TV
+          - entity: sensor.presa_selecline_power
+            name: Selecline
+          - entity: sensor.presa_samsung_power
+            name: Samsung
+          - entity: sensor.presa_onkyo_power
+            name: Onkyo
+          - entity: sensor.presa_mediaplayer_power
+            name: Mediaplayer
+        type: custom:mini-graph-card
+        hour24: true
+      - type: entities
+        entities:
+          - entity: switch.ciabattascrivania_l1
+          - entity: switch.ciabattascrivania_l2
+          - entity: switch.ciabattascrivania_l3
+          - entity: sensor.ciabattascrivania_linkquality
+        title: Ciabatta Scrivania
+        show_header_toggle: false
+      - entities:
+          - entity: switch.carica_batterie
+            icon: mdi:battery-charging-low
+          - entity: switch.presa_1
+            icon: mdi:power-socket-eu
+          - entity: switch.presa_2
+            icon: mdi:power-socket-eu
+          - entity: switch.usb_rm
+            icon: mdi:usb
+        show_header_toggle: false
+        state_color: true
+        title: Studio Ciabatta 1
+        type: entities
+      - entities:
+          - entity: switch.ferro_da_stiro
+            icon: mdi:tshirt-crew-outline
+          - entity: switch.cicalino
+            icon: mdi:bell-ring-outline
+          - entity: switch.massaggiatore
+            icon: mdi:sofa
+          - entity: switch.presa_3
+            icon: mdi:power-socket-eu
+          - entity: switch.usb_2
+            icon: mdi:usb-port
+        show_header_toggle: false
+        state_color: true
+        title: Studio Ciabatta 2
+        type: entities
+      - entities:
+          - entity: switch.forno_microonde
+            icon: mdi:microwave
+          - entity: sensor.forno_microonde_potenza
+            icon: mdi:power
+          - entity: sensor.forno_microonde_corrente
+            icon: mdi:current-ac
+          - entity: sensor.forno_microonde_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.forno_microonde_energia
+            icon: mdi:transmission-tower
+        show_header_toggle: false
+        state_color: true
+        title: Forno Microonde
+        type: entities
+      - entities:
+          - entity: switch.forno
+            icon: mdi:stove
+          - entity: sensor.forno_potenza
+            icon: mdi:power
+          - entity: sensor.forno_corrente
+            icon: mdi:current-ac
+          - entity: sensor.forno_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.forno_energia
+            icon: mdi:transmission-tower
+        state_color: true
+        title: Forno
+        type: entities
+      - entities:
+          - entity: switch.lavatrice
+            icon: mdi:washing-machine
+          - entity: sensor.lavatrice_potenza
+            icon: mdi:power
+          - entity: sensor.lavatrice_corrente
+            icon: mdi:current-ac
+          - entity: sensor.lavatrice_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.lavatrice_energia
+            icon: mdi:transmission-tower
+        show_header_toggle: false
+        state_color: true
+        title: Lavatrice
+        type: entities
+      - entities:
+          - entity: switch.scaldabagno
+            icon: mdi:radiator
+          - entity: sensor.scaldabagno_potenza
+            icon: mdi:power
+          - entity: sensor.scaldabagno_corrente
+            icon: mdi:current-ac
+          - entity: sensor.scaldabagno_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.scaldabagno_energia
+            icon: mdi:transmission-tower
+        show_header_toggle: false
+        state_color: true
+        title: Scaldabagno
+        type: entities
+      - entities:
+          - entity: switch.lavastoviglie
+            icon: mdi:dishwasher
+          - entity: sensor.lavastoviglie_potenza
+            icon: mdi:power
+          - entity: sensor.lavastoviglie_corrente
+            icon: mdi:current-ac
+          - entity: sensor.lavastoviglie_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.lavastoviglie_energia
+            icon: mdi:transmission-tower
+        show_header_toggle: false
+        state_color: true
+        title: Lavastoviglie
+        type: entities
+      - type: entities
+        entities:
+          - entity: switch.presa_selecline
+            icon: mdi:television
+          - entity: sensor.presa_selecline_power
+          - entity: sensor.presa_selecline_current
+          - entity: sensor.presa_selecline_voltage
+          - entity: sensor.presa_selecline_energy
+          - entity: sensor.presa_selecline_linkquality
+          - entity: sensor.presa_selecline_power_outage_memory
+          - entity: select.presa_selecline_power_outage_memory
+        title: TV Cucina
+        state_color: true
+      - entities:
+          - entity: switch.portone
+            icon: mdi:door
+        show_header_toggle: false
+        state_color: true
+        title: Portone
+        type: entities
+      - type: entities
+        entities:
+          - entity: switch.presa_samsung
+            icon: mdi:television
+          - entity: sensor.presa_samsung_power
+          - entity: sensor.presa_samsung_current
+          - entity: sensor.presa_samsung_voltage
+          - entity: sensor.presa_samsung_energy
+          - entity: sensor.presa_samsung_linkquality
+          - entity: sensor.presa_samsung_power_outage_memory
+          - entity: select.presa_samsung_power_outage_memory
+        title: TV Samsung
+        state_color: true
+      - type: entities
+        entities:
+          - entity: switch.presa_onkyo
+            icon: mdi:amplifier
+          - entity: sensor.presa_onkyo_power
+          - entity: sensor.presa_onkyo_current
+          - entity: sensor.presa_onkyo_voltage
+          - entity: sensor.presa_onkyo_energy
+          - entity: sensor.presa_onkyo_linkquality
+          - entity: sensor.presa_onkyo_power_outage_memory
+          - entity: select.presa_onkyo_power_outage_memory
+        title: Amplificatore
+        state_color: true
+      - type: entities
+        entities:
+          - entity: switch.antenna_tv
+            icon: mdi:antenna
+          - entity: sensor.antenna_tv_power
+          - entity: sensor.antenna_tv_current
+          - entity: sensor.antenna_tv_voltage
+          - entity: sensor.antenna_tv_energy
+          - entity: sensor.antenna_tv_linkquality
+          - entity: sensor.antenna_tv_power_outage_memory
+          - entity: select.antenna_tv_power_outage_memory
+        title: Antenna TV
+        state_color: true
+      - type: entities
+        entities:
+          - entity: switch.presa_phon
+            icon: mdi:hair-dryer
+          - entity: sensor.presa_phon_power
+          - entity: sensor.presa_phon_current
+          - entity: sensor.presa_phon_voltage
+          - entity: sensor.presa_phon_energy
+          - entity: sensor.presa_phon_linkquality
+          - entity: sensor.presa_phon_power_outage_memory
+          - entity: select.presa_phon_power_outage_memory
+        title: Phon
+        state_color: true
+      - type: entities
+        entities:
+          - entity: switch.presa_frigo
+            icon: mdi:fridge
+          - entity: sensor.presa_frigo_power
+          - entity: sensor.presa_frigo_current
+          - entity: sensor.presa_frigo_voltage
+          - entity: sensor.presa_frigo_energy
+          - entity: sensor.presa_frigo_linkquality
+          - entity: sensor.presa_frigo_power_outage_memory
+          - entity: select.presa_frigo_power_outage_memory
+        title: Presa Frigo
+        state_color: true
+      - type: entities
+        entities:
+          - entity: switch.presa_mediaplayer
+            icon: mdi:film
+          - entity: sensor.presa_mediaplayer_power
+          - entity: sensor.presa_mediaplayer_current
+          - entity: sensor.presa_mediaplayer_voltage
+          - entity: sensor.presa_mediaplayer_energy
+          - entity: sensor.presa_mediaplayer_linkquality
+          - entity: sensor.presa_mediaplayer_power_outage_memory
+          - entity: select.presa_mediaplayer_power_outage_memory
+        title: Mediaplayer
+        state_color: true
+      - entities:
+          - entity: switch.meross_mss425e_main_channel
+            icon: mdi:power-socket-eu
+            name: Principale
+          - entity: switch.meross_mss425e_compressore
+            icon: mdi:power-plug
+            name: Compressore
+          - entity: switch.meross_mss425e_lampada_box
+            icon: mdi:harddisk
+            name: Lampada Box
+          - entity: switch.meross_mss425e_presa_box
+            icon: mdi:printer
+            name: Presa Box
+          - entity: switch.meross_mss425e_usb_box
+            icon: mdi:usb-port
+            name: USB Box
+        show_header_toggle: false
+        state_color: true
+        title: Meross
+        type: entities
+      - type: entities
+        entities:
+          - entity: switch.sonoff_10009bdd07
+            name: Deumidificatore
+    icon: mdi:toggle-switch-outline
+    path: interruttori
+    title: Interruttori
+  - badges: []
+    cards:
+      - type: thermostat
+        entity: climate.netatmo_camera_di_silvia
+      - type: thermostat
+        entity: climate.netatmo_cucina
+      - type: thermostat
+        entity: climate.netatmo_studio
+      - type: thermostat
+        entity: climate.netatmo_ingresso
+      - type: thermostat
+        entity: climate.netatmo_camera_da_letto
+      - type: thermostat
+        entity: climate.netatmo_bagno_grande
+      - type: thermostat
+        entity: climate.netatmo_bagno_piccolo
+      - entity: climate.coolix
+        type: thermostat
+      - entities:
+          - fan.ventilatore_letto
+        state_color: true
+        type: entities
+      - entities:
+          - entity: fan.ventilatore_silvia
+        state_color: true
+        type: entities
+      - entities:
+          - fan.ventilatore_studio
+        state_color: true
+        type: entities
+      - type: thermostat
+        entity: climate.netatmo_smart_thermostat
+        name: Termostato
+      - type: thermostat
+        entity: climate.netatmo_valve_1
+        name: Cucina
+      - type: thermostat
+        entity: climate.netatmo_valve_2
+        name: Studio
+      - type: thermostat
+        entity: climate.netatmo_valve_3
+        name: Ingresso
+      - type: thermostat
+        entity: climate.netatmo_valve_7
+        name: Camera da Letto
+      - type: thermostat
+        entity: climate.netatmo_valve_4
+        name: Bagno Grande
+      - type: thermostat
+        entity: climate.netatmo_valve_5
+        name: Bagno Piccolo
+      - type: entities
+        entities:
+          - entity: sensor.batteria_netatmo_bagno_grande
+          - entity: sensor.batteria_netatmo_bagno_piccolo
+          - entity: sensor.batteria_netatmo_camera_da_letto
+          - entity: sensor.batteria_netatmo_cucina
+          - entity: sensor.batteria_netatmo_ingresso
+          - entity: sensor.batteria_netatmo_studio
+          - entity: sensor.batteria_netatmo_termostato
+        title: Livello Batterie Valvole
+      - type: entities
+        entities:
+          - entity: sensor.netatmo_smart_thermostat_current_temperature
+          - entity: sensor.netatmo_valve_1_current_temperature
+            name: Cucina
+          - entity: sensor.netatmo_valve_2_current_temperature
+            name: Studio
+          - entity: sensor.netatmo_valve_3_current_temperature
+            name: Ingresso
+          - entity: sensor.netatmo_valve_4_current_temperature
+            name: Bagno Grande
+          - entity: sensor.netatmo_valve_5_current_temperature
+            name: Bagno Piccolo
+          - entity: sensor.netatmo_valve_7_current_temperature
+            name: Camera Letto
+      - type: entities
+        entities:
+          - select.netatmo_casa
+    icon: mdi:home-thermometer-outline
+    path: climatizzazione
+    title: Climatizzazione
+  - icon: mdi:gauge
+    path: sensori
+    title: Sensori
+    badges: []
+    cards:
+      - animate: true
+        cards:
+          - entities:
+              - sensor.air_quality_sensor_3c26cf_temperature
+            font_size: 75
+            line_color: pink
+            line_width: 8
+            name: Silvia
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - sensor.netatmo_smart_thermostat_current_temperature
+            font_size: 75
+            line_color: pink
+            line_width: 8
+            name: Termostato
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - entity: sensor.air_quality_sensor_3c26cf_humidity
+            font_size: 75
+            line_color: pink
+            line_width: 8
+            name: Silvia
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+        type: horizontal-stack
+      - animate: true
+        cards:
+          - entities:
+              - sensor.netatmo_valve_3_current_temperature
+            font_size: 75
+            line_color: purple
+            line_width: 8
+            name: Ingresso
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - sensor.netatmo_valve_1_current_temperature
+            font_size: 75
+            line_color: white
+            line_width: 8
+            name: Cucina
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+        type: horizontal-stack
+      - animate: true
+        cards:
+          - entities:
+              - sensor.ble_temperature_4c65a8ddd248
+            font_size: 75
+            line_color: red
+            line_width: 8
+            name: Letto
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - sensor.netatmo_valve_7_current_temperature
+            font_size: 75
+            line_color: red
+            line_width: 8
+            name: Valvola
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - entity: sensor.ble_humidity_4c65a8ddd248
+            font_size: 75
+            line_color: red
+            line_width: 8
+            name: Letto
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+        type: horizontal-stack
+      - animate: true
+        cards:
+          - entities:
+              - sensor.frigo
+            font_size: 75
+            line_color: orange
+            line_width: 8
+            name: Frigo
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - sensor.frigo_humidity
+            font_size: 75
+            line_color: orange
+            line_width: 8
+            name: Frigo
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+        type: horizontal-stack
+      - animate: true
+        cards:
+          - entities:
+              - sensor.temperatura_studio
+            font_size: 75
+            line_color: blue
+            line_width: 8
+            name: Studio
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - sensor.netatmo_valve_2_current_temperature
+            font_size: 75
+            line_color: blue
+            line_width: 8
+            name: Valvola
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+          - entities:
+              - entity: sensor.umidita_studio
+            font_size: 75
+            line_color: blue
+            line_width: 8
+            name: Studio
+            type: custom:mini-graph-card
+            show:
+              extrema: true
+            hour24: true
+        type: horizontal-stack
+      - animate: true
+        type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - entities:
+                  - sensor.balcone_temperature
+                font_size: 75
+                line_color: green
+                line_width: 8
+                name: Balcone
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+              - entities:
+                  - sensor.balcone_humidity
+                font_size: 75
+                line_color: green
+                line_width: 8
+                name: Balcone
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+              - entities:
+                  - entity: sensor.balcone_pressure
+                font_size: 75
+                line_color: green
+                line_width: 8
+                name: Balcone
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+          - type: horizontal-stack
+            cards:
+              - entities:
+                  - sensor.temperatura_esterna
+                font_size: 75
+                font_size_header: 12
+                line_color: yellow
+                line_width: 8
+                name: Esterna
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+              - entities:
+                  - sensor.umidita_esterna
+                font_size: 75
+                font_size_header: 12
+                icon: mdi:water-percent
+                line_width: 8
+                line_color: yellow
+                name: Esterna
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+              - entities:
+                  - sensor.openweathermap_pressure
+                font_size: 75
+                font_size_header: 12
+                line_width: 8
+                line_color: yellow
+                name: Esterna
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+      - animate: true
+        type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - entities:
+                  - sensor.lcd_bagnogrande_temperature
+                font_size: 75
+                line_color: grey
+                line_width: 8
+                name: Bagno Grande
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+              - entities:
+                  - sensor.lcd_bagnogrande_humidity
+                font_size: 75
+                line_color: grey
+                line_width: 8
+                name: Bagno Grande
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+          - type: horizontal-stack
+            cards:
+              - entities:
+                  - sensor.lcd_bagnopiccolo_temperature
+                font_size: 75
+                line_color: lightblue
+                line_width: 8
+                name: Bagno Piccolo
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+              - entities:
+                  - sensor.lcd_bagnopiccolo_humidity
+                font_size: 75
+                icon: mdi:water-percent
+                line_width: 8
+                line_color: lightblue
+                name: Bagno Piccolo
+                type: custom:mini-graph-card
+                show:
+                  extrema: true
+                hour24: true
+      - entities:
+          - entity: sensor.ble_temperature_4c65a8ddd248
+            name: Temperatura
+            secondary_info: last-updated
+          - entity: sensor.ble_humidity_4c65a8ddd248
+            name: Umidità
+            secondary_info: last-updated
+          - entity: sensor.ble_battery_4c65a8ddd248
+            name: Batteria
+            secondary_info: last-updated
+          - entity: sensor.ble_rssi_4c65a8ddd248
+            name: RSSI
+        title: Camera da Letto
+        type: entities
+      - entities:
+          - entity: sensor.temperatura_studio
+            secondary_info: last-updated
+          - entity: sensor.umidita_studio
+            secondary_info: last-updated
+        title: Sensore Studio
+        type: entities
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.qualita_aria_1
+        show:
+          extrema: true
+        hours_to_show: 168
+        points_per_hour: 0.25
+        animated: true
+      - entities:
+          - entity: sensor.temperatura_silvia
+            secondary_info: last-updated
+          - entity: sensor.umidita_silvia
+            secondary_info: last-updated
+            icon: mdi:water-percent
+          - entity: sensor.air_quality
+            icon: mdi:air-filter
+            secondary_info: last-updated
+          - entity: sensor.carbon_dioxide_level
+          - entity: sensor.carbon_monoxide_level
+          - entity: sensor.ethanol_level
+          - entity: sensor.toluene_level
+          - entity: sensor.acetone_level
+          - entity: sensor.ammonium_level
+        title: Camera di Silvia
+        type: entities
+      - type: entities
+        entities:
+          - entity: sensor.frigo_temperature
+            secondary_info: last-updated
+          - entity: sensor.frigo_humidity
+            secondary_info: last-updated
+          - entity: sensor.frigo_battery
+            secondary_info: last-updated
+          - entity: sensor.frigo_linkquality
+            secondary_info: last-updated
+          - entity: sensor.temperatura_media_frigo
+            secondary_info: last-updated
+        title: Frigo
+      - type: entities
+        entities:
+          - entity: sensor.balcone_temperature
+            secondary_info: last-updated
+          - entity: sensor.balcone_humidity
+            secondary_info: last-updated
+          - entity: sensor.balcone_pressure
+            secondary_info: last-updated
+          - entity: sensor.balcone_linkquality
+            secondary_info: last-updated
+          - entity: sensor.balcone_battery
+            secondary_info: last-updated
+        title: Balcone
+      - type: entities
+        entities:
+          - entity: sensor.lcd_bagnogrande_temperature
+          - entity: sensor.lcd_bagnogrande_humidity
+          - entity: sensor.lcd_bagnogrande_linkquality
+          - entity: sensor.lcd_bagnogrande_battery
+          - entity: sensor.lcd_bagnopiccolo_temperature
+          - entity: sensor.lcd_bagnopiccolo_humidity
+          - entity: sensor.lcd_bagnopiccolo_linkquality
+          - entity: sensor.lcd_bagnopiccolo_battery
+        title: Bagni
+      - type: entities
+        entities:
+          - entity: sensor.bagno_grande_temperature
+          - entity: sensor.bagno_piccolo_temperature
+          - entity: sensor.condizionatore_temperature
+          - entity: sensor.pir_scale_temperature
+          - entity: sensor.porta_casa_temperature
+          - entity: sensor.porta_balcone_studio_temperature
+          - entity: sensor.porta_balcone_ingresso_temperature
+          - entity: sensor.porta_balcone_cucina_temperature
+          - entity: sensor.finestra_silvia_temperature
+          - entity: sensor.porta_balcone_letto_temperature
+        title: Temperature Aqara
+      - entities:
+          - entity: sensor.casa_corrente
+            icon: mdi:current-ac
+            secondary_info: last-updated
+          - entity: sensor.casa_potenza
+            icon: mdi:power
+            secondary_info: last-updated
+          - entity: sensor.casa_tensione
+            icon: mdi:radio-tower
+            secondary_info: last-updated
+          - entity: sensor.casa_consumo_di_oggi
+            icon: mdi:power-standby
+            secondary_info: last-updated
+          - entity: sensor.casa_consumo_di_ieri
+            icon: mdi:power-settings
+            secondary_info: last-updated
+          - entity: sensor.casa_energia
+            icon: mdi:transmission-tower
+            secondary_info: last-updated
+        title: Casa
+        type: entities
+      - type: entities
+        entities:
+          - entity: utility_meter.consumo_mensile
+            name: Fascia Consumo
+          - entity: sensor.consumo_mensile_f1
+            name: Consumo Mensile F1
+          - entity: sensor.consumo_mensile_f2
+            name: Consumo Mensile F2
+          - entity: sensor.consumo_mensile_totale
+          - entity: sensor.consumo_mensile_mese_precedente
+      - type: custom:mini-graph-card
+        name: Consumo Mensile
+        unit: kWh
+        icon: hass:power
+        entities:
+          - entity: input_number.mese_01
+            color: blue
+          - entity: input_number.mese_02
+            color: blue
+          - entity: input_number.mese_03
+            color: blue
+          - entity: input_number.mese_04
+            color: blue
+          - entity: input_number.mese_05
+            color: blue
+          - entity: input_number.mese_06
+            color: blue
+          - entity: input_number.mese_07
+            color: blue
+          - entity: input_number.mese_08
+            color: blue
+          - entity: input_number.mese_09
+            color: blue
+          - entity: input_number.mese_10
+            color: blue
+          - entity: input_number.mese_11
+            color: blue
+          - entity: input_number.mese_12
+            color: blue
+        show:
+          labels: true
+          graph: bar
+          legend: false
+        hours_to_show: 1
+        animate: true
+        line_width: 5
+        hour24: true
+        height: 200
+        group_by: hourt
+  - title: Stati
+    path: stati
+    icon: mdi:motion-sensor
+    badges: []
+    cards:
+      - entities:
+          - entity: binary_sensor.ex_camera_letto
+            secondary_info: last-updated
+          - entity: binary_sensor.ex_cucina
+            secondary_info: last-updated
+          - entity: binary_sensor.ex_ingresso
+            secondary_info: last-updated
+          - entity: binary_sensor.ex_studio
+            secondary_info: last-updated
+          - entity: binary_sensor.sotto_scala
+            secondary_info: last-updated
+        state_color: true
+        title: Sensori porte RF
+        type: entities
+      - entities:
+          - entity: binary_sensor.pir_ingresso
+            secondary_info: last-updated
+          - entity: binary_sensor.pir_balcone
+            secondary_info: last-updated
+          - entity: binary_sensor.pir_scale_occupancy
+            secondary_info: last-updated
+            name: PIR Scale
+          - entity: sensor.pir_scale_illuminance
+            secondary_info: last-updated
+          - entity: sensor.pir_scale_linkquality
+            secondary_info: last-updated
+          - entity: sensor.pir_scale_battery
+            secondary_info: last-updated
+          - entity: sensor.pir_scale_illuminance_lux
+            secondary_info: last-updated
+        state_color: true
+        title: Sensori PIR
+        type: entities
+      - type: entities
+        entities:
+          - entity: binary_sensor.porta_casa_contact
+            secondary_info: last-updated
+          - entity: sensor.porta_casa_battery
+            secondary_info: last-updated
+          - entity: sensor.porta_casa_linkquality
+            secondary_info: last-updated
+          - entity: binary_sensor.porta_balcone_cucina_contact
+            secondary_info: last-updated
+          - entity: sensor.porta_balcone_cucina_battery
+            secondary_info: last-updated
+          - entity: sensor.porta_balcone_cucina_linkquality
+            secondary_info: last-updated
+          - entity: binary_sensor.porta_balcone_ingresso_contact
+            secondary_info: last-updated
+          - entity: sensor.porta_balcone_ingresso_battery
+            secondary_info: last-updated
+          - entity: sensor.porta_balcone_ingresso_linkquality
+            secondary_info: last-updated
+          - entity: binary_sensor.porta_balcone_studio_contact
+            secondary_info: last-updated
+          - entity: sensor.porta_balcone_studio_battery
+            secondary_info: last-updated
+          - entity: sensor.porta_balcone_studio_linkquality
+            secondary_info: last-updated
+          - entity: binary_sensor.porta_balcone_letto_contact
+            secondary_info: last-updated
+          - entity: sensor.porta_balcone_letto_battery
+            secondary_info: last-updated
+          - entity: sensor.porta_balcone_letto_linkquality
+            secondary_info: last-updated
+        title: Sensori Porte Zigbee
+      - type: entities
+        entities:
+          - entity: binary_sensor.bagno_piccolo_contact
+            secondary_info: last-updated
+            name: Bagno Piccolo
+          - entity: sensor.bagno_piccolo_battery
+            secondary_info: last-updated
+          - entity: sensor.bagno_piccolo_linkquality
+            secondary_info: last-updated
+          - entity: binary_sensor.bagno_grande_contact
+            secondary_info: last-updated
+          - entity: sensor.bagno_grande_battery
+            secondary_info: last-updated
+          - entity: sensor.bagno_grande_linkquality
+            secondary_info: last-updated
+          - entity: binary_sensor.finestra_silvia_contact
+            secondary_info: last-updated
+          - entity: sensor.finestra_silvia_battery
+            secondary_info: last-updated
+          - entity: sensor.finestra_silvia_linkquality
+            secondary_info: last-updated
+        title: Sensori Finestre Zigbee
+      - entities:
+          - entity: binary_sensor.cantina_grande
+            secondary_info: last-updated
+          - entity: binary_sensor.cantina_piccola
+            secondary_info: last-updated
+        state_color: true
+        title: Cantine
+        type: entities
+      - type: entities
+        entities:
+          - entity: binary_sensor.condizionatore_contact
+            name: Stato Condizionatore
+            secondary_info: last-updated
+          - entity: sensor.condizionatore_linkquality
+            secondary_info: last-updated
+          - entity: sensor.condizionatore_battery
+            secondary_info: last-updated
+      - entities:
+          - entity: binary_sensor.box_davide
+            secondary_info: last-updated
+          - entity: binary_sensor.box_giovanna
+            secondary_info: last-updated
+        state_color: true
+        title: Box
+        type: entities
+      - entities:
+          - entity: binary_sensor.telecomando_a
+            icon: mdi:alpha-a-box-outline
+            secondary_info: last-updated
+          - entity: binary_sensor.telecomando_b
+            icon: mdi:alpha-b-box-outline
+            secondary_info: last-updated
+          - entity: binary_sensor.telecomando_c
+            icon: mdi:alpha-c-box-outline
+            secondary_info: last-updated
+          - entity: binary_sensor.telecomando_d
+            icon: mdi:alpha-d-box-outline
+            secondary_info: last-updated
+        state_color: true
+        title: Telecomando
+        type: entities
+      - entities:
+          - entity: input_boolean.sensore_tanica_clima
+            icon: mdi:cup-water
+            secondary_info: last-updated
+        state_color: true
+        type: entities
+  - badges: []
+    cards:
+      - aspect_ratio: 50%
+        entity: camera.ingresso
+        type: picture-entity
+      - aspect_ratio: 50%
+        entity: camera.box
+        type: picture-entity
+      - entities:
+          - entity: script.sequenza_foto_ingresso
+          - entity: script.sequenza_foto_box
+        type: entities
+      - type: custom:webrtc-camera
+        entity: camera.ingresso
+      - type: custom:webrtc-camera
+        entity: camera.box
+    icon: mdi:webcam
+    path: cam
+    title: Cam
+  - icon: mdi:account-supervisor-circle
+    path: scialla
+    title: Scialla
+    visible:
+      - user: be1a6ffa9d5344148b1d33d754b9815e
+    badges: []
+    cards:
+      - entity: climate.fan_shim
+        type: thermostat
+      - entities:
+          - entity: switch.fan_shim
+          - entity: sensor.temperatura_cpu
+            secondary_info: last-updated
+        type: entities
+      - entities:
+          - entity: device_tracker.iphone_x_di_scialla
+          - entity: sensor.iphone_x_di_scialla_activity
+          - entity: sensor.iphone_x_di_scialla_average_active_pace
+          - entity: sensor.iphone_x_di_scialla_bssid
+          - entity: sensor.iphone_x_di_scialla_connection_type
+          - entity: sensor.iphone_x_di_scialla_distance
+          - entity: sensor.iphone_x_di_scialla_floors_ascended
+          - entity: sensor.iphone_x_di_scialla_floors_descended
+          - entity: sensor.iphone_x_di_scialla_geocoded_location
+          - entity: sensor.iphone_x_di_scialla_last_update_trigger
+          - entity: sensor.iphone_x_di_scialla_sim_1
+          - entity: sensor.iphone_x_di_scialla_ssid
+          - entity: sensor.iphone_x_di_scialla_steps
+          - entity: sensor.iphone_x_di_scialla_battery_level
+          - entity: sensor.iphone_x_di_scialla_battery_state
+          - entity: sensor.iphone_x_di_scialla_storage
+          - entity: binary_sensor.iphone_x_di_scialla_focus
+        title: iPhoneX
+        type: entities
+      - dark_mode: false
+        default_zoom: 11
+        entities:
+          - entity: device_tracker.life360_scialla
+          - entity: device_tracker.iphone_di_silvia
+          - entity: device_tracker.iphone_di_giovanna
+        geo_location_sources:
+          - all
+        hours_to_show: 30
+        type: map
+      - type: entities
+        entities:
+          - remote.broadlink_cucina_remote
+          - remote.broadlink_ingresso_remote
+          - remote.broadlink_studio_remote
+      - entities:
+          - entity: automation.apertura_automatica_portone
+          - entity: automation.risposta_su_apertura_portone
+        show_header_toggle: false
+        title: Ritorno a casa
+        type: entities
+      - title: Zigbee2mqtt
+        type: entities
+        show_header_toggle: false
+        entities:
+          - entity: sensor.zigbee2mqtt_bridge_state
+          - entity: sensor.zigbee2mqtt_version
+          - entity: sensor.coordinator_version
+          - entity: input_select.zigbee2mqtt_log_level
+          - type: divider
+          - entity: switch.zigbee2mqtt_main_join
+          - entity: timer.zigbee_permit_join
+      - type: entities
+        entities:
+          - entity: switch.ikeapresa
+          - entity: sensor.ikeapresa_linkquality
+          - entity: sensor.ikeapresa_update_state
+          - entity: binary_sensor.ikeapresa_update_available
+          - entity: sensor.ikeapresa_power_on_behavior
+          - entity: select.ikeapresa_power_on_behavior
+        title: Sirena
+      - type: entities
+        entities:
+          - entity: sensor.ikeaswitch_action
+          - entity: sensor.ikeaswitch_click
+          - entity: sensor.ikeaswitch_linkquality
+          - entity: binary_sensor.ikeaswitch_update_available
+          - entity: sensor.ikeaswitch_update_state
+          - entity: sensor.ikeaswitch_battery
+        title: Pulsante Ikea
+      - type: entities
+        entities:
+          - person.scialla
+      - type: entities
+        entities:
+          - entity: binary_sensor.ha_new_version
+          - entity: sensor.ha_current
+          - entity: sensor.ha_latest
+          - entity: sensor.ha_latest_rest
+          - entity: automation.new_ha_version_available
+      - type: entities
+        entities:
+          - sensor.sonoffbridge_state
+      - type: entities
+        entities:
+          - entity: sensor.bagno_grande_voltage
+          - entity: sensor.bagno_piccolo_voltage
+          - entity: sensor.balcone_voltage
+          - entity: sensor.condizionatore_voltage
+          - entity: sensor.finestra_silvia_voltage
+          - entity: sensor.frigo_voltage
+          - entity: sensor.lcd_bagnogrande_voltage
+          - entity: sensor.lcd_bagnopiccolo_voltage
+          - entity: sensor.pir_scale_voltage
+          - entity: sensor.porta_balcone_cucina_voltage
+          - entity: sensor.porta_balcone_ingresso_voltage
+          - entity: sensor.porta_balcone_studio_voltage
+          - entity: sensor.porta_casa_voltage
+          - entity: sensor.porta_balcone_letto_voltage
+        title: Volt Batterie
+      - type: entities
+        entities:
+          - sensor.manager_mqtt_messages_s
+      - type: entities
+        entities:
+          - entity: sensor.ikeamultilightswitch_action
+          - entity: binary_sensor.0x0c4314fffe5740c7_update_available
+          - entity: sensor.0x0c4314fffe5740c7_linkquality
+          - entity: sensor.0x0c4314fffe5740c7_update_state
+  - icon: mdi:account
+    path: silvia
+    title: Silvia
+    visible:
+      - user: be1a6ffa9d5344148b1d33d754b9815e
+      - user: 573094ce635e455a99fcc585739eee09
+    badges: []
+    cards:
+      - entities:
+          - entity: device_tracker.iphone_di_silvia
+          - entity: sensor.iphone_di_silvia_activity
+          - entity: sensor.iphone_di_silvia_average_active_pace
+          - entity: sensor.iphone_di_silvia_bssid
+          - entity: sensor.iphone_di_silvia_connection_type
+          - entity: sensor.iphone_di_silvia_distance
+          - entity: sensor.iphone_di_silvia_floors_ascended
+          - entity: sensor.iphone_di_silvia_floors_descended
+          - entity: sensor.iphone_di_silvia_geocoded_location
+          - entity: sensor.iphone_di_silvia_last_update_trigger
+          - entity: sensor.iphone_di_silvia_sim_1
+          - entity: sensor.iphone_di_silvia_ssid
+          - entity: sensor.iphone_di_silvia_steps
+          - entity: sensor.iphone_di_silvia_battery_level
+          - entity: sensor.iphone_di_silvia_battery_state
+          - entity: sensor.iphone_di_silvia_sim_2
+          - entity: sensor.iphone_di_silvia_storage
+        type: entities
+  - icon: mdi:account-outline
+    path: giovanna
+    title: Giovanna
+    visible:
+      - user: be1a6ffa9d5344148b1d33d754b9815e
+      - user: 8713de55ff20412aafcfd34728ea4d87
+    badges: []
+    cards:
+      - entities:
+          - entity: device_tracker.iphone_di_giovanna
+          - entity: sensor.iphone_di_giovanna_activity
+          - entity: sensor.iphone_di_giovanna_bssid
+          - entity: sensor.iphone_di_giovanna_connection_type
+          - entity: sensor.iphone_di_giovanna_distance
+          - entity: sensor.iphone_di_giovanna_geocoded_location
+          - entity: sensor.iphone_di_giovanna_last_update_trigger
+          - entity: sensor.iphone_di_giovanna_sim_1
+          - entity: sensor.iphone_di_giovanna_ssid
+          - entity: sensor.iphone_di_giovanna_steps
+          - entity: sensor.iphone_di_giovanna_battery_level
+          - entity: sensor.iphone_di_giovanna_battery_state
+          - entity: sensor.iphone_di_giovanna_average_active_pace
+          - entity: sensor.iphone_di_giovanna_storage
+        type: entities
+  - title: Elettrodomestici
+    path: elettrodomestici
+    icon: mdi:home-modern
+    badges: []
+    cards:
+      - type: picture-glance
+        title: Forno
+        image: /local/forno.jpg
+        entities:
+          - entity: sensor.forno_potenza
+            icon: mdi:power
+          - entity: sensor.forno_corrente
+            icon: mdi:current-ac
+          - entity: sensor.forno_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.forno_energia
+            icon: mdi:transmission-tower
+          - entity: switch.forno_microonde
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+        entity: switch.forno
+      - type: picture-glance
+        title: Forno Microonde
+        image: /local/Microonde.jpg
+        entities:
+          - entity: sensor.forno_microonde_potenza
+            icon: mdi:power
+          - entity: sensor.forno_microonde_corrente
+            icon: mdi:current-ac
+          - entity: sensor.forno_microonde_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.forno_microonde_energia
+            icon: mdi:transmission-tower
+          - entity: switch.forno_microonde
+        entity: switch.forno_microonde
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - type: picture-glance
+        title: Lavastoviglie
+        image: /local/lavastoviglie.jpg
+        entities:
+          - entity: sensor.lavastoviglie_potenza
+            icon: mdi:power
+          - entity: sensor.lavastoviglie_corrente
+            icon: mdi:current-ac
+          - entity: sensor.lavastoviglie_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.lavastoviglie_energia
+            icon: mdi:transmission-tower
+          - entity: switch.lavastoviglie
+        entity: switch.lavastoviglie
+        hold_action:
+          action: more-info
+        tap_action:
+          action: toggle
+      - type: picture-glance
+        title: Scaldabagno
+        image: /local/scaldabagno.jpg
+        entities:
+          - entity: sensor.scaldabagno_potenza
+            icon: mdi:power
+          - entity: sensor.scaldabagno_corrente
+            icon: mdi:current-ac
+          - entity: sensor.scaldabagno_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.scaldabagno_energia
+            icon: mdi:transmission-tower
+          - entity: switch.scaldabagno
+        entity: switch.scaldabagno
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - type: picture-glance
+        title: Lavatrice
+        image: /local/lavatrice.jpg
+        entities:
+          - entity: sensor.lavatrice_potenza
+            icon: mdi:power
+          - entity: sensor.lavatrice_corrente
+            icon: mdi:current-ac
+          - entity: sensor.lavatrice_tensione
+            icon: mdi:radio-tower
+          - entity: sensor.lavatrice_energia
+            icon: mdi:transmission-tower
+          - entity: switch.lavatrice
+        entity: switch.lavatrice
+        hold_action:
+          action: more-info
+        tap_action:
+          action: toggle
+      - type: picture-glance
+        title: Frigorifero
+        image: /local/frigo_samsung.jpg
+        entities:
+          - entity: sensor.presa_frigo_power
+            icon: mdi:power
+          - entity: sensor.presa_frigo_current
+            icon: mdi:current-ac
+          - entity: sensor.presa_frigo_voltage
+            icon: mdi:radio-tower
+          - entity: sensor.presa_frigo_energy
+            icon: mdi:transmission-tower
+          - entity: switch.presa_frigo
+        entity: switch.presa_frigo
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+        aspect_ratio: '0.5'
+      - type: picture-glance
+        title: WD Player
+        image: /local/wd_player.jpg
+        entities:
+          - entity: sensor.presa_mediaplayer_power
+            icon: mdi:power
+          - entity: sensor.presa_mediaplayer_current
+            icon: mdi:current-ac
+          - entity: sensor.presa_mediaplayer_voltage
+            icon: mdi:radio-tower
+          - entity: sensor.presa_mediaplayer_energy
+            icon: mdi:transmission-tower
+          - entity: switch.presa_mediaplayer
+        entity: switch.presa_mediaplayer
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - type: picture-glance
+        title: Ampli
+        image: /local/onkyo.jpg
+        entities:
+          - entity: sensor.presa_onkyo_power
+            icon: mdi:power
+          - entity: sensor.presa_onkyo_current
+            icon: mdi:current-ac
+          - entity: sensor.presa_onkyo_voltage
+            icon: mdi:radio-tower
+          - entity: sensor.presa_onkyo_energy
+            icon: mdi:transmission-tower
+          - entity: switch.presa_onkyo
+        entity: switch.presa_onkyo
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - type: picture-glance
+        title: Phon
+        image: /local/phon.jpg
+        entities:
+          - entity: sensor.presa_phon_power
+            icon: mdi:power
+          - entity: sensor.presa_phon_current
+            icon: mdi:current-ac
+          - entity: sensor.presa_phon_voltage
+            icon: mdi:radio-tower
+          - entity: sensor.presa_phon_energy
+            icon: mdi:transmission-tower
+          - entity: switch.presa_phon
+        entity: switch.presa_phon
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - type: picture-glance
+        title: Samsung
+        image: /local/samsung.jpg
+        entities:
+          - entity: sensor.presa_samsung_power
+            icon: mdi:power
+          - entity: sensor.presa_samsung_current
+            icon: mdi:current-ac
+          - entity: sensor.presa_samsung_voltage
+            icon: mdi:radio-tower
+          - entity: sensor.presa_samsung_energy
+            icon: mdi:transmission-tower
+          - entity: switch.presa_samsung
+        entity: switch.presa_samsung
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - type: picture-glance
+        title: Selecline
+        image: /local/selecline.jpg
+        entities:
+          - entity: sensor.presa_selecline_power
+            icon: mdi:power
+          - entity: sensor.presa_selecline_current
+            icon: mdi:current-ac
+          - entity: sensor.presa_selecline_voltage
+            icon: mdi:radio-tower
+          - entity: sensor.presa_selecline_energy
+            icon: mdi:transmission-tower
+          - entity: switch.presa_selecline
+        entity: switch.presa_selecline
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+  - icon: mdi:home-automation
+    path: x-le-automazioni
+    title: x le Automazioni
+    visible:
+      - user: eca2925947454ae0ab47b43f06b132f9
+    type: sidebar
+    badges: []
+    cards:
+      - entities:
+          - automation.shellies_announce
+        type: entities
+      - entity: media_player.dappertutto
+        type: media-control
+      - entities:
+          - entity: automation.apertura_contatti_e_reset
+        type: entities
+      - entities:
+          - automation.apertura_box_davide
+          - automation.apertura_box_giovanna
+          - automation.apertura_cantina_grande
+          - automation.apertura_cantina_piccola
+          - automation.apertura_porta_camera_letto
+        type: entities
+      - entities:
+          - entity: automation.innesco_controllo_carichi
+        type: entities
+      - entities:
+          - entity: light.led_ingresso2
+          - entity: light.led_ingresso3
+          - entity: light.led_ingresso4
+          - entity: light.led_ingresso5
+          - entity: light.led_ingresso6
+        show_header_toggle: false
+        title: Led Ingresso Interruttori secondari
+        type: entities
+      - entities:
+          - entity: sensor.waqi_aldo_mei_beinasco_piemonte_italy
+          - entity: sensor.waqi_alpini_cuneo_piemonte_italy
+          - entity: sensor.waqi_aragno_mondovi_piemonte_italy
+          - entity: sensor.waqi_diga_ceresole_reale_piemonte_italy
+          - entity: sensor.waqi_montanaro_chivasso_piemonte_italy
+          - entity: sensor.waqi_rubino_torino_piemonte_italy
+          - entity: sensor.waqi_sturzo_biella_piemonte_italy
+          - entity: sensor.waqi_volta_alessandria_piemonte_italy
+          - entity: sensor.waqi_rebaudengo_torino_piemonte_italy
+          - entity: sensor.waqi_lingotto_torino_piemonte_italy
+          - entity: sensor.waqi_bersezio_chieri_piemonte_italy
+          - entity: sensor.waqi_d_acquisto_asti_piemonte_italy
+          - entity: sensor.waqi_verdi_novara_piemonte_italy
+          - entity: sensor.waqi_grande_torino_leini_piemonte_italy
+        type: entities
+      - entities:
+          - automation.lavatrice_attiva_notifica
+          - automation.lavatrice_notifica_fine_lavaggio
+        type: entities
+      - entities:
+          - automation.update_available_notification
+        type: entities
+      - entities:
+          - group.famiglia
+        type: entities
+      - entities:
+          - entity: automation.accensione_luce_scale
+          - entity: automation.apertura_portone
+          - entity: automation.ios_notification_action_pressed
+          - entity: automation.notifica_rientro_a_casa
+        title: iOS
+        type: entities
+      - entities:
+          - automation.accensione_automatica_piantana
+        type: entities
+      - entities:
+          - entity: automation.info_sensori
+          - entity: automation.info_sistema
+          - entity: automation.telegram_bot_stop
+          - entity: automation.telegram_bot_start
+          - entity: automation.telegram_disattivazione_allarme
+          - entity: automation.telegram_attivazione_allarme_in_casa
+          - entity: automation.telegram_attivazione_allarme
+          - entity: automation.telegram_alarm
+          - entity: automation.telegram_help
+        title: Telegram
+        type: entities
+      - entities:
+          - entity: automation.allarme_scattato_notturno
+          - entity: automation.attiva_allarme_fuori_casa_con_pusalnte_b
+          - entity: automation.attiva_allarme_in_casa_o_pulsante_a
+          - entity: automation.attiva_allarme_notte_automatico
+          - entity: automation.attiva_allarme_notte_pulsante_c
+          - entity: automation.attiva_notifica_per_attivare_allarme_fuori_casa
+          - entity: automation.avvio_cicalino_e_sirena
+          - entity: automation.disattiva_allarme_notte
+          - entity: automation.disattiva_allarme_pulsante_d
+          - entity: automation.invio_notifica_allarme_inserito_fuori_casa
+          - entity: automation.invio_notifica_allarme_inserito_in_casa
+          - entity: automation.invio_notifica_allarme_inserito_notte
+          - entity: automation.invio_notifica_quando_allarme_disarmato
+          - entity: automation.movimenti_box
+          - entity: automation.notifica_allarme_scattato
+          - entity: automation.trigger_attivato_allarme_scattato
+        show_header_toggle: false
+        title: Antifurto
+        type: entities
+      - entities:
+          - air_quality.air_quality_sensor_3c26cf
+        type: entities
+      - entities:
+          - group.led_ingresso
+        type: entities
+      - entities:
+          - automation.notifica_cambio_ip
+        type: entities
+      - entities:
+          - automation.riaccensione_dispositivi
+        type: entities
+      - entities:
+          - automation.tanica_clima_piena
+        type: entities
+      - entities:
+          - entity: automation.gestione_notturna_ventilatore_silvia
+          - entity: automation.gestione_notturna_ventilatore_camera_letto
+        type: entities
+      - type: entities
+        entities:
+          - automation.riproduce_testo_su_alexa
+      - type: entities
+        entities:
+          - automation.avviso_batterie_scariche
+      - type: entities
+        entities:
+          - automation.zigbee_join_disabled
+          - automation.zigbee_join_enabled
+          - automation.zigbee2mqtt_log_level
+      - type: entities
+        entities:
+          - automation.notifica_temperatura_frigo
+      - type: entities
+        entities:
+          - automation.reset_piantana_e_ballerini_in_avvio_ha
+      - type: entities
+        entities:
+          - automation.attivazione_luce_specchiera_di_notte
+      - type: entities
+        entities:
+          - automation.lavastoviglie_attiva_notifica
+          - automation.lavastoviglie_notifica_fine_lavaggio
+      - type: entities
+        entities:
+          - entity: automation.automazione_dimmer_zigbee_ikea
+      - type: entities
+        entities:
+          - entity: switch.altoparlante_do_not_disturb_switch
+          - entity: switch.dappertutto_do_not_disturb_switch
+          - entity: switch.echo_dot_camera_letto_do_not_disturb_switch
+          - entity: switch.echo_dot_camera_letto_repeat_switch
+          - entity: switch.echo_dot_camera_letto_shuffle_switch
+          - entity: switch.echo_dot_ingresso_do_not_disturb_switch
+          - entity: switch.echo_show_do_not_disturb_switch
+          - entity: switch.echo_studio_do_not_disturb_switch
+          - entity: switch.fire_tv_stick_do_not_disturb_switch
+          - entity: switch.ovunque_do_not_disturb_switch
+      - type: entities
+        entities:
+          - entity: automation.avviso_zigbee_down
+          - entity: automation.avviso_sonoff_rf_down
+      - entities:
+          - sensor.date
+          - sensor.date_time
+          - sensor.date_time_utc
+          - sensor.time
+        type: entities
+      - type: entities
+        entities:
+          - entity: binary_sensor.stato_tv_samsung
+          - entity: binary_sensor.stato_tv_selecline
+          - entity: binary_sensor.stato_onkyo
+      - type: entities
+        entities:
+          - automation.saluto_alexa_al_rientro
+      - type: entities
+        entities:
+          - entity: automation.qualcuno_alla_porta
+          - entity: automation.accendi_luce_scale_uscendo
+      - type: entities
+        entities:
+          - automation.innesco_controllo_carichi
+          - script.spegnimento_clima
+          - script.spegnimento_ferro
+          - script.spegnimento_forno
+          - script.spegnimento_forno_microonde
+          - script.spegnimento_lavastoviglie
+          - script.spegnimento_lavatrice
+          - script.spegnimento_phon
+          - script.spegnimento_scaldabagno
+          - script.superamento_soglia
+      - type: entities
+        entities:
+          - entity: script.riaccensione_dispositivi
+      - type: entities
+        entities:
+          - automation.antenna_tv
+      - type: entities
+        entities:
+          - sensor.count_entities
+      - type: entities
+        entities:
+          - automation.controllo_device_accesi
+          - group.device_controllo_on
+      - type: entities
+        entities:
+          - automation.announce_zigbee
+          - automation.problemi_alimentazione
+      - type: entities
+        entities:
+          - automation.presa_frigo_off
+      - type: entities
+        entities:
+          - automation.accensione_luce_balcone
+      - type: entities
+        entities:
+          - group.sensori_batteria
+      - type: entities
+        entities:
+          - entity: automation.test
+      - type: entities
+        entities:
+          - entity: input_boolean.loop_riscaldamento
+          - entity: group.porte_finestre
+          - entity: automation.riscaldamento_gestione_aperture_finestre
+          - entity: automation.riscaldamento_gestione_chiusura_finestre
+          - entity: automation.riscaldamento_away
+      - type: entities
+        entities:
+          - automation.tariffe_consumo
+      - type: entities
+        entities:
+          - script.attiva_sirena
+      - type: entities
+        entities:
+          - entity: automation.avviso_batterie_scariche_netatmo
+          - entity: group.netatmo_batterie
+      - type: entities
+        entities:
+          - automation.send_notification_upon_failed_login_attempt
+          - group.tutte_le_luci
+      - type: entities
+        entities:
+          - automation.salva_consumo_mese
+      - type: entities
+        entities:
+          - automation.errore_ambrogio
+      - type: entities
+        entities:
+          - binary_sensor.workday_sensor
+      - type: entities
+        entities:
+          - automation.deumidifica
+      - type: entities
+        entities:
+          - input_select.colori_striscia
+          - input_text.striscia_selected_color
+      - type: entities
+        entities:
+          - automation.automazione_ikea_multi_switch
+          - script.striscia_colors_down
+          - script.striscia_colors_up
+  - title: Prove
+    path: prove
+    visible: []
+    badges: []
+    cards:
+      - title: Livello Batterie
+        type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                needle: true
+                entity: sensor.lcd_bagnogrande_battery
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 30
+                  red: 10
+                name: LCD Bagno Grande
+              - entity: sensor.lcd_bagnopiccolo_battery
+                type: gauge
+                name: LCD Bagno Piccolo
+                severity:
+                  green: 50
+                  yellow: 30
+                  red: 10
+              - type: gauge
+                entity: sensor.porta_balcone_letto_battery
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 30
+                  red: 10
+                name: Porta Letto
+              - type: gauge
+                entity: sensor.porta_casa_battery
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 30
+                  red: 10
+                name: Porta Casa
+          - type: horizontal-stack
+            cards:
+              - entity: sensor.frigo_battery
+                type: gauge
+                name: Frigo
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+              - entity: sensor.ble_battery_4c65a8ddd248
+                type: gauge
+                name: Temp BT
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+              - type: gauge
+                name: Condizionatore
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+                entity: sensor.condizionatore_battery
+              - type: gauge
+                entity: sensor.balcone_battery
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+                name: Temperatura Balcone
+          - type: horizontal-stack
+            cards:
+              - entity: sensor.pir_scale_battery
+                type: gauge
+                name: PIR Scale
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+              - type: gauge
+                min: 0
+                max: 100
+                entity: sensor.ikeaswitch_battery
+                name: Pulsante Ikea
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+              - entity: sensor.porta_balcone_studio_battery
+                type: gauge
+                name: Porta Studio
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+              - type: gauge
+                entity: sensor.porta_balcone_ingresso_battery
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+                name: Porta Ingresso
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                min: 0
+                max: 100
+                entity: sensor.bagno_grande_battery
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+                name: Bagno Grande
+              - type: gauge
+                min: 0
+                max: 100
+                entity: sensor.bagno_piccolo_battery
+                name: Bagno Piccolo
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+              - entity: sensor.porta_balcone_cucina_battery
+                type: gauge
+                min: 0
+                max: 100
+                name: Porta Cucina
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+              - type: gauge
+                entity: sensor.finestra_silvia_battery
+                min: 0
+                max: 100
+                severity:
+                  green: 50
+                  yellow: 20
+                  red: 10
+                name: Finestra Silvia
+      - type: entities
+        entities:
+          - sensor.broadlink_studio_temperature
+      - type: entities
+        entities:
+          - automation.prova
+          - script.prova

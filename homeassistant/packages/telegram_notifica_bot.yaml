@@ -1,0 +1,82 @@
+automation:
+
+- alias: Telegram_Bot_Start
+  id: telegram_bot_start
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /start
+  action:
+  - service: notify.scialla
+    data:
+      title: Benvenuto
+      message: '*PANNELLO DI CONTROLLO*'
+      data:
+        inline_keyboard:
+        - '{{ "\U0001F6A8" }} Sicurezza:/sicurezza' 
+        - '{{ "\U0001F4BB" }} Sistema:/sistema'
+        - '{{ "\U0001F6AA" }} Sensori:/sensori'
+             
+# '{{ "\U0001F4C4" }} Sommario:/Sommario,{{ "\U00002600" }} Meteo:/meteo',{{ "\U0001F4A1" }} Luci:/luci'    
+
+- alias: Telegram_Bot_Stop
+  id: telegram_bot_stop
+  trigger:
+  - platform: event
+    event_type: telegram_callback
+    event_data:
+      data: /stop
+  action:
+  - service: notify.scialla
+    data:
+      message: '*PANNELLO DI CONTROLLO*'
+      data:
+        inline_keyboard:
+        - '{{ "\U0001F6A8" }} Sicurezza:/sicurezza' 
+        - '{{ "\U0001F4BB" }} Sistema:/sistema'
+        - '{{ "\U0001F6AA" }} Sensori:/sensori'
+  
+- alias: Telegram_Help
+  id: telegram_help
+  trigger: 
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /help
+  action:
+  - service: notify.scialla
+    data:
+      message: 'Aiuto'
+      data:
+        inline_keyboard:
+        - 'Digitare start per cominciare:/start'
+
+- alias: notifica_cambio_ip
+  id: notifica_cambio_ip
+  trigger:
+  - platform: state
+    entity_id: sensor.ip_pubblico
+  action:
+  - service: notify.scialla
+    data:
+      title: 'Cambio IP'
+      message: "Nuovo IP {{ states('sensor.ip_pubblico') }}"
+        
+- alias: Aggiornamenti App Hacs
+  id: aggiornamenti_app_hacs
+  trigger:
+  - entity_id: sensor.hacs
+    platform: numeric_state
+    above: 0
+  action:
+  - data:
+      message: '{% for repo in state_attr(''sensor.hacs'', ''repositories'') %} Nuova
+        versione di *{{ repo.display_name }}* (`{{ repo.name  }}`) disponibile: `{{
+        repo.available_version }}`. Installata: `{{ repo.installed_version }}`  {%
+        endfor %}'
+      data:
+        username: HACS
+        icon: hacs
+      title: Nuova versione HACS disponibile
+    service: notify.scialla

@@ -1,0 +1,67 @@
+homeassistant: true
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: 'mqtt://localhost'
+serial:
+  port: /dev/ttyACM0
+advanced:
+  network_key:
+    - 166
+    - 11
+    - 172
+    - 6
+    - 93
+    - 171
+    - 192
+    - 176
+    - 98
+    - 223
+    - 15
+    - 94
+    - 209
+    - 145
+    - 134
+    - 116
+frontend:
+  port: 4000
+experimental:
+  new_api: true
+devices:
+  '0x00158d00052dbd04':
+    friendly_name: frigo
+    retain: true
+  '0x842e14fffe366818':
+    friendly_name: Presa Samsung
+  '0x588e81fffeff5df4':
+    friendly_name: Presa Selecline
+  '0x086bd7fffe219622':
+    friendly_name: IkeaPresa
+    retain: true
+  '0x00158d0005446d5f':
+    friendly_name: Balcone
+    retain: true
+  '0x00158d00054b38ec':
+    friendly_name: PIR Scale
+    retain: true
+  '0x680ae2fffec2023e':
+    friendly_name: IkeaSwitch
+    retain: true
+  '0x00158d00058034f0':
+    friendly_name: Bagno Grande
+    retain: true
+  '0x00158d000581a07f':
+    friendly_name: Porta Casa
+    retain: true
+  '0x00158d0005803786':
+    friendly_name: Bagno Piccolo
+    retain: true
+  '0x00158d0005819be8':
+    friendly_name: Condizionatore
+    retain: true
+  '0x5c0272fffec3dc2e':
+    friendly_name: LCD BagnoGrande
+    retain: true
+  '0x5c0272fffecbe82f':
+    friendly_name: LCD BagnoPiccolo
+    retain: true

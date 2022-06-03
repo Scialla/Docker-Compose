@@ -1,0 +1,76 @@
+sensor.temperatura_studio:
+  device_class: temperature
+sensor.umidita_studio:
+  device_class: humidity
+media_player.lg_tv:
+  friendly_name: LG
+  icon: mdi:television
+  device_class: tv
+media_player.selecline:
+  friendly_name: Selecline
+  icon: mdi:television
+  device_class: tv
+media_player.samsung:
+  friendly_name: Samsung
+  icon: mdi:television
+  device_class: tv
+media_player.onkyo:
+  icon: mdi:amplifier
+  device_class: tv
+sensor.air_quality_sensor_3c26cf_humidity:
+  friendly_name: Umidita
+  device_class: humidity
+sensor.air_quality_sensor_3c26cf_temperature:
+  friendly_name: Temperatura
+  device_class: temperature
+air_quality.air_quality_sensor_3c26cf: {}
+light.ballerini:
+  supported_features: 63
+sensor.mi_battery_4c65a8ddd248:
+  friendly_name: "Livello Batteria"
+binary_sensor.bagno_grande_contact:
+  device_class: window
+binary_sensor.bagno_piccolo_contact:
+  device_class: window
+binary_sensor.condizionatore_contact:
+  device_class: power
+binary_sensor.finestra_silvia_contact:
+  device_class: window
+binary_sensor.porta_balcone_cucina_contact:
+  device_class: door
+binary_sensor.porta_balcone_ingresso_contact:
+  device_class: door
+binary_sensor.porta_balcone_studio_contact:
+  device_class: door
+binary_sensor.porta_casa_contact:
+  device_class: door
+light.koogeek_lb1_1f299c:
+  friendly_name: Piantana
+light.sonoff_10009c0093:
+  friendly_name: Specchiera
+sensor.casa_energia:
+  state_class: total_increasing
+  device_class: energy
+sensor.forno_energia:
+  state_class: total_increasing
+  device_class: energy
+sensor.lavatrice_energia:
+  state_class: total_increasing
+  device_class: energy
+sensor.scaldabagno_energia:
+  state_class: total_increasing
+  device_class: energy
+sensor.lavastoviglie_energia:
+  state_class: total_increasing
+  device_class: energy
+sensor.forno_microonde_energia:
+  state_class: total_increasing
+  device_class: energy
+switch.ciabattascrivania_l1:
+  friendly_name: Hard Disk
+switch.ciabattascrivania_l2:
+  friendly_name: Alimentatori
+switch.ciabattascrivania_l3:
+  friendly_name: Stampante
+switch.sonoff_10009bdd07:
+  friendly_name: Deumidificatore

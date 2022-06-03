@@ -1,0 +1,81 @@
+# Lavatrice
+mqtt:
+
+  sensor:
+  - name: "Lavatrice: Tensione"
+    state_topic: "tele/Teckin4/SENSOR"
+    value_template: "{{ value_json.ENERGY.Voltage }}"
+    unit_of_measurement: "V"
+
+  - name: "Lavatrice: Potenza"
+    state_topic: "tele/Teckin4/SENSOR"
+    value_template: "{{ value_json.ENERGY.Power }}"
+    unit_of_measurement: "W"
+
+  - name: "Lavatrice: Energia"
+    state_topic: "tele/Teckin4/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Total }}"
+    unit_of_measurement: "kWh"
+
+  - name: "Lavatrice: Corrente"
+    state_topic: "tele/Teckin4/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Current }}"
+    unit_of_measurement: "A"
+
+  switch:
+  - name: "Lavatrice"
+    unique_id: lavatrice
+    state_topic: "stat/Teckin4/POWER"
+    command_topic: "cmnd/Teckin4/power"
+    availability_topic: "tele/Teckin4/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+automation:
+  - alias: Lavatrice Notifica Fine Lavaggio
+    id: lavatrice_notifica_fine_lavaggio
+    trigger:
+    - below: 20
+      entity_id: sensor.lavatrice_potenza
+      for:
+        minutes: 10
+      platform: numeric_state
+    condition:
+    - after: '07:00'
+      before: '23:59'
+      condition: time
+    action:
+    - data:
+        message: Lavaggio terminato
+        title: Lavatrice
+      service: notify.scialla
+    - data: 
+        target:
+        - media_player.ovunque
+        message: lavatrice lavaggio terminato
+        data: 
+          type: announce
+          method: spoken
+      service: notify.alexa_media
+    - entity_id: switch.lavatrice
+      service: switch.turn_off
+    - entity_id: automation.lavatrice_notifica_fine_lavaggio
+      service: automation.turn_off
+    initial_state: false
+
+  - alias: Lavatrice Attiva Notifica
+    id: lavatrice_attiva_notifica
+    initial_state: true
+    trigger:
+    - platform: numeric_state
+      entity_id: sensor.lavatrice_potenza
+      above: 100
+    action:
+    - service: automation.turn_on
+      entity_id: automation.lavatrice_notifica_fine_lavaggio
+
+

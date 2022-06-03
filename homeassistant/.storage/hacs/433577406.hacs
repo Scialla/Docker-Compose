@@ -1,0 +1,61 @@
+{
+    "version": "6",
+    "minor_version": 1,
+    "key": "hacs/433577406.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@htmltiger"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": false,
+        "default_branch": "main",
+        "description": "Home Assistant Configuration Editor Helper",
+        "domain": "config_editor",
+        "domains": [],
+        "downloads": 0,
+        "etag_repository": "W/\"ae24f83f9380889bc17cf7e70ce5199cb319437c373bc73eb809528c498cf5cb\"",
+        "file_name": "",
+        "filename": null,
+        "first_install": false,
+        "fork": false,
+        "full_name": "htmltiger/config-editor",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": null,
+        "id": "433577406",
+        "iot_class": null,
+        "installed": true,
+        "installed_commit": "1bdf968",
+        "installed_version": "4.2",
+        "open_issues": 0,
+        "last_commit": "1bdf968",
+        "last_version": "4.2",
+        "last_updated": "2022-04-16T22:50:46Z",
+        "manifest_name": "Config Editor",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2022-04-16T22:50:46",
+        "releases": true,
+        "render_readme": "true",
+        "published_tags": [
+            "4.2",
+            "4.1",
+            "4.0",
+            "3.0",
+            "2.1"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 10,
+        "topics": [
+            "homeassistant",
+            "homeassistant-config",
+            "homeassistant-integration"
+        ],
+        "zip_release": false
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "lovelace.lovelace_ambrogio",
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "theme": "Backend-selected",
+                    "title": "Home",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:vacuum-card",
+                            "entity": "vacuum.ambrogio",
+                            "image": "default",
+                            "compact_view": false
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.ambrogio_last_cleaning"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_last_error"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_life_span_brush"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_life_span_filter"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_life_span_side_brush"
+                                },
+                                {
+                                    "entity": "binary_sensor.ambrogio_mop_attached"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_stats_area"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_stats_time"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_stats_total_area"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_stats_total_cleanings"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_stats_total_time"
+                                },
+                                {
+                                    "entity": "sensor.ambrogio_stats_type"
+                                },
+                                {
+                                    "entity": "number.ambrogio_volume"
+                                },
+                                {
+                                    "entity": "select.ambrogio_water_amount"
+                                },
+                                {
+                                    "entity": "switch.ambrogio_advanced_mode"
+                                },
+                                {
+                                    "entity": "switch.ambrogio_carpet_auto_fan_speed_boost"
+                                },
+                                {
+                                    "entity": "switch.ambrogio_continuous_cleaning"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "picture-entity",
+                            "entity": "camera.ambrogio_live_map"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "button.ambrogio_life_span_brush_reset"
+                                },
+                                {
+                                    "entity": "button.ambrogio_life_span_filter_reset"
+                                },
+                                {
+                                    "entity": "button.ambrogio_life_span_side_brush_reset"
+                                },
+                                {
+                                    "entity": "button.ambrogio_relocate"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "picture-entity",
+                            "entity": "camera.ultima_pulizia"
+                        },
+                        {
+                            "type": "custom:mushroom-vacuum-card",
+                            "entity": "vacuum.ambrogio",
+                            "commands": [
+                                "start_pause",
+                                "stop",
+                                "locate",
+                                "clean_spot",
+                                "return_home"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

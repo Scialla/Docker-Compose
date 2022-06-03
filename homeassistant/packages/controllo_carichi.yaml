@@ -1,0 +1,155 @@
+input_number:
+  tempo_intervento:
+    name: Tempo Intervento (sec)
+    mode: box
+    icon: mdi:timelapse
+    initial: 10
+    min: 0
+    max: 300
+    step: 2
+  max_consumo_permesso:
+    name: Max W Consentiti
+    mode: box
+    initial: 150
+    min: 10
+    max: 200
+    step: 2
+input_select:
+  max_soglia_istantanea:
+    name: Soglia Istantanea (W)
+    options:
+      - 3300
+      - 3500
+      - 4000
+    initial: 4000
+  soglia_tolleranza:
+    name: Soglia di Tolleranza (W)
+    options:
+      - 3000
+      - 3300
+    initial: 3300
+  soglia_guardia:
+    name: Soglia di Guardia (W)
+    options:
+      - 2500
+      - 2800
+      - 3000
+    initial: 3000
+#################################################################
+#                 automations                                   #
+#################################################################
+automation:
+# innesco controllo carichi
+  - alias: innesco controllo carichi
+    id: innesco_controllo_carichi
+    initial_state: true
+    mode: single
+    trigger:
+    # primo trigger: potenza entro 3.3kW per il tempo indicato in tempo_intervento
+    - platform: template
+      value_template: "{{(states('sensor.casa_potenza'))|float(0) > (states('input_select.soglia_tolleranza'))|float(0) - 1 }}"
+      for:
+        seconds: "{{ states('input_number.tempo_intervento')|int(0) }}"
+    # secondo trigger: se la potenza istantanea è >= 4kW
+    - platform: template
+      value_template: "{{(states('sensor.casa_potenza'))|float(0) > (states('input_select.max_soglia_istantanea'))|float(0) - 1 }}"
+    action:
+    # attivo automazione per il riarmo
+    - service: automation.turn_on
+      entity_id: automation.riaccensione_dispositivi
+    - service: script.superamento_soglia
+    # aspetta 10 secondi
+    - delay: 10
+    # Ripete fino a quando il consumo sarà < max_consumo_permesso
+    - repeat:
+        while:
+        - condition: template
+          value_template: "{{(states('sensor.casa_potenza'))|float(0) > (states('input_select.soglia_guardia'))|float(0) }}"
+        sequence:
+        # ordine di spegnimento dei carichi: 1) clima, 2) ferro, 3) phon, 4) scaldabagno, 5) microonde, 6) Forno, 7) lavastoviglie, 8) lavatrice
+        - choose:
+          # spengo clima se acceso
+          - conditions:
+            - condition: template
+              value_template: "{{ states('climate.coolix') != 'off' }}"
+            sequence:
+            - service: climate.turn_off
+              entity_id: climate.coolix
+            - service: script.spegnimento_clima
+          # spengo ferro da stiro se acceso
+          - conditions:
+            - condition: state
+              entity_id: switch.ferro_da_stiro
+              state: 'on'
+            sequence:
+            - service: switch.turn_off
+              entity_id: switch.ferro_da_stiro
+            - service: script.spegnimento_ferro
+          # spengo scaldabagno se oltre soglia
+          - conditions:
+            - condition: template
+              value_template: "{{ (states('sensor.scaldabagno_potenza')|float(0) > states('input_number.max_consumo_permesso')|float(0)) }}"
+            sequence:
+            - service: switch.turn_off
+              entity_id: switch.scaldabagno
+            - service: script.spegnimento_scaldabagno
+          # spengo phon se oltre soglia
+          - conditions:
+            - condition: template
+              value_template: "{{ (states('sensor.presa_phon_power')|float(0) > states('input_number.max_consumo_permesso')|float(0)) }}"
+            sequence:
+            - service: switch.turn_off
+              entity_id: switch.presa_phon
+            - service: script.spegnimento_phon
+          # spengo microonde se oltre soglia
+          - conditions:
+            - condition: template
+              value_template: "{{ (states('sensor.forno_microonde_potenza')|float(0) > states('input_number.max_consumo_permesso')|float(0)) }}"
+            sequence:
+            - service: switch.turn_off
+              entity_id: switch.forno_microonde
+            - service: script.spegnimento_forno_microonde    
+          # spengo forno se oltre soglia
+          - conditions:
+            - condition: template
+              value_template: "{{ (states('sensor.forno_potenza')|float(0) > states('input_number.max_consumo_permesso')|float(0)) }}"
+            sequence:
+            - service: switch.turn_off
+              entity_id: switch.forno
+            - service: script.spegnimento_forno                   
+          # spengo lavastoviglie se oltre soglia
+          - conditions:
+            - condition: template
+              value_template: "{{ (states('sensor.lavastoviglie_potenza')|float(0) > states('input_number.max_consumo_permesso')|float(0)) }}"
+            sequence:
+            - service: switch.turn_off
+              entity_id: switch.lavastoviglie
+            - service: script.spegnimento_lavastoviglie
+          # spengo lavatrice se oltre soglia
+          - conditions:
+            - condition: template
+              value_template: "{{ (states('sensor.lavatrice_potenza')|float(0) > states('input_number.max_consumo_permesso')|float(0)) }}"
+            sequence:
+            - service: switch.turn_off
+              entity_id: switch.lavatrice
+            - service: script.spegnimento_lavatrice  
+          default:
+          - delay: 5
+        - delay: 15
+
+# Riaccensione dispositivi se consumi sotto 1 kW
+  - alias: Riaccensione dispositivi
+    id: riaccensione_dispositivi
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.casa_potenza
+      below: 1000
+      for:
+        minutes: 5
+    action:
+      - service: switch.turn_on
+        entity_id: switch.lavatrice, switch.forno, switch.forno_microonde, switch.lavastoviglie, switch.scaldabagno
+      - service: script.riaccensione_dispositivi
+      - service: automation.turn_off
+        entity_id: automation.riaccensione_dispositivi
+    initial_state: false

@@ -1,0 +1,78 @@
+#  When your config is ok comment block below to disable use of AMCE staging server
+#{
+#    acme_ca https://acme-staging-v02.api.letsencrypt.org/directory 
+#}
+
+(https_header) {
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubdomains"
+    X-XSS-Protection "1; mode=block"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "SAMEORIGIN"
+    Referrer-Policy "same-origin"
+  }
+}
+
+https://ha.scialla.duckdns.org {
+  import https_header
+  reverse_proxy http://192.168.1.122:8123
+}
+
+https://z2m.scialla.duckdns.org {
+  import https_header
+  reverse_proxy http://192.168.1.122:4000
+  basicauth {
+    Scialla JDJhJDE0JGt3VFJsbFl0TlJhcHhtRm9ieEZ5b3VHVkVjY214QlFzcWtZd013S2t1QTZ1elJxZ2QyUHdX
+    }
+}
+
+https://tasmoadmin.scialla.duckdns.org {
+  import https_header
+  reverse_proxy http://192.168.1.122:9999
+}
+
+https://modem.scialla.duckdns.org {
+  import https_header
+  reverse_proxy http://192.168.1.254
+}
+
+#https://scialla.ddns.net {
+#  import https_header
+#  reverse_proxy http://192.168.1.122:8123
+#}
+
+https://scialla.ddns.net:5000 {
+  import https_header
+  reverse_proxy http://192.168.1.122:8123
+}
+
+#https://scialla.duckdns.org {
+#  import https_header
+#  reverse_proxy http://192.168.1.122:8123
+#}
+
+https://scialla.duckdns.org:5000 {
+  import https_header
+  reverse_proxy http://192.168.1.122:8123
+}
+
+#https://scialla.ddns.net/tasmoadmin* {
+#  import https_header
+#  redir /tasmoadmin /tasmoadmin/
+#  route /tasmoadmin/* {
+#    reverse_proxy /* http://192.168.1.122:9999 {
+#      header_up Host {http.request.host}
+#      header_up X-Real-IP {http.request.remote}
+#      header_up X-Forwarded-For {http.request.remote}
+#      header_up X-Forwarded-Port {http.request.port}
+#      header_up X-Forwarded-Proto {http.request.scheme}
+#    }
+#  }
+#  log {
+#    output file /var/log/caddy/tasmoadmin.log {
+#      roll_size		5MiB
+#      roll_keep		2
+#      roll_keep_for	48h
+#    }
+#  }
+#}

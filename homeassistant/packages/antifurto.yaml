@@ -1,0 +1,360 @@
+# Antifurto
+automation:
+#-----------------------------------------------ALLARME SCATTATO
+  - alias: 'Trigger attivato allarme scattato'
+    id: trigger_attivato_allarme_scattato
+    trigger:
+#      - platform: state
+#        entity_id: binary_sensor.pir_ingresso
+#        to: 'on'
+#      - platform: state
+#        entity_id: binary_sensor.pir_studio
+#        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.porta_casa_contact
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.porta_balcone_letto_contact
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.porta_balcone_cucina_contact
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.porta_balcone_studio_contact
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.porta_balcone_ingresso_contact
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.bagno_grande_contact
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.bagno_piccolo_contact
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.finestra_silvia_contact
+        to: 'on'
+    condition:
+      - condition: state
+        entity_id: 'alarm_control_panel.allarme_casa'
+        state: armed_away
+    action:
+      service: alarm_control_panel.alarm_trigger
+      data:
+        entity_id: alarm_control_panel.allarme_casa
+        code: !secret code
+
+  - alias: 'Notifica Allarme scattato'
+    id: notifica_allarme_scattato
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.allarme_casa
+        to: 'triggered'
+    action:
+      - service: notify.notify
+        data:
+          message: "Allarme scattato!! Antifurto sta suonando"
+      - service: notify.scialla
+        data: 
+          title: 'Allarme'
+          message: "Scattato, sta suonando!"
+      - service: notify.telegram_call
+        data:
+          message: Ciao Davide, controlla casa perché lantifurto sta suonando
+
+#-----------------------------------------------ATTIVAZIONI VARI STATI
+
+  - alias: 'Attiva allarme in casa o pulsante A'
+    id: attiva_allarme_in_casa_o_pulsante_a
+    trigger:
+      - platform: zone
+        entity_id: 
+        - person.scialla
+        - person.silvia
+        - person.giovanna
+        zone: zone.home
+        event: enter
+      - platform: state
+        entity_id: binary_sensor.telecomando_a
+        to: 'on'
+    condition:
+      condition: template
+      value_template: "{{ states('alarm_control_panel.allarme_casa') != 'disarmed' }}"
+    action:
+      - service: alarm_control_panel.alarm_arm_home
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+
+  - alias: 'Rientro Notte - attiva in casa e riarma notte'
+    id: rientro_notte_attiva_in_casa_e_riarma_notte
+    trigger:
+      - platform: zone
+        entity_id: 
+        - person.scialla
+        - person.silvia
+        - person.giovanna
+        zone: zone.home
+        event: enter
+    condition:
+      condition: template
+      value_template: "{{ states('alarm_control_panel.allarme_casa') == 'armed_night' }}"
+    action:
+      - service: alarm_control_panel.alarm_arm_home
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+      - delay:
+          minutes: 30
+      - service: alarm_control_panel.alarm_arm_night
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+
+  - alias: 'Attiva notifica per attivare allarme fuori casa' 
+    id: attiva_notifica_per_attivare_allarme_fuori_casa
+    trigger:
+      - platform: zone
+        entity_id: 
+          - person.scialla
+          - person.silvia
+          - person.giovanna
+        zone: zone.home
+        event: leave
+    condition:
+      condition: and
+      conditions:
+      - condition: template
+        value_template: "{{ states('person.scialla') != 'home' }}"
+      - condition: template
+        value_template: "{{ states('person.silvia') != 'home' }}"
+      - condition: template
+        value_template: "{{ states('person.giovanna') != 'home' }}"
+    action: 
+      - service: >
+          {% if trigger.entity_id == 'person.scialla' %}
+            notify.mobile_app_iphone_x_di_scialla
+          {% elif trigger.entity_id == 'person.silvia' %}
+            notify.mobile_app_iphone_di_silvia
+          {% else %}
+            notify.mobile_app_iphone_di_giovanna
+          {% endif %} 
+        data:
+          message: "Abilitare Allarme?"
+          data:
+            actions:
+              - action: "attiva_antifurto"
+                title: "SI"
+                destructive: true
+              - action: "non_attivare_antifurto"
+                title: "NO"
+                destructive: true
+
+  - alias: "iOS notification action pressed"
+    id: ios_notification_action_pressed
+    trigger:
+      - platform: event
+        event_type: mobile_app_notification_action
+        event_data:
+          action: "attiva_antifurto"
+    action:
+      - service: alarm_control_panel.alarm_arm_away
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+
+  - alias: 'Attiva allarme fuori casa con pusalnte B'
+    id: attiva_allarme_fuori_casa_con_pusante_b
+    trigger: 
+      - platform: state
+        entity_id: binary_sensor.telecomando_b
+        to: 'on'
+    action:
+      - service: alarm_control_panel.alarm_arm_away
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+
+  - alias: 'Attiva allarme notte automatico'
+    id: attiva_allarme_notte_automatico
+    trigger:
+      - platform: time
+        at: "01:00:00"
+    condition:
+      - condition: state
+        entity_id: 'alarm_control_panel.allarme_casa'
+        state: 'armed_home'
+    action:
+      - service: alarm_control_panel.alarm_arm_night
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+
+  - alias: 'Attiva allarme notte pulsante C'
+    id: attiva_allarme_notte_pulsante_c
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.telecomando_c
+        to: 'on'
+    action:
+      - service: alarm_control_panel.alarm_arm_night
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+
+  - alias: 'Disattiva allarme notte'
+    id: disattiva_allarme_notte
+    trigger:
+      - platform: time
+        at: "06:00:00"
+    condition:
+      - condition: state
+        entity_id: 'alarm_control_panel.allarme_casa'
+        state: 'armed_night'
+    action:
+      - service: alarm_control_panel.alarm_arm_home
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+
+  - alias: 'Disattiva Allarme pulsante D'
+    id: disattiva_allarme_pulsante_d
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.telecomando_d
+        to: 'on'
+    action:
+      - service: alarm_control_panel.alarm_disarm
+        data:
+          entity_id: alarm_control_panel.allarme_casa
+          code: !secret code
+
+#-----------------------------------------------INVIO NOTIFICHE
+
+  - alias: 'Invio notifica quando allarme disarmato'
+    id: invio_notifica_quando_allarme_disarmato
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.allarme_casa
+        to: 'disarmed'
+    action:
+      - service: notify.notify
+        data:
+          message: "Allarme disattivato il {{ states('sensor.date') }} alle {{ states('sensor.time') }}"
+      - service: notify.scialla
+        data: 
+          title: 'Allarme'
+          message: "Disattivato il {{ states('sensor.date') }} alle {{ states('sensor.time') }}"
+
+  - alias: 'Invio notifica allarme inserito fuori casa'
+    id: invio_notifica_allarme_inserito_fuori_casa
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.allarme_casa
+        to: 'armed_away'
+    action:
+      - service: notify.notify
+        data:
+          message: "Allarme inserito fuori casa il {{ states('sensor.date') }} alle {{ states('sensor.time') }}"
+      - service: notify.scialla
+        data: 
+          title: 'Allarme'
+          message: "Inserito fuori casa il {{ states('sensor.date') }} alle {{ states('sensor.time') }}"
+
+  - alias: 'Invio notifica allarme inserito in casa'
+    id: invio_notifica_allarme_inserito_in_casa
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.allarme_casa
+        to: 'armed_home'
+    action:
+      - service: notify.notify
+        data:
+          # Using multi-line notation allows for easier quoting
+          message: >
+            Allarme inserito in casa il {{ states('sensor.date') }} alle {{ states('sensor.time') }}
+      - service: notify.scialla
+        data: 
+          title: 'Allarme'
+          message: "Inserito in casa il {{ states('sensor.date') }} alle {{ states('sensor.time') }}"
+
+  - alias: 'Invio notifica allarme inserito notte' # solo su Telegram
+    id: invio_notifica_allarme_inserito_notte
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.allarme_casa
+        to: 'armed_night'
+    action:
+      - service: notify.scialla
+        data: 
+          title: 'Allarme'
+          message: "Inserito notte il {{ states('sensor.date') }} alle {{ states('sensor.time') }}"
+
+  # non inserito l'avviso allarme in pending (fase di cambio stato)
+
+  # ATTIVAZIONE SIRENA !!!!!!!!
+
+  - alias: 'Avvio cicalino e sirena'
+    id: avvio_cicalino_e_sirena
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.allarme_casa
+        to: 'triggered'
+    action:
+      - service: switch.turn_on
+        entity_id: switch.cicalino
+      - service: script.turn_on
+        entity_id: script.sequenza_foto_ingresso
+      - delay:
+          seconds: 10
+      - service: switch.turn_off
+        entity_id: switch.cicalino
+      - service: script.turn_on
+        entity_id: script.sequenza_foto_ingresso
+      - delay:
+          seconds: 4
+      - condition: template
+        value_template: "{{ states('alarm_control_panel.allarme_casa') == 'triggered' }}"
+      - service: script.attiva_sirena
+
+#-----------------------------------------------ALARME NOTTURNO
+
+  - alias: 'Allarme scattato notturno'
+    id: allarme_scattato_notturno
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.porta_casa_contact
+        to: 'on'
+    condition:
+      - condition: state
+        entity_id: 'alarm_control_panel.allarme_casa'
+        state: armed_night
+    action:
+      - service: light.turn_on
+        entity_id: light.led_ingresso, light.luce_letto
+      - service: notify.alexa_media
+        data:
+          target:
+            - media_player.echo_dot_camera_letto
+          data:
+            type: announce
+            method: spoken
+          message: "Qualcuno è entrato in casa"
+      - service: script.turn_on
+        entity_id: script.sequenza_foto_ingresso
+
+#-----------------------------------------------MOVIMENTI BOX
+
+  - alias: 'Movimenti Box'
+    id: movimenti_box
+    trigger:
+      - platform: state
+        entity_id: 'binary_sensor.box_davide'
+        to: 'on'
+    condition:
+      condition: template
+      value_template: "{{ states('person.scialla') != 'home' }}"
+    action:
+    - service: script.turn_on
+      entity_id: script.sequenza_foto_box
+

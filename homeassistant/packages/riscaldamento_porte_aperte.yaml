@@ -1,0 +1,208 @@
+sensor:
+  - platform: template
+    sensors:
+      stato_riscaldamento:
+        friendly_name: "Riscaldamento"
+        value_template: >
+          {% if state_attr('climate.netatmo_smart_thermostat', 'hvac_action') == "idle" %}
+            Inattivo
+          {% elif state_attr('climate.netatmo_smart_thermostat', 'hvac_action') == "heating" %}
+            Acceso
+          {% elif state_attr('climate.netatmo_smart_thermostat', 'hvac_action') == "off" %}
+            Spento
+          {% else %}
+            {{ state_attr('climate.netatmo_smart_thermostat', 'hvac_action') }}
+          {% endif %}
+
+automation:
+
+- id: riscaldamento_gestione_aperture_finestre
+  alias: Riscaldamento Gestione Aperture Finestre 
+  trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.porta_casa_contact
+      - binary_sensor.porta_balcone_cucina_contact
+      - binary_sensor.porta_balcone_ingresso_contact
+      - binary_sensor.porta_balcone_studio_contact
+      - binary_sensor.bagno_grande_contact
+      - binary_sensor.bagno_piccolo_contact
+      - binary_sensor.porta_balcone_letto_contact
+    to: #non metto stato ma metto il to: così triggera solo al variare dello stato e non di un attributo
+    for:
+      minutes: 1
+  condition:
+  - condition: template
+    value_template: "{{ states('sensor.stato_riscaldamento') == 'Acceso' }}"
+  action:
+  - service: >
+      {% if trigger.to_state.state == 'on' %}
+        climate.turn_off
+      {% else %}
+        climate.turn_on
+      {% endif %}
+    target:
+      entity_id: >
+        {% if trigger.entity_id   == 'binary_sensor.porta_casa_contact' or trigger.entity_id == 'binary_sensor.porta_balcone_ingresso_contact' %}
+          climate.ingresso
+        {% elif trigger.entity_id == 'binary_sensor.porta_balcone_cucina_contact' %}
+          climate.cucina
+        {% elif trigger.entity_id == 'binary_sensor.porta_balcone_studio_contact' %}
+          climate.studio
+        {% elif trigger.entity_id == 'binary_sensor.bagno_grande_contact' %}
+          climate.bagno_grande
+        {% elif trigger.entity_id == 'binary_sensor.bagno_piccolo_contact' %}
+          climate.bagno_piccolo
+        {% else %}
+          climate.camera_da_letto
+        {% endif %}
+  mode: parallel
+
+          # da gestire il termostato in camera di Silvia
+
+- id: riscaldamento_away
+  alias: Riscaldamento Away
+  trigger: # triggera al variare dello stato del gruppo, quasiasi stato
+    - platform: state
+      entity_id: group.famiglia # il gruppo famiglia prende solo gli stato home (basta uno a casa) e not_home (tutti fuori)
+  condition:
+    condition: template #su termostato integrato con homekit
+    value_template: "{{ is_state('climate.netatmo_smart_thermostat', 'heat') }}" # Se il riscaldamento è spento questo è off, altrimenti è sempre heat (solo due stati)
+  action:
+    - service: climate.set_preset_mode
+      data:
+        entity_id: climate.camera_di_silvia #sempre termostato ma con integrazione perchè ha i preset che con homekit non ha
+        preset_mode: > #se rientro in casa riprende la programmazione, altrimenti imposta away
+          {% if trigger.to_state.state == 'home' %}
+            Schedule
+          {% else %}
+            away
+          {% endif %}
+    - service: notify.scialla
+      data: 
+        title: 'Riscaldamento'
+        message: >
+          {% if trigger.to_state.state == 'home' %}
+            Attivo in casa
+          {% elif trigger.to_state.state == 'not_home' %}
+            Fuori casa
+          {% endif %}
+
+
+
+# Questo sotto era quando gestivo con hvac_mode che, impostanto una valvola su auto, le imposta tutte in auto
+#- id: riscaldamento_gestione_chiusura_finestre
+#  alias: Riscaldamento Gestione Chiusura Finestre
+#  trigger: # quando si chiude una porta
+#  - platform: state
+#    entity_id:
+#      - binary_sensor.porta_casa_contact
+#      - binary_sensor.porta_balcone_cucina_contact
+#      - binary_sensor.porta_balcone_ingresso_contact
+#      - binary_sensor.porta_balcone_studio_contact
+#      - binary_sensor.bagno_grande_contact
+#      - binary_sensor.bagno_piccolo_contact
+#      - binary_sensor.porta_balcone_letto_contact
+#    to: 'off'
+#  - platform: state # oppure quando parte il riscaldamento (si aggiorna dopo 53 secondi)
+#    entity_id: sensor.stato_riscaldamento
+#    to: 'Acceso'
+#  condition:
+#    condition: template # a condizione che il riscaldamento non sia spento (questo per il trigger delle valvole)
+#    value_template: "{{ states('sensor.stato_riscaldamento') != 'Spento' }}" 
+#  action:
+#  - service: climate.set_hvac_mode 
+#    data:
+#      hvac_mode: 'auto' # imposta su auto il termostato, tanto tutte le valvole vanno tutte su auto anche se impostate singolarmente
+#      entity_id: climate.camera_di_silvia # questo è il termostato
+#  - repeat: # per spegnere tutte le valvole dove la porta è aperta
+#      while: # ripete in loop fino a quando il dummy non sia a on
+#      - condition: state
+#        entity_id: input_boolean.loop_riscaldamento
+#        state: 'off'
+#      sequence:
+#      - delay: '00:01:00' # delay perché lo stato delle valvole (tramite homekit) si aggiorna dopo 53 secondi (con integrazione dopo oltre 6 minuti)
+#      - choose: # sceglie quale valvola impostare a off, se la porta è aperta e se la valvola non è spenta (ovvero impostata a 7 gradi perché non prende mai lo stato di off)
+#        - conditions: # controlla se la porta è aperta e la valvola non è a 7 gradi
+#          - condition: state
+#            entity_id: binary_sensor.bagno_grande_contact
+#            state: 'on'
+#          - condition: template
+#            value_template: "{{ state_attr('climate.netatmo_valve_4', 'temperature') != 7 }}" # non serve il cast, testato su modelli, uso entità integrate con homekit per maggiore rapidità aggiornamento                   
+#          sequence: # se le condizioni sono verificate la chiude (off)
+#          - service: climate.set_hvac_mode
+#            data:
+#              hvac_mode: 'off'
+#              entity_id: climate.bagno_grande
+#        - conditions: # controlla altra porta e valvola
+#          - condition: state
+#            entity_id: binary_sensor.bagno_piccolo_contact
+#            state: 'on'
+#          - condition: template
+#            value_template: "{{ state_attr('climate.netatmo_valve_5', 'temperature') != 7 }}"                  
+#          sequence:
+#          - service: climate.set_hvac_mode
+#            data:
+#              hvac_mode: 'off'
+#              entity_id: climate.bagno_piccolo
+#        - conditions: # controlla altra porta e valvola
+#          - condition: state
+#            entity_id: binary_sensor.porta_balcone_letto_contact
+#            state: 'on'
+#          - condition: template
+#            value_template: "{{ state_attr('climate.netatmo_valve_7', 'temperature') != 7 }}"              
+#          sequence:
+#          - service: climate.set_hvac_mode
+#            data:
+#              hvac_mode: 'off'
+#              entity_id: climate.camera_da_letto
+#        - conditions: # controlla altra porta e valvola
+#          - condition: state
+#            entity_id: binary_sensor.porta_balcone_cucina_contact
+#            state: 'on'
+#          - condition: template
+#            value_template: "{{ state_attr('climate.netatmo_valve_1', 'temperature') != 7 }}"
+#          sequence:
+#          - service: climate.set_hvac_mode
+#            data:
+#              hvac_mode: 'off'
+#              entity_id: climate.cucina
+#        - conditions: # controlla altra porta e valvola
+#          - condition: state
+#            entity_id: binary_sensor.porta_balcone_studio_contact
+#            state: 'on'
+#          - condition: template
+#            value_template: "{{ state_attr('climate.netatmo_valve_2', 'temperature') != 7 }}"
+#          sequence:
+#          - service: climate.set_hvac_mode
+#            data:
+#              hvac_mode: 'off'
+#              entity_id: climate.studio                   
+#        - conditions: # qui fa il controllo su due porte nella stessa stanza e sulla valvola
+#          - condition: or
+#            conditions:
+#            - condition: state
+#              entity_id: binary_sensor.porta_balcone_ingresso_contact
+#              state: 'on'
+#            - condition: state
+#              entity_id: binary_sensor.porta_casa_contact
+#              state: 'on'
+#          - condition: template
+#            value_template: "{{ state_attr('climate.netatmo_valve_3', 'temperature') != 7 }}"
+#          sequence:
+#          - service: climate.set_hvac_mode
+#            data:
+#              hvac_mode: 'off'
+#              entity_id: climate.ingresso
+#        default: # quando non trova più possibile nessuna delle scelte sopra, ovvero non ci sono porte aperte con valvola diversa da off (7 gradi), imposta ad on il dummy 
+#        - service: input_boolean.turn_on
+#          entity_id: input_boolean.loop_riscaldamento
+#  - service: input_boolean.turn_off   # una volta uscito dal loop, ovvero dal ciclo di repeat fino a che il dummy è on, reimposta a off il dummy
+#    entity_id: input_boolean.loop_riscaldamento
+#  mode: restart # non ha senso far finire tanto riazzera tutto e ricontrolla tutto, meglio ripartire
+
+# Funziona bene ma esiste il problema quando si imposta manualmente una valvola e ci sono porte aperte (oppure quando se ne chiude una); il riscaldamento parte, trova una porta aperta, reimposta tutto in auto e riparte la programmazione azzerando l'impostazione manuale
+
+#input_boolean:
+#  loop_riscaldamento:
+#    name: Loop Riscaldamento

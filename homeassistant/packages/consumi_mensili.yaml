@@ -1,0 +1,83 @@
+#la cartella dove salvare va messa in configuration.yaml sotto allowlist_external_dirs:
+# non serve creare il file prima, se non c'è lo crea la prima volta
+
+notify:
+  - platform: file
+    name: consumi_mese
+    filename: '/config/snapshots/consumi_mese.csv'
+    timestamp: false
+
+#input_number dove salvare i dati di ogni mese per visualizzare l'ultimo anno su Mini graph-card
+#i dati precedenti all'anno sono solo sul file
+
+input_number:
+  mese_01:
+    name: mese_01
+    min: 0
+    max: 300
+  mese_02:
+    name: mese_02
+    min: 0
+    max: 300     
+  mese_03:
+    name: mese_03
+    min: 0
+    max: 300
+  mese_04:
+    name: mese_04
+    min: 0
+    max: 300
+  mese_05:
+    name: mese_05
+    min: 0
+    max: 300
+  mese_06:
+    name: mese_06
+    min: 0
+    max: 300
+  mese_07:
+    name: mese_07
+    min: 0
+    max: 300
+  mese_08:
+    name: mese_08
+    min: 0
+    max: 300
+  mese_09:
+    name: mese_09
+    min: 0
+    max: 300
+  mese_10:
+    name: mese_10
+    min: 0
+    max: 300
+  mese_11:
+    name: mese_11
+    min: 0
+    max: 300
+  mese_12:
+    name: mese_12
+    min: 0
+    max: 300
+
+#alle 23:59:59 scatta il trigger,SE domani è il giorno 1 allora OGGI è l'ultimo giorno del mese
+#funziona per mesi da 28/29/30 o 31gg
+#salva sul file csv per lo storico superiore ad 1 anno e su input_number per gli ultimi 12 mesi
+
+automation:
+  - alias: salva consumo mese
+    id: salva_consumo_mese
+    trigger:
+      platform: time
+      at : "23:59:59"
+    condition:
+      condition: template
+      value_template: "{{ (as_timestamp(states('sensor.date')) + 1 *3600 *24)| timestamp_custom('%d',true) == '01'}}"
+    action:
+    - service: notify.consumi_mese
+      data:
+        message: "{{ states('sensor.date_time') }},{{ states('sensor.consumo_mensile_totale') }}"
+    - service: input_number.set_value
+      data:
+        entity_id: input_number.mese_{{ as_timestamp(states('sensor.date')) | timestamp_custom('%m',true) }}
+        value: "{{ states('sensor.consumo_mensile_totale') }}"

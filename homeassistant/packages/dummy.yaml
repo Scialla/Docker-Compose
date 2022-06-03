@@ -1,0 +1,10 @@
+# dummy switch
+input_boolean:
+  sensore_tanica_clima:
+    name: Tanica Clima
+  test:
+    name: Test
+  web_radio:
+    name: Web Radio
+  fake_call:
+    name: Fake Call

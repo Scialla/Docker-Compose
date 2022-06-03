@@ -1,0 +1,752 @@
+# Tutte le entità mqtt (tranne le fan, lavatrice e lavastoviglie) sono qui, quindi light, switch, sensor e binary_sensor
+# Cambiato dalla 2022.6.0
+
+mqtt:
+  light:
+
+  - name: "Luce Scale"
+    unique_id: luce_scale
+    state_topic: "shellies/shelly1-944984/relay/0"
+    command_topic: "shellies/shelly1-944984/relay/0/command"
+    availability_topic: "shellies/shelly1-944984/online"
+    optimistic: false
+    payload_on: "on"
+    payload_off: "off"
+    payload_available: "true"
+    payload_not_available: "false"
+    retain: false
+    qos: 1
+
+  - name: "Luce Cucina"
+    unique_id: luce_cucina
+    state_topic: "stat/T1CH3Cucina/POWER1"
+    command_topic: "cmnd/T1CH3Cucina/POWER1"
+    availability_topic: "tele/T1CH3Cucina/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Alogena"
+    unique_id: alogena
+    state_topic: "stat/T1CH3Cucina/POWER2"
+    command_topic: "cmnd/T1CH3Cucina/POWER2"
+    availability_topic: "tele/T1CH3Cucina/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "LED Ingresso"
+    unique_id: led_ingresso   
+    state_topic: "stat/LEDingresso1/POWER"
+    command_topic: "cmnd/LEDingresso1/POWER"
+    availability_topic: "tele/LEDingresso1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "LED Ingresso2"
+    unique_id: led_ingresso2
+    state_topic: "stat/LEDingresso2/POWER"
+    command_topic: "cmnd/LEDingresso2/POWER"
+    availability_topic: "tele/LEDingresso2/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "LED Ingresso3"
+    unique_id: led_ingresso3
+    state_topic: "stat/T1CH3Studio/POWER3"
+    command_topic: "cmnd/T1CH3Studio/POWER3"
+    availability_topic: "tele/T1CH3Studio/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "LED Ingresso4"
+    unique_id: led_ingresso4
+    state_topic: "stat/T1CH2Ingresso/POWER2"
+    command_topic: "cmnd/T1CH2Ingresso/POWER2"
+    availability_topic: "tele/T1CH2Ingresso/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "LED Ingresso5"
+    unique_id: led_ingresso5
+    state_topic: "stat/CameraLetto/POWER1"
+    command_topic: "cmnd/CameraLetto/POWER1"
+    availability_topic: "tele/CameraLetto/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "LED Ingresso6"
+    unique_id: led_ingresso6
+    state_topic: "stat/T1CH3Cucina/POWER3"
+    command_topic: "cmnd/T1CH3Cucina/POWER3"
+    availability_topic: "tele/T1CH3Cucina/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "Luce Bagno Grande"
+    unique_id: luce_bagno_grande
+    state_topic: "stat/LuceBagnoGrande/POWER"
+    command_topic: "cmnd/LuceBagnoGrande/POWER"
+    availability_topic: "tele/LuceBagnoGrande/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "Luce Bagno Piccolo"
+    unique_id: luce_bagno_piccolo
+    state_topic: "stat/LuceBagnoPiccolo/POWER"
+    command_topic: "cmnd/LuceBagnoPiccolo/POWER"
+    availability_topic: "tele/LuceBagnoPiccolo/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "Luce Balcone"
+    unique_id: luce_balcone
+    state_topic: "stat/LuceBalcone/POWER"
+    command_topic: "cmnd/LuceBalcone/POWER"
+    availability_topic: "tele/LuceBalcone/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "Luce Studio"
+    unique_id: luce_studio
+    state_topic: "stat/T1CH3Studio/POWER1"
+    command_topic: "cmnd/T1CH3Studio/POWER1"
+    availability_topic: "tele/T1CH3Studio/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "Luce Ingresso"
+    unique_id: luce_ingresso
+    state_topic: "stat/T1CH2Ingresso/POWER1"
+    command_topic: "cmnd/T1CH2Ingresso/POWER1"
+    availability_topic: "tele/T1CH2Ingresso/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "Luce Silvia"
+    unique_id: luce_silvia
+    state_topic: "stat/LuceSilvia/POWER"
+    command_topic: "cmnd/LuceSilvia/POWER"
+    availability_topic: "tele/LuceSilvia/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - name: "Mensola"
+    unique_id: mensola
+    state_topic: "stat/sonoffTH/POWER"
+    command_topic: "cmnd/sonoffTH/POWER"
+    availability_topic: "tele/sonoffTH/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Lampada Scrivania"
+    unique_id: lampada_scrivania
+    state_topic: "stat/PresaS20/POWER"
+    command_topic: "cmnd/PresaS20/POWER"
+    availability_topic: "tele/PresaS20/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Neon"
+    unique_id: neon
+    state_topic: "stat/Ciabatta/POWER2"
+    command_topic: "cmnd/Ciabatta/POWER2"
+    availability_topic: "tele/Ciabatta/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Luce Letto"
+    unique_id: luce_letto
+    state_topic: "stat/CameraLetto/POWER3"
+    command_topic: "cmnd/CameraLetto/POWER3"
+    availability_topic: "tele/CameraLetto/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+  
+  switch:
+
+  - name: "Portone"
+    unique_id: portone
+    state_topic: "shellies/shelly1-944A46/relay/0"
+    command_topic: "shellies/shelly1-944A46/relay/0/command"
+    availability_topic: "shellies/shelly1-944A46/online"
+    optimistic: false
+    payload_on: "on"
+    payload_off: "off"
+    payload_available: "true"
+    payload_not_available: "false"
+    retain: false
+    qos: 1
+
+  - name: "Carica Batterie"
+    unique_id: carica_batterie
+    state_topic: "stat/Ciabatta/POWER1"
+    command_topic: "cmnd/Ciabatta/POWER1"
+    availability_topic: "tele/Ciabatta/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Presa 1"
+    unique_id: presa_1
+    state_topic: "stat/Ciabatta/POWER4"
+    command_topic: "cmnd/Ciabatta/POWER4"
+    availability_topic: "tele/Ciabatta/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Presa 2"
+    unique_id: presa_2
+    state_topic: "stat/Ciabatta/POWER3"
+    command_topic: "cmnd/Ciabatta/POWER3"
+    availability_topic: "tele/Ciabatta/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "USB RM"
+    unique_id: usb_rm
+    state_topic: "stat/Ciabatta/POWER5"
+    command_topic: "cmnd/Ciabatta/POWER5"
+    availability_topic: "tele/Ciabatta/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - name: "Forno"
+    unique_id: forno
+    state_topic: "stat/BlitzWolf1/POWER"
+    command_topic: "cmnd/BlitzWolf1/POWER"
+    availability_topic: "tele/BlitzWolf1/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+  - name: "Forno Microonde"
+    unique_id: forno_microonde
+    state_topic: "stat/Teckin1/POWER"
+    command_topic: "cmnd/Teckin1/power"
+    availability_topic: "tele/Teckin1/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+  - name: "Scaldabagno"
+    unique_id: scaldabagno
+    state_topic: "stat/Teckin3/POWER"
+    command_topic: "cmnd/Teckin3/power"
+    availability_topic: "tele/Teckin3/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+  - name: "USB 2"
+    unique_id: usb_2
+    state_topic: "stat/Ciabatta2/POWER5"
+    command_topic: "cmnd/Ciabatta2/POWER5"
+    availability_topic: "tele/Ciabatta2/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+  - name: "Ferro da Stiro"
+    unique_id: ferro_da_stiro
+    state_topic: "stat/Ciabatta2/POWER1"
+    command_topic: "cmnd/Ciabatta2/POWER1"
+    availability_topic: "tele/Ciabatta2/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+  - name: "Massaggiatore"
+    unique_id: massaggiatore
+    state_topic: "stat/Ciabatta2/POWER2"
+    command_topic: "cmnd/Ciabatta2/POWER2"
+    availability_topic: "tele/Ciabatta2/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+  - name: "Cicalino"
+    unique_id: cicalino
+    state_topic: "stat/Ciabatta2/POWER3"
+    command_topic: "cmnd/Ciabatta2/POWER3"
+    availability_topic: "tele/Ciabatta2/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+
+  - name: "Presa 3"
+    unique_id: presa_3
+    state_topic: "stat/Ciabatta2/POWER4"
+    command_topic: "cmnd/Ciabatta2/POWER4"
+    availability_topic: "tele/Ciabatta2/LWT"
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    qos: 1
+  
+  sensor:
+
+  - name: "Temperatura Studio"
+    state_topic: "tele/sonoffTH/SENSOR"
+    value_template: "{{ value_json['AM2301'].Temperature }}"
+    unit_of_measurement: "°C"
+
+  - name: "Umidità Studio"
+    state_topic: "tele/sonoffTH/SENSOR"
+    value_template: "{{ value_json['AM2301'].Humidity }}"
+    unit_of_measurement: "%"
+
+  - name: "Forno: Tensione"
+    state_topic: "tele/BlitzWolf1/SENSOR"
+    value_template: "{{ value_json.ENERGY.Voltage }}"
+    unit_of_measurement: "V"
+
+  - name: "Forno: Potenza"
+    state_topic: "tele/BlitzWolf1/SENSOR"
+    value_template: "{{ value_json.ENERGY.Power }}"
+    unit_of_measurement: "W"
+
+  - name: "Forno: Energia"
+    state_topic: "tele/BlitzWolf1/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Total }}"
+    unit_of_measurement: "kWh"
+
+  - name: "Forno: Corrente"
+    state_topic: "tele/BlitzWolf1/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Current }}"
+    unit_of_measurement: "A"
+
+  - name: "Casa: Tensione"
+    state_topic: "tele/pzem004t/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Voltage }}"
+    unit_of_measurement: "V"
+
+  - name: "Casa: Potenza"
+    state_topic: "tele/pzem004t/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Power }}"
+    unit_of_measurement: "W"
+
+  - name: "Casa: Energia"
+    state_topic: "tele/pzem004t/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Total }}"
+    unit_of_measurement: "kWh"
+
+  - name: "Casa: Corrente"
+    state_topic: "tele/pzem004t/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Current }}"
+    unit_of_measurement: "A"
+
+  - name: "Casa: Consumo di Ieri"
+    state_topic: "tele/pzem004t/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Yesterday }}"
+    unit_of_measurement: "kWh"
+
+  - name: "Casa: Consumo di Oggi"
+    state_topic: "tele/pzem004t/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Today }}"
+    unit_of_measurement: "kWh"
+
+  - name: "Forno Microonde: Tensione"
+    state_topic: "tele/Teckin1/SENSOR"
+    value_template: "{{ value_json.ENERGY.Voltage }}"
+    unit_of_measurement: "V"
+
+  - name: "'Forno Microonde: Potenza"
+    state_topic: "tele/Teckin1/SENSOR"
+    value_template: "{{ value_json.ENERGY.Power }}"
+    unit_of_measurement: "W"
+
+  - name: "Forno Microonde: Energia"
+    state_topic: "tele/Teckin1/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Total }}"
+    unit_of_measurement: "kWh"
+
+  - name: "Forno Microonde: Corrente"
+    state_topic: "tele/Teckin1/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Current }}"
+    unit_of_measurement: "A"
+
+  - name: "Scaldabagno: Tensione"
+    state_topic: "tele/Teckin3/SENSOR"
+    value_template: "{{ value_json.ENERGY.Voltage }}"
+    unit_of_measurement: "V"
+
+  - name: "Scaldabagno: Potenza"
+    state_topic: "tele/Teckin3/SENSOR"
+    value_template: "{{ value_json.ENERGY.Power }}"
+    unit_of_measurement: "W"
+
+  - name: "Scaldabagno: Energia"
+    state_topic: "tele/Teckin3/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Total }}"
+    unit_of_measurement: "kWh"
+
+  - name: "Scaldabagno: Corrente"
+    state_topic: "tele/Teckin3/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Current }}"
+    unit_of_measurement: "A"
+
+  - name: "Qualità Aria 1"
+    state_topic: "tele/Vindriktning1/SENSOR"
+    value_template: "{{ value_json['VINDRIKTNING']['PM2.5'] }}"
+    unit_of_measurement: "μg/m3"
+
+  - name: "Qualità Aria 2"
+    state_topic: "tele/Vindriktning2/SENSOR"
+    value_template: "{{ value_json['VINDRIKTNING']['PM2.5'] }}"
+    unit_of_measurement: "μg/m3"
+
+  - name: "Temperatura Silvia"
+    state_topic: "tele/Vindriktning2/SENSOR"
+    value_template: "{{ value_json['AM2301'].Temperature }}"
+    unit_of_measurement: "°C"
+
+  - name: "Umidità Silvia"
+    state_topic: "tele/Vindriktning2/SENSOR"
+    value_template: "{{ value_json['AM2301'].Humidity }}"
+    unit_of_measurement: "%"  
+
+  - name: "Punto di rugiada Silvia"
+    state_topic: "tele/Vindriktning2/SENSOR"
+    value_template: "{{ value_json['AM2301'].DewPoint }}"
+    unit_of_measurement: "°C"
+
+  binary_sensor:
+
+  - name: "PIR Ingresso" 
+    unique_id: pir_ingresso
+    payload_on: "on"
+    payload_off: "off"
+    device_class: motion
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == 'EC1DEE' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.pir_ingresso') }}
+      {% endif %} 
+    off_delay: 3
+
+  - name: "PIR Balcone"
+    unique_id: pir_balcone
+    payload_on: "on"
+    payload_off: "off"
+    device_class: motion
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == 'ED881E' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.pir_balcone') }}
+      {% endif %}
+    off_delay: 3
+
+  - name: "Box Davide" 
+    unique_id: box_davide
+    payload_on: "on"
+    payload_off: "off"
+    device_class: garage_door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '0E3999' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.box_davide') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "Box Giovanna"
+    unique_id: box_giovanna 
+    payload_on: "on"
+    payload_off: "off"
+    device_class: garage_door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '7CFFA9' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.box_giovanna') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "Cantina Grande"  
+    unique_id: cantina_grande
+    payload_on: "on"
+    payload_off: "off"
+    device_class: door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == 'CFF7A9' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.cantina_grande') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "Cantina Piccola" 
+    unique_id: cantina_piccola
+    payload_on: "on"
+    payload_off: "off"
+    device_class: door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '9AFE99' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.cantina_piccola') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "ex Camera Letto" 
+    unique_id: ex_camera_letto
+    payload_on: "on"
+    payload_off: "off"
+    device_class: door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '4C6CB9' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.ex_camera_letto') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "ex Studio"
+    unique_id: ex_studio
+    payload_on: "on"
+    payload_off: "off"
+    device_class: door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == 'DF71A9' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.ex_studio') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "ex Cucina"
+    unique_id: ex_cucina
+    payload_on: "on"
+    payload_off: "off"
+    device_class: door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '0D6F89' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.ex_cucina') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "ex Ingresso"
+    unique_id: ex_ingresso
+    payload_on: "on"
+    payload_off: "off"
+    device_class: door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '7EB1A9' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.ex_ingresso') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "Telecomando A"
+    unique_id: telecomando_a
+    payload_on: "on"
+    payload_off: "off"
+    device_class: power
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '226394' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.telecomando_a') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "Telecomando B"
+    unique_id: telecomando_b
+    payload_on: "on"
+    payload_off: "off"
+    device_class: power
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '226391' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.telecomando_b') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "Telecomando C"
+    unique_id: telecomando_c
+    payload_on: "on"
+    payload_off: "off"
+    device_class: power
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '226398' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.telecomando_c') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "Telecomando D"
+    unique_id: telecomando_d
+    payload_on: "on"
+    payload_off: "off"
+    device_class: power
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '226392' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.telecomando_d') }}
+      {% endif %}
+    off_delay: 3
+    
+  - name: "Sotto Scala"
+    unique_id: sotto_scala
+    payload_on: "on"
+    payload_off: "off"
+    device_class: door
+    state_topic: "tele/SonoffBridge/RESULT"
+    value_template: >
+      {% if value_json['RfReceived'].Data == '9B9899' %}
+        on
+      {% elif value_json['RfReceived'].Data == 'key_clean' %}
+        off
+      {% else %}
+        {{ states('binary_sensor.sotto_scala') }}
+      {% endif %}
+    off_delay: 3

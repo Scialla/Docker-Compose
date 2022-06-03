@@ -1,0 +1,477 @@
+input_select:
+  colori_striscia:
+    name: Colori Striscia
+    options:
+      - "0,0,0"
+      - "255,255,255"
+      - "255,0,0"
+      - "255,63,0"
+      - "255,127,0"
+      - "255,191,0"
+      - "255,255,0"
+      - "191,255,0"
+      - "0,255,0"
+      - "0,255,127"
+      - "0,255,255"
+      - "0,191,255"
+      - "0,127,255"
+      - "127,0,255"
+      - "255,0,255"
+      - "255,0,191"
+      - "255,0,127"
+    initial: "0,0,0"
+  effetti_wled:
+    name: Effetti Wled
+    options:
+      - "Android"
+      - "Aurora"
+      - "Blends"
+      - "Blink"
+      - "Blink Rainbow"
+      - "Bouncing Balls"
+      - "Bpm"
+      - "Breathe"
+      - "Candle"
+      - "Candle Multi"
+      - "Candy Cane"
+      - "Chase"
+      - "Chase 2"
+      - "Chase 3"
+      - "Chase Flash"
+      - "Chase Flash Rnd"
+      - "Chase Rainbow"
+      - "Chase Random"
+      - "Chunchun"
+      - "Colorful"
+      - "Colorloop"
+      - "Colortwinkles"
+      - "Colorwaves"
+      - "Dancing Shadows"
+      - "Dissolve"
+      - "Dissolve Rnd"
+      - "Drip"
+      - "Dynamic"
+      - "Dynamic Smooth"
+      - "Fade"
+      - "Fairy"
+      - "Fairytwinkle"
+      - "Fill Noise"
+      - "Fire 2012"
+      - "Fire Flicker"
+      - "Fireworks"
+      - "Fireworks 1D"
+      - "Fireworks Starburst"
+      - "Flow"
+      - "Glitter"
+      - "Gradient"
+      - "Halloween"
+      - "Halloween Eyes"
+      - "Heartbeat"
+      - "ICU"
+      - "Juggle"
+      - "Lake"
+      - "Lighthouse"
+      - "Lightning"
+      - "Loading"
+      - "Meteor"
+      - "Meteor Smooth"
+      - "Multi Comet"
+      - "Noise 1"
+      - "Noise 2"
+      - "Noise 3"
+      - "Noise 4"
+      - "Noise Pal"
+      - "Oscillate"
+      - "Pacifica"
+      - "Palette"
+      - "Percent"
+      - "Phased"
+      - "Phased Noise"
+      - "Plasma"
+      - "Police"
+      - "Popcorn"
+      - "Pride 2015"
+      - "Railway"
+      - "Rain"
+      - "Rainbow"
+      - "Rainbow Runner"
+      - "Random Colors"
+      - "Ripple"
+      - "Ripple Rainbow"
+      - "Running"
+      - "Running Dual"
+      - "Saw"
+      - "Scan"
+      - "Scan Dual"
+      - "Scanner"
+      - "Scanner Dual"
+      - "Sine"
+      - "Sinelon"
+      - "Sinelon Dual"
+      - "Sinelon Rainbow"
+      - "Solid"
+      - "Solid Glitter"
+      - "Solid Pattern"
+      - "Solid Pattern Tri"
+      - "Sparkle"
+      - "Sparkle Dark"
+      - "Sparkle+"
+      - "Spots"
+      - "Spots Fade"
+      - "Stream"
+      - "Stream 2"
+      - "Strobe"
+      - "Strobe Mega"
+      - "Strobe Rainbow"
+      - "Sunrise"
+      - "Sweep"
+      - "Sweep Random"
+      - "TV Simulator"
+      - "Tetrix"
+      - "Theater"
+      - "Theater Rainbow"
+      - "Traffic Light"
+      - "Tri Fade"
+      - "Tri Wipe"
+      - "Twinkle"
+      - "Twinklecat"
+      - "Twinklefox"
+      - "Twinkleup"
+      - "Two Dots"
+      - "Washing Machine"
+      - "Wipe"
+      - "Wipe Random"
+    initial: "Android"
+
+input_text:
+  striscia_selected_color:
+  wled_selected_effect:
+
+automation:     
+
+- alias: automazione_ikea_multi_switch
+  id: automazione_ikea_multi_switch
+  initial_state: true
+  # Imposto modalità restart perché se arriva un'altra publish dello stesso device...
+  # ...devo interrompere quello che sto facendo e rieseguire l'automazione da capo
+  mode: restart
+  trigger:
+  # L'automazione viene triggerata quando viene pubblicato il topic del pulsante IKEA...
+  - platform: mqtt
+    topic: 'zigbee2mqtt/IkeaMultiLightSwitch/action'
+  action:
+  # Qui utilizzo la choose per valutare se dimmerare oppure fermarmi...
+  - choose:
+    ########################
+    # BLOCCO PER DIMMERARE #
+    ########################
+    - conditions:
+      - condition: or
+        conditions:
+        # Se brightness_down...
+        - condition: template
+          value_template: "{{ trigger.payload == 'brightness_move_down' }}"
+        # ...oppure brightness_up
+        - condition: template
+          value_template: "{{ trigger.payload == 'brightness_move_up' }}"
+      sequence:
+      - repeat:
+          # Finché...
+          until:
+          - condition: or
+            conditions:
+            # ...la luce non si spegne...
+            - condition: state
+              entity_id: light.cappa
+              state: 'off'
+            # ...oppure la luce non è alla massima luminosità (la luminosità va da 1 a 255)...
+            - condition: template
+              value_template: "{{ state_attr('light.cappa','brightness') | int == 255 }}"
+          # ...ripeto i seguenti passaggi:
+          sequence:
+          # Chiamo il servizio light.turn_on...
+          - service: light.turn_on
+            entity_id: light.cappa
+            data:
+              # ...aumentando o diminuendo la luminosità di 10...
+              brightness: >-
+                {% if trigger.payload == 'brightness_move_up' %}
+                  {{ state_attr('light.cappa','brightness') | int(0) + 10 }}
+                {% else %}
+                  {{ state_attr('light.cappa','brightness') | int(6) - 10 }}
+                {% endif %}
+          # ...e aspetto un numero preciso di millisecondi
+          # ...per rallentare e rendere più fluido il cambio di luminosità
+          - delay:
+              milliseconds: 70
+    ######################
+    # BLOCCO PER FERMARE #
+    ######################
+    - conditions:
+      # Se brightness_stop
+      - condition: template
+        value_template: "{{ trigger.payload == 'brightness_stop' }}"
+      # ...Aspetto 1 millisecondo. In pratica non faccio nulla. 
+      # Mi serve solo per interrompere il dimmer
+      sequence:
+      - delay:
+          milliseconds: 1
+      # Questo accade perché l'automazione è impostata con mode repeat e quindi quando viene
+      # ...nuovamente triggerata, interrompe quello che stava facendo e viene eseguita da capo
+    #################
+    # BLOCCO ON/OFF #
+    #################
+    - conditions:
+      # Se off spegne
+      - condition: template
+        value_template: "{{ trigger.payload == 'off' }}"
+      sequence:
+      - service: light.turn_off
+        entity_id: light.cappa
+    - conditions:
+      # Se on imposta bianco freddo max luminosità
+      - condition: template
+        value_template: "{{ trigger.payload == 'on' }}"
+      sequence:
+      - service: light.turn_on
+        entity_id: light.cappa
+        data:
+          brightness: 255
+          color_temp: 150
+    #################
+    # Cambio Colore #
+    #################
+    - conditions:
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: "{{ trigger.payload == 'arrow_left_click' }}"
+        - condition: template
+          value_template: "{{ trigger.payload == 'arrow_right_click' }}"
+      sequence:
+      - service: script.turn_on
+        data:
+          entity_id: >
+            {% if trigger.payload == 'arrow_left_click' %}
+              script.striscia_colors_down
+            {% else %}
+              script.striscia_colors_up
+            {% endif %}
+- alias: ikea_multi_switch_2
+  id: ikea_multi_switch_2
+  initial_state: true
+  # Imposto modalità restart perché se arriva un'altra publish dello stesso device...
+  # ...devo interrompere quello che sto facendo e rieseguire l'automazione da capo
+  mode: restart
+  trigger:
+  # L'automazione viene triggerata quando viene pubblicato il topic del pulsante IKEA...
+  - platform: mqtt
+    topic: 'zigbee2mqtt/IkeaMultiLightSwitch2/action'
+  action:
+  # Qui utilizzo la choose per valutare se dimmerare oppure fermarmi...
+  - choose:
+    ########################
+    # BLOCCO PER DIMMERARE #
+    ########################
+    - conditions:
+      - condition: or
+        conditions:
+        # Se brightness_down...
+        - condition: template
+          value_template: "{{ trigger.payload == 'brightness_move_down' }}"
+        # ...oppure brightness_up
+        - condition: template
+          value_template: "{{ trigger.payload == 'brightness_move_up' }}"
+      sequence:
+      - repeat:
+          # Finché...
+          until:
+          - condition: or
+            conditions:
+            # ...la luce non si spegne...
+            - condition: state
+              entity_id: light.wled
+              state: 'off'
+            # ...oppure la luce non è alla massima luminosità (la luminosità va da 1 a 255)...
+            - condition: template
+              value_template: "{{ state_attr('light.wled','brightness') | int == 255 }}"
+          # ...ripeto i seguenti passaggi:
+          sequence:
+          # Chiamo il servizio light.turn_on...
+          - service: light.turn_on
+            entity_id: light.wled
+            data:
+              # ...aumentando o diminuendo la luminosità di 10...
+              brightness: >-
+                {% if trigger.payload == 'brightness_move_up' %}
+                  {{ state_attr('light.wled','brightness') | int(0) + 10 }}
+                {% else %}
+                  {{ state_attr('light.wled','brightness') | int(6) - 10 }}
+                {% endif %}
+          # ...e aspetto un numero preciso di millisecondi
+          # ...per rallentare e rendere più fluido il cambio di luminosità
+          - delay:
+              milliseconds: 70
+    ######################
+    # BLOCCO PER FERMARE #
+    ######################
+    - conditions:
+      # Se brightness_stop
+      - condition: template
+        value_template: "{{ trigger.payload == 'brightness_stop' }}"
+      # ...Aspetto 1 millisecondo. In pratica non faccio nulla. 
+      # Mi serve solo per interrompere il dimmer
+      sequence:
+      - delay:
+          milliseconds: 1
+      # Questo accade perché l'automazione è impostata con mode repeat e quindi quando viene
+      # ...nuovamente triggerata, interrompe quello che stava facendo e viene eseguita da capo
+    #################
+    # BLOCCO ON/OFF #
+    #################
+    - conditions:
+      # Se off spegne
+      - condition: template
+        value_template: "{{ trigger.payload == 'off' }}"
+      sequence:
+      - service: light.turn_off
+        entity_id: light.wled
+    - conditions:
+      # Se on imposta bianco freddo max luminosità
+      - condition: template
+        value_template: "{{ trigger.payload == 'on' }}"
+      sequence:
+      - service: light.turn_on
+        entity_id: light.wled
+        data:
+          brightness: 255
+          color_temp: 150
+          effect: "Solid"
+    ##################
+    # Cambio Effetto #
+    ##################
+    - conditions:
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: "{{ trigger.payload == 'arrow_left_click' }}"
+        - condition: template
+          value_template: "{{ trigger.payload == 'arrow_right_click' }}"
+      sequence:
+      - service: script.turn_on
+        data:
+          entity_id: >
+            {% if trigger.payload == 'arrow_left_click' %}
+              script.wled_effect_down
+            {% else %}
+              script.wled_effect_up
+            {% endif %}
+script:
+  striscia_colors_up:
+    alias: striscia_colors_up
+    sequence:
+    # Se la luce è accesa
+    - condition: state
+      entity_id: light.cappa
+      state: 'on'
+    # Imposto il prossimo indice dell'array per recuperare il colore RGB
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.striscia_selected_color
+        value: >-
+          {% if state_attr('input_select.colori_striscia','options')[states('input_text.striscia_selected_color') | int(0) + 1 ] != null -%}
+            {{ states('input_text.striscia_selected_color') | int(0) + 1 }}
+          {%- else -%}
+            0
+          {%- endif %}
+    # Imposto la terna RGB recuperando l'indice dell'array dall'input_text
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.colori_striscia
+        option: >-
+          {{ state_attr('input_select.colori_striscia','options')[states('input_text.striscia_selected_color') | int(0)] }}
+    - service: light.turn_on
+      data:
+        entity_id: light.cappa
+        rgb_color: "{{ state_attr('input_select.colori_striscia','options')[states('input_text.striscia_selected_color') | int(0)] }}"
+  striscia_colors_down:
+    alias: striscia_colors_down
+    sequence:
+    # Se la luce è accesa
+    - condition: state
+      entity_id: light.cappa
+      state: 'on'
+    # Imposto il precedente indice dell'array per recuperare il colore RGB
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.striscia_selected_color
+        value: >-
+          {% if state_attr('input_select.colori_striscia','options')[states('input_text.striscia_selected_color') | int(1) - 1 ] != null -%}
+            {{ states('input_text.striscia_selected_color') | int(1) - 1 }}
+          {%- else -%}
+            0
+          {%- endif %}
+    # Imposto la terna RGB recuperando l'indice dell'array dall'input_text
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.colori_striscia
+        option: >-
+          {{ state_attr('input_select.colori_striscia','options')[states('input_text.striscia_selected_color') | int(0)] }}
+    - service: light.turn_on
+      data:
+        entity_id: light.cappa
+        rgb_color: "{{ state_attr('input_select.colori_striscia','options')[states('input_text.striscia_selected_color') | int(0)] }}"
+  wled_effect_up:
+    alias: wled_effect_up
+    sequence:
+    # Se la luce è accesa
+    - condition: state
+      entity_id: light.wled
+      state: 'on'
+    # Imposto il prossimo indice dell'array per recuperare l'effetto
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.wled_selected_effect
+        value: >-
+          {% if state_attr('input_select.effetti_wled','options')[states('input_text.wled_selected_effect') | int(0) + 1 ] != null -%}
+            {{ states('input_text.wled_selected_effect') | int(0) + 1 }}
+          {%- else -%}
+            0
+          {%- endif %}
+    # Imposto l'effetto recuperando l'indice dell'array dall'input_text
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.effetti_wled
+        option: >-
+          {{ state_attr('input_select.effetti_wled','options')[states('input_text.wled_selected_effect') | int(0)] }}
+    - service: light.turn_on
+      data:
+        entity_id: light.wled
+        effect: "{{ state_attr('input_select.effetti_wled','options')[states('input_text.wled_selected_effect') | int(0)] }}"
+  wled_effect_down:
+    alias: wled_effect_down
+    sequence:
+    # Se la luce è accesa
+    - condition: state
+      entity_id: light.wled
+      state: 'on'
+    # Imposto il precedente indice dell'array per recuperare l'effetto
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.wled_selected_effect
+        value: >-
+          {% if state_attr('input_select.effetti_wled','options')[states('input_text.wled_selected_effect') | int(1) - 1 ] != null -%}
+            {{ states('input_text.wled_selected_effect') | int(1) - 1 }}
+          {%- else -%}
+            0
+          {%- endif %}
+    # Imposto l'effetto recuperando l'indice dell'array dall'input_text
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.effetti_wled
+        option: >-
+          {{ state_attr('input_select.effetti_wled','options')[states('input_text.wled_selected_effect') | int(0)] }}
+    - service: light.turn_on
+      data:
+        entity_id: light.wled
+        effect: "{{ state_attr('input_select.effetti_wled','options')[states('input_text.wled_selected_effect') | int(0)] }}"

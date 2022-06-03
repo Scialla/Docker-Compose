@@ -1,0 +1,66 @@
+{
+    "version": "6",
+    "minor_version": 1,
+    "key": "hacs/395991055.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@amaximus"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [
+            "HU"
+        ],
+        "config_flow": false,
+        "default_branch": "main",
+        "description": "Anniversary integration for Home Assistant",
+        "domain": "anniversary",
+        "domains": [
+            "anniversary"
+        ],
+        "downloads": 0,
+        "etag_repository": "W/\"1515530ba337021ee432264270c06db58d76c85b725e3618327f850f2c014756\"",
+        "file_name": "",
+        "filename": null,
+        "first_install": false,
+        "fork": false,
+        "full_name": "amaximus/anniversary",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": null,
+        "id": "395991055",
+        "iot_class": [
+            "Assumed State"
+        ],
+        "installed": true,
+        "installed_commit": "b74c858",
+        "installed_version": "0.2.2",
+        "open_issues": 1,
+        "last_commit": "b74c858",
+        "last_version": "0.2.2",
+        "last_updated": "2022-05-02T18:04:16Z",
+        "manifest_name": "Upcoming anniversary",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2022-05-02T18:04:16",
+        "releases": true,
+        "render_readme": "true",
+        "published_tags": [
+            "0.2.2",
+            "0.2.1",
+            "0.2.0",
+            "0.1.0",
+            "0.0.5"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 11,
+        "topics": [
+            "home-assistant",
+            "homeassistant"
+        ],
+        "zip_release": false
+    }
+}

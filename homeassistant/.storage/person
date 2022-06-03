@@ -1,0 +1,39 @@
+{
+    "version": 2,
+    "minor_version": 1,
+    "key": "person",
+    "data": {
+        "items": [
+            {
+                "device_trackers": [
+                    "device_tracker.iphone_x_di_scialla",
+                    "device_tracker.ping_scialla"
+                ],
+                "id": "scialla",
+                "name": "Scialla",
+                "user_id": "eca2925947454ae0ab47b43f06b132f9",
+                "picture": "/api/image/serve/44a5d8ebd14bbad945c897230c2fd1fe/512x512"
+            },
+            {
+                "device_trackers": [
+                    "device_tracker.ping_giovanna",
+                    "device_tracker.iphone_di_giovanna"
+                ],
+                "id": "giovanna",
+                "name": "Giovanna",
+                "user_id": "40966b7cd25447b698d32286ef7256f0",
+                "picture": "/api/image/serve/8764ecde7429c8261728b2ed8b78629e/512x512"
+            },
+            {
+                "name": "Silvia",
+                "device_trackers": [
+                    "device_tracker.ping_silvia",
+                    "device_tracker.iphone_di_silvia"
+                ],
+                "user_id": null,
+                "picture": "/api/image/serve/69615348b51b466c3877832a9c0f93a0/512x512",
+                "id": "silvia"
+            }
+        ]
+    }
+}

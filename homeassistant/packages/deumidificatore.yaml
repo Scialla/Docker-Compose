@@ -1,0 +1,20 @@
+automation:
+
+- alias: "Deumidifica"
+  id: deumidifica
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.lcd_bagnopiccolo_humidity
+      above: 80
+    - platform: numeric_state
+      entity_id: sensor.lcd_bagnopiccolo_humidity
+      below: 75
+  action:
+    - service: >
+        {% if trigger.to_state.state | float > 80 %}
+          switch.turn_on
+        {% else %}
+          switch.turn_off
+        {% endif %}
+      data:
+        entity_id: switch.sonoff_10009bdd07

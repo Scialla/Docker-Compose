@@ -1,0 +1,63 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "zone",
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:map-marker",
+                "id": "ufficio",
+                "latitude": 45.071096013917376,
+                "longitude": 7.657459974288941,
+                "name": "Ufficio",
+                "passive": false,
+                "radius": 235.02791628251504
+            },
+            {
+                "icon": "mdi:map-marker",
+                "id": "mamma",
+                "latitude": 45.11893996422189,
+                "longitude": 7.65749216079712,
+                "name": "Mamma",
+                "passive": false,
+                "radius": 96.7056689410624
+            },
+            {
+                "icon": "mdi:map-marker",
+                "id": "lavoro_giovanna",
+                "latitude": 45.08188466225595,
+                "longitude": 7.6146841049194345,
+                "name": "Lavoro",
+                "passive": false,
+                "radius": 231.2665710267214
+            },
+            {
+                "icon": "mdi:map-marker",
+                "id": "casa_di_pino",
+                "latitude": 45.013955742040544,
+                "longitude": 7.666606307029725,
+                "name": "Pino",
+                "passive": false,
+                "radius": 136.21337973051902
+            },
+            {
+                "icon": "mdi:map-marker",
+                "id": "da_marco",
+                "latitude": 45.079930128465605,
+                "longitude": 7.559870481491089,
+                "name": "Marco",
+                "passive": false,
+                "radius": 100.0
+            },
+            {
+                "icon": "mdi:map-marker",
+                "id": "casa_mare",
+                "latitude": 44.11989343546385,
+                "longitude": 8.24299290776253,
+                "name": "Casa Mare",
+                "passive": false,
+                "radius": 53.927821558351084
+            }
+        ]
+    }
+}

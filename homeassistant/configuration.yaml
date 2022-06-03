@@ -1,0 +1,661 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+homeassistant:
+  packages: !include_dir_named packages
+  customize: !include customize.yaml
+  internal_url: http://192.168.1.122:8123
+  external_url: https://scialla.duckdns.org:5000
+  allowlist_external_dirs:
+    - /config/snapshots
+    - /config/www
+#  media_dirs:
+#    media: /mnt/samba
+
+zeroconf:
+#  default_interface: true
+
+#discovery: # tolto dalla 2021.3.0
+
+recorder:
+  purge_keep_days: 7
+  exclude:
+    domains:
+      - automation
+      - script
+      - media_player
+      - timer
+      - calendar
+      - timer
+      - sensor
+      - weather
+      - sun
+      - input_text
+      - input_select
+      - input_number
+      - select
+  include:
+    entities:
+      - sensor.temperatura_studio
+      - sensor.umidita_studio
+      - sensor.ble_temperature_4c65a8ddd248
+      - sensor.ble_humidity_4c65a8ddd248
+      - sensor.casa_potenza
+      - sensor.casa_tensione
+      - sensor.casa_corrente
+      - sensor.casa_energia_cost
+#      - sensor.temperatura_valvola_studio
+#      - sensor.temperatura_ingresso
+#      - sensor.temperatura_cucina
+#      - sensor.temperatura_termostato
+#      - sensor.temperatura_valvola_letto
+      - sensor.netatmo_smart_thermostat_current_temperature
+      - sensor.netatmo_valve_1_current_temperature # (Cucina)
+      - sensor.netatmo_valve_2_current_temperature # (Studio)
+      - sensor.netatmo_valve_3_current_temperature # (Ingresso)
+#      - sensor.netatmo_valve_4_current_temperature (Bagno Grande)
+#      - sensor.netatmo_valve_5_current_temperature (Bagno Piccolo)
+#      - sensor.netatmo_valve_6_current_temperature (valvola smontata da Silvia)
+      - sensor.netatmo_valve_7_current_temperature # (Camera da Letto)
+      - sensor.temperatura_esterna
+      - sensor.umidita_esterna
+      - sensor.temperatura_silvia
+      - sensor.umidita_silvia
+      - sensor.openweathermap_pressure
+      - sensor.forno_potenza
+      - sensor.forno_microonde_potenza
+      - sensor.lavatrice_potenza
+      - sensor.scaldabagno_potenza
+      - sensor.lavastoviglie_potenza
+      - sensor.presa_phon_power
+      - sensor.cpu_temperature
+      - sensor.memory_use
+      - sensor.memory_free
+      - sensor.processor_use
+      - sensor.frigo
+      - sensor.temperatura_cpu
+      - sensor.frigo_temperature
+      - sensor.frigo_humidity
+      - sensor.frigo_pressure
+      - sensor.balcone_temperature
+      - sensor.balcone_humidity
+      - sensor.balcone_pressure
+      - sensor.lcd_bagnogrande_temperature
+      - sensor.lcd_bagnogrande_humidity
+      - sensor.lcd_bagnopiccolo_temperature
+      - sensor.lcd_bagnopiccolo_humidity
+      - sensor.presa_frigo_power
+      - sensor.presa_jolly_power
+      - sensor.presa_selecline_power
+      - sensor.presa_samsung_power
+      - sensor.presa_onkyo_power
+      - sensor.presa_mediaplayer_power
+      - sensor.consumo_mensile_f1
+      - sensor.consumo_mensile_f1_cost
+      - sensor.consumo_mensile_f2
+      - sensor.consumo_mensile_f2_cost
+      - sensor.consumo_mensile_f3
+      - sensor.consumo_mensile_f3_cost
+      - sensor.consumo_mensile_somma 
+      - sensor.antenna_tv_energy
+      - sensor.presa_frigo_energy
+      - sensor.presa_mediaplayer_energy
+      - sensor.presa_onkyo_energy
+      - sensor.presa_phon_energy
+      - sensor.presa_samsung_energy
+      - sensor.presa_selecline_energy
+      - sensor.casa_energia
+      - sensor.forno_microonde_energia
+      - sensor.lavatrice_energia
+      - sensor.forno_energia
+      - sensor.scaldabagno_energia
+      - sensor.lavastoviglie_energia
+      - sensor.lampada_zanzare_energy
+      - sensor.presa_jolly_energy
+      - sensor.co2_intensity
+      - sensor.grid_fossil_fuel_percentage
+      - sensor.qualita_aria_1
+      - sensor.qualita_aria_2
+      - sensor.mold_indicator
+
+logger:
+  default: info
+  logs:
+#    aiohttp: debug
+#    homeassistant.components.upnp: debug
+#    aiohomekit: debug
+#    homeassistant.components.homekit_controller: debug
+    homeassistant.bootstrap: info
+#    homeassistant.components.sensor: debug
+#    homeassistant.components.mobile_app: debug
+#    custom_components.alexa_media: debug
+#    custom_components.mitemp_bt: debug
+#    homeassistant.components.alexa: debug
+#    homeassistant.components.generic.camera: debug
+#    homeassistant.components.vacuum: debug
+#    custom_components.deebot: debug
+#    deebotozmo: debug
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+light: !include light.yaml
+switch: !include switch.yaml
+sensor: !include sensor.yaml
+binary_sensor: !include binary_sensor.yaml
+
+zone:
+  - name: Home
+    latitude: 45.1103513
+    longitude: 7.6652568
+    radius: 250
+    icon: 'mdi:home'
+
+frontend:
+  themes: !include_dir_merge_named themes/
+
+config_editor:
+
+alarm_control_panel:
+- platform: manual
+  name: "Allarme Casa"
+  delay_time: 15
+#  trigger_time: 25  (di default è 120 sec)
+  disarm_after_trigger: false #
+  code: !secret code
+api:
+
+alexa:
+  smart_home:
+    filter:
+      exclude_domains:
+        - climate
+        - automation
+        - media_player
+        - group
+        - remote
+        - script
+        - button
+      include_entities:
+        - climate.coolix
+        - media_player.onkyo
+        - script.film_on
+        - script.film_off
+      exclude_entities:
+        - binary_sensor.telecomando_a
+        - binary_sensor.telecomando_b
+        - binary_sensor.telecomando_c
+        - binary_sensor.telecomando_d
+        - light.led_ingresso2
+        - light.led_ingresso3
+        - light.led_ingresso4
+        - light.led_ingresso5
+        - light.led_ingresso6
+        - switch.ovunque_do_not_disturb_switch
+        - switch.ovunque_repeat_switch
+        - switch.altoparlante_do_not_disturb_switch
+        - switch.davide_s_reverb_ai_do_not_disturb_switch
+        - switch.echo_studio_repeat_switch
+        - switch.dappertutto_do_not_disturb_switch
+        - switch.echo_dot_ingresso_repeat_switch
+        - switch.davide_s_reverb_ai_shuffle_switch
+        - switch.dappertutto_repeat_switch
+        - switch.this_device_do_not_disturb_switch
+        - switch.altoparlante_repeat_switch
+        - switch.davide_s_alexa_apps_do_not_disturb_switch
+        - switch.echo_dot_camera_letto_do_not_disturb_switch
+        - switch.echo_dot_camera_letto_shuffle_switch
+        - switch.echo_dot_ingresso_do_not_disturb_switch
+        - switch.echo_show_shuffle_switch
+        - switch.davide_s_reverb_ai_repeat_switch
+        - switch.echo_dot_camera_letto_repeat_switch
+        - switch.echo_dot_ingresso_shuffle_switch
+        - switch.altoparlante_shuffle_switch
+        - switch.dappertutto_shuffle_switch
+        - switch.ovunque_shuffle_switch
+        - switch.echo_show_repeat_switch
+        - switch.echo_studio_shuffle_switch
+        - switch.echo_show_do_not_disturb_switch
+        - switch.echo_studio_do_not_disturb_switch
+        - switch.fire_tv_stick_do_not_disturb_switch
+        - binary_sensor.updater
+        - binary_sensor.ikeapresa_update_available
+        - binary_sensor.ikeaswitch_update_available
+        - sensor.cpu_temperature
+        - binary_sensor.duckdns_org
+        - binary_sensor.rpi_power_sensor
+        - binary_sensor.pulsante_ikea
+        - binary_sensor.tv_cucina
+        - sensor.temperatura_valvola_studio
+        - switch.bf59303c89ae38e766znbo
+        - timer.zigbee_permit_join
+        - switch.ikeapresa
+        - switch.presa_samsung
+        - switch.presa_selecline
+        - switch.presa_onkyo
+        - binary_sensor.condizionatore_contact
+        - binary_sensor.pulsante_ikea
+        - binary_sensor.stato_tv_samsung
+        - binary_sensor.stato_tv_selecline
+        - binary_sensor.stato_onkyo
+        - binary_sensor.rpi_power_status
+        - binary_sensor.macmini
+        - binary_sensor.imac
+        - binary_sensor.ha_new_version
+        - input_boolean.loop_riscaldamento
+        - camera.ambrogio_livemap
+        - sensor.ambrogio_brush
+        - sensor.ambrogio_last_clean_image
+        - sensor.ambrogio_stats_area
+        - sensor.ambrogio_stats_type
+        - sensor.ambrogio_water_level
+        - vacuum.ambrogio
+        - binary_sensor.ambrogio_mop_attached
+        - sensor.broadlink_studio_temperature
+        - input_number.mese_01
+        - input_number.mese_02
+        - input_number.mese_03
+        - input_number.mese_04
+        - input_number.mese_05
+        - input_number.mese_06
+        - input_number.mese_07
+        - input_number.mese_08
+        - input_number.mese_09
+        - input_number.mese_10
+        - input_number.mese_11
+        - input_number.mese_12
+        - sensor.openweathermap_dew_point
+        - sensor.openweathermap_feels_like_temperature
+        - sensor.openweathermap_forecast_cloud_coverage
+        - sensor.openweathermap_forecast_condition
+        - sensor.openweathermap_forecast_precipitation
+        - sensor.openweathermap_forecast_precipitation_probability
+        - sensor.openweathermap_forecast_pressure
+        - sensor.openweathermap_forecast_temperature
+        - sensor.openweathermap_forecast_temperature_low
+        - sensor.openweathermap_temperature
+        - camera.ultima_pulizia
+        - media_player.altoparlante
+        - input_boolean.antifurto_in_casa
+        - air_quality.air_quality_sensor_3c26cf
+        - binary_sensor.imac
+        - binary_sensor.macmini
+        - sensor.finestra_silvia_temperature
+        - sensor.porta_balcone_cucina_temperature
+        - sensor.porta_balcone_ingresso_temperature
+        - sensor.porta_balcone_letto_temperature
+        - sensor.porta_casa_temperature
+        - sensor.porta_balcone_studio_temperature
+        - sensor.bagno_grande_temperature
+        - sensor.bagno_piccolo_temperature
+        - sensor.condizionatore_temperature
+        - input_boolean.loop_riscaldamento
+        - input_number.max_consumo_permesso
+        - sensor.air_quality_sensor_3c26cf_temperature
+        - input_number.tempo_intervento
+        - sensor.netatmo_smart_thermostat_current_temperature
+        - sensor.netatmo_valve_1_current_temperature
+        - sensor.netatmo_valve_2_current_temperature
+        - sensor.netatmo_valve_3_current_temperature
+        - sensor.netatmo_valve_4_current_temperature
+        - sensor.netatmo_valve_5_current_temperature
+#        - sensor.netatmo_valve_6_current_temperature  questa è la valvola smontata di Silvia
+        - sensor.netatmo_valve_7_current_temperature
+        - binary_sensor.workday_sensor
+        - switch.meross_mss425e_main_channel
+        - switch.meross_mss425e_presa_box
+        - switch.meross_mss425e_usb_box
+        - switch.meross_mss425e_lampada_box
+        - switch.meross_mss425e_compressore
+        - binary_sensor.0x0c4314fffe5740c7_update_available
+        - binary_sensor.iphone_x_di_scialla_focus
+        - switch.ambrogio_advanced_mode
+        - switch.ambrogio_carpet_auto_fan_speed_boost
+        - switch.ambrogio_continuous_cleaning
+        - switch.wled_sync_send
+        - switch.wled_sync_receive
+        - switch.wled_nightlight
+        - binary_sensor.wled_firmware
+        - switch.wled_reverse
+        - binary_sensor.ble_toothbrush_a81b6ab78fc5
+        - binary_sensor.ha_latest_update_available
+        - sensor.ikeamiltiswitch_update_state
+        - sensor.ikeamultilightswitch2_update_state
+        - binary_sensor.ikeapir1_illuminance_above_threshold
+        - binary_sensor.ikeapir1_update_available
+        - binary_sensor.iphone_di_silvia_focus
+        - binary_sensor.pulsanteikea1_update_available
+        - binary_sensor.pulsanteikea2_update_available
+        
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api_key
+    allowed_chat_ids:
+      - 22700800
+
+notify:
+  - name: Scialla
+    platform: telegram
+    chat_id: 22700800
+  - name: Telegram_Call
+    platform: rest
+    resource: https://api.callmebot.com/start.php
+    data:
+      source: HA
+      user: "@Scialla66"   #enter your telegram username
+      lang: it-IT-Standard-B        #specify the languange and voice to use. See above the different options.
+      rpt: 1                        #how many times you want the message to be repeated by the bot.
+
+#mqtt: # tolto dalla 2021.3.0
+#  broker: 127.0.0.1
+#  port: 1883
+#  client_id: home-assistant
+#  keepalive: 60
+#  discovery: true
+#  discovery_prefix: homeassistant
+
+#netatmo:
+#  client_id: !secret netatmo_client_id
+#  client_secret: !secret netatmo_secret
+    
+duckdns:
+  domain: scialla
+  access_token: !secret duckdns_token
+  
+http:
+  use_x_forwarded_for: true
+  trusted_proxies: 
+    - 127.0.0.1
+    - 192.168.1.122
+    - 192.168.1.0/24
+    - 172.20.0.0/24
+    - 172.18.0.0/24
+    
+  ip_ban_enabled: true
+  login_attempts_threshold: 15
+  
+#  ssl_certificate: /home/homeassistant/dehydrated/certs/scialla.duckdns.org/fullchain.pem
+#  ssl_key: /home/homeassistant/dehydrated/certs/scialla.duckdns.org/privkey.pem
+
+# hacs:
+#   token: !secret hacs_token 
+
+smartir:
+
+media_player:
+  - platform: smartir
+    unique_id: samsung
+    name: Samsung
+    device_code: 1061
+    controller_data: remote.broadlink_ingresso_remote
+    power_sensor: binary_sensor.stato_tv_samsung
+  - platform: smartir
+    unique_id: selecline
+    name: Selecline
+    device_code: 1062
+    controller_data: remote.broadlink_cucina_remote
+    power_sensor: binary_sensor.stato_tv_selecline
+  - platform: smartir
+    unique_id: onkyo
+    name: Onkyo
+    device_code: 6126
+    controller_data: remote.broadlink_studio_remote
+    power_sensor: binary_sensor.stato_onkyo
+
+climate:
+  - platform: smartir
+    unique_id: coolix
+    name: Coolix
+    device_code: 1966
+    controller_data: remote.broadlink_studio_remote
+    temperature_sensor: sensor.temperatura_studio
+    humidity_sensor: sensor.umidita_studio
+    power_sensor: binary_sensor.condizionatore_contact
+    power_sensor_restore_state: true
+
+homekit:
+- filter:
+    exclude_domains:
+      - automation
+      - device_tracker
+      - person
+      - script
+      - group
+      - media_player
+      - remote
+      - camera
+      - input_select
+      - select
+      - button
+      - script
+    include_entities:
+      - script.film_on
+      - script.film_off
+    exclude_entities:
+      - climate.camera_da_letto
+      - climate.cucina
+      - climate.studio
+      - climate.ingresso
+      - climate.bagno_grande
+      - climate.bagno_piccolo
+      - climate.camera_di_silvia
+      - binary_sensor.telecomando_a
+      - binary_sensor.telecomando_b
+      - binary_sensor.telecomando_c
+      - binary_sensor.telecomando_d
+      - light.led_ingresso2
+      - light.led_ingresso3
+      - light.led_ingresso4
+      - light.led_ingresso5
+      - light.led_ingresso6
+      - switch.ovunque_do_not_disturb_switch
+      - switch.ovunque_repeat_switch
+      - switch.altoparlante_do_not_disturb_switch
+      - switch.davide_s_reverb_ai_do_not_disturb_switch
+      - switch.echo_studio_repeat_switch
+      - switch.dappertutto_do_not_disturb_switch
+      - switch.echo_dot_ingresso_repeat_switch
+      - switch.davide_s_reverb_ai_shuffle_switch      
+      - switch.dappertutto_repeat_switch
+      - switch.this_device_do_not_disturb_switch
+      - switch.altoparlante_repeat_switch
+      - switch.davide_s_alexa_apps_do_not_disturb_switch
+      - switch.echo_dot_camera_letto_do_not_disturb_switch
+      - switch.echo_dot_camera_letto_shuffle_switch
+      - switch.echo_dot_ingresso_do_not_disturb_switch
+      - switch.echo_show_shuffle_switch
+      - switch.davide_s_reverb_ai_repeat_switch
+      - switch.echo_dot_camera_letto_repeat_switch
+      - switch.echo_dot_ingresso_shuffle_switch
+      - switch.altoparlante_shuffle_switch
+      - switch.dappertutto_shuffle_switch
+      - switch.ovunque_shuffle_switch
+      - switch.echo_show_repeat_switch
+      - switch.echo_studio_shuffle_switch
+      - switch.echo_show_do_not_disturb_switch
+      - switch.echo_studio_do_not_disturb_switch
+      - switch.fire_tv_stick_do_not_disturb_switch
+      - switch.presa_samsung
+      - switch.presa_selecline
+      - switch.presa_onkyo
+      - switch.presa_mediaplayer
+      - switch.bf59303c89ae38e766znbo
+      - binary_sensor.updater
+      - binary_sensor.ikeapresa_update_available
+      - binary_sensor.ikeaswitch_update_available
+      - sensor.cpu_temperature
+      - binary_sensor.condizionatore_contact
+      - binary_sensor.pulsante_ikea
+      - binary_sensor.stato_tv_samsung
+      - binary_sensor.stato_tv_selecline
+      - binary_sensor.stato_onkyo
+      - binary_sensor.rpi_power_status
+      - binary_sensor.macmini
+      - binary_sensor.imac
+      - binary_sensor.ha_new_version
+      - sensor.netatmo_smart_thermostat_current_temperature
+      - sensor.netatmo_valve_1_current_temperature
+      - sensor.netatmo_valve_2_current_temperature
+      - sensor.netatmo_valve_3_current_temperature
+      - sensor.netatmo_valve_4_current_temperature
+      - sensor.netatmo_valve_5_current_temperature
+#      - sensor.netatmo_valve_6_current_temperature (valvola di Silvia smontata)
+      - sensor.netatmo_valve_7_current_temperature
+      - input_boolean.loop_riscaldamento
+      - switch.ambrogio_advanced_mode
+      - switch.ambrogio_carpet_auto_fan_speed_boost
+      - switch.ambrogio_continuous_cleaning
+      - button.ambrogio_life_span_brush_reset
+      - button.ambrogio_life_span_filter_reset
+      - button.ambrogio_life_span_side_brush_reset
+      - switch.wled_nightlight
+      - button.wled_restart
+      - switch.wled_reverse
+      - switch.wled_sync_receive
+      - switch.wled_sync_send
+      - button.wled_update
+  entity_config:
+    alarm_control_panel.allarme_casa:
+      code: !secret code
+
+#      - binary_sensor.pir_studio
+#      - binary_sensor.pir_ingresso
+#      - sensor.ble_temperature_4c65a8ddd248
+#      - sensor.ble_humidity_4c65a8ddd248
+
+- name: 'Bridge LG'
+  port: 52000
+  mode: accessory
+  filter:
+    include_entities:
+      - media_player.lg_tv
+- name: 'Bridge Onkyo'
+  port: 52100
+  mode: accessory
+  filter:
+    include_entities:
+      - media_player.onkyo
+- name: 'Bridge Selecline'
+  port: 52200
+  mode: accessory
+  filter:
+    include_entities:
+      - media_player.selecline
+- name: 'Bridge Samsung'
+  port: 52300
+  mode: accessory
+  filter:
+    include_entities:
+      - media_player.samsung
+- name: 'Bridge Camera Ingresso'
+  port: 52400
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.ingresso
+- name: 'Bridge Camera Box'
+  port: 52500
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.box
+
+wake_on_lan:
+
+#switch wol:
+#  - platform: wake_on_lan
+#    mac: "d4:9a:20:d1:29:36"
+#    name: "imac"
+#    host: "192.168.1.200"
+#    turn_off:
+#      service: shell_command.turn_off_imac
+#shell_command:
+#  turn_off_imac: net rpc shutdown -I 192.168.1.200 -U Scialla%Futura
+
+
+mobile_app:
+
+ios: #disattivate le categories che sono deprecate, sistemato nel file ios_act.yaml
+# push:
+#   categories:
+#     - name: Allarme
+#       identifier: 'domanda_allarme'
+#       actions:
+#         - identifier: 'ANTIFURTO_ON'
+#           title: 'SI'
+#           activationMode: 'background'
+#           authenticationRequired: false
+#           destructive: false
+#           behavior: 'default'
+#         - identifier: 'ANTIFURTO_OFF'
+#           title: 'NO'
+#           activationMode: 'background'
+#           authenticationRequired: false
+#           destructive: false
+#           behavior: 'default'
+#     - name: Portone
+#       identifier: 'domanda_portone'
+#       actions:
+#         - identifier: 'PORTONE_ON'
+#           title: 'SI'
+#           activationMode: 'background'
+#           authenticationRequired: false
+#           destructive: false
+#           behavior: 'default'
+#         - identifier: 'PORTONE_OFF'
+#           title: 'NO'
+#           activationMode: 'background'
+#           authenticationRequired: false
+#           destructive: false
+#           behavior: 'default'
+           
+sonoff:
+  devices:
+    10009bdd07: 
+      devicekey: f9da314a-fd1e-4c41-a0f5-10666f3f8d30
+      device_class: switch
+    10009c0093:
+      devicekey: 62453731-97b1-4fb8-9a58-cf119d7a8a96
+      device_class: light
+
+browser_mod:
+  disable: all
+
+stream:
+ffmpeg:
+
+camera:
+  - platform: ffmpeg
+    input: -rtsp_transport udp -re -i rtsp://admin:Futura69@192.168.1.114:554/onvif1
+    extra_arguments: -q:v 2 
+    name: ingresso
+  - platform: ffmpeg
+    input: -rtsp_transport udp -re -i rtsp://admin:Futura69@192.168.1.152:554/onvif1
+    extra_arguments: -q:v 2 
+    name: Box
+#  - platform: generic
+#    name: "Ultima pulizia"
+#    still_image_url: "https://scialla.duckdns.org:5000/local/Ambrogio_liveMap.png"
+
+device_tracker:
+  - platform: ping
+    hosts:
+      ping_scialla: 192.168.1.59
+      ping_silvia: 192.168.1.149
+      ping_giovanna: 192.168.1.130
+      count: 2
+      scan_interval: 60
+
+#deebot: (è diventato integrazione)
+#  username: !secret deebot_name
+#  password: !secret deebot_passw
+#  country: IT
+#  continent: EU
+#  deviceid:
+#    - E0CR14134B09HGBE0924
+#  live_map: True
+#  show_color_rooms: False
+#  livemappath: '/home/homeassistant/.homeassistant/www/'

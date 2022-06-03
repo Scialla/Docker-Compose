@@ -1,0 +1,68 @@
+automation:
+
+- id: infosensori
+  alias: info sensori
+  trigger:
+  - platform: event
+    event_type: telegram_callback
+    event_data:
+      data: /sensori
+  action:
+  - service: telegram_bot.answer_callback_query
+    data:
+      callback_query_id: '{{ trigger.event.data.id }}'
+      message: Sensori
+  - service: notify.scialla
+    data:
+
+      message: >- 
+        
+        {{ "\U0001F321" }} *TEMPERATURE*:
+        
+        *Studio*:                      {{ states('sensor.temperatura_studio') }} ºC
+
+        *Studio (Valvola)*:     {{ states('sensor.netatmo_valve_2_current_temperature') }} ºC
+        
+        *Camera da Letto*:    {{ states('sensor.ble_temperature_4c65a8ddd248') }} ºC
+
+        *Termostato*:             {{ states('sensor.netatmo_smart_thermostat_current_temperature') }} ºC
+        
+        *Camera di Silvia*:     {{ states('sensor.temperatura_silvia') }} ºC
+        
+        *Cucina (Valvola)*:     {{ states('sensor.netatmo_valve_1_current_temperature') }} ºC
+
+        *Ingresso (Valvola)*:  {{ states('sensor.netatmo_valve_3_current_temperature') }} ºC
+
+        *Bagno Grande*:         {{ states('sensor.lcd_bagnogrande_temperature') }} ºC
+
+        *Bagno Piccolo*:         {{ states('sensor.lcd_bagnopiccolo_temperature') }} ºC
+
+        *Balcone*:                    {{ states('sensor.balcone_temperature') }} ºC
+
+        *Esterna*:                     {{ state_attr('weather.openweathermap', 'temperature') }} ºC
+
+        *Frigo*:                          {{ states('sensor.frigo_temperature') }} ºC
+
+        -----------------------------------        
+
+        {{ "\U0001F4A7" }} *UMIDITA'*:
+        
+        *Studio*                    {{ states('sensor.umidita_studio') }} %
+        
+        *Camera da Letto*  {{ states('sensor.ble_humidity_4c65a8ddd248') }} %
+        
+        *Camera di Silvia*   {{ states('sensor.umidita_silvia') }} %
+
+        *Bagno Grande*       {{ states('sensor.lcd_bagnogrande_humidity') }} %
+
+        *Bagno piccolo*       {{ states('sensor.lcd_bagnopiccolo_humidity') }} %
+
+        *Balcone*                  {{ states('sensor.balcone_humidity') }} %
+        
+        *Esterna*                   {{ state_attr('weather.openweathermap', 'humidity') }} %
+
+        *Frigo*                       {{ states('sensor.frigo_humidity') }} %
+
+      data:
+        inline_keyboard:
+        - '{{ "\u21a9\ufe0f" }} Menú Principale:/stop'

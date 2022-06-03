@@ -1,0 +1,25 @@
+automation:
+  - alias: Tanica Clima Piena
+    id: tanica_clima_piena
+    trigger:
+      - platform: state
+        entity_id: input_boolean.sensore_tanica_clima
+        to: 'on'
+    action:
+      - service: climate.turn_off
+        entity_id: climate.coolix
+      - service: notify.notify
+        data:
+          message: "Tanica Clima Piena, Svuotarla"
+      - service: notify.scialla
+        data:
+          title: "Tanica Clima"
+          message: "Clima spento, la tanica è piena, svuotarla"
+      - service: notify.alexa_media
+        data:
+          target:
+            - media_player.ovunque
+          data:
+            type: announce
+            method: spoken
+          message: "Ho spento il clima, la tanica è piena d'acqua, svuotarla subito"
