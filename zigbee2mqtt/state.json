@@ -1,10 +1,10 @@
 {
     "0x842e14fffe366818": {
         "state": "ON",
-        "energy": 218.51,
-        "power": 0,
-        "current": 0,
-        "voltage": 229,
+        "energy": 218.53,
+        "power": 42,
+        "current": 0.29,
+        "voltage": 228,
         "power_outage_memory": "on",
         "linkquality": 84
     },
@@ -12,8 +12,8 @@
         "state": "ON",
         "energy": 44.83,
         "power": 0,
-        "current": 0,
-        "voltage": 230,
+        "current": 0.01,
+        "voltage": 229,
         "power_outage_memory": "on",
         "linkquality": 84
     },
@@ -29,9 +29,9 @@
     "0x00158d0005446d5f": {
         "voltage": 3005,
         "battery": 100,
-        "temperature": 24.31,
-        "humidity": 67.62,
-        "pressure": 990.3,
+        "temperature": 24.35,
+        "humidity": 67.56,
+        "pressure": 990.1,
         "linkquality": 68
     },
     "0x00158d00054b38ec": {
@@ -74,7 +74,7 @@
         "contact": true,
         "temperature": 32,
         "device_temperature": 33,
-        "linkquality": 141
+        "linkquality": 110
     },
     "0x680ae2fffec2023e": {
         "update_available": false,
@@ -104,17 +104,17 @@
         "energy": 18.47,
         "power": 0,
         "current": 0,
-        "voltage": 235,
+        "voltage": 234,
         "linkquality": 84
     },
     "0x842e14fffe1265ac": {
-        "state": "OFF",
+        "state": "ON",
         "power_outage_memory": "restore",
         "energy": 72.77,
         "power": 0,
         "current": 0,
-        "voltage": 231,
-        "linkquality": 28
+        "voltage": 230,
+        "linkquality": 31
     },
     "0x588e81fffed39fdd": {
         "state": "OFF",
@@ -122,25 +122,25 @@
         "energy": 4.07,
         "power": 0,
         "current": 0,
-        "voltage": 233,
-        "linkquality": 70
+        "voltage": 232,
+        "linkquality": 36
     },
     "0x588e81fffed393d7": {
         "state": "ON",
-        "power": 0,
-        "current": 0.06,
-        "voltage": 233,
+        "power": 32,
+        "current": 0.22,
+        "voltage": 232,
         "power_outage_memory": "on",
-        "energy": 439.24,
+        "energy": 439.26,
         "linkquality": 44
     },
     "0x842e14fffe3a42aa": {
         "state": "ON",
         "power_outage_memory": "restore",
-        "energy": 41.3,
-        "power": 1,
-        "current": 0.03,
-        "voltage": 233,
+        "energy": 41.34,
+        "power": 0,
+        "current": 0.04,
+        "voltage": 232,
         "linkquality": 84
     },
     "0x00158d00028eafae": {
@@ -187,7 +187,7 @@
         "state_l1": "OFF",
         "state_l2": "OFF",
         "state_l3": "OFF",
-        "linkquality": 68
+        "linkquality": 92
     },
     "0x60a423fffe3f6d3f": {
         "state": "OFF",
@@ -210,10 +210,10 @@
         "linkquality": 21
     },
     "0x00158d00063dd645": {
-        "voltage": 2925,
-        "battery": 85,
-        "temperature": 6.34,
-        "humidity": 66.7,
+        "voltage": 2935,
+        "battery": 89,
+        "temperature": 5.43,
+        "humidity": 62.14,
         "linkquality": 39
     },
     "0xcc86ecfffe9fb794": {
