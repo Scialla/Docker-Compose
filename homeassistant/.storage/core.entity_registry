@@ -50,28 +50,6 @@
             },
             {
                 "area_id": null,
-                "capabilities": {},
-                "config_entry_id": "4a6fbe1b93153830931ac8ab59a5b34e",
-                "device_class": null,
-                "device_id": "aa915ca618ed198f3cd6637f8a5584b5",
-                "disabled_by": null,
-                "entity_category": null,
-                "entity_id": "sensor.hacs",
-                "hidden_by": null,
-                "icon": null,
-                "id": "e3cab2fc37c7cbb101c0511d95c4a3c2",
-                "name": null,
-                "options": {},
-                "original_device_class": null,
-                "original_icon": "hacs:hacs",
-                "original_name": "hacs",
-                "platform": "hacs",
-                "supported_features": 0,
-                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd",
-                "unit_of_measurement": "pending update(s)"
-            },
-            {
-                "area_id": null,
                 "capabilities": {
                     "state_class": "measurement"
                 },
@@ -24137,6 +24115,28 @@
                 "supported_features": 0,
                 "unique_id": "4bea05a69f4ec7ff187596645f8696c78c94d7448a54916b1b6ff26a70741c9e_last_update_trigger",
                 "unit_of_measurement": null
+            },
+            {
+                "area_id": null,
+                "capabilities": null,
+                "config_entry_id": "9171a4056ad806e7429b5a4c433cd838",
+                "device_class": null,
+                "device_id": "aa915ca618ed198f3cd6637f8a5584b5",
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "sensor.hacs",
+                "hidden_by": null,
+                "icon": null,
+                "id": "897f74c6d085b413033a59a82dda6946",
+                "name": null,
+                "options": {},
+                "original_device_class": null,
+                "original_icon": "hacs:hacs",
+                "original_name": "hacs",
+                "platform": "hacs",
+                "supported_features": 0,
+                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd",
+                "unit_of_measurement": "pending update(s)"
             }
         ]
     }

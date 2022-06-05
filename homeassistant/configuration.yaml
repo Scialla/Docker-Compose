@@ -241,7 +241,6 @@ alexa:
         - binary_sensor.stato_tv_samsung
         - binary_sensor.stato_tv_selecline
         - binary_sensor.stato_onkyo
-        - binary_sensor.rpi_power_status
         - binary_sensor.macmini
         - binary_sensor.imac
         - binary_sensor.ha_new_version
@@ -380,8 +379,8 @@ http:
 #  ssl_certificate: /home/homeassistant/dehydrated/certs/scialla.duckdns.org/fullchain.pem
 #  ssl_key: /home/homeassistant/dehydrated/certs/scialla.duckdns.org/privkey.pem
 
-# hacs:
-#   token: !secret hacs_token 
+#hacs:
+#  token: !secret hacs_token 
 
 smartir:
 
@@ -492,7 +491,6 @@ homekit:
       - binary_sensor.stato_tv_samsung
       - binary_sensor.stato_tv_selecline
       - binary_sensor.stato_onkyo
-      - binary_sensor.rpi_power_status
       - binary_sensor.macmini
       - binary_sensor.imac
       - binary_sensor.ha_new_version
