@@ -494,6 +494,7 @@ homekit:
       - binary_sensor.macmini
       - binary_sensor.imac
       - binary_sensor.ha_new_version
+      - binary_sensor.workday_sensor
       - sensor.netatmo_smart_thermostat_current_temperature
       - sensor.netatmo_valve_1_current_temperature
       - sensor.netatmo_valve_2_current_temperature
@@ -502,6 +503,7 @@ homekit:
       - sensor.netatmo_valve_5_current_temperature
 #      - sensor.netatmo_valve_6_current_temperature (valvola di Silvia smontata)
       - sensor.netatmo_valve_7_current_temperature
+      - sensor.broadlink_studio_temperature
       - input_boolean.loop_riscaldamento
       - switch.ambrogio_advanced_mode
       - switch.ambrogio_carpet_auto_fan_speed_boost
@@ -518,12 +520,6 @@ homekit:
   entity_config:
     alarm_control_panel.allarme_casa:
       code: !secret code
-
-#      - binary_sensor.pir_studio
-#      - binary_sensor.pir_ingresso
-#      - sensor.ble_temperature_4c65a8ddd248
-#      - sensor.ble_humidity_4c65a8ddd248
-
 - name: 'Bridge LG'
   port: 52000
   mode: accessory
@@ -577,38 +573,6 @@ wake_on_lan:
 mobile_app:
 
 ios: #disattivate le categories che sono deprecate, sistemato nel file ios_act.yaml
-# push:
-#   categories:
-#     - name: Allarme
-#       identifier: 'domanda_allarme'
-#       actions:
-#         - identifier: 'ANTIFURTO_ON'
-#           title: 'SI'
-#           activationMode: 'background'
-#           authenticationRequired: false
-#           destructive: false
-#           behavior: 'default'
-#         - identifier: 'ANTIFURTO_OFF'
-#           title: 'NO'
-#           activationMode: 'background'
-#           authenticationRequired: false
-#           destructive: false
-#           behavior: 'default'
-#     - name: Portone
-#       identifier: 'domanda_portone'
-#       actions:
-#         - identifier: 'PORTONE_ON'
-#           title: 'SI'
-#           activationMode: 'background'
-#           authenticationRequired: false
-#           destructive: false
-#           behavior: 'default'
-#         - identifier: 'PORTONE_OFF'
-#           title: 'NO'
-#           activationMode: 'background'
-#           authenticationRequired: false
-#           destructive: false
-#           behavior: 'default'
            
 sonoff:
   devices:
@@ -634,9 +598,6 @@ camera:
     input: -rtsp_transport udp -re -i rtsp://admin:Futura69@192.168.1.152:554/onvif1
     extra_arguments: -q:v 2 
     name: Box
-#  - platform: generic
-#    name: "Ultima pulizia"
-#    still_image_url: "https://scialla.duckdns.org:5000/local/Ambrogio_liveMap.png"
 
 device_tracker:
   - platform: ping
