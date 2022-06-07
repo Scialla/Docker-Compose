@@ -24119,7 +24119,7 @@
             {
                 "area_id": null,
                 "capabilities": null,
-                "config_entry_id": "48e66b65375262dd093c4cd292c88bd1",
+                "config_entry_id": "2c1396d2dfa6a2d4225275fe6f15b784",
                 "device_class": null,
                 "device_id": "aa915ca618ed198f3cd6637f8a5584b5",
                 "disabled_by": null,
@@ -24127,7 +24127,7 @@
                 "entity_id": "sensor.hacs",
                 "hidden_by": null,
                 "icon": null,
-                "id": "c7a4e88bee6db155fc92d0e8e89a4f7a",
+                "id": "750825f0765193df0e3abfd5a2820930",
                 "name": null,
                 "options": {},
                 "original_device_class": null,
