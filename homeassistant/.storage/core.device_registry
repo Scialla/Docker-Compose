@@ -875,12 +875,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:serial-number",
-                        "j0a33a0"
-                    ],
-                    [
                         "homekit_controller:accessory-id",
                         "0B:E3:5F:38:1A:21:aid:2"
+                    ],
+                    [
+                        "homekit_controller:serial-number",
+                        "j0a33a0"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -903,12 +903,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:3"
-                    ],
-                    [
                         "homekit_controller:serial-number",
                         "o046cd6"
+                    ],
+                    [
+                        "homekit_controller:accessory-id",
+                        "0B:E3:5F:38:1A:21:aid:3"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -987,12 +987,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:7"
-                    ],
-                    [
                         "homekit_controller:serial-number",
                         "o154fc2"
+                    ],
+                    [
+                        "homekit_controller:accessory-id",
+                        "0B:E3:5F:38:1A:21:aid:7"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -1015,12 +1015,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:8"
-                    ],
-                    [
                         "homekit_controller:serial-number",
                         "o153d75"
+                    ],
+                    [
+                        "homekit_controller:accessory-id",
+                        "0B:E3:5F:38:1A:21:aid:8"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -1043,12 +1043,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:serial-number",
-                        "o15481f"
-                    ],
-                    [
                         "homekit_controller:accessory-id",
                         "0B:E3:5F:38:1A:21:aid:10"
+                    ],
+                    [
+                        "homekit_controller:serial-number",
+                        "o15481f"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -1949,9 +1949,9 @@
             },
             {
                 "config_entries": [
-                    "d3ce3ce93b345e6f8a4846b42559f716",
                     "af9521407a3548c0a7f5378e4678222a",
-                    "9b22afd876018a439f729fd9b5f2f48b"
+                    "9b22afd876018a439f729fd9b5f2f48b",
+                    "d3ce3ce93b345e6f8a4846b42559f716"
                 ],
                 "connections": [],
                 "identifiers": [
@@ -2814,7 +2814,7 @@
             },
             {
                 "config_entries": [
-                    "a33d685456ca334c53bcfdf434fa8c10"
+                    "d368be8d4786e6be0f670326cba6df85"
                 ],
                 "connections": [],
                 "identifiers": [

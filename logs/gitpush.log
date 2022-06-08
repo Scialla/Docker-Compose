@@ -1,0 +1,6 @@
+[master e67c2ad] Backup del 08-06-2022 04:00:02
+ 14 files changed, 10492 insertions(+), 11447 deletions(-)
+ rewrite homeassistant/home-assistant.log.1 (68%)
+To github.com:Scialla/Docker-Compose
+   ba2b441..e67c2ad  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
