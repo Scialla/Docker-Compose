@@ -103,6 +103,7 @@
   - platform: numeric_state
     entity_id: sensor.cpu_temperature
     above: 70
+    for: 00:00:10
   action:
   - service: notify.scialla
     data:

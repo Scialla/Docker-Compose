@@ -27,6 +27,7 @@
 /homeassistant/rtsp2webrtc_v5_armv7
 /homeassistant/.storage/auth*
 /homeassistant/.storage/homekit*
+/homeassistant/.storage/core.config_entries
 /mosquitto/data/
 /mosquitto/log/
 /tasmoadmin/
