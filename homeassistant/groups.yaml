@@ -71,10 +71,10 @@ device_controllo_on:
   - media_player.samsung
   - media_player.onkyo
   - climate.coolix
-  - switch.meross_mss425e_compressore
-  - switch.meross_mss425e_lampada_box
-  - switch.meross_mss425e_presa_box
-  - switch.meross_mss425e_usb_box
+  - switch.ciabattameross_mss425e_compressore
+  - switch.ciabattameross_mss425e_lampada
+  - switch.ciabattameross_mss425e_presa
+  - switch.ciabattameross_mss425e_usb_box
   - switch.ferro_da_stiro
   - switch.massaggiatore
   - switch.usb_2
@@ -82,7 +82,7 @@ device_controllo_on:
   - switch.ciabattascrivania_l2
   - switch.ciabattascrivania_l3
   - switch.presa_phon
-  - switch.sonoff_10009c0093 # Deumidificatore
+  - switch.sonoff_10009bdd07 # Deumidificatore
   
 porte_finestre:
   name: porte_finestre

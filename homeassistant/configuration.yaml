@@ -42,7 +42,6 @@ recorder:
       - sensor.casa_potenza
       - sensor.casa_tensione
       - sensor.casa_corrente
-      - sensor.casa_energia_cost
 #      - sensor.temperatura_valvola_studio
 #      - sensor.temperatura_ingresso
 #      - sensor.temperatura_cucina
@@ -75,7 +74,6 @@ recorder:
       - sensor.temperatura_cpu
       - sensor.frigo_temperature
       - sensor.frigo_humidity
-      - sensor.frigo_pressure
       - sensor.balcone_temperature
       - sensor.balcone_humidity
       - sensor.balcone_pressure
@@ -95,8 +93,7 @@ recorder:
       - sensor.consumo_mensile_f2_cost
       - sensor.consumo_mensile_f3
       - sensor.consumo_mensile_f3_cost
-      - sensor.consumo_mensile_somma 
-      - sensor.antenna_tv_energy
+      - sensor.consumo_mensile_totale
       - sensor.presa_frigo_energy
       - sensor.presa_mediaplayer_energy
       - sensor.presa_onkyo_energy
@@ -194,63 +191,25 @@ alexa:
         - light.led_ingresso4
         - light.led_ingresso5
         - light.led_ingresso6
-        - switch.ovunque_do_not_disturb_switch
-        - switch.ovunque_repeat_switch
-        - switch.altoparlante_do_not_disturb_switch
-        - switch.davide_s_reverb_ai_do_not_disturb_switch
-        - switch.echo_studio_repeat_switch
-        - switch.dappertutto_do_not_disturb_switch
-        - switch.echo_dot_ingresso_repeat_switch
-        - switch.davide_s_reverb_ai_shuffle_switch
-        - switch.dappertutto_repeat_switch
-        - switch.this_device_do_not_disturb_switch
-        - switch.altoparlante_repeat_switch
-        - switch.davide_s_alexa_apps_do_not_disturb_switch
-        - switch.echo_dot_camera_letto_do_not_disturb_switch
-        - switch.echo_dot_camera_letto_shuffle_switch
-        - switch.echo_dot_ingresso_do_not_disturb_switch
-        - switch.echo_show_shuffle_switch
-        - switch.davide_s_reverb_ai_repeat_switch
-        - switch.echo_dot_camera_letto_repeat_switch
-        - switch.echo_dot_ingresso_shuffle_switch
-        - switch.altoparlante_shuffle_switch
-        - switch.dappertutto_shuffle_switch
-        - switch.ovunque_shuffle_switch
-        - switch.echo_show_repeat_switch
-        - switch.echo_studio_shuffle_switch
-        - switch.echo_show_do_not_disturb_switch
-        - switch.echo_studio_do_not_disturb_switch
         - switch.fire_tv_stick_do_not_disturb_switch
-        - binary_sensor.updater
         - binary_sensor.ikeapresa_update_available
         - binary_sensor.ikeaswitch_update_available
         - sensor.cpu_temperature
-        - binary_sensor.duckdns_org
-        - binary_sensor.rpi_power_sensor
-        - binary_sensor.pulsante_ikea
-        - binary_sensor.tv_cucina
-        - sensor.temperatura_valvola_studio
-        - switch.bf59303c89ae38e766znbo
         - timer.zigbee_permit_join
         - switch.ikeapresa
         - switch.presa_samsung
         - switch.presa_selecline
         - switch.presa_onkyo
         - binary_sensor.condizionatore_contact
-        - binary_sensor.pulsante_ikea
         - binary_sensor.stato_tv_samsung
         - binary_sensor.stato_tv_selecline
         - binary_sensor.stato_onkyo
         - binary_sensor.macmini
         - binary_sensor.imac
         - binary_sensor.ha_new_version
-        - input_boolean.loop_riscaldamento
-        - camera.ambrogio_livemap
-        - sensor.ambrogio_brush
-        - sensor.ambrogio_last_clean_image
-        - sensor.ambrogio_stats_area
-        - sensor.ambrogio_stats_type
-        - sensor.ambrogio_water_level
+        - camera.ambrogio_live_map
+        - switch.sonoff_10009c0093_led #specchiera led
+        - switch.sonoff_10009bdd07_led #umidificatore led
         - vacuum.ambrogio
         - binary_sensor.ambrogio_mop_attached
         - sensor.broadlink_studio_temperature
@@ -278,22 +237,18 @@ alexa:
         - sensor.openweathermap_temperature
         - camera.ultima_pulizia
         - media_player.altoparlante
-        - input_boolean.antifurto_in_casa
-        - air_quality.air_quality_sensor_3c26cf
         - binary_sensor.imac
         - binary_sensor.macmini
-        - sensor.finestra_silvia_temperature
-        - sensor.porta_balcone_cucina_temperature
-        - sensor.porta_balcone_ingresso_temperature
-        - sensor.porta_balcone_letto_temperature
-        - sensor.porta_casa_temperature
-        - sensor.porta_balcone_studio_temperature
-        - sensor.bagno_grande_temperature
-        - sensor.bagno_piccolo_temperature
-        - sensor.condizionatore_temperature
-        - input_boolean.loop_riscaldamento
+        - sensor.finestra_silvia_device_temperature
+        - sensor.porta_balcone_cucina_device_temperature
+        - sensor.porta_balcone_ingresso_device_temperature
+        - sensor.porta_balcone_letto_device_temperature
+        - sensor.porta_casa_device_temperature
+        - sensor.porta_balcone_studio_device_temperature
+        - sensor.bagno_grande_device_temperature
+        - sensor.bagno_piccolo_device_temperature
+        - sensor.condizionatore_device_temperature
         - input_number.max_consumo_permesso
-        - sensor.air_quality_sensor_3c26cf_temperature
         - input_number.tempo_intervento
         - sensor.netatmo_smart_thermostat_current_temperature
         - sensor.netatmo_valve_1_current_temperature
@@ -304,12 +259,11 @@ alexa:
 #        - sensor.netatmo_valve_6_current_temperature  questa è la valvola smontata di Silvia
         - sensor.netatmo_valve_7_current_temperature
         - binary_sensor.workday_sensor
-        - switch.meross_mss425e_main_channel
-        - switch.meross_mss425e_presa_box
-        - switch.meross_mss425e_usb_box
-        - switch.meross_mss425e_lampada_box
-        - switch.meross_mss425e_compressore
-        - binary_sensor.0x0c4314fffe5740c7_update_available
+        - switch.ciabattameross_mss425e_main_channel
+        - switch.ciabattameross_mss425e_presa
+        - switch.ciabattameross_mss425e_usb_box
+        - switch.ciabattameross_mss425e_lampada
+        - switch.ciabattameross_mss425e_compressore
         - binary_sensor.iphone_x_di_scialla_focus
         - switch.ambrogio_advanced_mode
         - switch.ambrogio_carpet_auto_fan_speed_boost
@@ -328,7 +282,9 @@ alexa:
         - binary_sensor.iphone_di_silvia_focus
         - binary_sensor.pulsanteikea1_update_available
         - binary_sensor.pulsanteikea2_update_available
-        
+        - binary_sensor.ikeamultilightswitch_update_available
+        - binary_sensor.ikeamultilightswitch2_update_available
+
 telegram_bot:
   - platform: polling
     api_key: !secret telegram_api_key
@@ -450,44 +406,17 @@ homekit:
       - light.led_ingresso4
       - light.led_ingresso5
       - light.led_ingresso6
-      - switch.ovunque_do_not_disturb_switch
-      - switch.ovunque_repeat_switch
-      - switch.altoparlante_do_not_disturb_switch
-      - switch.davide_s_reverb_ai_do_not_disturb_switch
-      - switch.echo_studio_repeat_switch
-      - switch.dappertutto_do_not_disturb_switch
-      - switch.echo_dot_ingresso_repeat_switch
-      - switch.davide_s_reverb_ai_shuffle_switch      
-      - switch.dappertutto_repeat_switch
-      - switch.this_device_do_not_disturb_switch
-      - switch.altoparlante_repeat_switch
-      - switch.davide_s_alexa_apps_do_not_disturb_switch
-      - switch.echo_dot_camera_letto_do_not_disturb_switch
-      - switch.echo_dot_camera_letto_shuffle_switch
-      - switch.echo_dot_ingresso_do_not_disturb_switch
-      - switch.echo_show_shuffle_switch
-      - switch.davide_s_reverb_ai_repeat_switch
-      - switch.echo_dot_camera_letto_repeat_switch
-      - switch.echo_dot_ingresso_shuffle_switch
-      - switch.altoparlante_shuffle_switch
-      - switch.dappertutto_shuffle_switch
-      - switch.ovunque_shuffle_switch
-      - switch.echo_show_repeat_switch
-      - switch.echo_studio_shuffle_switch
-      - switch.echo_show_do_not_disturb_switch
-      - switch.echo_studio_do_not_disturb_switch
       - switch.fire_tv_stick_do_not_disturb_switch
       - switch.presa_samsung
       - switch.presa_selecline
       - switch.presa_onkyo
       - switch.presa_mediaplayer
-      - switch.bf59303c89ae38e766znbo
-      - binary_sensor.updater
+      - switch.sonoff_10009c0093_led #specchiera led
+      - switch.sonoff_10009bdd07_led #umidificatore led
       - binary_sensor.ikeapresa_update_available
       - binary_sensor.ikeaswitch_update_available
       - sensor.cpu_temperature
       - binary_sensor.condizionatore_contact
-      - binary_sensor.pulsante_ikea
       - binary_sensor.stato_tv_samsung
       - binary_sensor.stato_tv_selecline
       - binary_sensor.stato_onkyo
@@ -504,7 +433,6 @@ homekit:
 #      - sensor.netatmo_valve_6_current_temperature (valvola di Silvia smontata)
       - sensor.netatmo_valve_7_current_temperature
       - sensor.broadlink_studio_temperature
-      - input_boolean.loop_riscaldamento
       - switch.ambrogio_advanced_mode
       - switch.ambrogio_carpet_auto_fan_speed_boost
       - switch.ambrogio_continuous_cleaning

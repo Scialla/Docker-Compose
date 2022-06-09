@@ -2812,12 +2812,26 @@
                             ]
                         },
                         {
-                            "type": "custom:mushroom-entity-card",
-                            "entity": "input_boolean.web_radio",
-                            "icon": "mdi:radio",
-                            "tap_action": {
-                                "action": "toggle"
-                            }
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "custom:mushroom-entity-card",
+                                    "entity": "input_boolean.web_radio",
+                                    "icon": "mdi:radio",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "type": "custom:mushroom-entity-card",
+                                    "entity": "input_boolean.test",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "name": "Tromba",
+                                    "icon": "horn"
+                                }
+                            ]
                         },
                         {
                             "type": "thermostat",

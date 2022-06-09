@@ -17,17 +17,8 @@ media_player.samsung:
 media_player.onkyo:
   icon: mdi:amplifier
   device_class: tv
-sensor.air_quality_sensor_3c26cf_humidity:
-  friendly_name: Umidita
-  device_class: humidity
-sensor.air_quality_sensor_3c26cf_temperature:
-  friendly_name: Temperatura
-  device_class: temperature
-air_quality.air_quality_sensor_3c26cf: {}
 light.ballerini:
   supported_features: 63
-sensor.mi_battery_4c65a8ddd248:
-  friendly_name: "Livello Batteria"
 binary_sensor.bagno_grande_contact:
   device_class: window
 binary_sensor.bagno_piccolo_contact:

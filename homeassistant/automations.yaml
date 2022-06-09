@@ -27,19 +27,6 @@
     service: mqtt.publish
   id: fa181cc8a2c7458cb020d87127e9cfde
 
-- alias: Update Available Notification
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.updater
-    from: 'off'
-    to: 'on'
-  action:
-  - service: notify.notify
-    data:
-      message: Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version')
-        }} è disponibile.
-  id: 8561fcd9cd9348d284b7c263818f28fe
-
 - alias: Avviso Batterie Scariche
   id: avviso_batterie_scariche
   trigger:

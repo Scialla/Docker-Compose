@@ -1,0 +1,57 @@
+sotto exclude di alexa:
+
+        - switch.ovunque_do_not_disturb_switch
+        - switch.ovunque_repeat_switch
+        - switch.altoparlante_do_not_disturb_switch
+        - switch.davide_s_reverb_ai_do_not_disturb_switch
+        - switch.echo_studio_repeat_switch
+        - switch.dappertutto_do_not_disturb_switch
+        - switch.echo_dot_ingresso_repeat_switch
+        - switch.davide_s_reverb_ai_shuffle_switch
+        - switch.dappertutto_repeat_switch
+        - switch.this_device_do_not_disturb_switch
+        - switch.altoparlante_repeat_switch
+        - switch.davide_s_alexa_apps_do_not_disturb_switch
+        - switch.echo_dot_camera_letto_do_not_disturb_switch
+        - switch.echo_dot_camera_letto_shuffle_switch
+        - switch.echo_dot_ingresso_do_not_disturb_switch
+        - switch.echo_show_shuffle_switch
+        - switch.davide_s_reverb_ai_repeat_switch
+        - switch.echo_dot_camera_letto_repeat_switch
+        - switch.echo_dot_ingresso_shuffle_switch
+        - switch.altoparlante_shuffle_switch
+        - switch.dappertutto_shuffle_switch
+        - switch.ovunque_shuffle_switch
+        - switch.echo_show_repeat_switch
+        - switch.echo_studio_shuffle_switch
+        - switch.echo_show_do_not_disturb_switch
+        - switch.echo_studio_do_not_disturb_switch
+
+sotto exclude di homekit
+
+      - switch.ovunque_do_not_disturb_switch
+      - switch.ovunque_repeat_switch
+      - switch.altoparlante_do_not_disturb_switch
+      - switch.davide_s_reverb_ai_do_not_disturb_switch
+      - switch.echo_studio_repeat_switch
+      - switch.dappertutto_do_not_disturb_switch
+      - switch.echo_dot_ingresso_repeat_switch
+      - switch.davide_s_reverb_ai_shuffle_switch      
+      - switch.dappertutto_repeat_switch
+      - switch.this_device_do_not_disturb_switch
+      - switch.altoparlante_repeat_switch
+      - switch.davide_s_alexa_apps_do_not_disturb_switch
+      - switch.echo_dot_camera_letto_do_not_disturb_switch
+      - switch.echo_dot_camera_letto_shuffle_switch
+      - switch.echo_dot_ingresso_do_not_disturb_switch
+      - switch.echo_show_shuffle_switch
+      - switch.davide_s_reverb_ai_repeat_switch
+      - switch.echo_dot_camera_letto_repeat_switch
+      - switch.echo_dot_ingresso_shuffle_switch
+      - switch.altoparlante_shuffle_switch
+      - switch.dappertutto_shuffle_switch
+      - switch.ovunque_shuffle_switch
+      - switch.echo_show_repeat_switch
+      - switch.echo_studio_shuffle_switch
+      - switch.echo_show_do_not_disturb_switch
+      - switch.echo_studio_do_not_disturb_switch
