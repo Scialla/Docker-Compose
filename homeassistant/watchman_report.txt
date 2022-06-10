@@ -1,0 +1,31 @@
+-== Watchman Report ==- 
+
+-== Missing 1 service(s) from 57 found in your config:
++--------------------------------+---------+--------------------------------------------------------------+
+| Service ID                     | State   | Location                                                     |
++--------------------------------+---------+--------------------------------------------------------------+
+| light.turn_                    | missing | packages/luci_movimento.yaml:37                              |
++--------------------------------+---------+--------------------------------------------------------------+
+
+-== Missing 10 entity(ies) from 335 found in your config:
++--------------------------------+---------+--------------------------------------------------------------+
+| Entity ID                      | State   | Location                                                     |
++--------------------------------+---------+--------------------------------------------------------------+
+| group.sensori_batteria         | unknown | automations.yaml:62                                          |
+| button.ambrogio_life_span_brus | unknown | configuration.yaml:439                                       |
+| h_reset                        |         |                                                              |
+| button.ambrogio_life_span_filt | unknown | configuration.yaml:440                                       |
+| er_reset                       |         |                                                              |
+| button.ambrogio_life_span_side | unknown | configuration.yaml:441                                       |
+| _brush_reset                   |         |                                                              |
+| button.wled_update             | unavail | configuration.yaml:447                                       |
+| camera.generic_stream          | missing | custom_components/webrtc/services.yaml:20,66                 |
+| media_player.mibox4            | missing | custom_components/webrtc/services.yaml:51                    |
+| camera.front_door              | missing | custom_components/browser_mod/services.yaml:47               |
+| input_number.mese_             | missing | packages/consumi_mensili.yaml:82                             |
+| switch.zigbee2mqtt_main_join   | unknown | packages/zigbee2mqtt.yaml:136,150,157                        |
++--------------------------------+---------+--------------------------------------------------------------+
+
+-== Report created on 09 Jun 2022 12:05:42
+-== Parsed 68 files in 5.11s., ignored 0 files 
+-== Generated in: 0.18s. Validated in: 0.05s.

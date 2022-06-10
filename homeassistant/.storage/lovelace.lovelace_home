@@ -1400,7 +1400,8 @@
                                 {
                                     "entity": "select.presa_jolly_power_outage_memory"
                                 }
-                            ]
+                            ],
+                            "title": "Presa Jolly"
                         }
                     ]
                 },

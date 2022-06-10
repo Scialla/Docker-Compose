@@ -5997,8 +5997,9 @@
                         {
                             "type": "entities",
                             "entities": [
-                                "sensor.pretty_date",
-                                "binary_sensor.updater"
+                                {
+                                    "entity": "sensor.pretty_date"
+                                }
                             ]
                         },
                         {
