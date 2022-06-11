@@ -24115,6 +24115,28 @@
                 "supported_features": 0,
                 "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd",
                 "unit_of_measurement": "pending update(s)"
+            },
+            {
+                "area_id": null,
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "input_boolean.coolix_dropdown",
+                "hidden_by": null,
+                "icon": null,
+                "id": "4106d3930d0bb532510b65b08efed667",
+                "name": null,
+                "options": {},
+                "original_device_class": null,
+                "original_icon": null,
+                "original_name": "Menu dropdown",
+                "platform": "input_boolean",
+                "supported_features": 0,
+                "unique_id": "coolix_dropdown",
+                "unit_of_measurement": null
             }
         ]
     }

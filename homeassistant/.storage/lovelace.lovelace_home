@@ -1538,6 +1538,10 @@
                                 "button.netatmo_valve_5_identify",
                                 "button.netatmo_valve_7_identify"
                             ]
+                        },
+                        {
+                            "entity": "climate.coolix",
+                            "type": "thermostat"
                         }
                     ]
                 },

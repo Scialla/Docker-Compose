@@ -8,3 +8,5 @@ input_boolean:
     name: Web Radio
   fake_call:
     name: Fake Call
+  coolix_dropdown:
+    name: Menu dropdown
