@@ -24137,6 +24137,76 @@
                 "supported_features": 0,
                 "unique_id": "coolix_dropdown",
                 "unit_of_measurement": null
+            },
+            {
+                "area_id": null,
+                "capabilities": null,
+                "config_entry_id": "5b08d6e19a47328a875fb4aef449fe38",
+                "device_class": null,
+                "device_id": "1cc62c705d92ea6bc57b32e107d52042",
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "sensor.watchman_last_updated",
+                "hidden_by": null,
+                "icon": null,
+                "id": "23fbcf6fcf825498ed462f3651fcb133",
+                "name": null,
+                "options": {},
+                "original_device_class": "timestamp",
+                "original_icon": "mdi:shield-half-full",
+                "original_name": "watchman_last_updated",
+                "platform": "watchman",
+                "supported_features": 0,
+                "unique_id": "5b08d6e19a47328a875fb4aef449fe38_watchman_last_updated",
+                "unit_of_measurement": null
+            },
+            {
+                "area_id": null,
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "config_entry_id": "5b08d6e19a47328a875fb4aef449fe38",
+                "device_class": null,
+                "device_id": "1cc62c705d92ea6bc57b32e107d52042",
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "sensor.watchman_missing_entities",
+                "hidden_by": null,
+                "icon": null,
+                "id": "0abe1b76036cda26a9af844a3cd88ea9",
+                "name": null,
+                "options": {},
+                "original_device_class": null,
+                "original_icon": "mdi:shield-half-full",
+                "original_name": "watchman_missing_entities",
+                "platform": "watchman",
+                "supported_features": 0,
+                "unique_id": "5b08d6e19a47328a875fb4aef449fe38_watchman_missing_entities",
+                "unit_of_measurement": "items"
+            },
+            {
+                "area_id": null,
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "config_entry_id": "5b08d6e19a47328a875fb4aef449fe38",
+                "device_class": null,
+                "device_id": "1cc62c705d92ea6bc57b32e107d52042",
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "sensor.watchman_missing_services",
+                "hidden_by": null,
+                "icon": null,
+                "id": "c21ab3f69bc87f1371a7f97891985e50",
+                "name": null,
+                "options": {},
+                "original_device_class": null,
+                "original_icon": "mdi:shield-half-full",
+                "original_name": "watchman_missing_services",
+                "platform": "watchman",
+                "supported_features": 0,
+                "unique_id": "5b08d6e19a47328a875fb4aef449fe38_watchman_missing_services",
+                "unit_of_measurement": "items"
             }
         ]
     }
