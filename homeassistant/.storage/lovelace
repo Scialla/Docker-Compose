@@ -4358,15 +4358,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "sensor.temperatura_cpu",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "device_tracker.iphone_x_di_scialla"
                                 },
                                 {

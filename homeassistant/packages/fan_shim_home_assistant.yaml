@@ -1,10 +1,10 @@
-sensor:
-  - platform: command_line
-    name: Temperatura CPU
-    command: "cat /sys/class/thermal/thermal_zone0/temp"
-    unit_of_measurement: "°C"
-    value_template: '{{ value | multiply(0.001) | round(1) }}'
-    scan_interval: 10
+#sensor:
+#  - platform: command_line
+#    name: Temperatura CPU
+#    command: "cat /sys/class/thermal/thermal_zone0/temp"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value | multiply(0.001) | round(1) }}'
+#    scan_interval: 10
 #switch:
 #  - platform: rpi_gpio
 #    ports:

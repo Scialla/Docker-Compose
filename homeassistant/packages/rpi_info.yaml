@@ -13,6 +13,7 @@ sensor:
     # If errors occur, remove degree symbol below
     unit_of_measurement: "°C"
     value_template: '{{ value | multiply(0.001) | round(1) }}'
+    scan_interval: 10
   - platform: command_line
     name: badlogin
     command: "/config/myscripts/checkLoginAttempts"
