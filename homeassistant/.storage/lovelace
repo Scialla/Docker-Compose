@@ -1562,9 +1562,9 @@
                                             "type": "custom:mushroom-template-card",
                                             "style": "ha-card {\n  padding-bottom: 14px !important;\n}\n",
                                             "primary": "Condizionatore",
-                                            "secondary": "Attualmente: {{ state_attr('climate.coolix', 'hvac_action') }}\n",
-                                            "icon": "{% set mode = states('climate.coolix') %}\n{% if mode == 'off' %}\nmdi:power\n{% elif mode == 'cool' %}\nmdi:snowflake\n{% elif mode == 'heat' %}\nmdi:fire\n{% elif mode == 'heat_cool' %}\nmdi:autorenew\n{% else %}\nmdi:home-thermometer\n{% endif %}",
-                                            "icon_color": "{% set status = state_attr('climate.coolix','hvac_action') %}\n{% if status == 'off' %}\ngrey\n{% elif status == 'cooling' %}\nblue\n{% elif status == 'heating' %}\nred\n{% else %}\ngrey\n{% endif %}",
+                                            "secondary": "stato: {{ states('climate.coolix') }}\n",
+                                            "icon": "{% set mode = states('climate.coolix') %}\n{% if mode == 'off' %}\nmdi:power\n{% elif mode == 'cool' %}\nmdi:snowflake\n{% elif mode == 'heat' %}\nmdi:fire\n{% elif mode == 'auto' %}\nmdi:autorenew\n{% else %}\nmdi:home-thermometer\n{% endif %}",
+                                            "icon_color": "{% set status = state_attr('climate.coolix','hvac_action') %}\n{% if status == 'off' %}\ngrey\n{% elif status == 'cooling' %}\nblue\n{% elif status == 'heating' %}\nred\n{% else %}\nyellow\n{% endif %}",
                                             "tap_action": "none"
                                         },
                                         {
