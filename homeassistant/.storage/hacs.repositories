@@ -18,11 +18,11 @@
             "category": "integration",
             "description": "HACS gives you a powerful UI to handle downloads of all your custom needs.",
             "domain": "hacs",
-            "downloads": 49537,
-            "etag_repository": "W/\"31607f35a784da229994bf84aa82ecdac54be891a548712076266e8b87e8221e\"",
+            "downloads": 51576,
+            "etag_repository": "W/\"36b2870d5d5aedf3febc72454d56a85828757312e8265e0003129343f8de4ebf\"",
             "full_name": "hacs/integration",
             "last_updated": "2022-06-15T07:22:32Z",
-            "stargazers_count": 2685,
+            "stargazers_count": 2690,
             "topics": [
                 "community",
                 "package-manager"
@@ -45,7 +45,7 @@
             "pushed_at": "2022-06-15T07:22:32",
             "releases": true,
             "version_installed": "1.25.5",
-            "last_fetched": 1655515256.862908
+            "last_fetched": 1655601659.142008
         },
         "117426840": {
             "repository_manifest": {
@@ -61,16 +61,16 @@
             "category": "integration",
             "description": "Volkswagen Carnet Component for home assistant",
             "domain": "volkswagencarnet",
-            "downloads": 2022,
-            "etag_repository": "W/\"0fd4877ad07df3d2af4c32196381e3ad7d26eab0d85e915c4db1670eaa967fd9\"",
+            "downloads": 2065,
+            "etag_repository": "W/\"821048c93940aed57ea32f32d3ebcbe55b2342081ced627d03073393ed698a64\"",
             "full_name": "robinostlund/homeassistant-volkswagencarnet",
             "last_updated": "2022-06-12T13:39:37Z",
             "new": true,
-            "stargazers_count": 177,
+            "stargazers_count": 178,
             "topics": [
                 "volkswagen-carnet"
             ],
-            "last_fetched": 1655149241.45329
+            "last_fetched": 1655547658.833031
         },
         "120696364": {
             "repository_manifest": {
@@ -162,11 +162,11 @@
             ],
             "category": "integration",
             "description": "Component to integrate with OpenStreetMap Reverse Geocode (PLACE)",
-            "etag_repository": "W/\"b7d520273c117ef41624b77acfcd396aa6a3034110576988b81e1a62febd0c33\"",
+            "etag_repository": "W/\"4569b61d2b1ff08380fab31bdefa4589998f4758cc9178636223a6936cfa784f\"",
             "full_name": "custom-components/places",
-            "last_updated": "2022-01-31T14:05:58Z",
-            "stargazers_count": 53,
-            "last_fetched": 1652527213.084518
+            "last_updated": "2022-06-13T03:43:40Z",
+            "stargazers_count": 54,
+            "last_fetched": 1655547658.318418
         },
         "132661981": {
             "repository_manifest": {
@@ -250,14 +250,14 @@
             ],
             "category": "integration",
             "description": "A sensor that gives you weather alerts from alerts.weather.gov.",
-            "etag_repository": "W/\"1068ec094176ad3081eb1b3df93b970461c870460c430f54ad34ed16ce15bdec\"",
+            "etag_repository": "W/\"d6b766b19f0fa82d8c1247a4ee89c40e439db035bd3881c53fdd023f5436aea7\"",
             "full_name": "custom-components/weatheralerts",
-            "last_updated": "2022-05-20T13:53:35Z",
-            "stargazers_count": 70,
+            "last_updated": "2022-06-12T06:17:11Z",
+            "stargazers_count": 71,
             "topics": [
                 "weatheralerts"
             ],
-            "last_fetched": 1654018596.699402
+            "last_fetched": 1655547663.852374
         },
         "139894509": {
             "repository_manifest": {
@@ -380,7 +380,7 @@
             "pushed_at": "2022-05-23T21:26:30",
             "releases": true,
             "version_installed": "v0.4.2",
-            "last_fetched": 1655515256.583573
+            "last_fetched": 1655601658.732607
         },
         "142545838": {
             "repository_manifest": {
@@ -797,7 +797,7 @@
             "pushed_at": "2022-05-28T13:26:49",
             "releases": true,
             "version_installed": "2.4.2",
-            "last_fetched": 1655515256.634536
+            "last_fetched": 1655601658.761353
         },
         "157618389": {
             "repository_manifest": {
@@ -862,7 +862,7 @@
             },
             "category": "plugin",
             "description": "A different take on the thermostat card for Home Assistant \u2668\ufe0f",
-            "downloads": 25341,
+            "downloads": 25413,
             "etag_repository": "W/\"823b6c0a76726f26a9a8f07835001d919fe847426a4be4e3f6247a553ecf3e6a\"",
             "full_name": "nervetattoo/simple-thermostat",
             "last_updated": "2022-06-10T00:52:56Z",
@@ -886,7 +886,7 @@
             "pushed_at": "2022-06-10T00:52:56",
             "releases": true,
             "version_installed": "v2.4.3",
-            "last_fetched": 1655515256.748014
+            "last_fetched": 1655601658.873842
         },
         "158756598": {
             "repository_manifest": {
@@ -964,7 +964,7 @@
             "pushed_at": "2021-06-05T21:12:36",
             "releases": true,
             "version_installed": "5.0",
-            "last_fetched": 1655515256.676005
+            "last_fetched": 1655601658.948553
         },
         "160022220": {
             "repository_manifest": {
@@ -1065,7 +1065,7 @@
             "pushed_at": "2022-05-28T13:36:56",
             "releases": true,
             "version_installed": "11",
-            "last_fetched": 1655515256.716152
+            "last_fetched": 1655601658.887813
         },
         "162468030": {
             "repository_manifest": {
@@ -1259,17 +1259,17 @@
             ],
             "category": "integration",
             "description": "Provides Home Assistant sensors for multiple Dutch and Belgium waste collectors",
-            "etag_repository": "W/\"15bfac5f6fd266f86a45a8f94bd78602c961d7ad7ecd9912cf522acfe38516f3\"",
+            "etag_repository": "W/\"8468ddb7c15ea0309ce19d9576bff09e403b64e172a23e801ce7c6bbccaa72f0\"",
             "full_name": "pippyn/Home-Assistant-Sensor-Afvalbeheer",
             "last_updated": "2022-06-03T14:10:19Z",
-            "stargazers_count": 147,
+            "stargazers_count": 148,
             "topics": [
                 "belgium",
                 "dutch",
                 "hassio-integration",
                 "waste-collectors"
             ],
-            "last_fetched": 1654806931.106878
+            "last_fetched": 1655547692.227562
         },
         "167744584": {
             "repository_manifest": {
@@ -1434,12 +1434,12 @@
             },
             "category": "plugin",
             "description": "\ud83d\udcdd Templatable Lovelace Configurations",
-            "downloads": 11380,
-            "etag_repository": "W/\"f92288851f49805041a877dd530c8072029de798adf105659336b2cf00843e08\"",
+            "downloads": 12294,
+            "etag_repository": "W/\"114d6d8820b37a742d0d05ea611168ddfb9529efee6b64021442ddde99290bcd\"",
             "full_name": "iantrich/config-template-card",
-            "last_updated": "2022-04-10T09:48:54Z",
-            "stargazers_count": 251,
-            "last_fetched": 1653344605.675834
+            "last_updated": "2022-05-30T10:01:49Z",
+            "stargazers_count": 252,
+            "last_fetched": 1655547700.096437
         },
         "172998062": {
             "repository_manifest": {},
@@ -1650,10 +1650,10 @@
             ],
             "category": "integration",
             "description": "hassio support for Airthings Wave BLE environmental radon sensor.",
-            "etag_repository": "W/\"116a7e95a5dab9d94b2efaf667bb25056ab509c0b028dd22a940617fc524c307\"",
+            "etag_repository": "W/\"23b33cbb8f43c7e4599e0c0990e30361b0778ffd11b62a3985fd1c72838773fc\"",
             "full_name": "custom-components/sensor.airthings_wave",
             "last_updated": "2022-06-10T17:46:03Z",
-            "stargazers_count": 88,
+            "stargazers_count": 89,
             "topics": [
                 "airthings-wave",
                 "bluetooth-low-energy",
@@ -1662,7 +1662,7 @@
                 "home-assistant-sensor",
                 "radon"
             ],
-            "last_fetched": 1655149289.459093
+            "last_fetched": 1655547706.36673
         },
         "178921037": {
             "repository_manifest": {
@@ -1836,11 +1836,12 @@
             },
             "category": "plugin",
             "description": "\u2b55 Radial Menu Element",
-            "etag_repository": "W/\"5841629d81e4e35a5782ec6db318f7836bf2430d08097981ab97b32a2fe345ac\"",
+            "downloads": 2089,
+            "etag_repository": "W/\"5aaeff784a6770aec9f7f4a8cec847ae06c5494fb104833b9204c93d33c17c3d\"",
             "full_name": "iantrich/radial-menu",
             "last_updated": "2022-03-13T20:58:45Z",
-            "stargazers_count": 58,
-            "last_fetched": 1652527276.387326
+            "stargazers_count": 57,
+            "last_fetched": 1655547712.054489
         },
         "181480967": {
             "repository_manifest": {},
@@ -2058,16 +2059,16 @@
             ],
             "category": "integration",
             "description": "Adds an audi connect integration to home assistant",
-            "etag_repository": "W/\"a5570db64574478852b7beb32fa569d95878540a31af113c89985ba8e3f847ee\"",
+            "etag_repository": "W/\"2909c61d4e0fd5c79d85b64b44b13e983311b9e5013d2e52964acca6a7a8a91d\"",
             "full_name": "arjenvrh/audi_connect_ha",
-            "last_updated": "2022-04-01T05:50:31Z",
-            "stargazers_count": 111,
+            "last_updated": "2022-06-17T13:49:51Z",
+            "stargazers_count": 112,
             "topics": [
                 "audi",
                 "audi-connect",
                 "sensors"
             ],
-            "last_fetched": 1654806958.880759
+            "last_fetched": 1655547719.026413
         },
         "186765704": {
             "repository_manifest": {
@@ -2076,12 +2077,12 @@
             },
             "category": "plugin",
             "description": "A fluffy banner card for Home Assistant \ud83e\udd70",
-            "downloads": 18795,
-            "etag_repository": "W/\"af23b884d8e56e54f0d3d9c4c0d08c47bcc2d2e55daadb6a60771b178ea3d8ae\"",
+            "downloads": 19292,
+            "etag_repository": "W/\"d89a21316e8ff5ddd5949913979b0dc14e3d94d93556343d3661ed2dbdc0b4ab\"",
             "full_name": "nervetattoo/banner-card",
             "last_updated": "2022-06-01T07:03:57Z",
-            "stargazers_count": 462,
-            "last_fetched": 1654108655.500174
+            "stargazers_count": 463,
+            "last_fetched": 1655547720.916318
         },
         "187201747": {
             "repository_manifest": {},
@@ -2365,15 +2366,15 @@
             "category": "integration",
             "description": "A custom component for Home Assistant to detect iPhones connected to local LAN, even if the phone is in deep sleep.",
             "domain": "iphonedetect",
-            "downloads": 8291,
-            "etag_repository": "W/\"bdf7caee2abbb4365818bd259f803f1221e1ebb8060de17966354dacef6d79a2\"",
+            "downloads": 8310,
+            "etag_repository": "W/\"999adfe8166652fe90cf98f5c4aafec10a0d661ce51deccda67317884a61dc11\"",
             "full_name": "mudape/iphonedetect",
             "last_updated": "2022-06-15T17:47:40Z",
-            "stargazers_count": 196,
+            "stargazers_count": 197,
             "topics": [
                 "iphonedetect"
             ],
-            "last_fetched": 1655457730.237268
+            "last_fetched": 1655547732.400793
         },
         "192664631": {
             "repository_manifest": {
@@ -2386,26 +2387,26 @@
             ],
             "category": "integration",
             "description": "Home Assistant Custom Component for Bosch Indego Lawn Mower",
-            "etag_repository": "W/\"5ce142ffbaf8d498456e58791bb555bf6255f48b865cbc03934817df55079783\"",
+            "etag_repository": "W/\"363ea9cc1d50257c4a4a774e17c731a4cfcbfb80c9190b4e3dfcb9b196b87f53\"",
             "full_name": "jm-73/Indego",
             "last_updated": "2022-06-06T10:44:58Z",
-            "stargazers_count": 36,
+            "stargazers_count": 37,
             "topics": [
                 "bosch-mower",
                 "indego",
                 "iot"
             ],
-            "last_fetched": 1655367729.336677
+            "last_fetched": 1655547732.49624
         },
         "192732636": {
             "repository_manifest": {},
             "category": "plugin",
             "description": "Weather Card with animated icons for Home Assistant Lovelace",
-            "etag_repository": "W/\"b4ae632c2bbf92f638e44de56e2452f3286dc001ca38740b4d46745e3df2c96b\"",
+            "etag_repository": "W/\"27bf402dca5281a368108ae999b566cc9dc075ed643dea326469710fd049d76e\"",
             "full_name": "bramkragten/weather-card",
             "last_updated": "2022-06-06T18:31:44Z",
-            "stargazers_count": 312,
-            "last_fetched": 1655149314.875519
+            "stargazers_count": 314,
+            "last_fetched": 1655547732.16861
         },
         "192732887": {
             "repository_manifest": {
@@ -3005,11 +3006,11 @@
             "repository_manifest": {},
             "category": "plugin",
             "description": "Custom Lovelace card that displays ZHA network and device information",
-            "etag_repository": "W/\"b0abb5b824eb054e49db0eed335b9fb604c883a0e5a95671f1aad7f6daf5afd7\"",
+            "etag_repository": "W/\"81eb831a2ed6d96f40ff428ed30d0f58f2a1be82c0d9703a44f9a0af01d26600\"",
             "full_name": "dmulcahey/zha-network-card",
             "last_updated": "2020-11-25T23:16:49Z",
-            "stargazers_count": 68,
-            "last_fetched": 1652797317.947661
+            "stargazers_count": 69,
+            "last_fetched": 1655547748.89063
         },
         "197950768": {
             "repository_manifest": {},
@@ -3161,11 +3162,11 @@
             ],
             "category": "integration",
             "description": "A custom Home Assistant component for declaring and setting generic variable entities dynamically.",
-            "etag_repository": "W/\"b01c72ef749d7cb7e1ba0b6b56268962ef5cd66052d89076e7b5ddec5fdd6b76\"",
+            "etag_repository": "W/\"864c1edea2dde37698c8e961537b59efaad1b792bbde2b4ca2c45e83b8b213f1\"",
             "full_name": "snarky-snark/home-assistant-variables",
             "last_updated": "2022-06-09T22:45:05Z",
             "stargazers_count": 150,
-            "last_fetched": 1655149337.454874
+            "last_fetched": 1655547755.422549
         },
         "199546187": {
             "repository_manifest": {},
@@ -3452,14 +3453,14 @@
             ],
             "category": "integration",
             "description": "nordpool sensor for ha.",
-            "etag_repository": "W/\"212b1411874fdc7cceeeff85b96614ed7e4768bb44466e3914f2f51ae5678c85\"",
+            "etag_repository": "W/\"7892dacd9edf5a304e2ae5eab1b792ebfadd3af010fa3a179dbe40f04fd85ed6\"",
             "full_name": "custom-components/nordpool",
             "last_updated": "2022-06-13T11:58:45Z",
-            "stargazers_count": 122,
+            "stargazers_count": 123,
             "topics": [
                 "nordpool"
             ],
-            "last_fetched": 1655149347.35518
+            "last_fetched": 1655547764.660299
         },
         "201963665": {
             "repository_manifest": {
@@ -3577,14 +3578,14 @@
             ],
             "category": "integration",
             "description": "Companion Component for node-red-contrib-home-assistant-websocket to help integrate Node-RED with Home Assistant Core",
-            "etag_repository": "W/\"c6853d570b7e69294cd81aeb64881fd654f6b68aabed5157392d05c30eaa4533\"",
+            "etag_repository": "W/\"629c1e97af42831bb73790e2b37e8fcc206f15f33c8e68eac545dbf2f5ff0939\"",
             "full_name": "zachowj/hass-node-red",
             "last_updated": "2022-05-28T10:26:29Z",
-            "stargazers_count": 256,
+            "stargazers_count": 257,
             "topics": [
                 "node-red"
             ],
-            "last_fetched": 1655457767.662776
+            "last_fetched": 1655547769.592755
         },
         "202990294": {
             "repository_manifest": {
@@ -3748,11 +3749,11 @@
             ],
             "category": "integration",
             "description": "Momentary Switch Component for Home Assistant",
-            "etag_repository": "W/\"f489b0816b00c072fd82fb1dd218d3a73c96805e71f8ce00ece43d140b87bea3\"",
+            "etag_repository": "W/\"5e0bf861be2c93e424358ced115133e3bc55b52e4aa1df28cb91ac44fab1c67b\"",
             "full_name": "twrecked/hass-momentary",
             "last_updated": "2022-06-05T05:39:39Z",
-            "stargazers_count": 27,
-            "last_fetched": 1654807014.981439
+            "stargazers_count": 28,
+            "last_fetched": 1655547774.652397
         },
         "205261230": {
             "repository_manifest": {
@@ -3951,7 +3952,7 @@
             "category": "integration",
             "description": "Anniversary Countdown Sensor for Home Assistant",
             "domain": "anniversaries",
-            "downloads": 3783,
+            "downloads": 3793,
             "etag_repository": "W/\"6de7a101f4b0d64f7bc17d1ad87a4b948f80d62582f01689d32735ebaa72bb3b\"",
             "full_name": "pinkywafer/Anniversaries",
             "last_updated": "2022-01-11T19:14:57Z",
@@ -3977,7 +3978,7 @@
             "pushed_at": "2022-01-11T19:14:57",
             "releases": true,
             "version_installed": "4.5.0",
-            "last_fetched": 1655515256.879563
+            "last_fetched": 1655601659.024377
         },
         "209854868": {
             "repository_manifest": {
@@ -5029,15 +5030,15 @@
             "category": "integration",
             "description": "Indoor Air Quality Sensor Component for Home Assistant",
             "downloads": 7,
-            "etag_repository": "W/\"2a124e9279d14d80809c12c8115a18547fec5c1850a33a051d55feb4f3097f8f\"",
+            "etag_repository": "W/\"d596e84e404581d4bdea6754805fa021d383f248d96c40dd8a7bef9fc6518867\"",
             "full_name": "Limych/ha-iaquk",
             "last_updated": "2022-06-13T15:04:41Z",
-            "stargazers_count": 54,
+            "stargazers_count": 55,
             "topics": [
                 "air-quality",
                 "indoor"
             ],
-            "last_fetched": 1655149396.700225
+            "last_fetched": 1655547812.460464
         },
         "228579545": {
             "repository_manifest": {
@@ -5351,15 +5352,15 @@
             },
             "category": "plugin",
             "description": "Xiaomi Smartmi Fan Lovelace card with CSS fan animation",
-            "etag_repository": "W/\"aeab6ca1691a236a14c754389a5a26f0f6858772bd754a0f2fd0e910cf648ffe\"",
+            "etag_repository": "W/\"fbe2354cc9f01583812eec3e4149a291bf3e088b63f19cb59aacda89492985c9\"",
             "full_name": "ikaruswill/lovelace-fan-xiaomi",
-            "last_updated": "2022-06-13T13:46:18Z",
-            "stargazers_count": 48,
+            "last_updated": "2022-06-18T07:37:29Z",
+            "stargazers_count": 49,
             "topics": [
                 "xiaomi",
                 "xiaomi-fan"
             ],
-            "last_fetched": 1655239405.706088
+            "last_fetched": 1655547822.588943
         },
         "231083679": {
             "repository_manifest": {
@@ -5691,15 +5692,16 @@
             },
             "category": "theme",
             "description": "Vaporwave Pink Theme for Home Assistant",
-            "etag_repository": "W/\"46640e82c85d46bc8357424013cd0522e354d07d1b4ede70a039e446366ab2fb\"",
+            "etag_repository": "W/\"9bd2f3aa912f6b87f1caf0e83298b7dc25253f3346fe222ac487d394ccca07ef\"",
             "full_name": "home-assistant-community-themes/vaporwave-pink",
-            "last_updated": "2020-01-16T19:26:58Z",
+            "last_updated": "2022-06-17T14:41:05Z",
             "stargazers_count": 3,
             "topics": [
                 "80s",
                 "pink",
                 "vaporwave"
-            ]
+            ],
+            "last_fetched": 1655547832.656929
         },
         "234491154": {
             "repository_manifest": {
@@ -6049,17 +6051,17 @@
             ],
             "category": "integration",
             "description": "Home assistant Component for reading data locally from Solaredge inverter through modbus TCP",
-            "etag_repository": "W/\"4c26937dc37f0accbc2d4f428b5408e63cf95685ec721e57c49b2cd7141c19c1\"",
+            "etag_repository": "W/\"fd001d83968d7ce6b41a12459b0bdea5f93030e01248b9d2cc029cfb487a7343\"",
             "full_name": "binsentsu/home-assistant-solaredge-modbus",
             "last_updated": "2022-01-28T20:13:03Z",
-            "stargazers_count": 88,
+            "stargazers_count": 89,
             "topics": [
                 "modbus",
                 "modbus-tcp",
                 "solaredge",
                 "solaredge-inverter"
             ],
-            "last_fetched": 1655457841.81048
+            "last_fetched": 1655547844.361246
         },
         "236277163": {
             "repository_manifest": {
@@ -6098,11 +6100,11 @@
             },
             "category": "theme",
             "description": "\u2764\ufe0f\ud83d\udcf1\ud83c\udfe0\ud83e\udd16 Themes inspired by iOS Dark \u2b1b\ufe0f and Light \u25fb\ufe0f Mode for Lovelace Home Assistant with different backgrounds by @basnijholt",
-            "etag_repository": "W/\"c06439d961d167e06d45f80ebaa0819e142e2225b5cbdcc3557b31611bfd7fa0\"",
+            "etag_repository": "W/\"e5aacced91d54c7ec95c654f132a563b1a5619653ceb0f1f2ed2177008c72039\"",
             "full_name": "basnijholt/lovelace-ios-themes",
             "last_updated": "2022-05-27T18:41:02Z",
-            "stargazers_count": 307,
-            "last_fetched": 1655239429.716021
+            "stargazers_count": 308,
+            "last_fetched": 1655547845.781246
         },
         "236664033": {
             "repository_manifest": {
@@ -6569,7 +6571,7 @@
             },
             "category": "plugin",
             "description": "Adds highly configurable buttons that use actions and per-state styling.",
-            "downloads": 4176,
+            "downloads": 4261,
             "etag_repository": "W/\"b93d52f4ae356be651aaa0a4ebb627f03843bd3b7b8be10b8508f46d6fc9bb9d\"",
             "full_name": "jcwillox/lovelace-paper-buttons-row",
             "last_updated": "2022-05-28T08:29:47Z",
@@ -6596,7 +6598,7 @@
             "pushed_at": "2022-05-28T08:29:47",
             "releases": true,
             "version_installed": "1.0.1",
-            "last_fetched": 1655515256.902912
+            "last_fetched": 1655601658.91468
         },
         "245159052": {
             "repository_manifest": {
@@ -6820,7 +6822,7 @@
             },
             "category": "plugin",
             "description": "\ud83d\udee0 group multiple cards into one card without the borders",
-            "downloads": 17471,
+            "downloads": 17504,
             "etag_repository": "W/\"a5334bd83d02d770c5ca81379d21fc551d178c8ea99225bc12773b2a8d8a144f\"",
             "full_name": "custom-cards/stack-in-card",
             "last_updated": "2022-05-12T22:26:56Z",
@@ -6841,7 +6843,7 @@
             "pushed_at": "2022-05-12T22:26:56",
             "releases": true,
             "version_installed": "0.2.0",
-            "last_fetched": 1655515257.023804
+            "last_fetched": 1655601658.930489
         },
         "250022973": {
             "repository_manifest": {
@@ -7337,7 +7339,7 @@
             },
             "category": "plugin",
             "description": "Battery state card for Home Assistant",
-            "downloads": 13221,
+            "downloads": 13270,
             "etag_repository": "W/\"52b2601a114bc81d61dbb8437db804fca8f48a30b82704718c0b24078a394885\"",
             "full_name": "maxwroc/battery-state-card",
             "last_updated": "2022-06-15T15:13:43Z",
@@ -7362,7 +7364,7 @@
             "pushed_at": "2022-06-15T15:13:43",
             "releases": true,
             "version_installed": "v2.1.1",
-            "last_fetched": 1655515256.931225
+            "last_fetched": 1655601659.117962
         },
         "256709811": {
             "repository_manifest": {
@@ -7849,16 +7851,16 @@
             },
             "category": "plugin",
             "description": "\ud83d\udd70\ufe0f Time Picker Card for Home Assistant's Lovelace UI",
-            "downloads": 6787,
-            "etag_repository": "W/\"8a89fcefccba78c35e4ee88f732cbcde442c81874ff0440c39eb8bb405b3384e\"",
+            "downloads": 6824,
+            "etag_repository": "W/\"c0e2cd78349f71a81610732c1aea9f26f5a2afe300243eb5416ecb7bc39261e7\"",
             "full_name": "GeorgeSG/lovelace-time-picker-card",
             "last_updated": "2022-06-02T05:24:11Z",
-            "stargazers_count": 148,
+            "stargazers_count": 149,
             "topics": [
                 "lovelace-card",
                 "lovelace-custom-card"
             ],
-            "last_fetched": 1655367890.118186
+            "last_fetched": 1655547893.454207
         },
         "261291147": {
             "repository_manifest": {
@@ -7888,7 +7890,7 @@
             },
             "category": "plugin",
             "description": "Vacuum cleaner card for Home Assistant Lovelace UI",
-            "downloads": 11818,
+            "downloads": 11916,
             "etag_repository": "W/\"1e4f849c6156e8efe25bc425d322cc34002e11279cd029e4ca1dee925dcd1e83\"",
             "full_name": "denysdovhan/vacuum-card",
             "last_updated": "2022-06-17T15:08:34Z",
@@ -7913,7 +7915,7 @@
             "pushed_at": "2022-06-17T15:08:34",
             "releases": true,
             "version_installed": "v2.6.3",
-            "last_fetched": 1655515258.01128
+            "last_fetched": 1655601660.214873
         },
         "261311061": {
             "repository_manifest": {
@@ -7926,15 +7928,15 @@
             "category": "integration",
             "description": "Ecowitt Weather Station integration for homeassistant",
             "domain": "ecowitt",
-            "etag_repository": "W/\"412818d67d30fe960c0e24640040726653e1877000effc47b8285cecc7d8a282\"",
+            "etag_repository": "W/\"d3edb510726a6b0ea67feee1596789c675871bf11b09f2e9ad99228f76158c4c\"",
             "full_name": "garbled1/homeassistant_ecowitt",
             "last_updated": "2022-05-29T06:23:39Z",
             "new": true,
-            "stargazers_count": 83,
+            "stargazers_count": 85,
             "topics": [
                 "ecowitt"
             ],
-            "last_fetched": 1655367890.013541
+            "last_fetched": 1655547893.505311
         },
         "261496794": {
             "repository_manifest": {
@@ -8116,12 +8118,12 @@
             "category": "integration",
             "description": "Home Assistant Custom Integration for Midea Group(Hualing, Senville, Klimaire, AirCon, Century, Pridiom, Thermocore, Comfee, Toshiba, Carrier, Goodman, Friedrich, Samsung, Kenmore, Trane, Lennox, LG and much more) Air Conditioners via LAN.",
             "domain": "midea_ac",
-            "etag_repository": "W/\"c69df7e01cf5de25b5f57d6f4f9829517e89816e2dbb3908dd228e57e719fdc4\"",
+            "etag_repository": "W/\"a61d7ae4344edef3cac068c6ac2bfaf79f8741a62f531cc4ae063d23502d9c27\"",
             "full_name": "mac-zhou/midea-ac-py",
             "last_updated": "2022-04-24T07:51:45Z",
             "new": true,
-            "stargazers_count": 332,
-            "last_fetched": 1655457896.072803
+            "stargazers_count": 333,
+            "last_fetched": 1655547898.584833
         },
         "262645913": {
             "repository_manifest": {
@@ -8744,15 +8746,15 @@
             "category": "integration",
             "description": "Monitor Docker containers from Home Assistant",
             "domain": "monitor_docker",
-            "etag_repository": "W/\"0af1b173554200518ea87a306e1356faad551abe3d785f3d15225d5ec92565c7\"",
+            "etag_repository": "W/\"b572983a9f31231ea5a084378d93d1fd924b2b8c1cf4d032410867a1cf185b8c\"",
             "full_name": "ualex73/monitor_docker",
             "last_updated": "2022-06-05T21:19:48Z",
             "new": true,
-            "stargazers_count": 155,
+            "stargazers_count": 156,
             "topics": [
                 "docker"
             ],
-            "last_fetched": 1655457912.673748
+            "last_fetched": 1655547914.243867
         },
         "272432260": {
             "repository_manifest": {
@@ -9331,16 +9333,16 @@
             "category": "plugin",
             "description": "A Lovelace card that shows a directional indicator on a compass for Home Assistant",
             "domain": "",
-            "downloads": 2206,
-            "etag_repository": "W/\"11b47e8883ebe7b09e4a5e97e6673cecfc783e057574aa127eaf03d2e1c7579e\"",
+            "downloads": 2341,
+            "etag_repository": "W/\"874c28b9ad377e2573f5366f4a5bc4461162f9b6031993554357f4e15faf16bf\"",
             "full_name": "tomvanswam/compass-card",
-            "last_updated": "2022-06-08T04:19:24Z",
-            "stargazers_count": 72,
+            "last_updated": "2022-06-17T04:20:02Z",
+            "stargazers_count": 73,
             "topics": [
                 "compass",
                 "lovelace-card"
             ],
-            "last_fetched": 1654807176.551293
+            "last_fetched": 1655547929.788785
         },
         "286186485": {
             "repository_manifest": {
@@ -9928,16 +9930,16 @@
             "category": "integration",
             "description": "Provides sensors for some Dutch waste collectors",
             "domain": "afvalwijzer",
-            "etag_repository": "W/\"45be411ebf27f1bffd716a5a4c099d53b59183465109db3c69d163964ad299e8\"",
+            "etag_repository": "W/\"aa6e022495fcb44714d2df7afd4f1bef7913d81c53f57b13533590eb311de8a6\"",
             "full_name": "xirixiz/homeassistant-afvalwijzer",
-            "last_updated": "2022-06-12T07:59:17Z",
+            "last_updated": "2022-06-17T09:32:31Z",
             "new": true,
-            "stargazers_count": 103,
+            "stargazers_count": 102,
             "topics": [
                 "afvalwijzer",
                 "trash"
             ],
-            "last_fetched": 1655149526.475547
+            "last_fetched": 1655547941.567606
         },
         "274738925": {
             "repository_manifest": {
@@ -10968,17 +10970,17 @@
             "category": "integration",
             "description": "local handling for Tuya devices",
             "domain": "localtuya",
-            "etag_repository": "W/\"b778b76c6f34bb09689c82fbd21c4abb8791376cc0827f2c44c7f9c4e7c1a5d3\"",
+            "etag_repository": "W/\"737a579d8e7955de17e73f1a1d7106641ca204ddb068f738a6250abd800db23b\"",
             "full_name": "rospogrigio/localtuya",
             "last_updated": "2022-06-17T01:16:12Z",
             "new": true,
-            "stargazers_count": 1142,
+            "stargazers_count": 1145,
             "topics": [
                 "localtuya",
                 "tuya",
                 "tuya-api"
             ],
-            "last_fetched": 1655457964.838789
+            "last_fetched": 1655547965.997788
         },
         "97201395": {
             "repository_manifest": {
@@ -11928,15 +11930,15 @@
             "category": "integration",
             "description": "Fully Kiosk Browser integration for Home Assistant",
             "domain": "fullykiosk",
-            "etag_repository": "W/\"e85e0ec5f23826bbcdefd949a34ba92d4bb112b2de214fc02958b02bf19edfbd\"",
+            "etag_repository": "W/\"71927dd8d5f414ad198adeaee28d500ce34a2feb6f757545339d885a033432a1\"",
             "full_name": "cgarwood/homeassistant-fullykiosk",
             "last_updated": "2022-05-15T21:17:45Z",
             "new": true,
-            "stargazers_count": 118,
+            "stargazers_count": 120,
             "topics": [
                 "fully-kiosk-browser"
             ],
-            "last_fetched": 1655457986.737783
+            "last_fetched": 1655547988.016636
         },
         "327779379": {
             "repository_manifest": {
@@ -12257,11 +12259,11 @@
             "category": "integration",
             "description": "Control Zigbee, BLE and Mesh devices from Home Assistant with Xiaomi Gateway 3 on original firmware",
             "domain": "xiaomi_gateway3",
-            "etag_repository": "W/\"4650a7f70e472d40a1aed40645cc463994be371b2e581b64ce2b716be8a1d18b\"",
+            "etag_repository": "W/\"e6903164bfd50e8b1b7025920e58ed113e2f307afef03d280e3a2ce3a1df2034\"",
             "full_name": "AlexxIT/XiaomiGateway3",
             "last_updated": "2022-06-04T07:36:06Z",
             "new": true,
-            "stargazers_count": 1446,
+            "stargazers_count": 1447,
             "topics": [
                 "aqara",
                 "ble",
@@ -12269,7 +12271,7 @@
                 "xiaomi",
                 "zigbee"
             ],
-            "last_fetched": 1655457993.27842
+            "last_fetched": 1655547994.827935
         },
         "295523408": {
             "repository_manifest": {
@@ -12464,11 +12466,11 @@
             "category": "integration",
             "description": "All-in-one & Easy-to-use. Integrate all your Xiaomi Smart Home - with a single integration and NO YAML files - into Home Assistant.",
             "domain": "xiaomi_miot_raw",
-            "etag_repository": "W/\"eedb33b27f10647b05eb38c97f03c7e160bf9c6b8194d42718bb66490643f501\"",
+            "etag_repository": "W/\"1632260d6eac747d4575aa2f26c9fffc62958d864749962b4985881e86864110\"",
             "full_name": "ha0y/xiaomi_miot_raw",
             "last_updated": "2022-06-10T18:37:26Z",
             "new": true,
-            "stargazers_count": 1492,
+            "stargazers_count": 1497,
             "topics": [
                 "home-assistant-addons",
                 "miot",
@@ -12476,7 +12478,7 @@
                 "xiaomi",
                 "xiaomi-miot"
             ],
-            "last_fetched": 1655457998.316403
+            "last_fetched": 1655547999.541075
         },
         "326220257": {
             "repository_manifest": {
@@ -12570,12 +12572,12 @@
             "category": "integration",
             "description": "Automatic integrate all Xiaomi devices to HomeAssistant via miot-spec, support Wi-Fi, BLE, ZigBee devices.",
             "domain": "xiaomi_miot",
-            "downloads": 7414,
-            "etag_repository": "W/\"5b7cf6985a871d70bc2a3b702eeb84e9e3f34070b538df3774ea6a2c59bef8c3\"",
+            "downloads": 7736,
+            "etag_repository": "W/\"bbd074e7364456b235425b4a96f481b33b3f7b1b6ad8e28237e97e35a76c19e5\"",
             "full_name": "al-one/hass-xiaomi-miot",
-            "last_updated": "2022-06-17T08:18:22Z",
+            "last_updated": "2022-06-17T11:15:02Z",
             "new": true,
-            "stargazers_count": 1254,
+            "stargazers_count": 1264,
             "topics": [
                 "iot",
                 "miio",
@@ -12586,7 +12588,7 @@
                 "xiaomi",
                 "xiaomi-miot"
             ],
-            "last_fetched": 1655458001.368195
+            "last_fetched": 1655548003.363295
         },
         "313850121": {
             "repository_manifest": {
@@ -12998,18 +13000,18 @@
             "category": "integration",
             "description": "Octopus Agile custom component for Home Assistant",
             "domain": "octopusagile",
-            "etag_repository": "W/\"c9e0ea6a83f4b8eeb43f80f6b2e30bd96ecad729fb55b4bb15f1bf063f2d8646\"",
+            "etag_repository": "W/\"4e110e0700361542fbe568b83f190293fa186451c74863d596a5217e4f025a52\"",
             "full_name": "markgdev/home-assistant_OctopusAgile",
             "last_updated": "2021-08-29T11:52:01Z",
             "new": true,
-            "stargazers_count": 59,
+            "stargazers_count": 60,
             "topics": [
                 "energy",
                 "octopus",
                 "octopus-agile",
                 "octopus-energy"
             ],
-            "last_fetched": 1649624690.180216
+            "last_fetched": 1655548012.761735
         },
         "338782385": {
             "repository_manifest": {
@@ -13663,17 +13665,17 @@
             "category": "integration",
             "description": "A HACS repository for Govee light integration",
             "domain": "govee",
-            "etag_repository": "W/\"c77651b16db265f4e531de7c41288f159c61e8d39c86e8277d4f643013bc839e\"",
+            "etag_repository": "W/\"fcc88670e6c062deee6e5d783f5e1786f82d261e33ca038a2eb1ae10672daeb8\"",
             "full_name": "LaggAt/hacs-govee",
             "last_updated": "2022-06-09T18:27:12Z",
             "new": true,
-            "stargazers_count": 114,
+            "stargazers_count": 115,
             "topics": [
                 "devcontainer",
                 "govee",
                 "light"
             ],
-            "last_fetched": 1655368026.378287
+            "last_fetched": 1655548026.985037
         },
         "357930725": {
             "repository_manifest": {
@@ -13835,7 +13837,7 @@
             "pushed_at": "2022-06-17T17:10:05",
             "releases": true,
             "version_installed": "v2.3.0",
-            "last_fetched": 1655515258.0253
+            "last_fetched": 1655601660.008861
         },
         "342427139": {
             "repository_manifest": {
@@ -14239,10 +14241,10 @@
             "category": "plugin",
             "description": "Custom brand icons for Home Assistant",
             "domain": "",
-            "etag_repository": "W/\"151fa94fd7b5a2c9add239a7436b0d5c560f4b44886326a678103558171dc1be\"",
+            "etag_repository": "W/\"98b145db9a3aadb1c3cee5a9c25edbe511f60d2a7c123d95979c65b73779123c\"",
             "full_name": "elax46/custom-brand-icons",
-            "last_updated": "2022-06-09T09:49:32Z",
-            "stargazers_count": 157,
+            "last_updated": "2022-06-17T22:24:20Z",
+            "stargazers_count": 158,
             "topics": [
                 "custom-icons",
                 "icons",
@@ -14252,7 +14254,7 @@
                 "philips-hue",
                 "xiaomi"
             ],
-            "last_fetched": 1654807293.746865
+            "last_fetched": 1655548040.280845
         },
         "350886220": {
             "repository_manifest": {
@@ -14487,16 +14489,16 @@
             "category": "integration",
             "description": "Home Assistant Presence Simulation",
             "domain": "presence_simulation",
-            "etag_repository": "W/\"4cda7d5fd42657d78513dcf1fbb9ae6df94900855270e6205b0b9bfbc1213626\"",
+            "etag_repository": "W/\"1b7196db1e4775fc118f6e661e382fa27a45fe2989d0fa3f5fa70f312bf10325\"",
             "full_name": "slashback100/presence_simulation",
             "last_updated": "2022-06-10T14:56:29Z",
             "new": true,
-            "stargazers_count": 120,
+            "stargazers_count": 121,
             "topics": [
                 "historic",
                 "presence-simulation"
             ],
-            "last_fetched": 1655368044.567166
+            "last_fetched": 1655548045.271448
         },
         "282509738": {
             "repository_manifest": {
@@ -14548,11 +14550,11 @@
             "category": "plugin",
             "description": "Home assistant sun card based on Google weather design",
             "domain": "",
-            "downloads": 34478,
-            "etag_repository": "W/\"114496eb09c060566bb26f9e7b343647606e492ca41719d15bbdc445111d7fda\"",
+            "downloads": 34539,
+            "etag_repository": "W/\"35b0a56c71711b5338a38b788b298815e144f8eb0c7df1f163f56ae2932ea701\"",
             "full_name": "AitorDB/home-assistant-sun-card",
             "last_updated": "2022-05-09T03:34:50Z",
-            "stargazers_count": 297,
+            "stargazers_count": 298,
             "topics": [
                 "sun",
                 "sun-card"
@@ -14573,7 +14575,7 @@
             "pushed_at": "2022-05-09T03:34:50",
             "releases": true,
             "version_installed": "v0.1.4",
-            "last_fetched": 1655515257.984741
+            "last_fetched": 1655601660.148681
         },
         "340596609": {
             "repository_manifest": {
@@ -15072,12 +15074,12 @@
             "category": "integration",
             "description": "Custom component to calculate estimated power consumption of lights and other appliances",
             "domain": "powercalc",
-            "downloads": 1106,
-            "etag_repository": "W/\"eebcba5781743c9cb205d14c96d720b91007e659834ddfdf8c2add0c07d0b946\"",
+            "downloads": 1756,
+            "etag_repository": "W/\"0e60fe68133b1bcdb5cd8691a27e0c355caff4d0c0e2291deedb8e129dc83a12\"",
             "full_name": "bramstroker/homeassistant-powercalc",
-            "last_updated": "2022-06-13T16:07:28Z",
+            "last_updated": "2022-06-17T13:56:10Z",
             "new": true,
-            "stargazers_count": 278,
+            "stargazers_count": 280,
             "topics": [
                 "consumption",
                 "energy-monitor",
@@ -15085,7 +15087,7 @@
                 "metering",
                 "power"
             ],
-            "last_fetched": 1655149648.708185
+            "last_fetched": 1655548060.694499
         },
         "378256174": {
             "repository_manifest": {
@@ -15281,10 +15283,10 @@
             },
             "category": "plugin",
             "description": "Remote Control for LG TV WebOS",
-            "etag_repository": "W/\"15355366320750938fb194711ecf7fd6fbb69268ff0727d651c2bd02b712ca85\"",
+            "etag_repository": "W/\"bb7c99d5f1481fa7722a166c450e30a3629e4c62657362f12c6290e1f36ecda0\"",
             "full_name": "madmicio/LG-WebOS-Remote-Control",
             "last_updated": "2022-06-13T04:11:10Z",
-            "stargazers_count": 218,
+            "stargazers_count": 219,
             "default_branch": "master",
             "installed_commit": "91b298b",
             "installed": true,
@@ -15292,7 +15294,7 @@
             "open_issues": 48,
             "pushed_at": "2022-06-13T04:11:10",
             "version_installed": null,
-            "last_fetched": 1655515259.578558
+            "last_fetched": 1655601661.752762
         },
         "151280062": {
             "repository_manifest": {
@@ -15301,7 +15303,7 @@
             },
             "category": "plugin",
             "description": "Minimalistic graph card for Home Assistant Lovelace UI",
-            "downloads": 48664,
+            "downloads": 48983,
             "etag_repository": "W/\"eba0e63ef4521f57069b6f91b88b7bc342e6778dd54d5c67604951f4daa1618f\"",
             "full_name": "kalkih/mini-graph-card",
             "last_updated": "2022-05-29T08:32:41Z",
@@ -15327,7 +15329,7 @@
             "pushed_at": "2022-05-29T08:32:41",
             "releases": true,
             "version_installed": "v0.11.0",
-            "last_fetched": 1655515259.76773
+            "last_fetched": 1655601662.021463
         },
         "257125587": {
             "repository_manifest": {
@@ -15347,7 +15349,7 @@
             "last_commit": "0c82c61",
             "pushed_at": "2020-05-01T14:45:44",
             "version_installed": null,
-            "last_fetched": 1655515261.406257
+            "last_fetched": 1655601661.772623
         },
         "191831638": {
             "repository_manifest": {
@@ -15389,7 +15391,7 @@
             "open_issues": 1,
             "pushed_at": "2022-05-29T19:02:02",
             "version_installed": null,
-            "last_fetched": 1655515260.227472
+            "last_fetched": 1655601662.516384
         },
         "223993584": {
             "repository_manifest": {
@@ -15442,7 +15444,7 @@
             "pushed_at": "2022-06-16T12:45:17",
             "releases": true,
             "version_installed": "8.9.1",
-            "last_fetched": 1655515258.162492
+            "last_fetched": 1655601660.302949
         },
         "215075805": {
             "repository_manifest": {
@@ -15461,7 +15463,7 @@
             "open_issues": 1,
             "pushed_at": "2022-06-17T14:45:33",
             "version_installed": null,
-            "last_fetched": 1655515258.067115
+            "last_fetched": 1655601660.174462
         },
         "194140521": {
             "repository_manifest": {
@@ -15481,7 +15483,7 @@
             "last_commit": "5c7f68c",
             "last_version": "1.5.3",
             "manifest_name": "Browser mod",
-            "open_issues": 56,
+            "open_issues": 53,
             "published_tags": [
                 "1.5.3",
                 "1.5.2",
@@ -15492,7 +15494,7 @@
             "pushed_at": "2022-05-22T11:58:02",
             "releases": true,
             "version_installed": "1.5.3",
-            "last_fetched": 1655515258.236084
+            "last_fetched": 1655601660.238294
         },
         "190927524": {
             "repository_manifest": {
@@ -15501,10 +15503,10 @@
             },
             "category": "plugin",
             "description": "\ud83d\udd39 Add CSS styles to (almost) any lovelace card",
-            "etag_repository": "W/\"3d0695e14f691480407e35b689bbb61e7ade5625a91451768f77708a871f04d0\"",
+            "etag_repository": "W/\"dc967a88dcb079f3482d25d3f77e603bc357a2e5a3c3193d2ed082c29280c750\"",
             "full_name": "thomasloven/lovelace-card-mod",
             "last_updated": "2022-06-13T04:02:29Z",
-            "stargazers_count": 513,
+            "stargazers_count": 514,
             "default_branch": "master",
             "installed_commit": "06140ff",
             "installed": true,
@@ -15521,7 +15523,7 @@
             "pushed_at": "2022-06-13T04:02:29",
             "releases": true,
             "version_installed": "3.1.5",
-            "last_fetched": 1655515260.434193
+            "last_fetched": 1655601662.886901
         },
         "331701152": {
             "repository_manifest": {
@@ -15531,11 +15533,11 @@
             "category": "plugin",
             "description": "\ud83d\udcc8 A Lovelace card to display advanced graphs and charts based on ApexChartsJS for Home Assistant",
             "domain": "",
-            "downloads": 11026,
-            "etag_repository": "W/\"9c76772a78e355ff77ea2ad74ac9396e140467f083277c41b49354dca1c54106\"",
+            "downloads": 11140,
+            "etag_repository": "W/\"cef59e95aed13e124aba8a02e3e3bc8438911fcbc1572317a4702de35f947952\"",
             "full_name": "RomRider/apexcharts-card",
             "last_updated": "2022-06-14T03:43:49Z",
-            "stargazers_count": 405,
+            "stargazers_count": 406,
             "topics": [
                 "apexcharts",
                 "iot"
@@ -15555,7 +15557,7 @@
             "pushed_at": "2022-06-14T03:43:49",
             "releases": true,
             "version_installed": "v2.0.1",
-            "last_fetched": 1655515258.496719
+            "last_fetched": 1655601663.010662
         },
         "139664351": {
             "repository_manifest": {
@@ -15571,11 +15573,11 @@
             "category": "integration",
             "description": "This is a custom component to allow control of Amazon Alexa devices in Home Assistant using the unofficial Alexa API.",
             "domain": "alexa_media",
-            "downloads": 10774,
-            "etag_repository": "W/\"244603fba8227dc206bc21df62827f26037a2efda3e20af72c3343e031108cb1\"",
+            "downloads": 11243,
+            "etag_repository": "W/\"276ab82c9958cc0b119f23b90aee3940806ed4e4747dc348a315e45715e6a209\"",
             "full_name": "custom-components/alexa_media_player",
             "last_updated": "2022-06-16T01:09:20Z",
-            "stargazers_count": 864,
+            "stargazers_count": 865,
             "topics": [
                 "alexa"
             ],
@@ -15586,7 +15588,7 @@
             "last_commit": "f197307",
             "last_version": "v4.0.2",
             "manifest_name": "Alexa Media Player",
-            "open_issues": 14,
+            "open_issues": 13,
             "published_tags": [
                 "v4.0.2",
                 "v4.0.1",
@@ -15597,7 +15599,7 @@
             "pushed_at": "2022-06-16T01:09:20",
             "releases": true,
             "version_installed": "v4.0.2",
-            "last_fetched": 1655515258.50149
+            "last_fetched": 1655601660.478093
         },
         "146194325": {
             "repository_manifest": {
@@ -15607,17 +15609,17 @@
             },
             "category": "plugin",
             "description": "\u2747\ufe0f Lovelace button-card for home assistant",
-            "downloads": 108454,
-            "etag_repository": "W/\"72508d96492012f40af7eddb6990bb4723ac6bf3345044f88fda9858c4e4c7f8\"",
+            "downloads": 108668,
+            "etag_repository": "W/\"f98198f89672f1c2bbd6162ab06f021d969886f877ab30689515e44f7d94ba4e\"",
             "full_name": "custom-cards/button-card",
             "last_updated": "2022-06-10T00:52:04Z",
-            "stargazers_count": 1131,
+            "stargazers_count": 1132,
             "default_branch": "master",
             "installed_commit": "29b10a6",
             "installed": true,
             "last_commit": "29b10a6",
             "last_version": "v3.4.2",
-            "open_issues": 134,
+            "open_issues": 135,
             "published_tags": [
                 "v3.4.2",
                 "3.4.1",
@@ -15628,7 +15630,7 @@
             "pushed_at": "2022-06-10T00:52:04",
             "releases": true,
             "version_installed": "v3.4.2",
-            "last_fetched": 1655515260.801855
+            "last_fetched": 1655601663.151627
         },
         "222118751": {
             "repository_manifest": {
@@ -15656,7 +15658,7 @@
             "last_commit": "c317407",
             "last_version": "v3.0.5",
             "manifest_name": "Sonoff",
-            "open_issues": 37,
+            "open_issues": 39,
             "published_tags": [
                 "v3.0.5",
                 "v3.0.4",
@@ -15667,7 +15669,7 @@
             "pushed_at": "2022-05-24T22:16:43",
             "releases": true,
             "version_installed": "v3.0.5",
-            "last_fetched": 1655515258.336121
+            "last_fetched": 1655601660.411861
         },
         "171121354": {
             "repository_manifest": {
@@ -15681,10 +15683,10 @@
             "category": "integration",
             "description": "Integration for Home Assistant to control climate, TV and fan devices via IR/RF controllers (Broadlink, Xiaomi, MQTT, LOOKin, ESPHome)",
             "domain": "smartir",
-            "etag_repository": "W/\"6430c76a99ae0cf30cbea6e1ab3591df8194b59d39b141f850d23f9accfb1161\"",
+            "etag_repository": "W/\"cb9da09687a5152e1fcb95e60edc245b12eda0ff831b17efc43e29f2d5784fcb\"",
             "full_name": "smartHomeHub/SmartIR",
-            "last_updated": "2022-06-15T14:07:32Z",
-            "stargazers_count": 1105,
+            "last_updated": "2022-06-18T12:53:23Z",
+            "stargazers_count": 1106,
             "topics": [
                 "broadlink",
                 "chuangmiir",
@@ -15699,7 +15701,7 @@
             "last_commit": "61e2960",
             "last_version": "1.17.6",
             "manifest_name": "SmartIR",
-            "open_issues": 29,
+            "open_issues": 32,
             "published_tags": [
                 "1.17.6",
                 "1.17.5",
@@ -15707,10 +15709,10 @@
                 "1.17.3",
                 "1.17.2"
             ],
-            "pushed_at": "2022-06-15T14:07:32",
+            "pushed_at": "2022-06-18T12:53:23",
             "releases": true,
             "version_installed": "1.17.6",
-            "last_fetched": 1655515260.587562
+            "last_fetched": 1655601660.466396
         },
         "249722008": {
             "repository_manifest": {
@@ -15729,7 +15731,7 @@
             "last_commit": "d0e517d",
             "pushed_at": "2022-04-29T23:58:08",
             "version_installed": null,
-            "last_fetched": 1655515258.248453
+            "last_fetched": 1655601660.355816
         },
         "257123327": {
             "repository_manifest": {
@@ -15755,7 +15757,7 @@
             "open_issues": 6,
             "pushed_at": "2020-05-28T19:17:53",
             "version_installed": null,
-            "last_fetched": 1655515260.492845
+            "last_fetched": 1655601662.850656
         },
         "221288367": {
             "repository_manifest": {
@@ -15783,7 +15785,7 @@
             "pushed_at": "2020-10-08T10:10:57",
             "releases": true,
             "version_installed": "v1.3",
-            "last_fetched": 1655515259.134025
+            "last_fetched": 1655601661.327067
         },
         "384434522": {
             "repository_manifest": {
@@ -15862,11 +15864,11 @@
             "category": "theme",
             "description": "This is a blend of 2 themes found within the Home Assistant community. Inspired mostly by Noctis, I've adjust colours slightly and have also opted to pull some features from Caule Theme packs to build my own 'ultimate' theme. I will continue to update overtime and do my best to credit those whom I have 'referenced' ",
             "domain": "",
-            "etag_repository": "W/\"410183a4d4dc85f0913429722a49733b3e5fb9c8e09e99921012d369cf151660\"",
+            "etag_repository": "W/\"8f629fc66d5bcc98e5934673825d669f1420e7fa175c880223e1236c98e6b3ac\"",
             "full_name": "tgcowell/waves",
-            "last_updated": "2022-06-10T19:58:47Z",
-            "stargazers_count": 34,
-            "last_fetched": 1654897318.763705
+            "last_updated": "2022-06-14T03:38:57Z",
+            "stargazers_count": 35,
+            "last_fetched": 1655548078.691316
         },
         "352169259": {
             "repository_manifest": {
@@ -15970,11 +15972,11 @@
             "category": "integration",
             "description": "Adaptive Lighting custom component for Home Assistant",
             "domain": "adaptive_lighting",
-            "etag_repository": "W/\"4d75853bb006470c0b95b3e2bf7036f7992978f6a2e449a69710b4dee30b8465\"",
+            "etag_repository": "W/\"04a1b968c4e25f321d53ccb1989e234b723b60b3a6d2960abeec7f440fbadb53\"",
             "full_name": "basnijholt/adaptive-lighting",
             "last_updated": "2022-05-27T21:02:24Z",
             "new": true,
-            "stargazers_count": 594,
+            "stargazers_count": 596,
             "topics": [
                 "adaptive-lighting",
                 "automation",
@@ -15985,7 +15987,7 @@
                 "sunset",
                 "zigbee"
             ],
-            "last_fetched": 1655458078.158389
+            "last_fetched": 1655548078.826469
         },
         "355159299": {
             "repository_manifest": {
@@ -16121,18 +16123,18 @@
             "category": "integration",
             "description": "Control your Midea air conditioner devices via the eWeLink cloud",
             "domain": "climate_ewelink",
-            "etag_repository": "W/\"f200e4895ff9d241189542e0151868b08490de7f1d4e44062394b8ecdfa77424\"",
+            "etag_repository": "W/\"cba8a8be75eaeb08dc4de89c95fcc870d40a0c6796c0efd88fbcfa13f7315cac\"",
             "full_name": "georgezhao2010/climate_ewelink",
             "last_updated": "2021-09-04T14:17:19Z",
             "new": true,
-            "stargazers_count": 33,
+            "stargazers_count": 34,
             "topics": [
                 "airconditioners",
                 "climate",
                 "ewelink",
                 "midea"
             ],
-            "last_fetched": 1655368077.379285
+            "last_fetched": 1655548078.927708
         },
         "384704004": {
             "repository_manifest": {
@@ -16624,17 +16626,17 @@
             "category": "plugin",
             "description": "A Lovelace card for Frigate in Home Assistant",
             "domain": "",
-            "downloads": 6730,
-            "etag_repository": "W/\"c041576823b9bdf65a3d3f59b74c220eb18e64a67f91808fd50447814d7d1fbf\"",
+            "downloads": 6832,
+            "etag_repository": "W/\"f7c5879de94428dc364d2e7aef0b235e31593245a34af6f6e3033eb4928bf824\"",
             "full_name": "dermotduffy/frigate-hass-card",
-            "last_updated": "2022-06-16T03:03:21Z",
+            "last_updated": "2022-06-18T02:23:23Z",
             "stargazers_count": 131,
             "topics": [
                 "cctv",
                 "frigate",
                 "nvr"
             ],
-            "last_fetched": 1655368078.3028
+            "last_fetched": 1655548079.854108
         },
         "395991055": {
             "repository_manifest": {
@@ -16671,7 +16673,7 @@
             "pushed_at": "2022-06-03T06:24:59",
             "releases": true,
             "version_installed": "0.2.2",
-            "last_fetched": 1655515259.187814
+            "last_fetched": 1655601661.499815
         },
         "362700564": {
             "repository_manifest": {
@@ -16730,24 +16732,24 @@
             "category": "integration",
             "description": "Toyota Connected Services integration for Home Assistant.",
             "domain": "toyota",
-            "downloads": 616,
-            "etag_repository": "W/\"f91812bcf6188c6a99d38e017e81a62ef6f581021f25bfe25649103a138d57ff\"",
+            "downloads": 625,
+            "etag_repository": "W/\"afa234b5c7c1108519ceb5cfd04431940d547f021081f06c8cd1b9e3f25193ea\"",
             "full_name": "DurgNomis-drol/ha_toyota",
             "last_updated": "2022-06-07T13:07:04Z",
             "new": true,
-            "stargazers_count": 52,
+            "stargazers_count": 53,
             "topics": [
                 "car",
                 "toyota",
                 "vehicle"
             ],
-            "last_fetched": 1655239666.089711
+            "last_fetched": 1655548079.878093
         },
         "383608593": {
             "repository_manifest": {
                 "name": "Toshiba AC",
                 "render_readme": true,
-                "homeassistant": "2021.8.0"
+                "homeassistant": "2022.5.0"
             },
             "authors": [
                 "@h4de5"
@@ -16755,17 +16757,16 @@
             "category": "integration",
             "description": "Toshiba AC integration into home-assistant.io",
             "domain": "toshiba_ac",
-            "downloads": 62,
-            "etag_repository": "W/\"d6e88183f0667953eb039ab1b0d182e368bf773e17dd2a3614df1ae905ba5426\"",
+            "etag_repository": "W/\"7aed726b3a8a588ab7eba636f7b71c2cdd62cec73a9031158a6f3afc646d6e9c\"",
             "full_name": "h4de5/home-assistant-toshiba_ac",
-            "last_updated": "2022-06-07T13:02:06Z",
+            "last_updated": "2022-06-18T08:31:02Z",
             "new": true,
             "stargazers_count": 35,
             "topics": [
                 "climate",
                 "toshiba"
             ],
-            "last_fetched": 1654807353.916702
+            "last_fetched": 1655548079.936029
         },
         "382335433": {
             "repository_manifest": {
@@ -17269,7 +17270,7 @@
             "pushed_at": "2021-11-22T17:05:56",
             "releases": true,
             "version_installed": "v1.9",
-            "last_fetched": 1655515260.720332
+            "last_fetched": 1655601661.466803
         },
         "403381222": {
             "repository_manifest": {
@@ -17717,7 +17718,7 @@
             "category": "integration",
             "description": "Home Assistant integration for deebot vacuums",
             "domain": "deebot",
-            "downloads": 2664,
+            "downloads": 2687,
             "etag_repository": "W/\"91c7c57bae454551e5092b8742ee28cc511e25e576bbe061760517c19e705b7e\"",
             "full_name": "DeebotUniverse/Deebot-4-Home-Assistant",
             "last_updated": "2022-06-15T09:34:41Z",
@@ -17734,7 +17735,7 @@
             "last_commit": "d52f8ec",
             "last_version": "1.3.1",
             "manifest_name": "Deebot 4 Home Assistant",
-            "open_issues": 10,
+            "open_issues": 11,
             "published_tags": [
                 "1.3.1",
                 "1.3.0",
@@ -17745,7 +17746,7 @@
             "pushed_at": "2022-06-15T09:34:41",
             "releases": true,
             "version_installed": "1.3.1",
-            "last_fetched": 1655515259.382817
+            "last_fetched": 1655601661.687779
         },
         "356385629": {
             "repository_manifest": {
@@ -17759,11 +17760,11 @@
             "category": "integration",
             "description": "A Home Assistant HACS integration that supports Kia Connect(Uvo) and Hyundai Bluelink. The integration supports the EU, Canada and the USA.",
             "domain": "kia_uvo",
-            "etag_repository": "W/\"cf0f32d4460d33afc529d57a49715745573ad5b619c7c27b6daea09653bcad00\"",
+            "etag_repository": "W/\"9214e4210a6bba6ce64b1faa86b170b46b83fe7bf36566a18102b89052d8f818\"",
             "full_name": "fuatakgun/kia_uvo",
-            "last_updated": "2022-05-22T08:04:23Z",
+            "last_updated": "2022-06-11T19:43:42Z",
             "new": true,
-            "stargazers_count": 137,
+            "stargazers_count": 138,
             "topics": [
                 "bluelink",
                 "car",
@@ -17771,7 +17772,7 @@
                 "kia",
                 "uvo"
             ],
-            "last_fetched": 1654897319.92004
+            "last_fetched": 1655548081.25327
         },
         "417400028": {
             "repository_manifest": {
@@ -17815,18 +17816,18 @@
             "category": "integration",
             "description": "HomeAssistant integration for the Ginlong Solis PV Monitoring portal. This integration supports the current Platform v2.0 portal (m.ginlong.com) which supports Solis and Solarman PV inverter brands. Also supports new SolisCloud platform",
             "domain": "solis",
-            "etag_repository": "W/\"c1850fbb77b48e7de45cd4857187e021d9319666f500019b3368b236621a0173\"",
+            "etag_repository": "W/\"134ac76465d0a126498cf7398e96a8b15efe591130ad487fb50a1dc6f4f9e850\"",
             "full_name": "hultenvp/solis-sensor",
             "last_updated": "2022-05-21T11:24:10Z",
             "new": true,
-            "stargazers_count": 52,
+            "stargazers_count": 51,
             "topics": [
                 "ginlong",
                 "solarman",
                 "solis",
                 "soliscloud"
             ],
-            "last_fetched": 1654987322.152932
+            "last_fetched": 1655548081.309984
         },
         "302985427": {
             "repository_manifest": {
@@ -18034,7 +18035,7 @@
             "pushed_at": "2022-03-13T17:28:16",
             "releases": true,
             "version_installed": "4.2",
-            "last_fetched": 1655515259.315361
+            "last_fetched": 1655601663.164262
         },
         "432522624": {
             "repository_manifest": {
@@ -18094,7 +18095,7 @@
             "pushed_at": "2022-04-16T22:50:46",
             "releases": true,
             "version_installed": "4.2",
-            "last_fetched": 1655515260.526888
+            "last_fetched": 1655601662.905454
         },
         "427867835": {
             "repository_manifest": {
@@ -18264,17 +18265,17 @@
             "category": "integration",
             "description": "An fully auto generating Home Assistant UI dashboard for desktop, tablet and mobile by Dwains for desktop, tablet, mobile",
             "domain": "dwains_dashboard",
-            "etag_repository": "W/\"a82f460353e16e36d82db8b201a1352e42f091810c36fa649451b59254120a6f\"",
+            "etag_repository": "W/\"573c514e935f23c101d623bb7b3057004045ddcb31fce8546e8c63b3ef372b7d\"",
             "full_name": "dwainscheeren/dwains-lovelace-dashboard",
             "last_updated": "2022-05-28T21:48:23Z",
             "new": true,
-            "stargazers_count": 1082,
+            "stargazers_count": 1083,
             "topics": [
                 "dashboard",
                 "dwains-lovelace-dashboard",
                 "home-assistant-dashboard"
             ],
-            "last_fetched": 1655458080.749442
+            "last_fetched": 1655548081.845637
         },
         "334925385": {
             "repository_manifest": {
@@ -18352,11 +18353,11 @@
             "category": "integration",
             "description": "Home Assistant integration to manage Eufy Security devices as cameras, home base stations, doorbells, motion and contact sensors.",
             "domain": "eufy_security",
-            "etag_repository": "W/\"fa0d5aabf0f6632c199c08d1596716cf670ed1caeac48996ee8397e0c9aa9685\"",
+            "etag_repository": "W/\"7951f55b5e504b50e1f2636d723f492b70861a3d5b69eaba254b76a75f74414d\"",
             "full_name": "fuatakgun/eufy_security",
             "last_updated": "2022-06-16T06:18:21Z",
             "new": true,
-            "stargazers_count": 250,
+            "stargazers_count": 251,
             "topics": [
                 "camera",
                 "eufy",
@@ -18365,7 +18366,7 @@
                 "rtsp",
                 "security"
             ],
-            "last_fetched": 1655458080.918991
+            "last_fetched": 1655548081.96132
         },
         "439467929": {
             "repository_manifest": {
@@ -19276,11 +19277,11 @@
             "category": "integration",
             "description": "A custom integration to control Tapo devices from home assistant.",
             "domain": "tapo",
-            "etag_repository": "W/\"761082c29a5b096a8040e49381516b6a47efe5482cd4c9b6c1e2f4ee2253c249\"",
+            "etag_repository": "W/\"8b8958ff73fb7ebf4f84037db1be590fe028c9cb3b9ce606de46a09cb53bc7dc\"",
             "full_name": "petretiandrea/home-assistant-tapo-p100",
             "last_updated": "2022-06-09T09:09:09Z",
             "new": true,
-            "stargazers_count": 124,
+            "stargazers_count": 125,
             "topics": [
                 "energy",
                 "l510",
@@ -19295,7 +19296,7 @@
                 "tapo-device",
                 "tapo-light-bulb"
             ],
-            "last_fetched": 1655458082.625016
+            "last_fetched": 1655548083.355793
         },
         "442181774": {
             "repository_manifest": {
@@ -19388,13 +19389,13 @@
             "category": "integration",
             "description": "UI-Lovelace-Minimalist is a \"theme\" for HomeAssistant",
             "domain": "ui_lovelace_minimalist",
-            "downloads": 6145,
-            "etag_repository": "W/\"d2f675d7d35f274393cace16712c782e2d9616ac39cb68fa99ad6d88bc83abc3\"",
+            "downloads": 6283,
+            "etag_repository": "W/\"813b9c59a1b1710534e7fe7b2cba19f6b3a94f22b7f44125c729a93b5c19adf2\"",
             "full_name": "UI-Lovelace-Minimalist/UI",
-            "last_updated": "2022-06-17T04:33:56Z",
+            "last_updated": "2022-06-17T16:22:07Z",
             "new": true,
-            "stargazers_count": 737,
-            "last_fetched": 1655458082.57241
+            "stargazers_count": 738,
+            "last_fetched": 1655548083.565841
         },
         "449218690": {
             "repository_manifest": {},
@@ -19502,7 +19503,7 @@
             "pushed_at": "2022-06-13T18:46:59",
             "releases": true,
             "version_installed": "2022.6.0",
-            "last_fetched": 1655515260.518386
+            "last_fetched": 1655601663.081829
         },
         "453143227": {
             "repository_manifest": {
@@ -19589,11 +19590,11 @@
             "category": "plugin",
             "description": "Mushroom Cards - Build a beautiful dashboard easily \ud83c\udf44",
             "domain": "",
-            "downloads": 3327,
-            "etag_repository": "W/\"039b126a2c1c16de2db9ddb9e81f1beebf5baed0a25ddde7a3961a50c44801e3\"",
+            "downloads": 4465,
+            "etag_repository": "W/\"a824ccd46801c1103de1b7bcd6a3c26bce351131b60890caccd01641fc4ed84a\"",
             "full_name": "piitaya/lovelace-mushroom",
             "last_updated": "2022-06-16T16:22:37Z",
-            "stargazers_count": 1022,
+            "stargazers_count": 1028,
             "topics": [
                 "card",
                 "mushroom"
@@ -19614,7 +19615,7 @@
             "pushed_at": "2022-06-16T16:22:37",
             "releases": true,
             "version_installed": "v1.10.0",
-            "last_fetched": 1655515260.871477
+            "last_fetched": 1655601663.448512
         },
         "454942078": {
             "repository_manifest": {
@@ -19775,7 +19776,7 @@
             "pushed_at": "2022-06-12T17:44:55",
             "releases": true,
             "version_installed": "v0.0.2",
-            "last_fetched": 1655515259.293945
+            "last_fetched": 1655601661.524324
         },
         "294037465": {
             "repository_manifest": {
@@ -19896,7 +19897,7 @@
             "pushed_at": "2022-06-15T07:56:39",
             "releases": true,
             "version_installed": "v1.1.2",
-            "last_fetched": 1655515259.355762
+            "last_fetched": 1655601661.583495
         },
         "458664750": {
             "repository_manifest": {
@@ -19948,7 +19949,7 @@
             "pushed_at": "2022-05-03T14:14:53",
             "releases": true,
             "version_installed": "v1.0",
-            "last_fetched": 1655515259.336691
+            "last_fetched": 1655601661.558907
         },
         "387116237": {
             "repository_manifest": {
@@ -20076,7 +20077,7 @@
             "pushed_at": "2022-06-12T16:06:16",
             "releases": true,
             "version_installed": "v0.6.0",
-            "last_fetched": 1655515260.996356
+            "last_fetched": 1655601663.428855
         },
         "279680951": {
             "repository_manifest": {
@@ -20266,11 +20267,11 @@
             "category": "integration",
             "description": "Home Assistant integration for reading Echelon/NES smart power meter, by utilizing the Dabbler.dk MEP module ",
             "domain": "dabblerdk_powermeterreader",
-            "etag_repository": "W/\"1305e87e7072ba39decaab14bedc4f6ecb563840263fbd1b781023e09bfc964a\"",
+            "etag_repository": "W/\"141909791c426ddff9f25b2a0ce3d13503d997cf7345753959e98c05cd8ab756\"",
             "full_name": "jnxxx/homeassistant-dabblerdk_powermeterreader",
             "last_updated": "2022-05-29T14:33:43Z",
             "new": true,
-            "stargazers_count": 3,
+            "stargazers_count": 4,
             "topics": [
                 "83331-3i",
                 "dabbler-dk",
@@ -20279,7 +20280,7 @@
                 "nes",
                 "powermeter"
             ],
-            "last_fetched": 1655458083.972659
+            "last_fetched": 1655548084.765251
         },
         "461936688": {
             "repository_manifest": {
@@ -20430,16 +20431,16 @@
             "category": "integration",
             "description": "Home Assistant Integration for Hatch Rest Mini",
             "domain": "ha_hatch",
-            "etag_repository": "W/\"27eadc8b76b50d3ddb825218000e60caefe2763b8f70cf9400c7d378512509fe\"",
+            "etag_repository": "W/\"95c56d755eba15e7e7f82940cbf6bd02a0f4d36d440550058fba9d062e4b7f2c\"",
             "full_name": "dahlb/ha_hatch",
             "last_updated": "2022-04-21T15:55:18Z",
             "new": true,
-            "stargazers_count": 2,
+            "stargazers_count": 3,
             "topics": [
                 "hatch-baby-rest",
                 "python3"
             ],
-            "last_fetched": 1652294213.281954
+            "last_fetched": 1655548084.982555
         },
         "448323715": {
             "repository_manifest": {
@@ -20453,17 +20454,17 @@
             "category": "integration",
             "description": "Nest Protect integration for Home Assistant. This will allow you to integrate your smoke, heat, co and occupancy status real-time in HA.",
             "domain": "nest_protect",
-            "etag_repository": "W/\"291bd5473910f31d1c53b439e43c8244933c748362c8454b8cb6c453f7873ffc\"",
+            "etag_repository": "W/\"b71aadd0e722d1fcbc61088db78a91c9a8692460c33d3f6cf4a6b089e5e96233\"",
             "full_name": "iMicknl/ha-nest-protect",
             "last_updated": "2022-06-15T15:41:45Z",
             "new": true,
-            "stargazers_count": 116,
+            "stargazers_count": 117,
             "topics": [
                 "google",
                 "nest",
                 "nest-protect"
             ],
-            "last_fetched": 1655368084.258175
+            "last_fetched": 1655548085.029461
         },
         "462065554": {
             "repository_manifest": {
@@ -20805,12 +20806,13 @@
             "category": "integration",
             "description": "Get the status from your Electrolux devices connected to Wellbeing",
             "domain": "wellbeing",
-            "etag_repository": "W/\"ff94f1dfa4b4be44e0c110b4da95109d99405778f24293f66621c8b1d943e285\"",
+            "downloads": 3,
+            "etag_repository": "W/\"cef7e8df4b9d6d2877e49b77715bf53863f043ddaa28fd416cc815e8ff8ad266\"",
             "full_name": "JohNan/homeassistant-wellbeing",
-            "last_updated": "2022-04-18T20:45:09Z",
+            "last_updated": "2022-05-04T18:46:51Z",
             "new": true,
-            "stargazers_count": 27,
-            "last_fetched": 1651004554.165478
+            "stargazers_count": 28,
+            "last_fetched": 1655548085.512991
         },
         "478745957": {
             "repository_manifest": {
@@ -20852,17 +20854,17 @@
             "category": "integration",
             "description": "TrueNAS integration for Home Assistant ",
             "domain": "truenas",
-            "downloads": 1712,
-            "etag_repository": "W/\"2f7b5ea3ed4356dbe74ea856b2263c318d6b92787150348b5d820c864c46ca1f\"",
+            "downloads": 337,
+            "etag_repository": "W/\"024e1c39778d2f14e464c007374d44bd0e2c460af6ecd904a6213a7fa8ba037a\"",
             "full_name": "tomaae/homeassistant-truenas",
-            "last_updated": "2022-05-26T08:28:42Z",
+            "last_updated": "2022-06-17T09:17:18Z",
             "new": true,
-            "stargazers_count": 24,
+            "stargazers_count": 25,
             "topics": [
                 "homeassistant-custom-component",
                 "truenas"
             ],
-            "last_fetched": 1655149657.300919
+            "last_fetched": 1655548085.564165
         },
         "233289477": {
             "repository_manifest": {
@@ -20900,18 +20902,18 @@
             "category": "integration",
             "description": "MiWiFi for Home Assistant",
             "domain": "miwifi",
-            "etag_repository": "W/\"cef7cceceb99ad25bb553217de75753018ecf74b732e7ffb7493240b8a49576a\"",
+            "etag_repository": "W/\"7158470fcccad4df795729df2dfd2bf8e2a96d3f42b3e6e86cebae39cd747d1e\"",
             "full_name": "dmamontov/hass-miwifi",
             "last_updated": "2022-05-28T16:39:04Z",
             "new": true,
-            "stargazers_count": 92,
+            "stargazers_count": 93,
             "topics": [
                 "mi",
                 "miwifi",
                 "redmi",
                 "xiaomi"
             ],
-            "last_fetched": 1654987326.999756
+            "last_fetched": 1655548085.612709
         },
         "472497355": {
             "repository_manifest": {
@@ -20998,9 +21000,9 @@
             "category": "integration",
             "description": "Calculate Taipower (Taiwan Power Company) bi-monthly bill amount from kWh sensor on Home Assistant.",
             "domain": "taipower_bimonthly_cost",
-            "etag_repository": "W/\"74b45c47ee062af7f18a92d6b8256f223a6fe0173ff88c9f8efb9831dafdb5df\"",
+            "etag_repository": "W/\"c3e45ca03ccdf2b16a985bae5b7df566300cbcfc5e7c965d49fbd95ea563c23a\"",
             "full_name": "cnstudio/Taipower-Bimonthly-Energy-Cost-homeassistant",
-            "last_updated": "2022-06-05T04:24:11Z",
+            "last_updated": "2022-06-18T03:44:16Z",
             "new": true,
             "stargazers_count": 36,
             "topics": [
@@ -21009,7 +21011,7 @@
                 "power",
                 "taipower"
             ],
-            "last_fetched": 1655239672.1387
+            "last_fetched": 1655548085.742921
         },
         "375838748": {
             "repository_manifest": {
@@ -21359,7 +21361,7 @@
             "category": "theme",
             "description": "\ud83c\udfa8 Give your Home Assistant a modern and clean facelift. \ud83d\udfe5\ud83d\udfe7\ud83d\udfe9\ud83d\udfe6 4 Color Themes (Magenta Red / Orange / Green / Blue) + \ud83c\udf1e Light and \ud83c\udf1a Dark modes included. Based on Metro and Fluent UI Design Systems from Microsoft Windows.",
             "domain": "",
-            "etag_repository": "W/\"920264d17e08f5598de0976bec2787bf16fdf030f9d7feca1a9515e0bd6f6978\"",
+            "etag_repository": "W/\"de84736ab31342fb6839079cbcd54fbc42309aae516018f2cc6400f08ae51c21\"",
             "full_name": "Madelena/Metrology-for-Hass",
             "last_updated": "2022-06-07T02:09:03Z",
             "new": true,
@@ -21368,7 +21370,7 @@
                 "home-assistant-config",
                 "lovelace-theme"
             ],
-            "last_fetched": 1655458085.480404
+            "last_fetched": 1655548086.372192
         },
         "489295753": {
             "repository_manifest": {
@@ -21566,17 +21568,17 @@
             "category": "integration",
             "description": "Turn your Home Assistant instance into a jukebox, hassle free streaming of your favorite media to Home Assistant media players.",
             "domain": "mass",
-            "downloads": 376,
-            "etag_repository": "W/\"d9cc48fe082682dc9a26c8e68a31cb95b2ad631d78a0544839277cd7ab5db578\"",
+            "downloads": 763,
+            "etag_repository": "W/\"59b777273f1d431c4c27415ef35f4c1b35fef5df6348e8f2e3fc58cd1ee38c40\"",
             "full_name": "music-assistant/hass-music-assistant",
-            "last_updated": "2022-06-17T00:30:11Z",
+            "last_updated": "2022-06-17T21:24:54Z",
             "new": true,
-            "stargazers_count": 94,
+            "stargazers_count": 113,
             "topics": [
                 "music-library",
                 "music-player"
             ],
-            "last_fetched": 1655458085.903864
+            "last_fetched": 1655548086.829294
         },
         "471000066": {
             "repository_manifest": {
@@ -21619,16 +21621,16 @@
             "category": "plugin",
             "description": "A power distribution card inspired by the official Energy Distribution card for Home Assistant",
             "domain": "",
-            "downloads": 1028,
-            "etag_repository": "W/\"323fc3cc1c7b7ac2a011ea3ab788bf4a9c2dd884b548be8cf1efdd529779a09d\"",
+            "downloads": 1221,
+            "etag_repository": "W/\"c27380171e4bff95a037884e521ef8dda589f37b26ad59e2af0834a4e1e2ad92\"",
             "full_name": "ulic75/power-flow-card",
-            "last_updated": "2022-06-06T14:55:36Z",
+            "last_updated": "2022-06-16T15:01:41Z",
             "new": true,
-            "stargazers_count": 18,
+            "stargazers_count": 19,
             "topics": [
                 "dashboard"
             ],
-            "last_fetched": 1654807470.72402
+            "last_fetched": 1655548086.793637
         },
         "457767453": {
             "repository_manifest": {
@@ -21913,18 +21915,18 @@
             "category": "integration",
             "description": "Alternative (and improved) Home Connect integration for Home Assistant",
             "domain": "home_connect_alt",
-            "etag_repository": "W/\"213d87d373f2d37164d106dfea39e2cc439da999e43087e7d12a960d031e8a67\"",
+            "etag_repository": "W/\"9ea867aaae84d9f247e450f7a3a6c479cc132d5e04c32b1f1e16696c3f6388fa\"",
             "full_name": "ekutner/home-connect-hass",
-            "last_updated": "2022-06-15T21:03:24Z",
+            "last_updated": "2022-06-16T21:38:40Z",
             "new": true,
-            "stargazers_count": 23,
+            "stargazers_count": 24,
             "topics": [
                 "home-assistant-component",
                 "home-assistant-integration",
                 "home-connect",
                 "homeconnect"
             ],
-            "last_fetched": 1655368085.800168
+            "last_fetched": 1655548087.029262
         },
         "145479324": {
             "repository_manifest": {},
@@ -21950,7 +21952,7 @@
             "pushed_at": "2022-03-06T06:47:34",
             "releases": true,
             "version_installed": "0.1.1",
-            "last_fetched": 1655515259.295379
+            "last_fetched": 1655601663.438521
         },
         "199718799": {
             "repository_manifest": {},
