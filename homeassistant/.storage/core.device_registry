@@ -98,12 +98,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:serial-number",
-                        "EUCB091745001457"
-                    ],
-                    [
                         "homekit_controller:accessory-id",
                         "A6:8B:C0:53:8D:2F:aid:1"
+                    ],
+                    [
+                        "homekit_controller:serial-number",
+                        "EUCB091745001457"
                     ]
                 ],
                 "manufacturer": "Koogeek",
@@ -903,12 +903,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:3"
-                    ],
-                    [
                         "homekit_controller:serial-number",
                         "o046cd6"
+                    ],
+                    [
+                        "homekit_controller:accessory-id",
+                        "0B:E3:5F:38:1A:21:aid:3"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -1015,12 +1015,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:serial-number",
-                        "o153d75"
-                    ],
-                    [
                         "homekit_controller:accessory-id",
                         "0B:E3:5F:38:1A:21:aid:8"
+                    ],
+                    [
+                        "homekit_controller:serial-number",
+                        "o153d75"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -1043,12 +1043,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:serial-number",
-                        "o15481f"
-                    ],
-                    [
                         "homekit_controller:accessory-id",
                         "0B:E3:5F:38:1A:21:aid:10"
+                    ],
+                    [
+                        "homekit_controller:serial-number",
+                        "o15481f"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -2299,7 +2299,7 @@
                 "manufacturer": null,
                 "model": "Single Channel DIY",
                 "name": "Single Channel DIY",
-                "sw_version": "3.6.0",
+                "sw_version": null,
                 "hw_version": null,
                 "entry_type": null,
                 "id": "fde5ecd11933cce3038ba3bd0bf49114",

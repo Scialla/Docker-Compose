@@ -21,3 +21,10 @@ ping_silvia:
   icon:
   picture:
   track: true
+
+scan_interval:
+  name: scan_interval
+  mac:
+  icon:
+  picture:
+  track: true
