@@ -570,7 +570,7 @@
                 "manufacturer": "Amazon",
                 "model": "ECHO A32DOYMUN6DTXA",
                 "name": "Echo Dot ingresso",
-                "sw_version": "7148111492",
+                "sw_version": "7416571268",
                 "hw_version": null,
                 "entry_type": null,
                 "id": "a6e71c203694bc5a543f19fc9624d77e",
@@ -594,7 +594,7 @@
                 "manufacturer": "Amazon",
                 "model": "ECHO A7WXQPH584YP",
                 "name": "Echo Studio",
-                "sw_version": "677719220",
+                "sw_version": "679756920",
                 "hw_version": null,
                 "entry_type": null,
                 "id": "60708f61a5d71949d77ef480154dc8e2",
@@ -875,12 +875,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:2"
-                    ],
-                    [
                         "homekit_controller:serial-number",
                         "j0a33a0"
+                    ],
+                    [
+                        "homekit_controller:accessory-id",
+                        "0B:E3:5F:38:1A:21:aid:2"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -1043,12 +1043,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:10"
-                    ],
-                    [
                         "homekit_controller:serial-number",
                         "o15481f"
+                    ],
+                    [
+                        "homekit_controller:accessory-id",
+                        "0B:E3:5F:38:1A:21:aid:10"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -1071,12 +1071,12 @@
                 "connections": [],
                 "identifiers": [
                     [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:1"
-                    ],
-                    [
                         "homekit_controller:serial-number",
                         "g0a1e8c"
+                    ],
+                    [
+                        "homekit_controller:accessory-id",
+                        "0B:E3:5F:38:1A:21:aid:1"
                     ]
                 ],
                 "manufacturer": "Netatmo",
@@ -1255,7 +1255,7 @@
                 "manufacturer": "Amazon",
                 "model": "KNIGHT A1Z88NGR2BK6A2",
                 "name": "Echo Show",
-                "sw_version": "7148111748",
+                "sw_version": "7148112260",
                 "hw_version": null,
                 "entry_type": null,
                 "id": "7cc385d7ec17a3e24c23d6bbe92df349",
@@ -1949,9 +1949,9 @@
             },
             {
                 "config_entries": [
-                    "d3ce3ce93b345e6f8a4846b42559f716",
                     "9b22afd876018a439f729fd9b5f2f48b",
-                    "af9521407a3548c0a7f5378e4678222a"
+                    "af9521407a3548c0a7f5378e4678222a",
+                    "d3ce3ce93b345e6f8a4846b42559f716"
                 ],
                 "connections": [],
                 "identifiers": [
@@ -2299,7 +2299,7 @@
                 "manufacturer": null,
                 "model": "Single Channel DIY",
                 "name": "Single Channel DIY",
-                "sw_version": null,
+                "sw_version": "3.6.0",
                 "hw_version": null,
                 "entry_type": null,
                 "id": "fde5ecd11933cce3038ba3bd0bf49114",
@@ -2379,7 +2379,7 @@
                 "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
                 "name_by_user": null,
                 "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/energy"
+                "configuration_url": "https://my.netatmo.com/app/"
             },
             {
                 "config_entries": [
@@ -2403,7 +2403,7 @@
                 "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
                 "name_by_user": null,
                 "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/energy"
+                "configuration_url": "https://my.netatmo.com/app/"
             },
             {
                 "config_entries": [
@@ -2427,7 +2427,7 @@
                 "area_id": "71ab9ec07d524a7a9090cae6302d1689",
                 "name_by_user": null,
                 "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/energy"
+                "configuration_url": "https://my.netatmo.com/app/"
             },
             {
                 "config_entries": [
@@ -2451,7 +2451,7 @@
                 "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
                 "name_by_user": null,
                 "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/energy"
+                "configuration_url": "https://my.netatmo.com/app/"
             },
             {
                 "config_entries": [
@@ -2475,7 +2475,7 @@
                 "area_id": "bagno_grande",
                 "name_by_user": "Valvola",
                 "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/energy"
+                "configuration_url": "https://my.netatmo.com/app/"
             },
             {
                 "config_entries": [
@@ -2499,7 +2499,7 @@
                 "area_id": "bagno_piccolo",
                 "name_by_user": null,
                 "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/energy"
+                "configuration_url": "https://my.netatmo.com/app/"
             },
             {
                 "config_entries": [
@@ -2523,7 +2523,7 @@
                 "area_id": "camera_di_silvia",
                 "name_by_user": null,
                 "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/energy"
+                "configuration_url": "https://my.netatmo.com/app/"
             },
             {
                 "config_entries": [
