@@ -857,12 +857,6 @@
                                             "entity": "sensor.frigo_battery",
                                             "layout": "vertical",
                                             "name": "Batteria"
-                                        },
-                                        {
-                                            "type": "custom:mushroom-entity-card",
-                                            "entity": "sensor.presa_frigo_power",
-                                            "layout": "vertical",
-                                            "name": "Consumo"
                                         }
                                     ]
                                 }
