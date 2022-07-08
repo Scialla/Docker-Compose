@@ -1,2990 +1,2990 @@
 {
-    "version": 1,
-    "minor_version": 3,
-    "key": "core.device_registry",
-    "data": {
-        "devices": [
-            {
-                "config_entries": [
-                    "768a1a54fb2211ea8e662970566f9c2d"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "78:0f:77:18:16:50"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "broadlink",
-                        "780f77181650"
-                    ]
-                ],
-                "manufacturer": "Broadlink",
-                "model": "RM pro+",
-                "name": "Broadlink Studio",
-                "sw_version": 52,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "77821346fb2211ea8ac23158ae9c12c3",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "cd8a675cfb2211ea8d329b6fc001a016"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "78:0f:77:d6:49:a1"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "broadlink",
-                        "780f77d649a1"
-                    ]
-                ],
-                "manufacturer": "Broadlink",
-                "model": "RM mini 3",
-                "name": "Broadlink Cucina",
-                "sw_version": 50,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "d094039afb2211eabea9d3df02aef147",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e9b42fa8fb2211eaaadddb8102a75477"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "78:0f:77:d6:43:a2"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "broadlink",
-                        "780f77d643a2"
-                    ]
-                ],
-                "manufacturer": "Broadlink",
-                "model": "RM mini 3",
-                "name": "Broadlink Ingresso",
-                "sw_version": 50,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "eccb3b08fb2211eaac49db7354418235",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "cecbfea8e55c1f6be43e702b170eeefd"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:serial-number",
-                        "EUCB091745001457"
-                    ],
-                    [
-                        "homekit_controller:accessory-id",
-                        "A6:8B:C0:53:8D:2F:aid:1"
-                    ]
-                ],
-                "manufacturer": "Koogeek",
-                "model": "LB1",
-                "name": "Koogeek-LB1-1F299C",
-                "sw_version": "2.2.2",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "ccd30f559705dc5b67f8528757230b7a",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x842e14fffe366818"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "10A UK or 16A EU smart plug (TS0121_plug)",
-                "name": "Presa Samsung",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "31a5e3fe2d00d075f5f33e4303933f5a",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x680ae2fffec2023e"
-                    ]
-                ],
-                "manufacturer": "IKEA",
-                "model": "TRADFRI ON/OFF switch (E1743)",
-                "name": "IkeaSwitch",
-                "sw_version": "2.2.010",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "7ad32cf8be5411869000108ed0288fd8",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d0005446d5f"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
-                "name": "Balcone",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "b9b99e0293e48bbeed107dbd83845e26",
-                "via_device_id": null,
-                "area_id": "670ce061c6aa4dd9bd2a9d4fc8567a82",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d00054b38ec"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara human body movement and illuminance sensor (RTCGQ11LM)",
-                "name": "PIR Scale",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "779d2b1c81e26f0cbd62668ad8d72fe8",
-                "via_device_id": null,
-                "area_id": "scale",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x588e81fffeff5df4"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "10A UK or 16A EU smart plug (TS0121_plug)",
-                "name": "Presa Selecline",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "f60fa617b8d9f1cc73816bf7f20eebd7",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x086bd7fffe219622"
-                    ]
-                ],
-                "manufacturer": "IKEA",
-                "model": "TRADFRI control outlet (E1603/E1702/E1708)",
-                "name": "IkeaPresa",
-                "sw_version": "2.0.024",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "713c81dd1555cde31491f62949df0d91",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d00058034f0"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Bagno Grande",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "c7c4e6e8d1bb37bb42b39c1ae6a42ba7",
-                "via_device_id": null,
-                "area_id": "bagno_grande",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d000581a07f"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Porta Casa",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "975b1d41222ac68271f276f1976ebefc",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d0005803786"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Bagno Piccolo",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "ea0790b1996b130d2bad86ecda1662da",
-                "via_device_id": null,
-                "area_id": "bagno_piccolo",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d0005819be8"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Condizionatore",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "c87e304fea25e2fe6d72a3aea0053406",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "629cea43a7dc915ef40fa7991f9c855c"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "58:55:ca:1e:47:6a"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "apple_tv",
-                        "4665EA5761AF1FE6"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "Apple TV 2",
-                "name": "AppleTV Ingresso",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "b50945278a28eb028ca5d933a1e72110",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x5c0272fffec3dc2e"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "Temperature & humidity sensor with display (TS0201)",
-                "name": "LCD BagnoGrande",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "11bffe6bb871ccd61a7a9fc220b9e588",
-                "via_device_id": null,
-                "area_id": "bagno_grande",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x5c0272fffecbe82f"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "Temperature & humidity sensor with display (TS0201)",
-                "name": "LCD BagnoPiccolo",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "c5ec5c16fed410bff8cdf01eff85f233",
-                "via_device_id": null,
-                "area_id": "bagno_piccolo",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "fd6a8ece6da2418884a32de8f7fd5c6f"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "THIRD_PARTY_AVS_MEDIA_DISPLAY AILBSA2LNTOYL",
-                "name": "Davide's Reverb.ai",
-                "sw_version": "0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "5e885423b2bad455df4186fcc4e314d5",
-                "via_device_id": "5e885423b2bad455df4186fcc4e314d5",
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "0fb7ba021c0f495ea36c4b99d68a05a4"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "WHA A3C9PE6TNYLTCH",
-                "name": "Dappertutto",
-                "sw_version": "0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "41285beafb0b30d0ceb86bd50f29845f",
-                "via_device_id": "41285beafb0b30d0ceb86bd50f29845f",
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "dafba6bc85d046d8a9c9106beb2013ba"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "WHA A3C9PE6TNYLTCH",
-                "name": "Ovunque",
-                "sw_version": "0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "aa123b51edceca8fa4e779efe83b4219",
-                "via_device_id": "aa123b51edceca8fa4e779efe83b4219",
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "70bff0d73a81483fb50f502864654858"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "UNKNOWN A3TEIMUZAESJMQ",
-                "name": "Altoparlante",
-                "sw_version": "20200706",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "d0a95f781f95353cd6705d1bdfdae8d0",
-                "via_device_id": "d0a95f781f95353cd6705d1bdfdae8d0",
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "G090U50783942833"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "ECHO A32DOYMUN6DTXA",
-                "name": "Echo Dot camera letto",
-                "sw_version": "7416571268",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "545d11654ef8161944d215556984a9c3",
-                "via_device_id": "545d11654ef8161944d215556984a9c3",
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "G090U50783750KDP"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "ECHO A32DOYMUN6DTXA",
-                "name": "Echo Dot ingresso",
-                "sw_version": "7416571268",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "a6e71c203694bc5a543f19fc9624d77e",
-                "via_device_id": "a6e71c203694bc5a543f19fc9624d77e",
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "G090P3088412038C"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "ECHO A7WXQPH584YP",
-                "name": "Echo Studio",
-                "sw_version": "679756920",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "60708f61a5d71949d77ef480154dc8e2",
-                "via_device_id": "60708f61a5d71949d77ef480154dc8e2",
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "G070QQ0783730BMV"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "FIRE_TV A2LWARUGJLBYEW",
-                "name": "Fire TV Stick",
-                "sw_version": "672831820",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "bfe66482cbbe380f6ec892d4b6a2ee27",
-                "via_device_id": "bfe66482cbbe380f6ec892d4b6a2ee27",
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x842e14fffe1262dd"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "10A UK or 16A EU smart plug (TS0121_plug)",
-                "name": "Presa Onkyo",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "22aae68d75088c6c43a8cf03db26e9b7",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x842e14fffe1265ac"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "10A UK or 16A EU smart plug (TS0121_plug)",
-                "name": "Presa Phon",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "329569aa759cd14fa25d1e8f6c42f20b",
-                "via_device_id": null,
-                "area_id": "bagno_grande",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x588e81fffed39fdd"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "10A UK or 16A EU smart plug (TS0121_plug)",
-                "name": "Presa Mediaplayer",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "cabd308e2533907fb6be4a18228a9434",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x588e81fffed393d7"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "10A UK or 16A EU smart plug (TS0121_plug)",
-                "name": "Presa Frigo",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "182c697bbcb0e8059494738ceda990db",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d00028eafae"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Porta Balcone Studio",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "b37cbbbb7ba1186feb4b510ac1f7dff8",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d00028d39d9"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Porta Balcone Cucina",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "33c8bac72202bc1216740c9fdd2b7ee2",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d00069ae9ec"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Finestra Silvia",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "7a012a2160a92da6758e7e5b4a3f4829",
-                "via_device_id": null,
-                "area_id": "camera_di_silvia",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d00028d3815"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Porta Balcone Ingresso",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "b870a7c2609000c05e5237b3fefa2630",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d0006c4c071"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "Porta Balcone Letto",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "8275a967aa50892734d4f8a29142557f",
-                "via_device_id": null,
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9bade6edf4e81bd5367c7412c5c21514"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "openweathermap",
-                        "45.11016488561856-7.665452957153321"
-                    ]
-                ],
-                "manufacturer": "OpenWeather",
-                "model": null,
-                "name": "OpenWeatherMap",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "e682ed72f94bbd43ad5f87b97addf3e5",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9658bce1ed65d115f75174b94c86f2c2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:2"
-                    ],
-                    [
-                        "homekit_controller:serial-number",
-                        "j0a33a0"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Netatmo Smart Thermostat",
-                "name": "Netatmo Smart Thermostat",
-                "sw_version": "75",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "7bb80423cb35b6c292cf74576fcab7bc",
-                "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
-                "area_id": "camera_di_silvia",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9658bce1ed65d115f75174b94c86f2c2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:serial-number",
-                        "o046cd6"
-                    ],
-                    [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:3"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Netatmo Valve",
-                "name": "Netatmo Valve 1",
-                "sw_version": "85",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "e2325502b4f735fc71c3832bad750558",
-                "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9658bce1ed65d115f75174b94c86f2c2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:4"
-                    ],
-                    [
-                        "homekit_controller:serial-number",
-                        "o1345c8"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Netatmo Valve",
-                "name": "Netatmo Valve 2",
-                "sw_version": "85",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "8592f1ae822c52d32c2af28e41e3d237",
-                "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9658bce1ed65d115f75174b94c86f2c2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:6"
-                    ],
-                    [
-                        "homekit_controller:serial-number",
-                        "o1583c8"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Netatmo Valve",
-                "name": "Netatmo Valve 3",
-                "sw_version": "85",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "3000017b539efc7d5bd383848b837ced",
-                "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9658bce1ed65d115f75174b94c86f2c2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:7"
-                    ],
-                    [
-                        "homekit_controller:serial-number",
-                        "o154fc2"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Netatmo Valve",
-                "name": "Netatmo Valve 4",
-                "sw_version": "85",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "ddb4cf31682313d50b3eb16a689e9cf5",
-                "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
-                "area_id": "bagno_grande",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9658bce1ed65d115f75174b94c86f2c2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:8"
-                    ],
-                    [
-                        "homekit_controller:serial-number",
-                        "o153d75"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Netatmo Valve",
-                "name": "Netatmo Valve 5",
-                "sw_version": "85",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "33d5470690cebd58d04116b2c95fcf50",
-                "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
-                "area_id": "bagno_piccolo",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9658bce1ed65d115f75174b94c86f2c2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:serial-number",
-                        "o15481f"
-                    ],
-                    [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:10"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Netatmo Valve",
-                "name": "Netatmo Valve 7",
-                "sw_version": "85",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "95176d289c4615fd51b96fee9170c3a6",
-                "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "9658bce1ed65d115f75174b94c86f2c2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "homekit_controller:serial-number",
-                        "g0a1e8c"
-                    ],
-                    [
-                        "homekit_controller:accessory-id",
-                        "0B:E3:5F:38:1A:21:aid:1"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Netatmo Relay",
-                "name": "Netatmo Relay",
-                "sw_version": "222.0.0",
-                "hw_version": "",
-                "entry_type": null,
-                "id": "2b3ddb5807433a6fd8f7590f43c428bd",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0xbc33acfffe516296"
-                    ]
-                ],
-                "manufacturer": "Lidl",
-                "model": "Silvercrest 3 gang switch, with 4 USB (EU, FR, CZ, BS) (HG06338)",
-                "name": "CiabattaScrivania",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "ecf55478c5a2c23f1f3e587706f0ebc1",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x60a423fffe3f6d3f"
-                    ]
-                ],
-                "manufacturer": "Lidl",
-                "model": "Livarno Lux smart LED light strip 2.5m (HG06104A)",
-                "name": "Striscia Letto",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "d906a0a6b4091b79abd3a82e0db88e9a",
-                "via_device_id": null,
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d00063dd645"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "MiJia temperature & humidity sensor (WSDCGQ01LM)",
-                "name": "Frigo",
-                "sw_version": "3000-0001",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "63a30757f131719c10dad1907111c6dc",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "89e8dcef812953029759943484a2a213"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "74245070807d3a762cde"
-                    ]
-                ],
-                "manufacturer": "Tuya",
-                "model": "RGBC Smart Bulb  (heeU2AWVxpxfqP6D)",
-                "name": "Ballerini",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "a47b1f43d57b5490111443948935d840",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0xbc33acfffef5ba82"
-                    ]
-                ],
-                "manufacturer": "Lidl",
-                "model": "Livarno Lux smart LED light strip 2.5m (HG06104A)",
-                "name": "Cappa",
-                "sw_version": "Zigbee2MQTT 1.22.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "4fd5a77368a7ec2f970e99ec8248b8b3",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "1b23c543d8c1576345267a685ebd2a92"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:FF310080-2A8E-DE0B-8577-C3E7FF310080"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "dlna_dmr",
-                        "uuid:FF310080-2A8E-DE0B-8577-C3E7FF310080"
-                    ]
-                ],
-                "manufacturer": "wiimu",
-                "model": "WiiMu LinkPlayer",
-                "name": "GGMM-E3",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "91b0dab4c3d2fdc1d981f416751b8aee",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "G0916D12129202ET"
-                    ]
-                ],
-                "manufacturer": "Amazon",
-                "model": "KNIGHT A1Z88NGR2BK6A2",
-                "name": "Echo Show",
-                "sw_version": "7148112260",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "7cc385d7ec17a3e24c23d6bbe92df349",
-                "via_device_id": "7cc385d7ec17a3e24c23d6bbe92df349",
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "322a809687918224f91b09cf68f719c6"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "cc:50:e3:3c:26:cf"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "wled",
-                        "cc50e33c26cf"
-                    ]
-                ],
-                "manufacturer": "WLED",
-                "model": "FOSS",
-                "name": "WLED",
-                "sw_version": "0.13.1",
-                "hw_version": "esp8266",
-                "entry_type": null,
-                "id": "dcf50e9b7fb28064e3e47fe4389ac537",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "http://192.168.1.135"
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "4C:65:A8:DD:D2:48"
-                    ]
-                ],
-                "manufacturer": "Xiaomi",
-                "model": "LYWSDCGQ",
-                "name": "4C65A8DDD248",
-                "sw_version": "Xiaomi (MiBeacon V2)",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "4769b984ff43c0a52bd904a9db642767",
-                "via_device_id": null,
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": "Sensore BLE",
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "7df27ab7f89b533abf52850f89d7b2a9"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "deebot",
-                        "9b501991-b12e-4b8a-9080-b412c82b32ad"
-                    ]
-                ],
-                "manufacturer": "Ecovacs",
-                "model": "DEEBOT OZMO 950 Series",
-                "name": "Ambrogio",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "1c92b63d9a1ab60cecf8b1bebacd7237",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "f21bb52bd212b6b45878f59143175134"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:49f7b3fd-0090-a9c4-c21c-4dd7a87700ba"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "dlna_dmr",
-                        "uuid:49f7b3fd-0090-a9c4-c21c-4dd7a87700ba"
-                    ]
-                ],
-                "manufacturer": "Western Digital Corporation",
-                "model": "WD TV Live",
-                "name": "WDTVLive - currently in use",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "04aebc1ed44d04575a12f33debeffb65",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "608be10bfa92e10fb8aa969d76f5cda2"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "co2signal",
-                        "608be10bfa92e10fb8aa969d76f5cda2"
-                    ]
-                ],
-                "manufacturer": "Tmrow.com",
-                "model": null,
-                "name": "CO2 signal",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "626756227f3577cd970978b349762cdd",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://www.electricitymap.org/"
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "A8:1B:6A:B7:8F:C5"
-                    ]
-                ],
-                "manufacturer": "Oral-B",
-                "model": "SmartSeries 7000",
-                "name": "A81B6AB78FC5",
-                "sw_version": "Oral-B",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "2615fc512249cd2088ff2080c4a98599",
-                "via_device_id": null,
-                "area_id": "bagno_grande",
-                "name_by_user": "Spazzolino Denti",
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "fa9485314dfdb3996e2af1030be74814"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "206F1F99-97B5-4F43-BD22-84757C503924"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iPhone10,6",
-                "name": "iPhone x di Scialla",
-                "sw_version": "15.5",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "41af8d10caf2b9cf6fd39475bcf88359",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0xcc86ecfffe9fb794"
-                    ]
-                ],
-                "manufacturer": "IKEA",
-                "model": "STYRBAR remote control N2 (E2001/E2002)",
-                "name": "IkeaMultiLightSwitch",
-                "sw_version": "1.0.024",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "076416b0230310d902d92839a85c27d9",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x0c4314fffe483d67"
-                    ]
-                ],
-                "manufacturer": "IKEA",
-                "model": "TRADFRI shortcut button (E1812)",
-                "name": "PulsanteIkea1",
-                "sw_version": "2.3.015",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "7baa38d2111885f925dc0f4bfd97db1c",
-                "via_device_id": null,
-                "area_id": "camera_di_silvia",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0xb4e3f9fffe751ca1"
-                    ]
-                ],
-                "manufacturer": "IKEA",
-                "model": "TRADFRI motion sensor (E1525/E1745)",
-                "name": "IkeaPIR1",
-                "sw_version": "2.0.022",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "d8cea40fa127e42164cd2f16c641594f",
-                "via_device_id": null,
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x84fd27fffe4225c6"
-                    ]
-                ],
-                "manufacturer": "IKEA",
-                "model": "TRADFRI shortcut button (E1812)",
-                "name": "PulsanteIkea2",
-                "sw_version": "2.3.015",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "983885878c8f5965809f73638aa51b3f",
-                "via_device_id": null,
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x0c4314fffedbba1b"
-                    ]
-                ],
-                "manufacturer": "IKEA",
-                "model": "STYRBAR remote control N2 (E2001/E2002)",
-                "name": "IkeaMultiLightSwitch2",
-                "sw_version": "1.0.024",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "62c2d941a1a9b2a90613dd1b6796600f",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA879613A492"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA879613A492",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "442535ce0c2888f969f02ced70db8161",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D921-0099-A4FA-879613A4928E"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9210099A4FA879613A4928E",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "05351efcd11bfae1f41bdc53e75c40ce",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D94E-0021-99A4-FA879613A492"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D94E002199A4FA879613A492",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "33b36e2a3f130b345c9081b9fa231ffe",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "1CA92E23-F087-4DF7-B9A2-FD4B716A4BF6"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "1CA92E23F0874DF7B9A2FD4B716A4BF6",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "48ce6d49f2057e8e4ecde58dbd6f08f5",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9A4-00FA-8796-13A4928EE71F"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9A400FA879613A4928EE71F",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "5ecaf0b079ee207ecc6f2ebd8e374bb4",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA879613A4E7"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA879613A4E7",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "89a3604005164cd58979ade3918b4e1a",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA879692008E"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA879692008E",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "3ffc34b64e3fe05a57dbde58cb628d82",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9FA-0087-9613-A4928EE71F1A"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9FA00879613A4928EE71F1A",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "6c432155714384d4c39dd50265206773",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA8796A40092"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA8796A40092",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "974cdd50c43f10507e6fef2fc6dfea0d",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D999-00A4-FA87-9613A4928EE7"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D99900A4FA879613A4928EE7",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "9530c2d001d5f0cb6e6bffc0945d128f",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA8796E7001F"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA8796E7001F",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "d9dddf06cf0bb3c66af11106f3e3b51e",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-9900-A4FA-879613A4928E"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA9900A4FA879613A4928E",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "f18ec8003e4be3bd6e078d777da16a31",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA8796138E00"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA8796138E00",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "d10fc62fdca59e0599e84d9de6b0e850",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA8796139200"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA8796139200",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "d31fc58423fab6e7a32c56c0367c775a",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-4E00-2199-A4FA-879613A4928E"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB74E002199A4FA879613A4928E",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "3f43665f4ab8b3403d83e7ead43eb6e9",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-EA00-4E21-99A4-FA879613A492"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7EA004E2199A4FA879613A492",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "88296c7519110c312ec41e5315f5f7b5",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "d3ce3ce93b345e6f8a4846b42559f716",
-                    "af9521407a3548c0a7f5378e4678222a",
-                    "9b22afd876018a439f729fd9b5f2f48b"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "Home Assistant",
-                        "version"
-                    ]
-                ],
-                "manufacturer": "Home Assistant",
-                "model": null,
-                "name": "Home Assistant Version",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "a40546ee04058a995cee77ee84c1251a",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "fa43b289e8a20b7a869f304dae45b4b7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "webostv",
-                        "ae18c3bd-c627-1c5a-eb5a-2b01d4005ffd"
-                    ]
-                ],
-                "manufacturer": "LG",
-                "model": "43UH620V-ZA",
-                "name": "LG",
-                "sw_version": "05.60.15",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "92a249cddcec43d2f78e87347573ba52",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA8796131F00"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA8796131F00",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "1af9d422279ddb6260a3800971736f63",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA879613E700"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA879613E700",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "a850df32f62499d8e7a704a3d37aecd8",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D904-003E-1D02-010001C48DA7"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D904003E1D02010001C48DA7",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "f1bb4d1e62230603dc57e30aa06693da",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "50765CB7-D9EA-4E21-99A4-FA87968E00E7"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "50765CB7D9EA4E2199A4FA87968E00E7",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "700db86952eb0c5c176d475ab97548d2",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8d1a6e1e1280a62c0301781ab136d12f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "ble_monitor",
-                        "E2C56DB5-DFFB-48D2-B060-D0F5A71096E0"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iBeacon",
-                "name": "E2C56DB5DFFB48D2B060D0F5A71096E0",
-                "sw_version": "iBeacon",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "da22745020a1fe721f4be274199a960a",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": "user",
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x588e81fffed393c6"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "10A UK or 16A EU smart plug (TS0121_plug)",
-                "name": "Lampada Zanzare",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "e2cf28291f245f5ba5ef31cdd0453fb6",
-                "via_device_id": null,
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x842e14fffe3a42aa"
-                    ]
-                ],
-                "manufacturer": "TuYa",
-                "model": "10A UK or 16A EU smart plug (TS0121_plug)",
-                "name": "Presa Jolly",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "a34551c27bc9409e68eab40c1e9166e7",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x84fd27fffecf68bd"
-                    ]
-                ],
-                "manufacturer": "Lidl",
-                "model": "Silvercrest smart plug (EU, CH, FR, BS, DK) (HG06337)",
-                "name": "Antenna TV",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "923febd0c6cf204acf94068e42ad1d6e",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "4c1911a45f97932f3a03b863cd0393c6"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "speedtestdotnet",
-                        "4c1911a45f97932f3a03b863cd0393c6"
-                    ]
-                ],
-                "manufacturer": null,
-                "model": null,
-                "name": "SpeedTest",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "0cb4b725509d6a5cd54f943aa2289332",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://www.speedtest.net/"
-            },
-            {
-                "config_entries": [
-                    "9cd4196ba4a4cbbf390ee9dfe9564650"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "A24842F7-9837-46FE-96DA-7C191FAD1187"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iPhone7,2",
-                "name": "iPhone di Giovanna",
-                "sw_version": "12.5.5",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "ac3fe5baa27450f3b49bf2aabc4608ab",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "f63a31156505323e7fddaa24098c0e20"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "whois",
-                        "scialla.duckdns.org"
-                    ]
-                ],
-                "manufacturer": null,
-                "model": null,
-                "name": null,
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "b05a74aa364e192be4f6ff12182a35d3",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "2ad1fd2f0893c9331242bcf271f34b27"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "whois",
-                        "scialla.ddns.net"
-                    ]
-                ],
-                "manufacturer": null,
-                "model": null,
-                "name": null,
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "194b149439ce5f08dd9a1b1c5a807cde",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "ac004ea263e423eea2e9369e8cec4374"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "sonoff",
-                        "10009c0093"
-                    ]
-                ],
-                "manufacturer": null,
-                "model": "Single Channel DIY",
-                "name": "Single Channel DIY",
-                "sw_version": "3.6.0",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "fde5ecd11933cce3038ba3bd0bf49114",
-                "via_device_id": null,
-                "area_id": "bagno_grande",
-                "name_by_user": "Specchiera",
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "ac004ea263e423eea2e9369e8cec4374"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "sonoff",
-                        "10009bdd07"
-                    ]
-                ],
-                "manufacturer": null,
-                "model": "Single Channel DIY",
-                "name": "Single Channel DIY",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "4def92e3f42b71ba9a7b4e58ba364cdb",
-                "via_device_id": null,
-                "area_id": "bagno_piccolo",
-                "name_by_user": "Deumidificatore",
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "867ebd3f688bb709995405d000aeddd7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "netatmo",
-                        ""
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Smart Thermostat",
-                "name": "Casa",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "11eefa1c05d1af4d889007a4d608dfc3",
-                "via_device_id": null,
-                "area_id": "camera_di_silvia",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/energy"
-            },
-            {
-                "config_entries": [
-                    "867ebd3f688bb709995405d000aeddd7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "netatmo",
-                        "3098778908"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Smart Radiator Valves",
-                "name": "",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "71e1af419cc80c68512978cddab01810",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/"
-            },
-            {
-                "config_entries": [
-                    "867ebd3f688bb709995405d000aeddd7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "netatmo",
-                        "1051037064"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Smart Radiator Valves",
-                "name": "",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "a9243549ae6f75b9af074629891da7ee",
-                "via_device_id": null,
-                "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/"
-            },
-            {
-                "config_entries": [
-                    "867ebd3f688bb709995405d000aeddd7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "netatmo",
-                        "2986348326"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Smart Radiator Valves",
-                "name": "",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "422485cf3fa0a0568fa0318e7e7bb306",
-                "via_device_id": null,
-                "area_id": "71ab9ec07d524a7a9090cae6302d1689",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/"
-            },
-            {
-                "config_entries": [
-                    "867ebd3f688bb709995405d000aeddd7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "netatmo",
-                        "3131539790"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Smart Radiator Valves",
-                "name": "",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "17f6d32159a53c917354a0325c204d53",
-                "via_device_id": null,
-                "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/"
-            },
-            {
-                "config_entries": [
-                    "867ebd3f688bb709995405d000aeddd7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "netatmo",
-                        "621190153"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Smart Radiator Valves",
-                "name": "",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "1ac2e67b76c6ff65ced2f60d83102c2d",
-                "via_device_id": null,
-                "area_id": "bagno_grande",
-                "name_by_user": "Valvola",
-                "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/"
-            },
-            {
-                "config_entries": [
-                    "867ebd3f688bb709995405d000aeddd7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "netatmo",
-                        "318217693"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Smart Radiator Valves",
-                "name": "",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "e9b948617c4b3a498fcaaed8a95551ad",
-                "via_device_id": null,
-                "area_id": "bagno_piccolo",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/"
-            },
-            {
-                "config_entries": [
-                    "867ebd3f688bb709995405d000aeddd7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "netatmo",
-                        "3781378344"
-                    ]
-                ],
-                "manufacturer": "Netatmo",
-                "model": "Smart Thermostat",
-                "name": "",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": null,
-                "id": "fd068e724c2bd6573cf7b06521e06f56",
-                "via_device_id": null,
-                "area_id": "camera_di_silvia",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://my.netatmo.com/app/"
-            },
-            {
-                "config_entries": [
-                    "004d7513094a295088e95612e743c925"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "meross_cloud",
-                        "#BASE:1810220467069629085334298f16f8dc"
-                    ]
-                ],
-                "manufacturer": "Meross",
-                "model": "mss425e 2.0.0",
-                "name": "CiabattaMeross",
-                "sw_version": "2.1.3",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "307bec71b0ad46da83e606879f5f8691",
-                "via_device_id": null,
-                "area_id": "box",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "d85e4883fab13fb58ae0945b9641427d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "EAF9F881-2D6F-44BB-A131-310376BAB092"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "iPhone14,5",
-                "name": "iPhone di Silvia",
-                "sw_version": "15.5",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "1b849090db5d0759380be21c774bb7e3",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "d3410ae91453457bd9a3c0b2d06793fd"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "96:a0:2f:62:f5:0a"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "homekit",
-                        "d3410ae91453457bd9a3c0b2d06793fd",
-                        "homekit.bridge"
-                    ]
-                ],
-                "manufacturer": "Home Assistant",
-                "model": "HomeKit Accessory",
-                "name": "Bridge Camera Box:51833 (Box)",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "3d24dc5fdc9a6d3b5d97c46dc3ace082",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "0affc9b6805641c78434c3727f918fbc"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "05:8a:ca:da:48:05"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "homekit",
-                        "0affc9b6805641c78434c3727f918fbc",
-                        "homekit.bridge"
-                    ]
-                ],
-                "manufacturer": "Home Assistant",
-                "model": "HomeKit Accessory",
-                "name": "Bridge Samsung:52300 (Samsung)",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "c8cb67cadb46ea01f26403560b0fbe7a",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "083e5d7ec40e4fbbbddaeaa13c4d17d1"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "e6:7d:85:15:ff:80"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "homekit",
-                        "083e5d7ec40e4fbbbddaeaa13c4d17d1",
-                        "homekit.bridge"
-                    ]
-                ],
-                "manufacturer": "Home Assistant",
-                "model": "HomeKit Bridge",
-                "name": "Home Assistant Bridge:51827",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "a715953cef88430c84cf6123eb6ed9d3",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "0324a909892abbd3015da0907c48b3d6"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "69:43:22:35:11:30"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "homekit",
-                        "0324a909892abbd3015da0907c48b3d6",
-                        "homekit.bridge"
-                    ]
-                ],
-                "manufacturer": "Home Assistant",
-                "model": "HomeKit Accessory",
-                "name": "Bridge Onkyo:52100 (Onkyo)",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "d6f7a00ee31d755585c6331ecd286a2d",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "e9182f6d0b27fb62f7ac068311f3bb49"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "9b:13:aa:c3:54:21"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "homekit",
-                        "e9182f6d0b27fb62f7ac068311f3bb49",
-                        "homekit.bridge"
-                    ]
-                ],
-                "manufacturer": "Home Assistant",
-                "model": "HomeKit Accessory",
-                "name": "Bridge LG:51828 (LG)",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "3b489e251d180ce76e0635de63a4043e",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "8dac0317844aa2fcc319237c924ba805"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "9e:4b:76:8d:1f:08"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "homekit",
-                        "8dac0317844aa2fcc319237c924ba805",
-                        "homekit.bridge"
-                    ]
-                ],
-                "manufacturer": "Home Assistant",
-                "model": "HomeKit Accessory",
-                "name": "Bridge Selecline:52200 (Selecline)",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "3105fad17789c31663d4f7fed1c1fdba",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "1976e92d595185a52e4a6c8a11028979"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "e7:2f:cd:3c:dd:69"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "homekit",
-                        "1976e92d595185a52e4a6c8a11028979",
-                        "homekit.bridge"
-                    ]
-                ],
-                "manufacturer": "Home Assistant",
-                "model": "HomeKit Accessory",
-                "name": "Bridge Camera Ingresso:51832 (ingresso)",
-                "sw_version": null,
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "a660acae7a084e45981394933c15426f",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "471c40ef500a3ea963c27235d6baabf8"
-                ],
-                "connections": [
-                    [
-                        "mac",
-                        "28:ff:3c:97:6f:3b"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "apple_tv",
-                        "7C1EA4BE-9CFB-48F9-985A-613EB29B77D5"
-                    ]
-                ],
-                "manufacturer": "Apple",
-                "model": "Apple TV 4",
-                "name": "Studio",
-                "sw_version": "15.5.1",
-                "hw_version": null,
-                "entry_type": null,
-                "id": "f248ea07514094031519b320d8e4d117",
-                "via_device_id": null,
-                "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": null
-            },
-            {
-                "config_entries": [
-                    "d368be8d4786e6be0f670326cba6df85"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "hacs",
-                        "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
-                    ]
-                ],
-                "manufacturer": "hacs.xyz",
-                "model": "",
-                "name": "HACS",
-                "sw_version": "1.25.5",
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "aa915ca618ed198f3cd6637f8a5584b5",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "homeassistant://hacs"
-            },
-            {
-                "config_entries": [
-                    "5b08d6e19a47328a875fb4aef449fe38"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "watchman",
-                        "watchman_unique_id"
-                    ]
-                ],
-                "manufacturer": "dummylabs",
-                "model": "Watchman",
-                "name": "Watchman",
-                "sw_version": "0.6.0",
-                "hw_version": null,
-                "entry_type": "service",
-                "id": "1cc62c705d92ea6bc57b32e107d52042",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null,
-                "configuration_url": "https://github.com/dummylabs/thewatchman"
-            }
+  "version": 1,
+  "minor_version": 3,
+  "key": "core.device_registry",
+  "data": {
+    "devices": [
+      {
+        "config_entries": [
+          "768a1a54fb2211ea8e662970566f9c2d"
         ],
-        "deleted_devices": [
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x00158d00052dbd04"
-                    ]
-                ],
-                "id": "85276c6617b511eb8cdac97e80e9bea3",
-                "orphaned_timestamp": null
-            },
-            {
-                "config_entries": [
-                    "e1bb7f50b722a743f111354fe638257d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "alexa_media",
-                        "G0911B05922208KW"
-                    ]
-                ],
-                "id": "d64918f96b5092be71c8d801895ba914",
-                "orphaned_timestamp": null
-            },
-            {
-                "config_entries": [
-                    "43822e37b9c1e645028cd3ed55a12379"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "speedtestdotnet",
-                        "43822e37b9c1e645028cd3ed55a12379"
-                    ]
-                ],
-                "id": "08518099133fa1b4d7784794dbe75366",
-                "orphaned_timestamp": null
-            },
-            {
-                "config_entries": [
-                    "df63284931684609881c09f983a4456d"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "zigbee2mqtt_0x0c4314fffe5740c7"
-                    ]
-                ],
-                "id": "0bded490e5d7734997d1dc1dcfe1f655",
-                "orphaned_timestamp": null
-            },
-            {
-                "config_entries": [],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "meross_cloud",
-                        "manager#sensor"
-                    ]
-                ],
-                "id": "ae9b6b66204023003c82f0a9243f6d5c",
-                "orphaned_timestamp": 1652092498.7551892
-            },
-            {
-                "config_entries": [],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "meross_cloud",
-                        "manager#API"
-                    ]
-                ],
-                "id": "2736779a67cac9b5300efdd95e6d1afe",
-                "orphaned_timestamp": 1652092498.7551892
-            },
-            {
-                "config_entries": [
-                    "89e8dcef812953029759943484a2a213"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "tuya",
-                        "bf59303c89ae38e766znbo"
-                    ]
-                ],
-                "id": "97ba14749382c6dc93b3dc515c5b7ec4",
-                "orphaned_timestamp": null
-            },
-            {
-                "config_entries": [],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "323744E5-D9CE-4F85-AC54-D8AEA464E382"
-                    ]
-                ],
-                "id": "a4c817830afd162705e620d18ea88909",
-                "orphaned_timestamp": 1653310271.5644572
-            },
-            {
-                "config_entries": [],
-                "connections": [
-                    [
-                        "mac",
-                        "28:ff:3c:97:6f:3b"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "apple_tv",
-                        "28:FF:3C:97:6F:3B"
-                    ]
-                ],
-                "id": "295ce18bfee3b74e92086804c8b8ee7c",
-                "orphaned_timestamp": 1654269621.9850469
-            }
-        ]
-    }
+        "connections": [
+          [
+            "mac",
+            "78:0f:77:18:16:50"
+          ]
+        ],
+        "identifiers": [
+          [
+            "broadlink",
+            "780f77181650"
+          ]
+        ],
+        "manufacturer": "Broadlink",
+        "model": "RM pro+",
+        "name": "Broadlink Studio",
+        "sw_version": 52,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "77821346fb2211ea8ac23158ae9c12c3",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "cd8a675cfb2211ea8d329b6fc001a016"
+        ],
+        "connections": [
+          [
+            "mac",
+            "78:0f:77:d6:49:a1"
+          ]
+        ],
+        "identifiers": [
+          [
+            "broadlink",
+            "780f77d649a1"
+          ]
+        ],
+        "manufacturer": "Broadlink",
+        "model": "RM mini 3",
+        "name": "Broadlink Cucina",
+        "sw_version": 50,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "d094039afb2211eabea9d3df02aef147",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e9b42fa8fb2211eaaadddb8102a75477"
+        ],
+        "connections": [
+          [
+            "mac",
+            "78:0f:77:d6:43:a2"
+          ]
+        ],
+        "identifiers": [
+          [
+            "broadlink",
+            "780f77d643a2"
+          ]
+        ],
+        "manufacturer": "Broadlink",
+        "model": "RM mini 3",
+        "name": "Broadlink Ingresso",
+        "sw_version": 50,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "eccb3b08fb2211eaac49db7354418235",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "cecbfea8e55c1f6be43e702b170eeefd"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "EUCB091745001457"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "A6:8B:C0:53:8D:2F:aid:1"
+          ]
+        ],
+        "manufacturer": "Koogeek",
+        "model": "LB1",
+        "name": "Koogeek-LB1-1F299C",
+        "sw_version": "2.2.2",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "ccd30f559705dc5b67f8528757230b7a",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x842e14fffe366818"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "10A UK or 16A EU smart plug (TS0121_plug)",
+        "name": "Presa Samsung",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "31a5e3fe2d00d075f5f33e4303933f5a",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x680ae2fffec2023e"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI ON/OFF switch (E1743)",
+        "name": "IkeaSwitch",
+        "sw_version": "2.2.010",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "7ad32cf8be5411869000108ed0288fd8",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d0005446d5f"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
+        "name": "Balcone",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "b9b99e0293e48bbeed107dbd83845e26",
+        "via_device_id": null,
+        "area_id": "670ce061c6aa4dd9bd2a9d4fc8567a82",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00054b38ec"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara human body movement and illuminance sensor (RTCGQ11LM)",
+        "name": "PIR Scale",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "779d2b1c81e26f0cbd62668ad8d72fe8",
+        "via_device_id": null,
+        "area_id": "scale",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x588e81fffeff5df4"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "10A UK or 16A EU smart plug (TS0121_plug)",
+        "name": "Presa Selecline",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "f60fa617b8d9f1cc73816bf7f20eebd7",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x086bd7fffe219622"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI control outlet (E1603/E1702/E1708)",
+        "name": "IkeaPresa",
+        "sw_version": "2.0.024",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "713c81dd1555cde31491f62949df0d91",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00058034f0"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Bagno Grande",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "c7c4e6e8d1bb37bb42b39c1ae6a42ba7",
+        "via_device_id": null,
+        "area_id": "bagno_grande",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d000581a07f"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Porta Casa",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "975b1d41222ac68271f276f1976ebefc",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d0005803786"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Bagno Piccolo",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "ea0790b1996b130d2bad86ecda1662da",
+        "via_device_id": null,
+        "area_id": "bagno_piccolo",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d0005819be8"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Condizionatore",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "c87e304fea25e2fe6d72a3aea0053406",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "629cea43a7dc915ef40fa7991f9c855c"
+        ],
+        "connections": [
+          [
+            "mac",
+            "58:55:ca:1e:47:6a"
+          ]
+        ],
+        "identifiers": [
+          [
+            "apple_tv",
+            "4665EA5761AF1FE6"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "Apple TV 2",
+        "name": "AppleTV Ingresso",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "b50945278a28eb028ca5d933a1e72110",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x5c0272fffec3dc2e"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "Temperature & humidity sensor with display (TS0201)",
+        "name": "LCD BagnoGrande",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "11bffe6bb871ccd61a7a9fc220b9e588",
+        "via_device_id": null,
+        "area_id": "bagno_grande",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x5c0272fffecbe82f"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "Temperature & humidity sensor with display (TS0201)",
+        "name": "LCD BagnoPiccolo",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "c5ec5c16fed410bff8cdf01eff85f233",
+        "via_device_id": null,
+        "area_id": "bagno_piccolo",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "fd6a8ece6da2418884a32de8f7fd5c6f"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "THIRD_PARTY_AVS_MEDIA_DISPLAY AILBSA2LNTOYL",
+        "name": "Davide's Reverb.ai",
+        "sw_version": "0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "5e885423b2bad455df4186fcc4e314d5",
+        "via_device_id": "5e885423b2bad455df4186fcc4e314d5",
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "0fb7ba021c0f495ea36c4b99d68a05a4"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "WHA A3C9PE6TNYLTCH",
+        "name": "Dappertutto",
+        "sw_version": "0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "41285beafb0b30d0ceb86bd50f29845f",
+        "via_device_id": "41285beafb0b30d0ceb86bd50f29845f",
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "dafba6bc85d046d8a9c9106beb2013ba"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "WHA A3C9PE6TNYLTCH",
+        "name": "Ovunque",
+        "sw_version": "0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "aa123b51edceca8fa4e779efe83b4219",
+        "via_device_id": "aa123b51edceca8fa4e779efe83b4219",
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "70bff0d73a81483fb50f502864654858"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "UNKNOWN A3TEIMUZAESJMQ",
+        "name": "Altoparlante",
+        "sw_version": "20200706",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "d0a95f781f95353cd6705d1bdfdae8d0",
+        "via_device_id": "d0a95f781f95353cd6705d1bdfdae8d0",
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "G090U50783942833"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "ECHO A32DOYMUN6DTXA",
+        "name": "Echo Dot camera letto",
+        "sw_version": "7416571268",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "545d11654ef8161944d215556984a9c3",
+        "via_device_id": "545d11654ef8161944d215556984a9c3",
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "G090U50783750KDP"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "ECHO A32DOYMUN6DTXA",
+        "name": "Echo Dot ingresso",
+        "sw_version": "7416571268",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "a6e71c203694bc5a543f19fc9624d77e",
+        "via_device_id": "a6e71c203694bc5a543f19fc9624d77e",
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "G090P3088412038C"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "ECHO A7WXQPH584YP",
+        "name": "Echo Studio",
+        "sw_version": "679756920",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "60708f61a5d71949d77ef480154dc8e2",
+        "via_device_id": "60708f61a5d71949d77ef480154dc8e2",
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "G070QQ0783730BMV"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "FIRE_TV A2LWARUGJLBYEW",
+        "name": "Fire TV Stick",
+        "sw_version": "672831820",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "bfe66482cbbe380f6ec892d4b6a2ee27",
+        "via_device_id": "bfe66482cbbe380f6ec892d4b6a2ee27",
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x842e14fffe1262dd"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "10A UK or 16A EU smart plug (TS0121_plug)",
+        "name": "Presa Onkyo",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "22aae68d75088c6c43a8cf03db26e9b7",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x842e14fffe1265ac"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "10A UK or 16A EU smart plug (TS0121_plug)",
+        "name": "Presa Phon",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "329569aa759cd14fa25d1e8f6c42f20b",
+        "via_device_id": null,
+        "area_id": "bagno_grande",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x588e81fffed39fdd"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "10A UK or 16A EU smart plug (TS0121_plug)",
+        "name": "Presa Mediaplayer",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "cabd308e2533907fb6be4a18228a9434",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x588e81fffed393d7"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "10A UK or 16A EU smart plug (TS0121_plug)",
+        "name": "Presa Frigo",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "182c697bbcb0e8059494738ceda990db",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00028eafae"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Porta Balcone Studio",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "b37cbbbb7ba1186feb4b510ac1f7dff8",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00028d39d9"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Porta Balcone Cucina",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "33c8bac72202bc1216740c9fdd2b7ee2",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00069ae9ec"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Finestra Silvia",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "7a012a2160a92da6758e7e5b4a3f4829",
+        "via_device_id": null,
+        "area_id": "camera_di_silvia",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00028d3815"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Porta Balcone Ingresso",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "b870a7c2609000c05e5237b3fefa2630",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d0006c4c071"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+        "name": "Porta Balcone Letto",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "8275a967aa50892734d4f8a29142557f",
+        "via_device_id": null,
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9bade6edf4e81bd5367c7412c5c21514"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "openweathermap",
+            "45.11016488561856-7.665452957153321"
+          ]
+        ],
+        "manufacturer": "OpenWeather",
+        "model": null,
+        "name": "OpenWeatherMap",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "e682ed72f94bbd43ad5f87b97addf3e5",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9658bce1ed65d115f75174b94c86f2c2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:2"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "j0a33a0"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Netatmo Smart Thermostat",
+        "name": "Netatmo Smart Thermostat",
+        "sw_version": "75",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "7bb80423cb35b6c292cf74576fcab7bc",
+        "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
+        "area_id": "camera_di_silvia",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9658bce1ed65d115f75174b94c86f2c2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:3"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "o046cd6"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Netatmo Valve",
+        "name": "Netatmo Valve 1",
+        "sw_version": "85",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "e2325502b4f735fc71c3832bad750558",
+        "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9658bce1ed65d115f75174b94c86f2c2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "o1345c8"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:4"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Netatmo Valve",
+        "name": "Netatmo Valve 2",
+        "sw_version": "85",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "8592f1ae822c52d32c2af28e41e3d237",
+        "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9658bce1ed65d115f75174b94c86f2c2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:6"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "o1583c8"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Netatmo Valve",
+        "name": "Netatmo Valve 3",
+        "sw_version": "85",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "3000017b539efc7d5bd383848b837ced",
+        "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9658bce1ed65d115f75174b94c86f2c2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "o154fc2"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:7"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Netatmo Valve",
+        "name": "Netatmo Valve 4",
+        "sw_version": "85",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "ddb4cf31682313d50b3eb16a689e9cf5",
+        "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
+        "area_id": "bagno_grande",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9658bce1ed65d115f75174b94c86f2c2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "o153d75"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:8"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Netatmo Valve",
+        "name": "Netatmo Valve 5",
+        "sw_version": "85",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "33d5470690cebd58d04116b2c95fcf50",
+        "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
+        "area_id": "bagno_piccolo",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9658bce1ed65d115f75174b94c86f2c2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "o15481f"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:10"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Netatmo Valve",
+        "name": "Netatmo Valve 7",
+        "sw_version": "85",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "95176d289c4615fd51b96fee9170c3a6",
+        "via_device_id": "2b3ddb5807433a6fd8f7590f43c428bd",
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "9658bce1ed65d115f75174b94c86f2c2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "g0a1e8c"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:1"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Netatmo Relay",
+        "name": "Netatmo Relay",
+        "sw_version": "222.0.0",
+        "hw_version": "",
+        "entry_type": null,
+        "id": "2b3ddb5807433a6fd8f7590f43c428bd",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0xbc33acfffe516296"
+          ]
+        ],
+        "manufacturer": "Lidl",
+        "model": "Silvercrest 3 gang switch, with 4 USB (EU, FR, CZ, BS) (HG06338)",
+        "name": "CiabattaScrivania",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "ecf55478c5a2c23f1f3e587706f0ebc1",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x60a423fffe3f6d3f"
+          ]
+        ],
+        "manufacturer": "Lidl",
+        "model": "Livarno Lux smart LED light strip 2.5m (HG06104A)",
+        "name": "Striscia Letto",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "d906a0a6b4091b79abd3a82e0db88e9a",
+        "via_device_id": null,
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00063dd645"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "MiJia temperature & humidity sensor (WSDCGQ01LM)",
+        "name": "Frigo",
+        "sw_version": "3000-0001",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "63a30757f131719c10dad1907111c6dc",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "89e8dcef812953029759943484a2a213"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "tuya",
+            "74245070807d3a762cde"
+          ]
+        ],
+        "manufacturer": "Tuya",
+        "model": "RGBC Smart Bulb  (heeU2AWVxpxfqP6D)",
+        "name": "Ballerini",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "a47b1f43d57b5490111443948935d840",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0xbc33acfffef5ba82"
+          ]
+        ],
+        "manufacturer": "Lidl",
+        "model": "Livarno Lux smart LED light strip 2.5m (HG06104A)",
+        "name": "Cappa",
+        "sw_version": "Zigbee2MQTT 1.22.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "4fd5a77368a7ec2f970e99ec8248b8b3",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "1b23c543d8c1576345267a685ebd2a92"
+        ],
+        "connections": [
+          [
+            "upnp",
+            "uuid:FF310080-2A8E-DE0B-8577-C3E7FF310080"
+          ]
+        ],
+        "identifiers": [
+          [
+            "dlna_dmr",
+            "uuid:FF310080-2A8E-DE0B-8577-C3E7FF310080"
+          ]
+        ],
+        "manufacturer": "wiimu",
+        "model": "WiiMu LinkPlayer",
+        "name": "GGMM-E3",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "91b0dab4c3d2fdc1d981f416751b8aee",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "G0916D12129202ET"
+          ]
+        ],
+        "manufacturer": "Amazon",
+        "model": "KNIGHT A1Z88NGR2BK6A2",
+        "name": "Echo Show",
+        "sw_version": "7148112260",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "7cc385d7ec17a3e24c23d6bbe92df349",
+        "via_device_id": "7cc385d7ec17a3e24c23d6bbe92df349",
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "322a809687918224f91b09cf68f719c6"
+        ],
+        "connections": [
+          [
+            "mac",
+            "cc:50:e3:3c:26:cf"
+          ]
+        ],
+        "identifiers": [
+          [
+            "wled",
+            "cc50e33c26cf"
+          ]
+        ],
+        "manufacturer": "WLED",
+        "model": "FOSS",
+        "name": "WLED",
+        "sw_version": "0.13.1",
+        "hw_version": "esp8266",
+        "entry_type": null,
+        "id": "dcf50e9b7fb28064e3e47fe4389ac537",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "http://192.168.1.135"
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "4C:65:A8:DD:D2:48"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "LYWSDCGQ",
+        "name": "4C65A8DDD248",
+        "sw_version": "Xiaomi (MiBeacon V2)",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "4769b984ff43c0a52bd904a9db642767",
+        "via_device_id": null,
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": "Sensore BLE",
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "7df27ab7f89b533abf52850f89d7b2a9"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "deebot",
+            "9b501991-b12e-4b8a-9080-b412c82b32ad"
+          ]
+        ],
+        "manufacturer": "Ecovacs",
+        "model": "DEEBOT OZMO 950 Series",
+        "name": "Ambrogio",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "1c92b63d9a1ab60cecf8b1bebacd7237",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "f21bb52bd212b6b45878f59143175134"
+        ],
+        "connections": [
+          [
+            "upnp",
+            "uuid:49f7b3fd-0090-a9c4-c21c-4dd7a87700ba"
+          ]
+        ],
+        "identifiers": [
+          [
+            "dlna_dmr",
+            "uuid:49f7b3fd-0090-a9c4-c21c-4dd7a87700ba"
+          ]
+        ],
+        "manufacturer": "Western Digital Corporation",
+        "model": "WD TV Live",
+        "name": "WDTVLive - currently in use",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "04aebc1ed44d04575a12f33debeffb65",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "608be10bfa92e10fb8aa969d76f5cda2"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "co2signal",
+            "608be10bfa92e10fb8aa969d76f5cda2"
+          ]
+        ],
+        "manufacturer": "Tmrow.com",
+        "model": null,
+        "name": "CO2 signal",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "626756227f3577cd970978b349762cdd",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://www.electricitymap.org/"
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "A8:1B:6A:B7:8F:C5"
+          ]
+        ],
+        "manufacturer": "Oral-B",
+        "model": "SmartSeries 7000",
+        "name": "A81B6AB78FC5",
+        "sw_version": "Oral-B",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "2615fc512249cd2088ff2080c4a98599",
+        "via_device_id": null,
+        "area_id": "bagno_grande",
+        "name_by_user": "Spazzolino Denti",
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "fa9485314dfdb3996e2af1030be74814"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mobile_app",
+            "206F1F99-97B5-4F43-BD22-84757C503924"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iPhone10,6",
+        "name": "iPhone x di Scialla",
+        "sw_version": "15.5",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "41af8d10caf2b9cf6fd39475bcf88359",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0xcc86ecfffe9fb794"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "STYRBAR remote control N2 (E2001/E2002)",
+        "name": "IkeaMultiLightSwitch",
+        "sw_version": "1.0.024",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "076416b0230310d902d92839a85c27d9",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x0c4314fffe483d67"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI shortcut button (E1812)",
+        "name": "PulsanteIkea1",
+        "sw_version": "2.3.015",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "7baa38d2111885f925dc0f4bfd97db1c",
+        "via_device_id": null,
+        "area_id": "camera_di_silvia",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0xb4e3f9fffe751ca1"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI motion sensor (E1525/E1745)",
+        "name": "IkeaPIR1",
+        "sw_version": "2.0.022",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "d8cea40fa127e42164cd2f16c641594f",
+        "via_device_id": null,
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x84fd27fffe4225c6"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI shortcut button (E1812)",
+        "name": "PulsanteIkea2",
+        "sw_version": "2.3.015",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "983885878c8f5965809f73638aa51b3f",
+        "via_device_id": null,
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x0c4314fffedbba1b"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "STYRBAR remote control N2 (E2001/E2002)",
+        "name": "IkeaMultiLightSwitch2",
+        "sw_version": "1.0.024",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "62c2d941a1a9b2a90613dd1b6796600f",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA879613A492"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA879613A492",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "442535ce0c2888f969f02ced70db8161",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D921-0099-A4FA-879613A4928E"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9210099A4FA879613A4928E",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "05351efcd11bfae1f41bdc53e75c40ce",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D94E-0021-99A4-FA879613A492"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D94E002199A4FA879613A492",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "33b36e2a3f130b345c9081b9fa231ffe",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "1CA92E23-F087-4DF7-B9A2-FD4B716A4BF6"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "1CA92E23F0874DF7B9A2FD4B716A4BF6",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "48ce6d49f2057e8e4ecde58dbd6f08f5",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9A4-00FA-8796-13A4928EE71F"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9A400FA879613A4928EE71F",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "5ecaf0b079ee207ecc6f2ebd8e374bb4",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA879613A4E7"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA879613A4E7",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "89a3604005164cd58979ade3918b4e1a",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA879692008E"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA879692008E",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "3ffc34b64e3fe05a57dbde58cb628d82",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9FA-0087-9613-A4928EE71F1A"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9FA00879613A4928EE71F1A",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "6c432155714384d4c39dd50265206773",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA8796A40092"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA8796A40092",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "974cdd50c43f10507e6fef2fc6dfea0d",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D999-00A4-FA87-9613A4928EE7"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D99900A4FA879613A4928EE7",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "9530c2d001d5f0cb6e6bffc0945d128f",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA8796E7001F"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA8796E7001F",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "d9dddf06cf0bb3c66af11106f3e3b51e",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-9900-A4FA-879613A4928E"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA9900A4FA879613A4928E",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "f18ec8003e4be3bd6e078d777da16a31",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA8796138E00"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA8796138E00",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "d10fc62fdca59e0599e84d9de6b0e850",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA8796139200"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA8796139200",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "d31fc58423fab6e7a32c56c0367c775a",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-4E00-2199-A4FA-879613A4928E"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB74E002199A4FA879613A4928E",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "3f43665f4ab8b3403d83e7ead43eb6e9",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-EA00-4E21-99A4-FA879613A492"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7EA004E2199A4FA879613A492",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "88296c7519110c312ec41e5315f5f7b5",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "af9521407a3548c0a7f5378e4678222a",
+          "d3ce3ce93b345e6f8a4846b42559f716",
+          "9b22afd876018a439f729fd9b5f2f48b"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "Home Assistant",
+            "version"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": null,
+        "name": "Home Assistant Version",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "a40546ee04058a995cee77ee84c1251a",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "fa43b289e8a20b7a869f304dae45b4b7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "webostv",
+            "ae18c3bd-c627-1c5a-eb5a-2b01d4005ffd"
+          ]
+        ],
+        "manufacturer": "LG",
+        "model": "43UH620V-ZA",
+        "name": "LG",
+        "sw_version": "05.60.15",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "92a249cddcec43d2f78e87347573ba52",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA8796131F00"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA8796131F00",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "1af9d422279ddb6260a3800971736f63",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA879613E700"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA879613E700",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "a850df32f62499d8e7a704a3d37aecd8",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D904-003E-1D02-010001C48DA7"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D904003E1D02010001C48DA7",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "f1bb4d1e62230603dc57e30aa06693da",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "50765CB7-D9EA-4E21-99A4-FA87968E00E7"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "50765CB7D9EA4E2199A4FA87968E00E7",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "700db86952eb0c5c176d475ab97548d2",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8d1a6e1e1280a62c0301781ab136d12f"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "ble_monitor",
+            "E2C56DB5-DFFB-48D2-B060-D0F5A71096E0"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iBeacon",
+        "name": "E2C56DB5DFFB48D2B060D0F5A71096E0",
+        "sw_version": "iBeacon",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "da22745020a1fe721f4be274199a960a",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": "user",
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x588e81fffed393c6"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "10A UK or 16A EU smart plug (TS0121_plug)",
+        "name": "Lampada Zanzare",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "e2cf28291f245f5ba5ef31cdd0453fb6",
+        "via_device_id": null,
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x842e14fffe3a42aa"
+          ]
+        ],
+        "manufacturer": "TuYa",
+        "model": "10A UK or 16A EU smart plug (TS0121_plug)",
+        "name": "Presa Jolly",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "a34551c27bc9409e68eab40c1e9166e7",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x84fd27fffecf68bd"
+          ]
+        ],
+        "manufacturer": "Lidl",
+        "model": "Silvercrest smart plug (EU, CH, FR, BS, DK) (HG06337)",
+        "name": "Antenna TV",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "923febd0c6cf204acf94068e42ad1d6e",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "4c1911a45f97932f3a03b863cd0393c6"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "speedtestdotnet",
+            "4c1911a45f97932f3a03b863cd0393c6"
+          ]
+        ],
+        "manufacturer": null,
+        "model": null,
+        "name": "SpeedTest",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "0cb4b725509d6a5cd54f943aa2289332",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://www.speedtest.net/"
+      },
+      {
+        "config_entries": [
+          "9cd4196ba4a4cbbf390ee9dfe9564650"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mobile_app",
+            "A24842F7-9837-46FE-96DA-7C191FAD1187"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iPhone7,2",
+        "name": "iPhone di Giovanna",
+        "sw_version": "12.5.5",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "ac3fe5baa27450f3b49bf2aabc4608ab",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "f63a31156505323e7fddaa24098c0e20"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "whois",
+            "scialla.duckdns.org"
+          ]
+        ],
+        "manufacturer": null,
+        "model": null,
+        "name": null,
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "b05a74aa364e192be4f6ff12182a35d3",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "2ad1fd2f0893c9331242bcf271f34b27"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "whois",
+            "scialla.ddns.net"
+          ]
+        ],
+        "manufacturer": null,
+        "model": null,
+        "name": null,
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "194b149439ce5f08dd9a1b1c5a807cde",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "ac004ea263e423eea2e9369e8cec4374"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "sonoff",
+            "10009c0093"
+          ]
+        ],
+        "manufacturer": null,
+        "model": "Single Channel DIY",
+        "name": "Single Channel DIY",
+        "sw_version": "3.6.0",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "fde5ecd11933cce3038ba3bd0bf49114",
+        "via_device_id": null,
+        "area_id": "bagno_grande",
+        "name_by_user": "Specchiera",
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "ac004ea263e423eea2e9369e8cec4374"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "sonoff",
+            "10009bdd07"
+          ]
+        ],
+        "manufacturer": null,
+        "model": "Single Channel DIY",
+        "name": "Single Channel DIY",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "4def92e3f42b71ba9a7b4e58ba364cdb",
+        "via_device_id": null,
+        "area_id": "bagno_piccolo",
+        "name_by_user": "Deumidificatore",
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "867ebd3f688bb709995405d000aeddd7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "netatmo",
+            ""
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Smart Thermostat",
+        "name": "Casa",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "11eefa1c05d1af4d889007a4d608dfc3",
+        "via_device_id": null,
+        "area_id": "camera_di_silvia",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://my.netatmo.com/app/energy"
+      },
+      {
+        "config_entries": [
+          "867ebd3f688bb709995405d000aeddd7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "netatmo",
+            "3098778908"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Smart Radiator Valves",
+        "name": "",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "71e1af419cc80c68512978cddab01810",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://my.netatmo.com/app/"
+      },
+      {
+        "config_entries": [
+          "867ebd3f688bb709995405d000aeddd7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "netatmo",
+            "1051037064"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Smart Radiator Valves",
+        "name": "",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "a9243549ae6f75b9af074629891da7ee",
+        "via_device_id": null,
+        "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://my.netatmo.com/app/"
+      },
+      {
+        "config_entries": [
+          "867ebd3f688bb709995405d000aeddd7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "netatmo",
+            "2986348326"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Smart Radiator Valves",
+        "name": "",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "422485cf3fa0a0568fa0318e7e7bb306",
+        "via_device_id": null,
+        "area_id": "71ab9ec07d524a7a9090cae6302d1689",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://my.netatmo.com/app/"
+      },
+      {
+        "config_entries": [
+          "867ebd3f688bb709995405d000aeddd7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "netatmo",
+            "3131539790"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Smart Radiator Valves",
+        "name": "",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "17f6d32159a53c917354a0325c204d53",
+        "via_device_id": null,
+        "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://my.netatmo.com/app/"
+      },
+      {
+        "config_entries": [
+          "867ebd3f688bb709995405d000aeddd7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "netatmo",
+            "621190153"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Smart Radiator Valves",
+        "name": "",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "1ac2e67b76c6ff65ced2f60d83102c2d",
+        "via_device_id": null,
+        "area_id": "bagno_grande",
+        "name_by_user": "Valvola",
+        "disabled_by": null,
+        "configuration_url": "https://my.netatmo.com/app/"
+      },
+      {
+        "config_entries": [
+          "867ebd3f688bb709995405d000aeddd7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "netatmo",
+            "318217693"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Smart Radiator Valves",
+        "name": "",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "e9b948617c4b3a498fcaaed8a95551ad",
+        "via_device_id": null,
+        "area_id": "bagno_piccolo",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://my.netatmo.com/app/"
+      },
+      {
+        "config_entries": [
+          "867ebd3f688bb709995405d000aeddd7"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "netatmo",
+            "3781378344"
+          ]
+        ],
+        "manufacturer": "Netatmo",
+        "model": "Smart Thermostat",
+        "name": "",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": null,
+        "id": "fd068e724c2bd6573cf7b06521e06f56",
+        "via_device_id": null,
+        "area_id": "camera_di_silvia",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://my.netatmo.com/app/"
+      },
+      {
+        "config_entries": [
+          "004d7513094a295088e95612e743c925"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "meross_cloud",
+            "#BASE:1810220467069629085334298f16f8dc"
+          ]
+        ],
+        "manufacturer": "Meross",
+        "model": "mss425e 2.0.0",
+        "name": "CiabattaMeross",
+        "sw_version": "2.1.3",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "307bec71b0ad46da83e606879f5f8691",
+        "via_device_id": null,
+        "area_id": "box",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "d85e4883fab13fb58ae0945b9641427d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mobile_app",
+            "EAF9F881-2D6F-44BB-A131-310376BAB092"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iPhone14,5",
+        "name": "iPhone di Silvia",
+        "sw_version": "15.5",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "1b849090db5d0759380be21c774bb7e3",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "d3410ae91453457bd9a3c0b2d06793fd"
+        ],
+        "connections": [
+          [
+            "mac",
+            "96:a0:2f:62:f5:0a"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "d3410ae91453457bd9a3c0b2d06793fd",
+            "homekit.bridge"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "HomeKit Accessory",
+        "name": "Bridge Camera Box:51833 (Box)",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "3d24dc5fdc9a6d3b5d97c46dc3ace082",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "0affc9b6805641c78434c3727f918fbc"
+        ],
+        "connections": [
+          [
+            "mac",
+            "05:8a:ca:da:48:05"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "0affc9b6805641c78434c3727f918fbc",
+            "homekit.bridge"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "HomeKit Accessory",
+        "name": "Bridge Samsung:52300 (Samsung)",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "c8cb67cadb46ea01f26403560b0fbe7a",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "083e5d7ec40e4fbbbddaeaa13c4d17d1"
+        ],
+        "connections": [
+          [
+            "mac",
+            "e6:7d:85:15:ff:80"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "083e5d7ec40e4fbbbddaeaa13c4d17d1",
+            "homekit.bridge"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "HomeKit Bridge",
+        "name": "Home Assistant Bridge:51827",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "a715953cef88430c84cf6123eb6ed9d3",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "0324a909892abbd3015da0907c48b3d6"
+        ],
+        "connections": [
+          [
+            "mac",
+            "69:43:22:35:11:30"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "0324a909892abbd3015da0907c48b3d6",
+            "homekit.bridge"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "HomeKit Accessory",
+        "name": "Bridge Onkyo:52100 (Onkyo)",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "d6f7a00ee31d755585c6331ecd286a2d",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "e9182f6d0b27fb62f7ac068311f3bb49"
+        ],
+        "connections": [
+          [
+            "mac",
+            "9b:13:aa:c3:54:21"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "e9182f6d0b27fb62f7ac068311f3bb49",
+            "homekit.bridge"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "HomeKit Accessory",
+        "name": "Bridge LG:51828 (LG)",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "3b489e251d180ce76e0635de63a4043e",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "8dac0317844aa2fcc319237c924ba805"
+        ],
+        "connections": [
+          [
+            "mac",
+            "9e:4b:76:8d:1f:08"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "8dac0317844aa2fcc319237c924ba805",
+            "homekit.bridge"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "HomeKit Accessory",
+        "name": "Bridge Selecline:52200 (Selecline)",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "3105fad17789c31663d4f7fed1c1fdba",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "1976e92d595185a52e4a6c8a11028979"
+        ],
+        "connections": [
+          [
+            "mac",
+            "e7:2f:cd:3c:dd:69"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "1976e92d595185a52e4a6c8a11028979",
+            "homekit.bridge"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "HomeKit Accessory",
+        "name": "Bridge Camera Ingresso:51832 (ingresso)",
+        "sw_version": null,
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "a660acae7a084e45981394933c15426f",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "471c40ef500a3ea963c27235d6baabf8"
+        ],
+        "connections": [
+          [
+            "mac",
+            "28:ff:3c:97:6f:3b"
+          ]
+        ],
+        "identifiers": [
+          [
+            "apple_tv",
+            "7C1EA4BE-9CFB-48F9-985A-613EB29B77D5"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "Apple TV 4",
+        "name": "Studio",
+        "sw_version": "15.5.1",
+        "hw_version": null,
+        "entry_type": null,
+        "id": "f248ea07514094031519b320d8e4d117",
+        "via_device_id": null,
+        "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": null
+      },
+      {
+        "config_entries": [
+          "d368be8d4786e6be0f670326cba6df85"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "hacs",
+            "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+          ]
+        ],
+        "manufacturer": "hacs.xyz",
+        "model": "",
+        "name": "HACS",
+        "sw_version": "1.25.5",
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "aa915ca618ed198f3cd6637f8a5584b5",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "homeassistant://hacs"
+      },
+      {
+        "config_entries": [
+          "5b08d6e19a47328a875fb4aef449fe38"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "watchman",
+            "watchman_unique_id"
+          ]
+        ],
+        "manufacturer": "dummylabs",
+        "model": "Watchman",
+        "name": "Watchman",
+        "sw_version": "0.6.0",
+        "hw_version": null,
+        "entry_type": "service",
+        "id": "1cc62c705d92ea6bc57b32e107d52042",
+        "via_device_id": null,
+        "area_id": null,
+        "name_by_user": null,
+        "disabled_by": null,
+        "configuration_url": "https://github.com/dummylabs/thewatchman"
+      }
+    ],
+    "deleted_devices": [
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00052dbd04"
+          ]
+        ],
+        "id": "85276c6617b511eb8cdac97e80e9bea3",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "e1bb7f50b722a743f111354fe638257d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "alexa_media",
+            "G0911B05922208KW"
+          ]
+        ],
+        "id": "d64918f96b5092be71c8d801895ba914",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "43822e37b9c1e645028cd3ed55a12379"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "speedtestdotnet",
+            "43822e37b9c1e645028cd3ed55a12379"
+          ]
+        ],
+        "id": "08518099133fa1b4d7784794dbe75366",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "df63284931684609881c09f983a4456d"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x0c4314fffe5740c7"
+          ]
+        ],
+        "id": "0bded490e5d7734997d1dc1dcfe1f655",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "meross_cloud",
+            "manager#sensor"
+          ]
+        ],
+        "id": "ae9b6b66204023003c82f0a9243f6d5c",
+        "orphaned_timestamp": 1652092498.7551892
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "meross_cloud",
+            "manager#API"
+          ]
+        ],
+        "id": "2736779a67cac9b5300efdd95e6d1afe",
+        "orphaned_timestamp": 1652092498.7551892
+      },
+      {
+        "config_entries": [
+          "89e8dcef812953029759943484a2a213"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "tuya",
+            "bf59303c89ae38e766znbo"
+          ]
+        ],
+        "id": "97ba14749382c6dc93b3dc515c5b7ec4",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "mobile_app",
+            "323744E5-D9CE-4F85-AC54-D8AEA464E382"
+          ]
+        ],
+        "id": "a4c817830afd162705e620d18ea88909",
+        "orphaned_timestamp": 1653310271.5644572
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "28:ff:3c:97:6f:3b"
+          ]
+        ],
+        "identifiers": [
+          [
+            "apple_tv",
+            "28:FF:3C:97:6F:3B"
+          ]
+        ],
+        "id": "295ce18bfee3b74e92086804c8b8ee7c",
+        "orphaned_timestamp": 1654269621.9850469
+      }
+    ]
+  }
 }
