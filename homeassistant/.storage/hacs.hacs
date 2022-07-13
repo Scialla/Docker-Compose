@@ -48,7 +48,9 @@
       "KTibow/lovelace-light-soft-ui-theme",
       "KTibow/lovelace-dark-soft-ui-theme",
       "DCSBL/ha-homewizard-energy",
-      "eavanvalkenburg/sia"
+      "eavanvalkenburg/sia",
+      "Cyr-ius/hass-cozytouch",
+      "Cyr-ius/hass-hue-service-advanced"
     ],
     "renamed_repositories": {
       "xMrVizzy/Philips-AirPurifier": "kraineff/philips-airpurifier",
@@ -65,7 +67,8 @@
       "ulic75/power-distribution-card": "ulic75/power-flow-card",
       "wills106/homsassistant-solax-modbus": "wills106/homeassistant-solax-modbus",
       "dmitry-k/yandex_smart_home": "dext0r/yandex_smart_home",
-      "uvjustin/alarmdotcom": "pyalarmdotcom/alarmdotcom"
+      "uvjustin/alarmdotcom": "pyalarmdotcom/alarmdotcom",
+      "wernerhp/ha_integration_load_shedding": "wernerhp/ha.integration.load_shedding"
     },
     "ignored_repositories": []
   }
