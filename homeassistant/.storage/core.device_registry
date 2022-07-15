@@ -98,12 +98,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:accessory-id",
-            "A6:8B:C0:53:8D:2F:aid:1"
-          ],
-          [
             "homekit_controller:serial-number",
             "EUCB091745001457"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "A6:8B:C0:53:8D:2F:aid:1"
           ]
         ],
         "manufacturer": "Koogeek",
@@ -546,7 +546,7 @@
         "manufacturer": "Amazon",
         "model": "ECHO A32DOYMUN6DTXA",
         "name": "Echo Dot camera letto",
-        "sw_version": "7416571268",
+        "sw_version": "7416572804",
         "hw_version": null,
         "entry_type": null,
         "id": "545d11654ef8161944d215556984a9c3",
@@ -903,12 +903,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:serial-number",
-            "o046cd6"
-          ],
-          [
             "homekit_controller:accessory-id",
             "0B:E3:5F:38:1A:21:aid:3"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "o046cd6"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -931,12 +931,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:accessory-id",
-            "0B:E3:5F:38:1A:21:aid:4"
-          ],
-          [
             "homekit_controller:serial-number",
             "o1345c8"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:4"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -959,12 +959,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:accessory-id",
-            "0B:E3:5F:38:1A:21:aid:6"
-          ],
-          [
             "homekit_controller:serial-number",
             "o1583c8"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:6"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -1015,12 +1015,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:serial-number",
-            "o153d75"
-          ],
-          [
             "homekit_controller:accessory-id",
             "0B:E3:5F:38:1A:21:aid:8"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "o153d75"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -1950,8 +1950,8 @@
       {
         "config_entries": [
           "d3ce3ce93b345e6f8a4846b42559f716",
-          "af9521407a3548c0a7f5378e4678222a",
-          "9b22afd876018a439f729fd9b5f2f48b"
+          "9b22afd876018a439f729fd9b5f2f48b",
+          "af9521407a3548c0a7f5378e4678222a"
         ],
         "connections": [],
         "identifiers": [
@@ -2826,7 +2826,7 @@
         "manufacturer": "hacs.xyz",
         "model": "",
         "name": "HACS",
-        "sw_version": "1.26.0",
+        "sw_version": "1.26.2",
         "hw_version": null,
         "entry_type": "service",
         "id": "aa915ca618ed198f3cd6637f8a5584b5",

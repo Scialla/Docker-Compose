@@ -1,134 +1,134 @@
 {
-    "version": 1,
-    "minor_version": 1,
-    "key": "lovelace_resources",
-    "data": {
-        "items": [
-            {
-                "id": "24f43b4487b546a294f92e2d1f2b857a",
-                "type": "module",
-                "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js?hacstag=1512800620110"
-            },
-            {
-                "id": "24cad80d0de6478fa67720b03d09aecb",
-                "type": "module",
-                "url": "/hacsfiles/button-card/button-card.js"
-            },
-            {
-                "id": "b1e15444ab244501917110ce9348750d",
-                "type": "module",
-                "url": "/browser_mod.js"
-            },
-            {
-                "id": "fe05261dbdfd4a98992a5626353c8f0f",
-                "type": "module",
-                "url": "/hacsfiles/channel-pad/card-channel-pad.js"
-            },
-            {
-                "id": "5d8655978f5249c9a91c4cfa8ea849ef",
-                "type": "module",
-                "url": "/hacsfiles/LG-Keypad/card-numeric-pad.js"
-            },
-            {
-                "id": "57ff9a9c79b24e9985b2c98665758754",
-                "type": "module",
-                "url": "/hacsfiles/LG-WebOS-Remote-Control/lg-remote-control.js?hacstag=25700599091298"
-            },
-            {
-                "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524315",
-                "type": "module",
-                "id": "59cdf427dee246bbaa3061dfe4ac4065"
-            },
-            {
-                "url": "/hacsfiles/lovelace-hui-element/hui-element.js?hacstag=249942054180547",
-                "type": "module",
-                "id": "37888f47107649bfaafbe7a279042a43"
-            },
-            {
-                "url": "/hacsfiles/apexcharts-card/apexcharts-card.js?hacstag=331701152201",
-                "type": "module",
-                "id": "155dcc6ba28d42cc8e77f41bbc9d410d"
-            },
-            {
-                "url": "/hacsfiles/battery-state-card/battery-state-card.js?hacstag=256292682211",
-                "type": "module",
-                "id": "627cf115a12a4be693da66e1f6cb2a59"
-            },
-            {
-                "url": "/hacsfiles/home-assistant-sun-card/home-assistant-sun-card.js?hacstag=366482637014",
-                "type": "module",
-                "id": "7c10764e811e4ce89e229740bfb4aa33"
-            },
-            {
-                "url": "/hacsfiles/vacuum-card/vacuum-card.js?hacstag=261291295263",
-                "type": "module",
-                "id": "950521e74beb4c47841d1b663b138793"
-            },
-            {
-                "url": "/hacsfiles/lovelace-paper-buttons-row/paper-buttons-row.js?hacstag=244872232101",
-                "type": "module",
-                "id": "edb58d937c0a4f6cb1a7ab622fb02e0f"
-            },
-            {
-                "url": "/webrtc/webrtc-camera.js?v2.3.0",
-                "type": "module",
-                "id": "97602a08f99a4063a8d36c7ab26a5a82"
-            },
-            {
-                "url": "/hacsfiles/lovelace-card-tools/card-tools.js?hacstag=16140332811",
-                "type": "module",
-                "id": "cb7a6448107e460296015d405ef740a2"
-            },
-            {
-                "url": "/hacsfiles/secondaryinfo-entity-row/secondaryinfo-entity-row.js?hacstag=15971160550",
-                "type": "module",
-                "id": "02640ad172be44e1a2c1c400d50dc81f"
-            },
-            {
-                "url": "url: /hacsfiles/card-tools.js",
-                "type": "module",
-                "id": "daae7e212f384975a520784f86b36838"
-            },
-            {
-                "url": "url: /hacsfiles/secondaryinfo-entity-row.js",
-                "type": "module",
-                "id": "32b787fc9b4d4b5b9422ffd31af3b7f2"
-            },
-            {
-                "url": "/hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js?hacstag=142051833042",
-                "type": "module",
-                "id": "892ade6f93ed45a6b851404e4e339e0f"
-            },
-            {
-                "url": "/hacsfiles/stack-in-card/stack-in-card.js?hacstag=248954055020",
-                "type": "module",
-                "id": "4113cccb7e204e41bba5ceaf15199807"
-            },
-            {
-                "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375200",
-                "type": "module",
-                "id": "cd6a5e064373473cb66be52e473c9bff"
-            },
-            {
-                "url": "/hacsfiles/config-editor-card/config-editor-card.js?hacstag=43357760343",
-                "type": "module",
-                "id": "808dcab992a04b8797f9530ff870c87a"
-            },
-            {
-                "url": "/hacsfiles/lovelace-layout-card/layout-card.js?hacstag=156434866242",
-                "type": "module",
-                "id": "2d0fef06f3874581af657c51058aa5e2"
-            },
-            {
-                "url": "/hacsfiles/list-card/list-card.js?hacstag=145479324011",
-                "type": "module",
-                "id": "8c6199d48a264380ab75920142ac59c6"
-            },
-            {
-                "url": "/hacsfiles/simple-thermostat/simple-thermostat.js?hacstag=158654878243",
-                "type": "module",
-                "id": "81aa4f143d244764af3f066a5687dc27"
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "24f43b4487b546a294f92e2d1f2b857a",
+        "type": "module",
+        "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js?hacstag=1512800620110"
+      },
+      {
+        "id": "24cad80d0de6478fa67720b03d09aecb",
+        "type": "module",
+        "url": "/hacsfiles/button-card/button-card.js"
+      },
+      {
+        "id": "b1e15444ab244501917110ce9348750d",
+        "type": "module",
+        "url": "/browser_mod.js"
+      },
+      {
+        "id": "fe05261dbdfd4a98992a5626353c8f0f",
+        "type": "module",
+        "url": "/hacsfiles/channel-pad/card-channel-pad.js"
+      },
+      {
+        "id": "5d8655978f5249c9a91c4cfa8ea849ef",
+        "type": "module",
+        "url": "/hacsfiles/LG-Keypad/card-numeric-pad.js"
+      },
+      {
+        "id": "57ff9a9c79b24e9985b2c98665758754",
+        "type": "module",
+        "url": "/hacsfiles/LG-WebOS-Remote-Control/lg-remote-control.js?hacstag=25700599091298"
+      },
+      {
+        "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524315",
+        "type": "module",
+        "id": "59cdf427dee246bbaa3061dfe4ac4065"
+      },
+      {
+        "url": "/hacsfiles/lovelace-hui-element/hui-element.js?hacstag=249942054180547",
+        "type": "module",
+        "id": "37888f47107649bfaafbe7a279042a43"
+      },
+      {
+        "url": "/hacsfiles/apexcharts-card/apexcharts-card.js?hacstag=331701152201",
+        "type": "module",
+        "id": "155dcc6ba28d42cc8e77f41bbc9d410d"
+      },
+      {
+        "url": "/hacsfiles/battery-state-card/battery-state-card.js?hacstag=256292682211",
+        "type": "module",
+        "id": "627cf115a12a4be693da66e1f6cb2a59"
+      },
+      {
+        "url": "/hacsfiles/home-assistant-sun-card/home-assistant-sun-card.js?hacstag=366482637014",
+        "type": "module",
+        "id": "7c10764e811e4ce89e229740bfb4aa33"
+      },
+      {
+        "url": "/hacsfiles/vacuum-card/vacuum-card.js?hacstag=261291295263",
+        "type": "module",
+        "id": "950521e74beb4c47841d1b663b138793"
+      },
+      {
+        "url": "/hacsfiles/lovelace-paper-buttons-row/paper-buttons-row.js?hacstag=244872232101",
+        "type": "module",
+        "id": "edb58d937c0a4f6cb1a7ab622fb02e0f"
+      },
+      {
+        "url": "/webrtc/webrtc-camera.js?v2.3.1",
+        "type": "module",
+        "id": "97602a08f99a4063a8d36c7ab26a5a82"
+      },
+      {
+        "url": "/hacsfiles/lovelace-card-tools/card-tools.js?hacstag=16140332811",
+        "type": "module",
+        "id": "cb7a6448107e460296015d405ef740a2"
+      },
+      {
+        "url": "/hacsfiles/secondaryinfo-entity-row/secondaryinfo-entity-row.js?hacstag=15971160550",
+        "type": "module",
+        "id": "02640ad172be44e1a2c1c400d50dc81f"
+      },
+      {
+        "url": "url: /hacsfiles/card-tools.js",
+        "type": "module",
+        "id": "daae7e212f384975a520784f86b36838"
+      },
+      {
+        "url": "url: /hacsfiles/secondaryinfo-entity-row.js",
+        "type": "module",
+        "id": "32b787fc9b4d4b5b9422ffd31af3b7f2"
+      },
+      {
+        "url": "/hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js?hacstag=142051833042",
+        "type": "module",
+        "id": "892ade6f93ed45a6b851404e4e339e0f"
+      },
+      {
+        "url": "/hacsfiles/stack-in-card/stack-in-card.js?hacstag=248954055020",
+        "type": "module",
+        "id": "4113cccb7e204e41bba5ceaf15199807"
+      },
+      {
+        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375200",
+        "type": "module",
+        "id": "cd6a5e064373473cb66be52e473c9bff"
+      },
+      {
+        "url": "/hacsfiles/config-editor-card/config-editor-card.js?hacstag=43357760343",
+        "type": "module",
+        "id": "808dcab992a04b8797f9530ff870c87a"
+      },
+      {
+        "url": "/hacsfiles/lovelace-layout-card/layout-card.js?hacstag=156434866242",
+        "type": "module",
+        "id": "2d0fef06f3874581af657c51058aa5e2"
+      },
+      {
+        "url": "/hacsfiles/list-card/list-card.js?hacstag=145479324011",
+        "type": "module",
+        "id": "8c6199d48a264380ab75920142ac59c6"
+      },
+      {
+        "url": "/hacsfiles/simple-thermostat/simple-thermostat.js?hacstag=158654878243",
+        "type": "module",
+        "id": "81aa4f143d244764af3f066a5687dc27"
+      }
+    ]
+  }
 }
