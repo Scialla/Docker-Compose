@@ -931,12 +931,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:serial-number",
-            "o1345c8"
-          ],
-          [
             "homekit_controller:accessory-id",
             "0B:E3:5F:38:1A:21:aid:4"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "o1345c8"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -959,12 +959,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:serial-number",
-            "o1583c8"
-          ],
-          [
             "homekit_controller:accessory-id",
             "0B:E3:5F:38:1A:21:aid:6"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "o1583c8"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -987,12 +987,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:accessory-id",
-            "0B:E3:5F:38:1A:21:aid:7"
-          ],
-          [
             "homekit_controller:serial-number",
             "o154fc2"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:7"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -1043,12 +1043,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:serial-number",
-            "o15481f"
-          ],
-          [
             "homekit_controller:accessory-id",
             "0B:E3:5F:38:1A:21:aid:10"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "o15481f"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -1071,12 +1071,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:serial-number",
-            "g0a1e8c"
-          ],
-          [
             "homekit_controller:accessory-id",
             "0B:E3:5F:38:1A:21:aid:1"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "g0a1e8c"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -1949,8 +1949,8 @@
       },
       {
         "config_entries": [
-          "d3ce3ce93b345e6f8a4846b42559f716",
           "9b22afd876018a439f729fd9b5f2f48b",
+          "d3ce3ce93b345e6f8a4846b42559f716",
           "af9521407a3548c0a7f5378e4678222a"
         ],
         "connections": [],
@@ -2379,7 +2379,7 @@
         "area_id": "8bf59e9d3e6c4a70b471fe8656b2979c",
         "name_by_user": null,
         "disabled_by": null,
-        "configuration_url": "https://my.netatmo.com/app/"
+        "configuration_url": "https://my.netatmo.com/app/energy"
       },
       {
         "config_entries": [
@@ -2403,7 +2403,7 @@
         "area_id": "240ed31a4f9b454a860f23d0b84e90c9",
         "name_by_user": null,
         "disabled_by": null,
-        "configuration_url": "https://my.netatmo.com/app/"
+        "configuration_url": "https://my.netatmo.com/app/energy"
       },
       {
         "config_entries": [
@@ -2427,7 +2427,7 @@
         "area_id": "71ab9ec07d524a7a9090cae6302d1689",
         "name_by_user": null,
         "disabled_by": null,
-        "configuration_url": "https://my.netatmo.com/app/"
+        "configuration_url": "https://my.netatmo.com/app/energy"
       },
       {
         "config_entries": [
@@ -2451,7 +2451,7 @@
         "area_id": "54d81491ad7d450e914f56fa59b6bcb8",
         "name_by_user": null,
         "disabled_by": null,
-        "configuration_url": "https://my.netatmo.com/app/"
+        "configuration_url": "https://my.netatmo.com/app/energy"
       },
       {
         "config_entries": [
@@ -2475,7 +2475,7 @@
         "area_id": "bagno_grande",
         "name_by_user": "Valvola",
         "disabled_by": null,
-        "configuration_url": "https://my.netatmo.com/app/"
+        "configuration_url": "https://my.netatmo.com/app/energy"
       },
       {
         "config_entries": [
@@ -2499,7 +2499,7 @@
         "area_id": "bagno_piccolo",
         "name_by_user": null,
         "disabled_by": null,
-        "configuration_url": "https://my.netatmo.com/app/"
+        "configuration_url": "https://my.netatmo.com/app/energy"
       },
       {
         "config_entries": [
@@ -2523,7 +2523,7 @@
         "area_id": "camera_di_silvia",
         "name_by_user": null,
         "disabled_by": null,
-        "configuration_url": "https://my.netatmo.com/app/"
+        "configuration_url": "https://my.netatmo.com/app/energy"
       },
       {
         "config_entries": [
