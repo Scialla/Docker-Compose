@@ -20803,7 +20803,7 @@
         "name": null,
         "options": {},
         "original_device_class": "moon__phase",
-        "original_icon": "mdi:moon-waning-gibbous",
+        "original_icon": "mdi:moon-waning-crescent",
         "original_name": "Moon",
         "platform": "moon",
         "supported_features": 0,
