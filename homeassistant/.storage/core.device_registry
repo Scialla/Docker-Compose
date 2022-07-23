@@ -875,12 +875,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:serial-number",
-            "j0a33a0"
-          ],
-          [
             "homekit_controller:accessory-id",
             "0B:E3:5F:38:1A:21:aid:2"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "j0a33a0"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -903,12 +903,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:serial-number",
-            "o046cd6"
-          ],
-          [
             "homekit_controller:accessory-id",
             "0B:E3:5F:38:1A:21:aid:3"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "o046cd6"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -931,12 +931,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:accessory-id",
-            "0B:E3:5F:38:1A:21:aid:4"
-          ],
-          [
             "homekit_controller:serial-number",
             "o1345c8"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:4"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -987,12 +987,12 @@
         "connections": [],
         "identifiers": [
           [
-            "homekit_controller:accessory-id",
-            "0B:E3:5F:38:1A:21:aid:7"
-          ],
-          [
             "homekit_controller:serial-number",
             "o154fc2"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0B:E3:5F:38:1A:21:aid:7"
           ]
         ],
         "manufacturer": "Netatmo",
@@ -1949,9 +1949,9 @@
       },
       {
         "config_entries": [
+          "af9521407a3548c0a7f5378e4678222a",
           "9b22afd876018a439f729fd9b5f2f48b",
-          "d3ce3ce93b345e6f8a4846b42559f716",
-          "af9521407a3548c0a7f5378e4678222a"
+          "d3ce3ce93b345e6f8a4846b42559f716"
         ],
         "connections": [],
         "identifiers": [
@@ -2239,54 +2239,6 @@
       },
       {
         "config_entries": [
-          "f63a31156505323e7fddaa24098c0e20"
-        ],
-        "connections": [],
-        "identifiers": [
-          [
-            "whois",
-            "scialla.duckdns.org"
-          ]
-        ],
-        "manufacturer": null,
-        "model": null,
-        "name": null,
-        "sw_version": null,
-        "hw_version": null,
-        "entry_type": "service",
-        "id": "b05a74aa364e192be4f6ff12182a35d3",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
-      },
-      {
-        "config_entries": [
-          "2ad1fd2f0893c9331242bcf271f34b27"
-        ],
-        "connections": [],
-        "identifiers": [
-          [
-            "whois",
-            "scialla.ddns.net"
-          ]
-        ],
-        "manufacturer": null,
-        "model": null,
-        "name": null,
-        "sw_version": null,
-        "hw_version": null,
-        "entry_type": "service",
-        "id": "194b149439ce5f08dd9a1b1c5a807cde",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
-      },
-      {
-        "config_entries": [
           "ac004ea263e423eea2e9369e8cec4374"
         ],
         "connections": [],
@@ -2299,7 +2251,7 @@
         "manufacturer": null,
         "model": "Single Channel DIY",
         "name": "Single Channel DIY",
-        "sw_version": "3.6.0",
+        "sw_version": null,
         "hw_version": null,
         "entry_type": null,
         "id": "fde5ecd11933cce3038ba3bd0bf49114",
@@ -2919,30 +2871,6 @@
         "orphaned_timestamp": null
       },
       {
-        "config_entries": [],
-        "connections": [],
-        "identifiers": [
-          [
-            "meross_cloud",
-            "manager#sensor"
-          ]
-        ],
-        "id": "ae9b6b66204023003c82f0a9243f6d5c",
-        "orphaned_timestamp": 1652092498.7551892
-      },
-      {
-        "config_entries": [],
-        "connections": [],
-        "identifiers": [
-          [
-            "meross_cloud",
-            "manager#API"
-          ]
-        ],
-        "id": "2736779a67cac9b5300efdd95e6d1afe",
-        "orphaned_timestamp": 1652092498.7551892
-      },
-      {
         "config_entries": [
           "89e8dcef812953029759943484a2a213"
         ],
@@ -2961,29 +2889,24 @@
         "connections": [],
         "identifiers": [
           [
-            "mobile_app",
-            "323744E5-D9CE-4F85-AC54-D8AEA464E382"
+            "whois",
+            "scialla.duckdns.org"
           ]
         ],
-        "id": "a4c817830afd162705e620d18ea88909",
-        "orphaned_timestamp": 1653310271.5644572
+        "id": "b05a74aa364e192be4f6ff12182a35d3",
+        "orphaned_timestamp": 1658505507.6318774
       },
       {
         "config_entries": [],
-        "connections": [
-          [
-            "mac",
-            "28:ff:3c:97:6f:3b"
-          ]
-        ],
+        "connections": [],
         "identifiers": [
           [
-            "apple_tv",
-            "28:FF:3C:97:6F:3B"
+            "whois",
+            "scialla.ddns.net"
           ]
         ],
-        "id": "295ce18bfee3b74e92086804c8b8ee7c",
-        "orphaned_timestamp": 1654269621.9850469
+        "id": "194b149439ce5f08dd9a1b1c5a807cde",
+        "orphaned_timestamp": 1658505676.373077
       }
     ]
   }

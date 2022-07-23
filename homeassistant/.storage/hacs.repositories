@@ -18,11 +18,11 @@
       "category": "integration",
       "description": "HACS gives you a powerful UI to handle downloads of all your custom needs.",
       "domain": "hacs",
-      "downloads": 26998,
-      "etag_repository": "W/\"9fddbdb798f5a568e80ee147f469f44b802609439838cacd2d40ba517c3ec11c\"",
+      "downloads": 29618,
+      "etag_repository": "W/\"d6826ea41e0bd4792c7540dec0ff69b99030550ebfc25e924df234b89384542e\"",
       "full_name": "hacs/integration",
       "last_updated": "2022-07-18T06:02:57Z",
-      "stargazers_count": 2772,
+      "stargazers_count": 2771,
       "topics": [
         "community",
         "package-manager"
@@ -34,7 +34,7 @@
       "last_commit": "406d5a6",
       "last_version": "1.26.2",
       "manifest_name": "HACS",
-      "open_issues": 5,
+      "open_issues": 6,
       "published_tags": [
         "1.26.2",
         "1.26.1",
@@ -45,7 +45,7 @@
       "pushed_at": "2022-07-18T06:02:57",
       "releases": true,
       "version_installed": "1.26.2",
-      "last_fetched": 1658448069.302309
+      "last_fetched": 1658534652.066904
     },
     "117426840": {
       "repository_manifest": {
@@ -384,7 +384,7 @@
       "pushed_at": "2022-07-02T14:42:31",
       "releases": true,
       "version_installed": "v0.4.2",
-      "last_fetched": 1658448069.109948
+      "last_fetched": 1658534651.875839
     },
     "142545838": {
       "repository_manifest": {
@@ -785,10 +785,10 @@
       },
       "category": "plugin",
       "description": "🔹 Get more control over the placement of lovelace cards.",
-      "etag_repository": "W/\"0e8ab7af4c8118148d5382c43f89cf5b726c57270fc02486416f30dd16ae25d3\"",
+      "etag_repository": "W/\"1aed829883f38cdeb858be91f22a2f55b3a8c4512cbf0cda2877bd236df069ae\"",
       "full_name": "thomasloven/lovelace-layout-card",
       "last_updated": "2022-07-20T20:33:15Z",
-      "stargazers_count": 575,
+      "stargazers_count": 576,
       "default_branch": "master",
       "installed_commit": "466df9c",
       "installed": true,
@@ -805,7 +805,7 @@
       "pushed_at": "2022-07-20T20:33:15",
       "releases": true,
       "version_installed": "2.4.2",
-      "last_fetched": 1658448069.197443
+      "last_fetched": 1658534653.20899
     },
     "157618389": {
       "repository_manifest": {
@@ -870,7 +870,7 @@
       },
       "category": "plugin",
       "description": "A different take on the thermostat card for Home Assistant ♨️",
-      "downloads": 27697,
+      "downloads": 27779,
       "etag_repository": "W/\"f0299b92db99b99ebf3770bb127cf4da2d95e4f2a0a3160f368c273e425dbf0b\"",
       "full_name": "nervetattoo/simple-thermostat",
       "last_updated": "2022-07-20T01:27:58Z",
@@ -894,7 +894,7 @@
       "pushed_at": "2022-07-20T01:27:58",
       "releases": true,
       "version_installed": "v2.4.3",
-      "last_fetched": 1658448069.217494
+      "last_fetched": 1658534652.082263
     },
     "158756598": {
       "repository_manifest": {
@@ -973,7 +973,7 @@
       "pushed_at": "2021-06-05T21:12:36",
       "releases": true,
       "version_installed": "5.0",
-      "last_fetched": 1658448069.133176
+      "last_fetched": 1658534651.922256
     },
     "160022220": {
       "repository_manifest": {
@@ -1074,7 +1074,7 @@
       "pushed_at": "2022-07-20T17:03:52",
       "releases": true,
       "version_installed": "11",
-      "last_fetched": 1658448069.155016
+      "last_fetched": 1658534651.937413
     },
     "162468030": {
       "repository_manifest": {
@@ -3978,7 +3978,7 @@
       "category": "integration",
       "description": "Anniversary Countdown Sensor for Home Assistant",
       "domain": "anniversaries",
-      "downloads": 4078,
+      "downloads": 4090,
       "etag_repository": "W/\"c1fb46d1a715fa58c5b183b77871947f97855c14be3b300eec5f74ade6e90fd2\"",
       "full_name": "pinkywafer/Anniversaries",
       "last_updated": "2022-06-27T19:50:33Z",
@@ -4004,7 +4004,7 @@
       "pushed_at": "2022-06-27T19:50:33",
       "releases": true,
       "version_installed": "4.5.0",
-      "last_fetched": 1658448069.326506
+      "last_fetched": 1658534652.094148
     },
     "209854868": {
       "repository_manifest": {
@@ -6600,7 +6600,7 @@
       },
       "category": "plugin",
       "description": "Adds highly configurable buttons that use actions and per-state styling.",
-      "downloads": 6546,
+      "downloads": 6613,
       "etag_repository": "W/\"33146b38b283bc5f1aa4603975f4c83d523c554e7970754d630c0a62f69cf17b\"",
       "full_name": "jcwillox/lovelace-paper-buttons-row",
       "last_updated": "2022-05-28T08:29:47Z",
@@ -6627,7 +6627,7 @@
       "pushed_at": "2022-05-28T08:29:47",
       "releases": true,
       "version_installed": "1.0.1",
-      "last_fetched": 1658448069.174307
+      "last_fetched": 1658534651.975046
     },
     "245159052": {
       "repository_manifest": {
@@ -6852,7 +6852,7 @@
       },
       "category": "plugin",
       "description": "🛠 group multiple cards into one card without the borders",
-      "downloads": 18995,
+      "downloads": 19061,
       "etag_repository": "W/\"7821c8b4487045525164a26217f164357d9654c1374adf8550e01fa238db2415\"",
       "full_name": "custom-cards/stack-in-card",
       "last_updated": "2022-07-20T01:39:48Z",
@@ -6873,7 +6873,7 @@
       "pushed_at": "2022-07-20T01:39:48",
       "releases": true,
       "version_installed": "0.2.0",
-      "last_fetched": 1658448069.204208
+      "last_fetched": 1658534651.96171
     },
     "250022973": {
       "repository_manifest": {
@@ -7370,10 +7370,10 @@
       },
       "category": "plugin",
       "description": "Battery state card for Home Assistant",
-      "downloads": 14820,
+      "downloads": 14862,
       "etag_repository": "W/\"f2205953fd8c8d3079ad3af7552b8374b380b37306df6f44c15e4289b37cabbd\"",
       "full_name": "maxwroc/battery-state-card",
-      "last_updated": "2022-07-20T19:33:41Z",
+      "last_updated": "2022-07-22T15:11:48Z",
       "stargazers_count": 430,
       "topics": [
         "battery",
@@ -7392,10 +7392,10 @@
         "v2.0.1",
         "v2.0.0"
       ],
-      "pushed_at": "2022-07-20T19:33:41",
+      "pushed_at": "2022-07-22T15:11:48",
       "releases": true,
       "version_installed": "v2.1.1",
-      "last_fetched": 1658448069.376431
+      "last_fetched": 1658534652.143746
     },
     "256709811": {
       "repository_manifest": {
@@ -7923,7 +7923,7 @@
       },
       "category": "plugin",
       "description": "Vacuum cleaner card for Home Assistant Lovelace UI",
-      "downloads": 15034,
+      "downloads": 15104,
       "etag_repository": "W/\"a64a27391d83ecd07f5d932cfbaad530961b2463347d764cbc11e0b7f393216a\"",
       "full_name": "denysdovhan/vacuum-card",
       "last_updated": "2022-07-21T03:24:55Z",
@@ -7948,7 +7948,7 @@
       "pushed_at": "2022-07-21T03:24:55",
       "releases": true,
       "version_installed": "v2.6.3",
-      "last_fetched": 1658448070.4788
+      "last_fetched": 1658534653.264192
     },
     "261311061": {
       "repository_manifest": {
@@ -13817,7 +13817,7 @@
       "pushed_at": "2022-07-13T05:31:19",
       "releases": true,
       "version_installed": "v2.3.1",
-      "last_fetched": 1658448070.355466
+      "last_fetched": 1658534653.162705
     },
     "342427139": {
       "repository_manifest": {
@@ -14498,7 +14498,7 @@
       "category": "plugin",
       "description": "Home assistant sun card based on Google weather design",
       "domain": "",
-      "downloads": 36537,
+      "downloads": 36599,
       "etag_repository": "W/\"be2a77a73fe57816cbce2c09915cd1b04a0717a8d7a9203a09da80f640189f51\"",
       "full_name": "AitorDB/home-assistant-sun-card",
       "last_updated": "2022-06-26T07:18:47Z",
@@ -14523,7 +14523,7 @@
       "pushed_at": "2022-06-26T07:18:47",
       "releases": true,
       "version_installed": "v0.1.4",
-      "last_fetched": 1658448070.376662
+      "last_fetched": 1658534653.082672
     },
     "340596609": {
       "repository_manifest": {
@@ -15223,7 +15223,7 @@
       "open_issues": 50,
       "pushed_at": "2022-06-13T04:11:10",
       "version_installed": null,
-      "last_fetched": 1658448071.695552
+      "last_fetched": 1658534654.688488
     },
     "151280062": {
       "repository_manifest": {
@@ -15232,11 +15232,11 @@
       },
       "category": "plugin",
       "description": "Minimalistic graph card for Home Assistant Lovelace UI",
-      "downloads": 58045,
-      "etag_repository": "W/\"ef08f3aa9c38a8130df52d4ff866706ac541a2e9f3e81f2108b834763c448b23\"",
+      "downloads": 58352,
+      "etag_repository": "W/\"c1c07c04eaec3dd37252df0c0dddf7b0776721b0bac3b095b640a1f207175594\"",
       "full_name": "kalkih/mini-graph-card",
       "last_updated": "2022-06-24T19:17:40Z",
-      "stargazers_count": 1981,
+      "stargazers_count": 1983,
       "topics": [
         "automation",
         "custom",
@@ -15258,7 +15258,7 @@
       "pushed_at": "2022-06-24T19:17:40",
       "releases": true,
       "version_installed": "v0.11.0",
-      "last_fetched": 1658448071.929523
+      "last_fetched": 1658534654.9436
     },
     "257125587": {
       "repository_manifest": {
@@ -15278,7 +15278,7 @@
       "last_commit": "0c82c61",
       "pushed_at": "2020-05-01T14:45:44",
       "version_installed": null,
-      "last_fetched": 1658448071.826976
+      "last_fetched": 1658534654.803293
     },
     "191831638": {
       "repository_manifest": {
@@ -15320,7 +15320,7 @@
       "open_issues": 1,
       "pushed_at": "2022-05-29T19:02:02",
       "version_installed": null,
-      "last_fetched": 1658448071.896073
+      "last_fetched": 1658534655.408329
     },
     "223993584": {
       "repository_manifest": {
@@ -15335,10 +15335,10 @@
       "category": "integration",
       "description": "BLE monitor passively monitors BLE sensors (Xiaomi, Qingping, ATC, BlueMaestro, Brifit, Govee, Kegtron, Moat, Inkbird, iNode, Yeelight, RuuviTag, SensorPush, Teltonika, Thermoplus and Thermopro)",
       "domain": "ble_monitor",
-      "etag_repository": "W/\"6202b4b3721c1e3937625d2f1fff820642c65f6c7e7932e092830c7a3bb49356\"",
+      "etag_repository": "W/\"eb701f3b8ebd3c150e137f87918b0312437a5a4f35ed6c839bc74c9831be6a7d\"",
       "full_name": "custom-components/ble_monitor",
-      "last_updated": "2022-07-21T13:31:54Z",
-      "stargazers_count": 1327,
+      "last_updated": "2022-07-22T13:33:15Z",
+      "stargazers_count": 1329,
       "topics": [
         "atc",
         "govee",
@@ -15357,23 +15357,23 @@
       ],
       "config_flow": true,
       "default_branch": "master",
-      "installed_commit": "ac06783",
+      "installed_commit": "6025ec5",
       "installed": true,
-      "last_commit": "ac06783",
-      "last_version": "9.0.3",
+      "last_commit": "6025ec5",
+      "last_version": "9.0.5",
       "manifest_name": "Passive BLE monitor",
       "open_issues": 41,
       "published_tags": [
+        "9.0.5",
+        "9.0.4",
         "9.0.3",
         "9.0.2",
-        "9.0.1",
-        "8.9.8",
-        "8.9.7"
+        "9.0.1"
       ],
-      "pushed_at": "2022-07-21T13:31:54",
+      "pushed_at": "2022-07-22T13:33:15",
       "releases": true,
-      "version_installed": "9.0.3",
-      "last_fetched": 1658448070.588317
+      "version_installed": "9.0.5",
+      "last_fetched": 1658534653.415462
     },
     "215075805": {
       "repository_manifest": {
@@ -15395,10 +15395,10 @@
       "category": "integration",
       "description": "🔹 A Home Assistant integration to turn your browser into a controllable entity - and also an audio player",
       "domain": "browser_mod",
-      "etag_repository": "W/\"8370680af17c8860ebb2524e7c3f16c86a5511b258d79afca9604cdd27c6ef2d\"",
+      "etag_repository": "W/\"13c0e70b7dc0316ea1bf54e253b320d74328814a216cd2dc62fbb0c7f7c971c4\"",
       "full_name": "thomasloven/hass-browser_mod",
       "last_updated": "2022-07-20T01:34:27Z",
-      "stargazers_count": 680,
+      "stargazers_count": 681,
       "default_branch": "master",
       "installed_commit": "df6bada",
       "installed": true,
@@ -15416,7 +15416,7 @@
       "pushed_at": "2022-07-20T01:34:27",
       "releases": true,
       "version_installed": "1.5.3",
-      "last_fetched": 1658448070.443011
+      "last_fetched": 1658534653.271511
     },
     "190927524": {
       "repository_manifest": {
@@ -15434,7 +15434,7 @@
       "installed": true,
       "last_commit": "06140ff",
       "last_version": "3.1.5",
-      "open_issues": 35,
+      "open_issues": 34,
       "published_tags": [
         "3.1.5",
         "3.1.4",
@@ -15445,7 +15445,7 @@
       "pushed_at": "2022-07-20T01:34:27",
       "releases": true,
       "version_installed": "3.1.5",
-      "last_fetched": 1658448070.498993
+      "last_fetched": 1658534655.756293
     },
     "331701152": {
       "repository_manifest": {
@@ -15455,11 +15455,11 @@
       "category": "plugin",
       "description": "📈 A Lovelace card to display advanced graphs and charts based on ApexChartsJS for Home Assistant",
       "domain": "",
-      "downloads": 14577,
-      "etag_repository": "W/\"0e31959939edd983b383e350a8d5c94cbafcdce95bedc073bc96619e046c614b\"",
+      "downloads": 14711,
+      "etag_repository": "W/\"31bb975ee8c65eb706915d5aa7dd0655d5bebff21d811ef89f5a28aadb30fb8a\"",
       "full_name": "RomRider/apexcharts-card",
       "last_updated": "2022-07-18T18:03:35Z",
-      "stargazers_count": 431,
+      "stargazers_count": 433,
       "topics": [
         "apexcharts",
         "iot"
@@ -15469,7 +15469,7 @@
       "installed": true,
       "last_commit": "d8a6539",
       "last_version": "v2.0.1",
-      "open_issues": 44,
+      "open_issues": 45,
       "published_tags": [
         "v2.0.1",
         "v2.0.0",
@@ -15479,7 +15479,7 @@
       "pushed_at": "2022-07-18T18:03:35",
       "releases": true,
       "version_installed": "v2.0.1",
-      "last_fetched": 1658448072.977419
+      "last_fetched": 1658534655.906745
     },
     "139664351": {
       "repository_manifest": {
@@ -15495,11 +15495,11 @@
       "category": "integration",
       "description": "This is a custom component to allow control of Amazon Alexa devices in Home Assistant using the unofficial Alexa API.",
       "domain": "alexa_media",
-      "downloads": 1599,
-      "etag_repository": "W/\"522fd52eef73f9c8717c51c3e22aee88652f0eee60e6b93233d13dda53067892\"",
+      "downloads": 2975,
+      "etag_repository": "W/\"e197ce7addc2ed8c354aa1bcd719723bf4832078847286e05817567a3da88b8a\"",
       "full_name": "custom-components/alexa_media_player",
       "last_updated": "2022-07-21T06:45:37Z",
-      "stargazers_count": 889,
+      "stargazers_count": 890,
       "topics": [
         "alexa"
       ],
@@ -15510,7 +15510,7 @@
       "last_commit": "3a12819",
       "last_version": "v4.1.0",
       "manifest_name": "Alexa Media Player",
-      "open_issues": 12,
+      "open_issues": 10,
       "published_tags": [
         "v4.1.0",
         "v4.0.3",
@@ -15521,7 +15521,7 @@
       "pushed_at": "2022-07-21T06:45:37",
       "releases": true,
       "version_installed": "v4.1.0",
-      "last_fetched": 1658448070.717854
+      "last_fetched": 1658534653.665618
     },
     "146194325": {
       "repository_manifest": {
@@ -15531,17 +15531,17 @@
       },
       "category": "plugin",
       "description": "❇️ Lovelace button-card for home assistant",
-      "downloads": 115549,
-      "etag_repository": "W/\"b2608068c2ca54aa51d5b0250461a35894be19eda604676acbb72af4976e4f2b\"",
+      "downloads": 115789,
+      "etag_repository": "W/\"656cc22c4085045f2c759946222791d4db62f9dc47bad8a8fbbeb20a5f17edee\"",
       "full_name": "custom-cards/button-card",
       "last_updated": "2022-07-20T01:40:28Z",
-      "stargazers_count": 1157,
+      "stargazers_count": 1156,
       "default_branch": "master",
       "installed_commit": "29b10a6",
       "installed": true,
       "last_commit": "29b10a6",
       "last_version": "v3.4.2",
-      "open_issues": 140,
+      "open_issues": 141,
       "published_tags": [
         "v3.4.2",
         "3.4.1",
@@ -15552,7 +15552,7 @@
       "pushed_at": "2022-07-20T01:40:28",
       "releases": true,
       "version_installed": "v3.4.2",
-      "last_fetched": 1658448073.102902
+      "last_fetched": 1658534656.008993
     },
     "222118751": {
       "repository_manifest": {
@@ -15565,10 +15565,10 @@
       "category": "integration",
       "description": "Control Sonoff Devices with eWeLink (original) firmware over LAN and/or Cloud from Home Assistant",
       "domain": "sonoff",
-      "etag_repository": "W/\"3e032386c3a3e35b8bc0018200a9ee8e6bdfea2b0a099d85be6016810056feb7\"",
+      "etag_repository": "W/\"62c0f71ca72cf7a020f5a8be33e758f98e104df439eeae449132d79efb99a74e\"",
       "full_name": "AlexxIT/SonoffLAN",
       "last_updated": "2022-07-21T11:51:46Z",
-      "stargazers_count": 1715,
+      "stargazers_count": 1716,
       "topics": [
         "ewelink",
         "sonoff"
@@ -15580,7 +15580,7 @@
       "last_commit": "86de124",
       "last_version": "v3.1.0",
       "manifest_name": "Sonoff",
-      "open_issues": 44,
+      "open_issues": 45,
       "published_tags": [
         "v3.1.0",
         "v3.0.5",
@@ -15591,7 +15591,7 @@
       "pushed_at": "2022-07-21T11:51:46",
       "releases": true,
       "version_installed": "v3.1.0",
-      "last_fetched": 1658448072.933149
+      "last_fetched": 1658534653.457989
     },
     "171121354": {
       "repository_manifest": {
@@ -15607,7 +15607,7 @@
       "domain": "smartir",
       "etag_repository": "W/\"8cf75c337c58548cdb3a71eb60144935f7d3d1b3717c4c41cc49e62b835acd69\"",
       "full_name": "smartHomeHub/SmartIR",
-      "last_updated": "2022-07-20T07:23:47Z",
+      "last_updated": "2022-07-22T23:59:11Z",
       "stargazers_count": 1156,
       "topics": [
         "broadlink",
@@ -15623,7 +15623,7 @@
       "last_commit": "ceb7b73",
       "last_version": "1.17.6",
       "manifest_name": "SmartIR",
-      "open_issues": 51,
+      "open_issues": 53,
       "published_tags": [
         "1.17.6",
         "1.17.5",
@@ -15631,10 +15631,10 @@
         "1.17.3",
         "1.17.2"
       ],
-      "pushed_at": "2022-07-20T07:23:47",
+      "pushed_at": "2022-07-22T23:59:11",
       "releases": true,
       "version_installed": "1.17.6",
-      "last_fetched": 1658448070.759858
+      "last_fetched": 1658534653.588174
     },
     "249722008": {
       "repository_manifest": {
@@ -15653,7 +15653,7 @@
       "last_commit": "d0e517d",
       "pushed_at": "2022-04-29T23:58:08",
       "version_installed": null,
-      "last_fetched": 1658448070.563577
+      "last_fetched": 1658534653.287467
     },
     "257123327": {
       "repository_manifest": {
@@ -15679,7 +15679,7 @@
       "open_issues": 6,
       "pushed_at": "2020-05-28T19:17:53",
       "version_installed": null,
-      "last_fetched": 1658448072.741213
+      "last_fetched": 1658534655.804169
     },
     "221288367": {
       "repository_manifest": {
@@ -15707,7 +15707,7 @@
       "pushed_at": "2020-10-08T10:10:57",
       "releases": true,
       "version_installed": "v1.3",
-      "last_fetched": 1658448070.542532
+      "last_fetched": 1658534654.292799
     },
     "384434522": {
       "repository_manifest": {
@@ -16595,7 +16595,7 @@
       "pushed_at": "2022-06-03T06:24:59",
       "releases": true,
       "version_installed": "0.2.2",
-      "last_fetched": 1658448071.59261
+      "last_fetched": 1658534654.412771
     },
     "362700564": {
       "repository_manifest": {
@@ -17195,7 +17195,7 @@
       "pushed_at": "2021-11-22T17:05:56",
       "releases": true,
       "version_installed": "v1.9",
-      "last_fetched": 1658448071.641301
+      "last_fetched": 1658534654.484919
     },
     "403381222": {
       "repository_manifest": {
@@ -17642,11 +17642,11 @@
       "category": "integration",
       "description": "Home Assistant integration for deebot vacuums",
       "domain": "deebot",
-      "downloads": 2164,
-      "etag_repository": "W/\"bc98f1dc692bc0e8929b5239e74436b962ed06c68f1cdd357cf74d84c4db23bf\"",
+      "downloads": 2233,
+      "etag_repository": "W/\"f4138bd15f748040631fc499b25cca8fc17978e965da8b3f89d1a65a7311dffa\"",
       "full_name": "DeebotUniverse/Deebot-4-Home-Assistant",
       "last_updated": "2022-07-20T09:40:53Z",
-      "stargazers_count": 66,
+      "stargazers_count": 67,
       "topics": [
         "deebot",
         "ecovacs",
@@ -17670,7 +17670,7 @@
       "pushed_at": "2022-07-20T09:40:53",
       "releases": true,
       "version_installed": "1.4.1",
-      "last_fetched": 1658448072.003689
+      "last_fetched": 1658534654.643714
     },
     "356385629": {
       "repository_manifest": {
@@ -17959,7 +17959,7 @@
       "pushed_at": "2022-07-05T22:49:44",
       "releases": true,
       "version_installed": "4.3",
-      "last_fetched": 1658448073.115766
+      "last_fetched": 1658534656.905441
     },
     "432522624": {
       "repository_manifest": {
@@ -18019,7 +18019,7 @@
       "pushed_at": "2022-04-16T22:50:46",
       "releases": true,
       "version_installed": "4.2",
-      "last_fetched": 1658448072.908391
+      "last_fetched": 1658534655.787865
     },
     "427867835": {
       "repository_manifest": {
@@ -19496,11 +19496,11 @@
       "category": "plugin",
       "description": "Mushroom Cards - Build a beautiful dashboard easily 🍄",
       "domain": "",
-      "downloads": 5911,
-      "etag_repository": "W/\"0f43f058b1719a41d8ad4a7ac10b644a1378261890d47cecaf5b051e91e6c55f\"",
+      "downloads": 412,
+      "etag_repository": "W/\"a25e89c880d6230add6791045fc6207a861a44bb1c3ff68a4d9bf94915971649\"",
       "full_name": "piitaya/lovelace-mushroom",
-      "last_updated": "2022-07-21T21:25:30Z",
-      "stargazers_count": 1209,
+      "last_updated": "2022-07-22T20:41:38Z",
+      "stargazers_count": 1212,
       "topics": [
         "card",
         "mushroom"
@@ -19508,20 +19508,20 @@
       "default_branch": "main",
       "installed_commit": "d7af48f",
       "installed": true,
-      "last_commit": "24e5e91",
-      "last_version": "v2.1.1",
-      "open_issues": 126,
+      "last_commit": "95d4462",
+      "last_version": "v2.1.3",
+      "open_issues": 124,
       "published_tags": [
+        "v2.1.3",
         "v2.1.1",
         "v2.1.0",
         "v2.0.0",
-        "v1.10.0",
-        "v1.9.0"
+        "v1.10.0"
       ],
-      "pushed_at": "2022-07-21T21:25:30",
+      "pushed_at": "2022-07-22T20:41:38",
       "releases": true,
       "version_installed": "v2.1.1",
-      "last_fetched": 1658448073.554661
+      "last_fetched": 1658534654.824792
     },
     "454942078": {
       "repository_manifest": {
@@ -19663,10 +19663,10 @@
       "category": "theme",
       "description": "Additional themes for Lovelace Mushroom Cards 🍄",
       "domain": "",
-      "etag_repository": "W/\"71f77eb6c318c7aa285f271bc07a33810697243324095c591363bcb8ac78a0a6\"",
+      "etag_repository": "W/\"d2d4fb066ea7c90c607bfd1819b67c2708138cf835fbb3b2e3cac2d9e134b354\"",
       "full_name": "piitaya/lovelace-mushroom-themes",
       "last_updated": "2022-07-21T19:05:50Z",
-      "stargazers_count": 64,
+      "stargazers_count": 65,
       "topics": [
         "mushroom"
       ],
@@ -19683,7 +19683,7 @@
       "pushed_at": "2022-07-21T19:05:50",
       "releases": true,
       "version_installed": "v0.0.2",
-      "last_fetched": 1658448071.6193
+      "last_fetched": 1658534656.038242
     },
     "294037465": {
       "repository_manifest": {
@@ -19804,7 +19804,7 @@
       "pushed_at": "2022-06-15T07:56:39",
       "releases": true,
       "version_installed": "v1.1.2",
-      "last_fetched": 1658448071.66069
+      "last_fetched": 1658534654.516146
     },
     "458664750": {
       "repository_manifest": {
@@ -19856,7 +19856,7 @@
       "pushed_at": "2022-05-03T14:14:53",
       "releases": true,
       "version_installed": "v1.0",
-      "last_fetched": 1658448071.676674
+      "last_fetched": 1658534654.658913
     },
     "387116237": {
       "repository_manifest": {
@@ -19961,7 +19961,7 @@
       "domain": "watchman",
       "etag_repository": "W/\"70be57425fa8ea701bec9be17046c1fc1ecc790879548be6bb0eea6d404eec57\"",
       "full_name": "dummylabs/thewatchman",
-      "last_updated": "2022-06-12T16:06:16Z",
+      "last_updated": "2022-07-22T12:06:07Z",
       "stargazers_count": 117,
       "topics": [
         "automation"
@@ -19973,7 +19973,7 @@
       "last_commit": "2875220",
       "last_version": "v0.6.0",
       "manifest_name": "Watchman",
-      "open_issues": 15,
+      "open_issues": 16,
       "published_tags": [
         "v0.6.0",
         "v0.5.3",
@@ -19981,10 +19981,10 @@
         "v0.5.1",
         "v0.5.0"
       ],
-      "pushed_at": "2022-06-12T16:06:16",
+      "pushed_at": "2022-07-22T12:06:07",
       "releases": true,
       "version_installed": "v0.6.0",
-      "last_fetched": 1658448072.893129
+      "last_fetched": 1658534655.951465
     },
     "279680951": {
       "repository_manifest": {
@@ -21842,7 +21842,7 @@
       "pushed_at": "2022-03-06T06:47:34",
       "releases": true,
       "version_installed": "0.1.1",
-      "last_fetched": 1658448072.742805
+      "last_fetched": 1658534655.782536
     },
     "199718799": {
       "repository_manifest": {},

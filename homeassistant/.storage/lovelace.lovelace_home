@@ -1,2175 +1,2162 @@
 {
-    "version": 1,
-    "minor_version": 1,
-    "key": "lovelace.lovelace_home",
-    "data": {
-        "config": {
-            "views": [
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.lovelace_home",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "theme": "Backend-selected",
+          "title": "Home",
+          "icon": "mdi:home-outline",
+          "visible": [
+            {
+              "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
+            }
+          ],
+          "badges": [
+            {
+              "entity": "sensor.memory_free"
+            },
+            {
+              "entity": "sensor.memory_use"
+            },
+            {
+              "entity": "sensor.processor_use"
+            },
+            {
+              "entity": "sensor.badlogin"
+            },
+            {
+              "entity": "sensor.ha_start"
+            },
+            {
+              "entity": "sensor.speedtest_download"
+            },
+            {
+              "entity": "sensor.speedtest_upload"
+            },
+            {
+              "entity": "sensor.speedtest_ping"
+            }
+          ],
+          "cards": [
+            {
+              "type": "entities",
+              "style": "ha-card {\n  padding: 0;\n}\n.card-content {\n   --ha-card-background: none;\n   --ha-card-box-shadow: none;\n   padding: 0;\n}\n",
+              "entities": [
                 {
-                    "theme": "Backend-selected",
-                    "title": "Home",
-                    "icon": "mdi:home-outline",
-                    "visible": [
-                        {
-                            "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
-                        }
-                    ],
-                    "badges": [
-                        {
-                            "entity": "sensor.memory_free"
-                        },
-                        {
-                            "entity": "sensor.memory_use"
-                        },
-                        {
-                            "entity": "sensor.processor_use"
-                        },
-                        {
-                            "entity": "sensor.badlogin"
-                        },
-                        {
-                            "entity": "sensor.ha_start"
-                        },
-                        {
-                            "entity": "sensor.speedtest_download"
-                        },
-                        {
-                            "entity": "sensor.speedtest_upload"
-                        },
-                        {
-                            "entity": "sensor.speedtest_ping"
-                        }
-                    ],
-                    "cards": [
-                        {
-                            "type": "entities",
-                            "style": "ha-card {\n  padding: 0;\n}\n.card-content {\n   --ha-card-background: none;\n   --ha-card-box-shadow: none;\n   padding: 0;\n}\n",
-                            "entities": [
-                                {
-                                    "type": "custom:button-card",
-                                    "color": "auto",
-                                    "aspect_ratio": "8/1",
-                                    "show_label": true,
-                                    "label": "[[[ \n  return 'Totale Entities: ' + states['sensor.count_entities'].state\n]]]\n"
-                                },
-                                {
-                                    "type": "custom:hui-horizontal-stack-card",
-                                    "cards": [
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:ballot",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Auto: ' + states['sensor.count_entities'].attributes.automation; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:counter",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Auto ON: ' + states['sensor.count_entities'].attributes.automation_ON; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:ceiling-light",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Luci: ' + states['sensor.count_entities'].attributes.light; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:lightbulb-on",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Luci ON: ' + states['sensor.count_entities'].attributes.light_ON; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "custom:hui-horizontal-stack-card",
-                                    "cards": [
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:nintendo-switch",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Binary: ' + states['sensor.count_entities'].attributes.binary_sensor; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:camera",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Camera: ' + states['sensor.count_entities'].attributes.camera; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:air-conditioner",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Clima: ' + states['sensor.count_entities'].attributes.climate; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:crosshairs-gps",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Tracker: ' + states['sensor.count_entities'].attributes.device_tracker; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "custom:hui-horizontal-stack-card",
-                                    "cards": [
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:ab-testing",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Boolean: ' + states['sensor.count_entities'].attributes.input_boolean; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:timer-sand",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Datetime: ' + states['sensor.count_entities'].attributes.input_datetime; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:numeric",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Number: ' + states['sensor.count_entities'].attributes.input_number; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:format-list-bulleted-square",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Select: ' + states['sensor.count_entities'].attributes.input_select; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "custom:hui-horizontal-stack-card",
-                                    "cards": [
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:card-text-outline",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Text: ' + states['sensor.count_entities'].attributes.input_text;\n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:play-network-outline",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Media: ' + states['sensor.count_entities'].attributes.media_player;\n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:image-area",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Scene: ' + states['sensor.count_entities'].attributes.scene; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:script-text-outline",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Script: ' + states['sensor.count_entities'].attributes.script; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "custom:hui-horizontal-stack-card",
-                                    "cards": [
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:gauge-low",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Sensori: ' + states['sensor.count_entities'].attributes.sensor; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:power-socket-eu",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Switch: ' + states['sensor.count_entities'].attributes.switch; \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:group",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Gruppi: ' + states['sensor.count_entities'].attributes.group\n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "color": "auto",
-                                            "icon": "mdi:earth",
-                                            "aspect_ratio": "2/1",
-                                            "show_label": true,
-                                            "label": "[[[\n  return 'Zone: ' + states['sensor.count_entities'].attributes.zone \n]]]\n",
-                                            "styles": {
-                                                "label": [
-                                                    {
-                                                        "font-size": "12px"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.openweathermap_cloud_coverage"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_cloud_coverage"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_condition"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_condition"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_precipitation"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_temperature"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_temperature_low"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_time"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_wind_bearing"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_wind_speed"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_humidity"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_pressure"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_rain"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_snow"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_temperature"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_weather"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_weather_code"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_wind_bearing"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_wind_speed"
-                                },
-                                {
-                                    "entity": "sensor.openweathermap_forecast_pressure"
-                                }
-                            ]
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.qualita_aria_rebaudengo"
-                                },
-                                {
-                                    "entity": "sensor.waqi_rebaudengo_torino_piemonte_italy",
-                                    "name": "Waqi Rebaudengo",
-                                    "secondary_info": "last-changed"
-                                },
-                                {
-                                    "entity": "sensor.qualita_aria_lingotto"
-                                },
-                                {
-                                    "entity": "sensor.waqi_lingotto_torino_piemonte_italy",
-                                    "name": "Waqi Lingotto",
-                                    "secondary_info": "last-changed"
-                                }
-                            ],
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "sensor.openweathermap_dew_point",
-                                "sensor.openweathermap_feels_like_temperature",
-                                "sensor.openweathermap_forecast_precipitation_probability",
-                                "sensor.openweathermap_precipitation_kind",
-                                "sensor.openweathermap_uv_index"
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "sensor.co2_intensity",
-                                "sensor.grid_fossil_fuel_percentage"
-                            ]
-                        },
-                        {
-                            "type": "custom:battery-state-card",
-                            "title": "Livello Batterie",
-                            "entities": [
-                                "sensor.lcd_bagnogrande_battery",
-                                "sensor.lcd_bagnopiccolo_battery",
-                                "sensor.porta_balcone_letto_battery",
-                                "sensor.porta_casa_battery",
-                                "sensor.frigo_battery",
-                                "sensor.ble_battery_4c65a8ddd248",
-                                "sensor.condizionatore_battery",
-                                "sensor.pir_scale_battery",
-                                "sensor.ikeaswitch_battery",
-                                "sensor.porta_balcone_studio_battery",
-                                "sensor.porta_balcone_ingresso_battery",
-                                "sensor.bagno_grande_battery",
-                                "sensor.bagno_piccolo_battery",
-                                "sensor.porta_balcone_cucina_battery",
-                                "sensor.finestra_silvia_battery",
-                                "sensor.ikeamultilightswitch_battery",
-                                "sensor.pulsanteikea1_battery",
-                                "sensor.pulsanteikea2_battery",
-                                "sensor.ikeapir1_battery",
-                                "sensor.ikeamultilightswitch2_battery"
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.date_time"
-                                },
-                                {
-                                    "entity": "sensor.ip_pubblico",
-                                    "secondary_info": "last-changed"
-                                },
-                                {
-                                    "entity": "sensor.cert_expiry_timestamp_scialla_ddns_net_5000"
-                                },
-                                {
-                                    "entity": "sensor.cert_expiry_timestamp_scialla_duckdns_org_5000"
-                                },
-                                {
-                                    "entity": "sensor.current_version",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.hacs",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.moon"
-                                },
-                                {
-                                    "entity": "binary_sensor.imac"
-                                },
-                                {
-                                    "entity": "binary_sensor.macmini"
-                                },
-                                {
-                                    "entity": "sensor.last_boot"
-                                },
-                                {
-                                    "entity": "sensor.uptime"
-                                }
-                            ],
-                            "state_color": true
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "sensor.scialla_ddns_net_created",
-                                "sensor.scialla_ddns_net_days_until_expiration",
-                                "sensor.scialla_ddns_net_expires",
-                                "sensor.scialla_ddns_net_last_updated",
-                                "sensor.scialla_duckdns_org_created",
-                                "sensor.scialla_duckdns_org_days_until_expiration",
-                                "sensor.scialla_duckdns_org_expires",
-                                "sensor.scialla_duckdns_org_last_updated"
-                            ]
-                        }
-                    ]
+                  "type": "custom:button-card",
+                  "color": "auto",
+                  "aspect_ratio": "8/1",
+                  "show_label": true,
+                  "label": "[[[ \n  return 'Totale Entities: ' + states['sensor.count_entities'].state\n]]]\n"
                 },
                 {
-                    "theme": "Mushroom",
-                    "title": "Info",
-                    "path": "info",
-                    "icon": "mdi:information-outline",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "custom:mushroom-template-card",
-                            "primary": "{{states('sensor.pretty_date')}}\n",
-                            "secondary": "Ora {{states('sensor.time')}}\nTemperatura {{states('sensor.temperatura_esterna')}}\n",
-                            "icon": "",
-                            "entity": "sensor.time",
-                            "multiline_secondary": true,
-                            "layout": "vertical",
-                            "icon_color": "",
-                            "fill_container": true,
-                            "tap_action": {
-                                "action": "none"
-                            },
-                            "hold_action": {
-                                "action": "none"
-                            },
-                            "double_tap_action": {
-                                "action": "none"
-                            }
-                        },
-                        {
-                            "type": "custom:list-card",
-                            "entity": "sensor.feedrss",
-                            "title": "Ansa",
-                            "feed_attribute": "entries",
-                            "row_limit": 6,
-                            "columns": [
-                                {
-                                    "title": "",
-                                    "type": "image",
-                                    "add_link": "link",
-                                    "field": "image"
-                                },
-                                {
-                                    "title": "Notizie",
-                                    "field": "title",
-                                    "width": "auto",
-                                    "height": "auto",
-                                    "style": null
-                                }
-                            ]
-                        }
-                    ]
+                  "type": "custom:hui-horizontal-stack-card",
+                  "cards": [
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:ballot",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Auto: ' + states['sensor.count_entities'].attributes.automation; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:counter",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Auto ON: ' + states['sensor.count_entities'].attributes.automation_ON; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:ceiling-light",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Luci: ' + states['sensor.count_entities'].attributes.light; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:lightbulb-on",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Luci ON: ' + states['sensor.count_entities'].attributes.light_ON; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    }
+                  ]
                 },
                 {
-                    "theme": "Backend-selected",
-                    "title": "Luci",
-                    "path": "luci",
-                    "icon": "mdi:lightbulb-outline",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.luce_studio",
-                                            "icon": "mdi:globe-light"
-                                        },
-                                        {
-                                            "entity": "light.mensola",
-                                            "icon": "mdi:lightbulb-cfl"
-                                        },
-                                        {
-                                            "entity": "light.lampada_scrivania",
-                                            "icon": "mdi:track-light"
-                                        },
-                                        {
-                                            "entity": "light.neon",
-                                            "icon": "mdi:car"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.ballerini",
-                                    "icon": "mdi:floor-lamp"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Studio"
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.led_ingresso",
-                                            "icon": "mdi:string-lights"
-                                        },
-                                        {
-                                            "entity": "light.luce_ingresso",
-                                            "icon": "mdi:lightbulb-group"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.koogeek_lb1_1f299c",
-                                    "icon": "mdi:floor-lamp"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Ingresso"
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.alogena",
-                                            "icon": "mdi:spotlight-beam"
-                                        },
-                                        {
-                                            "entity": "light.luce_cucina",
-                                            "icon": "mdi:ceiling-light"
-                                        }
-                                    ],
-                                    "camera_image": "camera.ambrogio_livemap"
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.cappa",
-                                    "icon": "mdi:led-strip-variant"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.cappa_linkquality"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Cucina"
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.luce_letto",
-                                            "icon": "mdi:lightbulb-group"
-                                        },
-                                        {
-                                            "entity": "light.lampada_zanzare",
-                                            "icon": "mdi:lightbulb-on-outline"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.striscia_letto",
-                                    "icon": "mdi:led-strip-variant"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.striscia_letto_linkquality"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Camera Letto"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.luce_silvia",
-                                    "icon": "mdi:string-lights"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Camera di Silvia",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.luce_scale",
-                                    "icon": "mdi:stairs"
-                                }
-                            ],
-                            "title": "Scale",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.luce_balcone",
-                                    "icon": "mdi:coach-lamp"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Balcone",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.luce_bagno_grande",
-                                    "icon": "mdi:ceiling-light"
-                                },
-                                {
-                                    "entity": "light.luce_bagno_piccolo",
-                                    "icon": "mdi:ceiling-light"
-                                },
-                                {
-                                    "entity": "light.sonoff_10009c0093",
-                                    "icon": "mdi:spotlight",
-                                    "name": "Specchiera"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_10009bdd07_rssi",
-                                    "name": "Specchiera rssi",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "switch.sonoff_10009c0093_led",
-                                    "name": "Specchiera led"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Bagni",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "light.lampada_zanzare"
-                                },
-                                {
-                                    "entity": "sensor.lampada_zanzare_current"
-                                },
-                                {
-                                    "entity": "sensor.lampada_zanzare_voltage"
-                                },
-                                {
-                                    "entity": "sensor.lampada_zanzare_energy"
-                                },
-                                {
-                                    "entity": "sensor.lampada_zanzare_power"
-                                },
-                                {
-                                    "entity": "sensor.lampada_zanzare_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.lampada_zanzare_power_outage_memory"
-                                },
-                                {
-                                    "entity": "select.lampada_zanzare_power_outage_memory"
-                                }
-                            ],
-                            "title": "Lampada Zanzare"
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "light",
-                                    "entity": "light.wled"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        "select.wled_color_palette",
-                                        "sensor.wled_estimated_current",
-                                        "number.wled_intensity",
-                                        "switch.wled_nightlight",
-                                        "select.wled_playlist",
-                                        "select.wled_preset",
-                                        "number.wled_speed",
-                                        "switch.wled_sync_receive",
-                                        "switch.wled_sync_send"
-                                    ]
-                                }
-                            ],
-                            "state_color": true
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "binary_sensor.wled_firmware",
-                                "sensor.wled_led_count",
-                                "select.wled_live_override",
-                                "sensor.wled_max_current",
-                                "button.wled_restart",
-                                "switch.wled_reverse",
-                                "button.wled_update"
-                            ]
-                        }
-                    ]
+                  "type": "custom:hui-horizontal-stack-card",
+                  "cards": [
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:nintendo-switch",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Binary: ' + states['sensor.count_entities'].attributes.binary_sensor; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:camera",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Camera: ' + states['sensor.count_entities'].attributes.camera; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:air-conditioner",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Clima: ' + states['sensor.count_entities'].attributes.climate; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:crosshairs-gps",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Tracker: ' + states['sensor.count_entities'].attributes.device_tracker; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    }
+                  ]
                 },
                 {
-                    "theme": "Backend-selected",
-                    "title": "Interruttori",
-                    "path": "interruttori",
-                    "icon": "mdi:toggle-switch-outline",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.ciabattascrivania_l1",
-                                    "icon": "mdi:harddisk"
-                                },
-                                {
-                                    "entity": "switch.ciabattascrivania_l2",
-                                    "icon": "mdi:power-plug"
-                                },
-                                {
-                                    "entity": "switch.ciabattascrivania_l3",
-                                    "icon": "mdi:printer"
-                                },
-                                {
-                                    "entity": "sensor.ciabattascrivania_linkquality"
-                                }
-                            ],
-                            "title": "Ciabatta Scrivania",
-                            "show_header_toggle": false
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.carica_batterie",
-                                    "icon": "mdi:battery-charging-low"
-                                },
-                                {
-                                    "entity": "switch.presa_1",
-                                    "icon": "mdi:power-socket-eu"
-                                },
-                                {
-                                    "entity": "switch.presa_2",
-                                    "icon": "mdi:power-socket-eu"
-                                },
-                                {
-                                    "entity": "switch.usb_rm",
-                                    "icon": "mdi:usb"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Studio Ciabatta 1",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.ferro_da_stiro",
-                                    "icon": "mdi:tshirt-crew-outline"
-                                },
-                                {
-                                    "entity": "switch.cicalino",
-                                    "icon": "mdi:bell-ring-outline"
-                                },
-                                {
-                                    "entity": "switch.massaggiatore",
-                                    "icon": "mdi:sofa"
-                                },
-                                {
-                                    "entity": "switch.presa_3",
-                                    "icon": "mdi:power-socket-eu"
-                                },
-                                {
-                                    "entity": "switch.usb_2",
-                                    "icon": "mdi:usb-port"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Studio Ciabatta 2",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.forno_microonde",
-                                    "icon": "mdi:microwave"
-                                },
-                                {
-                                    "entity": "sensor.forno_microonde_potenza",
-                                    "icon": "mdi:power"
-                                },
-                                {
-                                    "entity": "sensor.forno_microonde_corrente",
-                                    "icon": "mdi:current-ac"
-                                },
-                                {
-                                    "entity": "sensor.forno_microonde_tensione",
-                                    "icon": "mdi:radio-tower"
-                                },
-                                {
-                                    "entity": "sensor.forno_microonde_energia",
-                                    "icon": "mdi:transmission-tower"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Forno Microonde",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.forno",
-                                    "icon": "mdi:stove"
-                                },
-                                {
-                                    "entity": "sensor.forno_potenza",
-                                    "icon": "mdi:power"
-                                },
-                                {
-                                    "entity": "sensor.forno_corrente",
-                                    "icon": "mdi:current-ac"
-                                },
-                                {
-                                    "entity": "sensor.forno_tensione",
-                                    "icon": "mdi:radio-tower"
-                                },
-                                {
-                                    "entity": "sensor.forno_energia",
-                                    "icon": "mdi:transmission-tower"
-                                }
-                            ],
-                            "state_color": true,
-                            "title": "Forno",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.lavatrice",
-                                    "icon": "mdi:washing-machine"
-                                },
-                                {
-                                    "entity": "sensor.lavatrice_potenza",
-                                    "icon": "mdi:power"
-                                },
-                                {
-                                    "entity": "sensor.lavatrice_corrente",
-                                    "icon": "mdi:current-ac"
-                                },
-                                {
-                                    "entity": "sensor.lavatrice_tensione",
-                                    "icon": "mdi:radio-tower"
-                                },
-                                {
-                                    "entity": "sensor.lavatrice_energia",
-                                    "icon": "mdi:transmission-tower"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Lavatrice",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.scaldabagno",
-                                    "icon": "mdi:radiator"
-                                },
-                                {
-                                    "entity": "sensor.scaldabagno_potenza",
-                                    "icon": "mdi:power"
-                                },
-                                {
-                                    "entity": "sensor.scaldabagno_corrente",
-                                    "icon": "mdi:current-ac"
-                                },
-                                {
-                                    "entity": "sensor.scaldabagno_tensione",
-                                    "icon": "mdi:radio-tower"
-                                },
-                                {
-                                    "entity": "sensor.scaldabagno_energia",
-                                    "icon": "mdi:transmission-tower"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Scaldabagno",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.lavastoviglie",
-                                    "icon": "mdi:dishwasher"
-                                },
-                                {
-                                    "entity": "sensor.lavastoviglie_potenza",
-                                    "icon": "mdi:power"
-                                },
-                                {
-                                    "entity": "sensor.lavastoviglie_corrente",
-                                    "icon": "mdi:current-ac"
-                                },
-                                {
-                                    "entity": "sensor.lavastoviglie_tensione",
-                                    "icon": "mdi:radio-tower"
-                                },
-                                {
-                                    "entity": "sensor.lavastoviglie_energia",
-                                    "icon": "mdi:transmission-tower"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Lavastoviglie",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.presa_selecline",
-                                    "icon": "mdi:television"
-                                },
-                                {
-                                    "entity": "sensor.presa_selecline_power"
-                                },
-                                {
-                                    "entity": "sensor.presa_selecline_current"
-                                },
-                                {
-                                    "entity": "sensor.presa_selecline_voltage"
-                                },
-                                {
-                                    "entity": "sensor.presa_selecline_energy"
-                                },
-                                {
-                                    "entity": "sensor.presa_selecline_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.presa_selecline_power_outage_memory"
-                                },
-                                {
-                                    "entity": "select.presa_selecline_power_outage_memory"
-                                }
-                            ],
-                            "title": "TV Cucina",
-                            "state_color": true
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.portone",
-                                    "icon": "mdi:door"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Portone",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.presa_samsung",
-                                    "icon": "mdi:television"
-                                },
-                                {
-                                    "entity": "sensor.presa_samsung_power"
-                                },
-                                {
-                                    "entity": "sensor.presa_samsung_current"
-                                },
-                                {
-                                    "entity": "sensor.presa_samsung_voltage"
-                                },
-                                {
-                                    "entity": "sensor.presa_samsung_energy"
-                                },
-                                {
-                                    "entity": "sensor.presa_samsung_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.presa_samsung_power_outage_memory"
-                                },
-                                {
-                                    "entity": "select.presa_samsung_power_outage_memory"
-                                }
-                            ],
-                            "title": "TV Samsung",
-                            "state_color": true
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.presa_onkyo",
-                                    "icon": "mdi:amplifier"
-                                },
-                                {
-                                    "entity": "sensor.presa_onkyo_power"
-                                },
-                                {
-                                    "entity": "sensor.presa_onkyo_current"
-                                },
-                                {
-                                    "entity": "sensor.presa_onkyo_voltage"
-                                },
-                                {
-                                    "entity": "sensor.presa_onkyo_energy"
-                                },
-                                {
-                                    "entity": "sensor.presa_onkyo_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.presa_onkyo_power_outage_memory"
-                                },
-                                {
-                                    "entity": "select.presa_onkyo_power_outage_memory"
-                                }
-                            ],
-                            "title": "Amplificatore",
-                            "state_color": true
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.antenna_tv",
-                                    "icon": "mdi:antenna"
-                                },
-                                {
-                                    "entity": "sensor.antenna_tv_linkquality"
-                                }
-                            ],
-                            "title": "Antenna TV",
-                            "state_color": true
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.presa_phon",
-                                    "icon": "mdi:hair-dryer"
-                                },
-                                {
-                                    "entity": "sensor.presa_phon_power"
-                                },
-                                {
-                                    "entity": "sensor.presa_phon_current"
-                                },
-                                {
-                                    "entity": "sensor.presa_phon_voltage"
-                                },
-                                {
-                                    "entity": "sensor.presa_phon_energy"
-                                },
-                                {
-                                    "entity": "sensor.presa_phon_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.presa_phon_power_outage_memory"
-                                },
-                                {
-                                    "entity": "select.presa_phon_power_outage_memory"
-                                }
-                            ],
-                            "title": "Phon",
-                            "state_color": true
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.presa_frigo",
-                                    "icon": "mdi:fridge"
-                                },
-                                {
-                                    "entity": "sensor.presa_frigo_power"
-                                },
-                                {
-                                    "entity": "sensor.presa_frigo_current"
-                                },
-                                {
-                                    "entity": "sensor.presa_frigo_voltage"
-                                },
-                                {
-                                    "entity": "sensor.presa_frigo_energy"
-                                },
-                                {
-                                    "entity": "sensor.presa_frigo_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.presa_frigo_power_outage_memory"
-                                },
-                                {
-                                    "entity": "select.presa_frigo_power_outage_memory"
-                                }
-                            ],
-                            "title": "Presa Frigo",
-                            "state_color": true
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.presa_mediaplayer",
-                                    "icon": "mdi:film"
-                                },
-                                {
-                                    "entity": "sensor.presa_mediaplayer_power"
-                                },
-                                {
-                                    "entity": "sensor.presa_mediaplayer_current"
-                                },
-                                {
-                                    "entity": "sensor.presa_mediaplayer_voltage"
-                                },
-                                {
-                                    "entity": "sensor.presa_mediaplayer_energy"
-                                },
-                                {
-                                    "entity": "sensor.presa_mediaplayer_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.presa_mediaplayer_power_outage_memory"
-                                },
-                                {
-                                    "entity": "select.presa_mediaplayer_power_outage_memory"
-                                }
-                            ],
-                            "title": "Mediaplayer",
-                            "state_color": true
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.ciabattameross_mss425e_main_channel",
-                                    "icon": "mdi:power-socket-eu",
-                                    "name": "Principale"
-                                },
-                                {
-                                    "entity": "switch.ciabattameross_mss425e_compressore",
-                                    "icon": "mdi:power-plug",
-                                    "name": "Compressore"
-                                },
-                                {
-                                    "entity": "switch.ciabattameross_mss425e_lampada",
-                                    "icon": "mdi:desk-lamp",
-                                    "name": "Lampada Box"
-                                },
-                                {
-                                    "entity": "switch.ciabattameross_mss425e_presa",
-                                    "icon": "mdi:power-socket-eu",
-                                    "name": "Presa Box"
-                                },
-                                {
-                                    "entity": "switch.ciabattameross_mss425e_usb_box",
-                                    "icon": "mdi:usb-port",
-                                    "name": "USB Box"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "state_color": true,
-                            "title": "Meross",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.sonoff_10009bdd07",
-                                    "name": "Deumidificatore"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_10009bdd07_rssi",
-                                    "name": "Deumidificatore rssi",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "switch.sonoff_10009bdd07_led",
-                                    "name": "Deumidificatore led"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "switch.presa_jolly"
-                                },
-                                {
-                                    "entity": "sensor.presa_jolly_power"
-                                },
-                                {
-                                    "entity": "sensor.presa_jolly_current"
-                                },
-                                {
-                                    "entity": "sensor.presa_jolly_voltage"
-                                },
-                                {
-                                    "entity": "sensor.presa_jolly_energy"
-                                },
-                                {
-                                    "entity": "sensor.presa_jolly_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.presa_jolly_power_outage_memory"
-                                },
-                                {
-                                    "entity": "select.presa_jolly_power_outage_memory"
-                                }
-                            ],
-                            "title": "Presa Jolly"
-                        }
-                    ]
+                  "type": "custom:hui-horizontal-stack-card",
+                  "cards": [
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:ab-testing",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Boolean: ' + states['sensor.count_entities'].attributes.input_boolean; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:timer-sand",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Datetime: ' + states['sensor.count_entities'].attributes.input_datetime; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:numeric",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Number: ' + states['sensor.count_entities'].attributes.input_number; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:format-list-bulleted-square",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Select: ' + states['sensor.count_entities'].attributes.input_select; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    }
+                  ]
                 },
                 {
-                    "theme": "Backend-selected",
-                    "title": "Climatizzazione",
-                    "path": "climatizzazione",
-                    "icon": "mdi:home-thermometer-outline",
-                    "visible": [
-                        {
-                            "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
-                        }
-                    ],
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                "fan.ventilatore_letto",
-                                "fan.ventilatore_silvia",
-                                "fan.ventilatore_studio"
-                            ],
-                            "state_color": true,
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "select.netatmo_casa"
-                            ]
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.netatmo_smart_thermostat",
-                            "name": "Termostato"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.netatmo_valve_1",
-                            "name": "Cucina"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.netatmo_valve_2",
-                            "name": "Studio"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.netatmo_valve_3",
-                            "name": "Ingresso"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.netatmo_valve_7",
-                            "name": "Camera da Letto"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.netatmo_valve_4",
-                            "name": "Bagno Grande"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.netatmo_valve_5",
-                            "name": "Bagno Piccolo"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.bagno_grande_battery_percent"
-                                },
-                                {
-                                    "entity": "sensor.bagno_piccolo_battery_percent"
-                                },
-                                {
-                                    "entity": "sensor.camera_da_letto_battery_percent"
-                                },
-                                {
-                                    "entity": "sensor.valvola_cucina_battery_percent"
-                                },
-                                {
-                                    "entity": "sensor.ingresso_battery_percent"
-                                },
-                                {
-                                    "entity": "sensor.valvola_studio_battery_percent"
-                                },
-                                {
-                                    "entity": "sensor.termostato_battery_percent"
-                                }
-                            ],
-                            "title": "Livello Batterie Valvole"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.netatmo_smart_thermostat_current_temperature"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_valve_1_current_temperature",
-                                    "name": "Cucina"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_valve_2_current_temperature",
-                                    "name": "Studio"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_valve_3_current_temperature",
-                                    "name": "Ingresso"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_valve_4_current_temperature",
-                                    "name": "Bagno Grande"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_valve_5_current_temperature",
-                                    "name": "Bagno Piccolo"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_valve_7_current_temperature",
-                                    "name": "Camera Letto"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "button.netatmo_relay_identify",
-                                "button.netatmo_valve_1_identify",
-                                "button.netatmo_smart_thermostat_identify",
-                                "button.netatmo_valve_2_identify",
-                                "button.netatmo_valve_3_identify",
-                                "button.netatmo_valve_4_identify",
-                                "button.netatmo_valve_5_identify",
-                                "button.netatmo_valve_7_identify"
-                            ]
-                        },
-                        {
-                            "entity": "climate.coolix",
-                            "type": "thermostat"
-                        }
-                    ]
+                  "type": "custom:hui-horizontal-stack-card",
+                  "cards": [
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:card-text-outline",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Text: ' + states['sensor.count_entities'].attributes.input_text;\n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:play-network-outline",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Media: ' + states['sensor.count_entities'].attributes.media_player;\n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:image-area",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Scene: ' + states['sensor.count_entities'].attributes.scene; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:script-text-outline",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Script: ' + states['sensor.count_entities'].attributes.script; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    }
+                  ]
                 },
                 {
-                    "theme": "Backend-selected",
-                    "title": "Sensori",
-                    "path": "sensori",
-                    "icon": "mdi:gauge",
-                    "visible": [
-                        {
-                            "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
-                        }
-                    ],
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.casa_corrente",
-                                    "icon": "mdi:current-ac",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.casa_potenza",
-                                    "icon": "mdi:power",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.casa_tensione",
-                                    "icon": "mdi:radio-tower",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.casa_consumo_di_oggi",
-                                    "icon": "mdi:power-standby",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.casa_consumo_di_ieri",
-                                    "icon": "mdi:power-settings",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.casa_energia",
-                                    "icon": "mdi:transmission-tower",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "title": "Casa",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "utility_meter.consumo_mensile",
-                                    "name": "Fascia Consumo"
-                                },
-                                {
-                                    "entity": "sensor.consumo_mensile_f1",
-                                    "name": "Consumo Mensile F1"
-                                },
-                                {
-                                    "entity": "sensor.consumo_mensile_f2",
-                                    "name": "Consumo Mensile F2"
-                                },
-                                {
-                                    "entity": "sensor.consumo_mensile_f3"
-                                },
-                                {
-                                    "entity": "sensor.consumo_mensile_totale"
-                                },
-                                {
-                                    "entity": "sensor.consumo_mensile_mese_precedente"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.frigo_temperature",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.frigo_humidity",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.frigo_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.frigo_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.temperatura_media_frigo",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "title": "Frigo"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.temperatura_studio",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.umidita_studio",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "title": "Sensore Studio",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.temperatura_silvia",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.umidita_silvia",
-                                    "secondary_info": "last-updated",
-                                    "icon": "mdi:water-percent"
-                                },
-                                {
-                                    "entity": "sensor.punto_di_rugiada_silvia"
-                                }
-                            ],
-                            "title": "Camera di Silvia",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.ble_temperature_4c65a8ddd248",
-                                    "name": "Temperatura",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.ble_humidity_4c65a8ddd248",
-                                    "name": "Umidit\u00e0",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.ble_battery_4c65a8ddd248",
-                                    "name": "Batteria",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.ble_rssi_4c65a8ddd248",
-                                    "name": "RSSI"
-                                }
-                            ],
-                            "title": "Camera da Letto",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.lcd_bagnogrande_temperature"
-                                },
-                                {
-                                    "entity": "sensor.lcd_bagnogrande_humidity"
-                                },
-                                {
-                                    "entity": "sensor.lcd_bagnogrande_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.lcd_bagnogrande_battery"
-                                },
-                                {
-                                    "entity": "sensor.lcd_bagnopiccolo_temperature"
-                                },
-                                {
-                                    "entity": "sensor.lcd_bagnopiccolo_humidity"
-                                },
-                                {
-                                    "entity": "sensor.lcd_bagnopiccolo_linkquality"
-                                },
-                                {
-                                    "entity": "sensor.lcd_bagnopiccolo_battery"
-                                }
-                            ],
-                            "title": "Bagni"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.balcone_temperature",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.balcone_humidity",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.balcone_pressure",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.balcone_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.balcone_battery",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "title": "Balcone"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.bagno_grande_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.bagno_piccolo_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.condizionatore_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.pir_scale_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.porta_casa_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_studio_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_ingresso_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_cucina_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.finestra_silvia_device_temperature"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_letto_device_temperature"
-                                }
-                            ],
-                            "title": "Temperature Aqara"
-                        },
-                        {
-                            "title": "Consumi mensili in kWh",
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "input_number.mese_01",
-                                    "name": "Gennaio"
-                                },
-                                {
-                                    "entity": "input_number.mese_02",
-                                    "name": "Febbraio"
-                                },
-                                {
-                                    "entity": "input_number.mese_03",
-                                    "name": "Marzo"
-                                },
-                                {
-                                    "entity": "input_number.mese_04",
-                                    "name": "Aprile"
-                                },
-                                {
-                                    "entity": "input_number.mese_05",
-                                    "name": "Maggio"
-                                },
-                                {
-                                    "entity": "input_number.mese_06",
-                                    "name": "Giugno"
-                                },
-                                {
-                                    "entity": "input_number.mese_07",
-                                    "name": "Luglio"
-                                },
-                                {
-                                    "entity": "input_number.mese_08",
-                                    "name": "Agosto"
-                                },
-                                {
-                                    "entity": "input_number.mese_09",
-                                    "name": "Settembre"
-                                },
-                                {
-                                    "entity": "input_number.mese_10",
-                                    "name": "Ottobre"
-                                },
-                                {
-                                    "entity": "input_number.mese_11",
-                                    "name": "Novembre"
-                                },
-                                {
-                                    "entity": "input_number.mese_12",
-                                    "name": "Dicembre"
-                                }
-                            ],
-                            "theme": "Mushroom"
-                        }
-                    ]
-                },
-                {
-                    "theme": "Backend-selected",
-                    "title": "Stati",
-                    "path": "stati",
-                    "icon": "mdi:motion-sensor",
-                    "visible": [
-                        {
-                            "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
-                        }
-                    ],
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.porta_casa_contact",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_casa_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_casa_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.porta_balcone_cucina_contact",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_cucina_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_cucina_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.porta_balcone_ingresso_contact",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_ingresso_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_ingresso_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.porta_balcone_studio_contact",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_studio_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_studio_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.porta_balcone_letto_contact",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_letto_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.porta_balcone_letto_linkquality",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "title": "Sensori Porte Zigbee"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.bagno_piccolo_contact",
-                                    "secondary_info": "last-updated",
-                                    "name": "Bagno Piccolo"
-                                },
-                                {
-                                    "entity": "sensor.bagno_piccolo_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.bagno_piccolo_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.bagno_grande_contact",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.bagno_grande_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.bagno_grande_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.finestra_silvia_contact",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.finestra_silvia_battery",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.finestra_silvia_linkquality",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "title": "Sensori Finestre Zigbee"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.pir_ingresso",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.pir_balcone",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.ikeapir1_occupancy"
-                                },
-                                {
-                                    "entity": "binary_sensor.pir_scale_occupancy",
-                                    "secondary_info": "last-updated",
-                                    "name": "PIR Scale"
-                                },
-                                {
-                                    "entity": "sensor.pir_scale_illuminance",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.pir_scale_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.pir_scale_illuminance_lux",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "state_color": true,
-                            "title": "Sensori PIR",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.cantina_grande",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.cantina_piccola",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "state_color": true,
-                            "title": "Cantine",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.box_davide",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.box_giovanna",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "state_color": true,
-                            "title": "Box",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.ex_camera_letto",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.ex_cucina",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.ex_ingresso",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.ex_studio",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.sotto_scala",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "state_color": true,
-                            "title": "Sensori porte RF",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.condizionatore_contact",
-                                    "name": "Stato Condizionatore",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.condizionatore_linkquality",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "sensor.condizionatore_battery",
-                                    "secondary_info": "last-updated"
-                                }
-                            ]
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.sensore_tanica_clima",
-                                    "icon": "mdi:cup-water",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "state_color": true,
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.telecomando_a",
-                                    "icon": "mdi:alpha-a-box-outline",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.telecomando_b",
-                                    "icon": "mdi:alpha-b-box-outline",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.telecomando_c",
-                                    "icon": "mdi:alpha-c-box-outline",
-                                    "secondary_info": "last-updated"
-                                },
-                                {
-                                    "entity": "binary_sensor.telecomando_d",
-                                    "icon": "mdi:alpha-d-box-outline",
-                                    "secondary_info": "last-updated"
-                                }
-                            ],
-                            "state_color": true,
-                            "title": "Telecomando",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "conditional",
-                            "conditions": [
-                                {
-                                    "entity": "sensor.zigbee2mqtt_unreachable",
-                                    "state": "True"
-                                }
-                            ],
-                            "card": {
-                                "type": "custom:mushroom-template-card",
-                                "title": "Irraggiungibili",
-                                "subtitle": "{{ state_attr('sensor.zigbee2mqtt_unreachable', 'devices') }}"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "theme": "Backend-selected",
-                    "title": "Cam",
-                    "path": "cam",
-                    "icon": "mdi:webcam",
-                    "visible": [
-                        {
-                            "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
-                        }
-                    ],
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "custom:webrtc-camera",
-                            "entity": "camera.ingresso"
-                        },
-                        {
-                            "type": "custom:webrtc-camera",
-                            "entity": "camera.box"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "script.sequenza_foto_ingresso"
-                                },
-                                {
-                                    "entity": "script.sequenza_foto_box"
-                                }
-                            ],
-                            "type": "entities"
-                        }
-                    ]
+                  "type": "custom:hui-horizontal-stack-card",
+                  "cards": [
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:gauge-low",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Sensori: ' + states['sensor.count_entities'].attributes.sensor; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:power-socket-eu",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Switch: ' + states['sensor.count_entities'].attributes.switch; \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:group",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Gruppi: ' + states['sensor.count_entities'].attributes.group\n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "color": "auto",
+                      "icon": "mdi:earth",
+                      "aspect_ratio": "2/1",
+                      "show_label": true,
+                      "label": "[[[\n  return 'Zone: ' + states['sensor.count_entities'].attributes.zone \n]]]\n",
+                      "styles": {
+                        "label": [
+                          {
+                            "font-size": "12px"
+                          }
+                        ]
+                      }
+                    }
+                  ]
                 }
-            ]
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.openweathermap_cloud_coverage"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_cloud_coverage"
+                },
+                {
+                  "entity": "sensor.openweathermap_condition"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_condition"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_precipitation"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_temperature"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_temperature_low"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_time"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_wind_bearing"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_wind_speed"
+                },
+                {
+                  "entity": "sensor.openweathermap_humidity"
+                },
+                {
+                  "entity": "sensor.openweathermap_pressure"
+                },
+                {
+                  "entity": "sensor.openweathermap_rain"
+                },
+                {
+                  "entity": "sensor.openweathermap_snow"
+                },
+                {
+                  "entity": "sensor.openweathermap_temperature"
+                },
+                {
+                  "entity": "sensor.openweathermap_weather"
+                },
+                {
+                  "entity": "sensor.openweathermap_weather_code"
+                },
+                {
+                  "entity": "sensor.openweathermap_wind_bearing"
+                },
+                {
+                  "entity": "sensor.openweathermap_wind_speed"
+                },
+                {
+                  "entity": "sensor.openweathermap_forecast_pressure"
+                }
+              ]
+            },
+            {
+              "entities": [
+                {
+                  "entity": "sensor.qualita_aria_rebaudengo"
+                },
+                {
+                  "entity": "sensor.waqi_rebaudengo_torino_piemonte_italy",
+                  "name": "Waqi Rebaudengo",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "sensor.qualita_aria_lingotto"
+                },
+                {
+                  "entity": "sensor.waqi_lingotto_torino_piemonte_italy",
+                  "name": "Waqi Lingotto",
+                  "secondary_info": "last-changed"
+                }
+              ],
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "sensor.openweathermap_dew_point",
+                "sensor.openweathermap_feels_like_temperature",
+                "sensor.openweathermap_forecast_precipitation_probability",
+                "sensor.openweathermap_precipitation_kind",
+                "sensor.openweathermap_uv_index"
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "sensor.co2_intensity",
+                "sensor.grid_fossil_fuel_percentage"
+              ]
+            },
+            {
+              "type": "custom:battery-state-card",
+              "title": "Livello Batterie",
+              "entities": [
+                "sensor.lcd_bagnogrande_battery",
+                "sensor.lcd_bagnopiccolo_battery",
+                "sensor.porta_balcone_letto_battery",
+                "sensor.porta_casa_battery",
+                "sensor.frigo_battery",
+                "sensor.ble_battery_4c65a8ddd248",
+                "sensor.condizionatore_battery",
+                "sensor.pir_scale_battery",
+                "sensor.ikeaswitch_battery",
+                "sensor.porta_balcone_studio_battery",
+                "sensor.porta_balcone_ingresso_battery",
+                "sensor.bagno_grande_battery",
+                "sensor.bagno_piccolo_battery",
+                "sensor.porta_balcone_cucina_battery",
+                "sensor.finestra_silvia_battery",
+                "sensor.ikeamultilightswitch_battery",
+                "sensor.pulsanteikea1_battery",
+                "sensor.pulsanteikea2_battery",
+                "sensor.ikeapir1_battery",
+                "sensor.ikeamultilightswitch2_battery"
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.date_time"
+                },
+                {
+                  "entity": "sensor.ip_pubblico",
+                  "secondary_info": "last-changed"
+                },
+                {
+                  "entity": "sensor.cert_expiry_timestamp_scialla_ddns_net_5000"
+                },
+                {
+                  "entity": "sensor.cert_expiry_timestamp_scialla_duckdns_org_5000"
+                },
+                {
+                  "entity": "sensor.current_version",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.hacs",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.moon"
+                },
+                {
+                  "entity": "binary_sensor.imac"
+                },
+                {
+                  "entity": "binary_sensor.macmini"
+                },
+                {
+                  "entity": "sensor.last_boot"
+                },
+                {
+                  "entity": "sensor.uptime"
+                }
+              ],
+              "state_color": true
+            }
+          ]
+        },
+        {
+          "theme": "Mushroom",
+          "title": "Info",
+          "path": "info",
+          "icon": "mdi:information-outline",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:mushroom-template-card",
+              "primary": "{{states('sensor.pretty_date')}}\n",
+              "secondary": "Ora {{states('sensor.time')}}\nTemperatura {{states('sensor.temperatura_esterna')}}\n",
+              "icon": "",
+              "entity": "sensor.time",
+              "multiline_secondary": true,
+              "layout": "vertical",
+              "icon_color": "",
+              "fill_container": true,
+              "tap_action": {
+                "action": "none"
+              },
+              "hold_action": {
+                "action": "none"
+              },
+              "double_tap_action": {
+                "action": "none"
+              }
+            },
+            {
+              "type": "custom:list-card",
+              "entity": "sensor.feedrss",
+              "title": "Ansa",
+              "feed_attribute": "entries",
+              "row_limit": 6,
+              "columns": [
+                {
+                  "title": "",
+                  "type": "image",
+                  "add_link": "link",
+                  "field": "image"
+                },
+                {
+                  "title": "Notizie",
+                  "field": "title",
+                  "width": "auto",
+                  "height": "auto",
+                  "style": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Luci",
+          "path": "luci",
+          "icon": "mdi:lightbulb-outline",
+          "badges": [],
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.luce_studio",
+                      "icon": "mdi:globe-light"
+                    },
+                    {
+                      "entity": "light.mensola",
+                      "icon": "mdi:lightbulb-cfl"
+                    },
+                    {
+                      "entity": "light.lampada_scrivania",
+                      "icon": "mdi:track-light"
+                    },
+                    {
+                      "entity": "light.neon",
+                      "icon": "mdi:car"
+                    }
+                  ]
+                },
+                {
+                  "type": "light",
+                  "entity": "light.ballerini",
+                  "icon": "mdi:floor-lamp"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Studio"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.led_ingresso",
+                      "icon": "mdi:string-lights"
+                    },
+                    {
+                      "entity": "light.luce_ingresso",
+                      "icon": "mdi:lightbulb-group"
+                    }
+                  ]
+                },
+                {
+                  "type": "light",
+                  "entity": "light.koogeek_lb1_1f299c",
+                  "icon": "mdi:floor-lamp"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Ingresso"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.alogena",
+                      "icon": "mdi:spotlight-beam"
+                    },
+                    {
+                      "entity": "light.luce_cucina",
+                      "icon": "mdi:ceiling-light"
+                    }
+                  ],
+                  "camera_image": "camera.ambrogio_livemap"
+                },
+                {
+                  "type": "light",
+                  "entity": "light.cappa",
+                  "icon": "mdi:led-strip-variant"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.cappa_linkquality"
+                    }
+                  ]
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Cucina"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.luce_letto",
+                      "icon": "mdi:lightbulb-group"
+                    },
+                    {
+                      "entity": "light.lampada_zanzare",
+                      "icon": "mdi:lightbulb-on-outline"
+                    }
+                  ]
+                },
+                {
+                  "type": "light",
+                  "entity": "light.striscia_letto",
+                  "icon": "mdi:led-strip-variant"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.striscia_letto_linkquality"
+                    }
+                  ]
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Camera Letto"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "light.luce_silvia",
+                  "icon": "mdi:string-lights"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Camera di Silvia",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "light.luce_scale",
+                  "icon": "mdi:stairs"
+                }
+              ],
+              "title": "Scale",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "light.luce_balcone",
+                  "icon": "mdi:coach-lamp"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Balcone",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "light.luce_bagno_grande",
+                  "icon": "mdi:ceiling-light"
+                },
+                {
+                  "entity": "light.luce_bagno_piccolo",
+                  "icon": "mdi:ceiling-light"
+                },
+                {
+                  "entity": "light.sonoff_10009c0093",
+                  "icon": "mdi:spotlight",
+                  "name": "Specchiera"
+                },
+                {
+                  "entity": "sensor.sonoff_10009bdd07_rssi",
+                  "name": "Specchiera rssi",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "switch.sonoff_10009c0093_led",
+                  "name": "Specchiera led"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Bagni",
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.lampada_zanzare"
+                },
+                {
+                  "entity": "sensor.lampada_zanzare_current"
+                },
+                {
+                  "entity": "sensor.lampada_zanzare_voltage"
+                },
+                {
+                  "entity": "sensor.lampada_zanzare_energy"
+                },
+                {
+                  "entity": "sensor.lampada_zanzare_power"
+                },
+                {
+                  "entity": "sensor.lampada_zanzare_linkquality"
+                },
+                {
+                  "entity": "sensor.lampada_zanzare_power_outage_memory"
+                },
+                {
+                  "entity": "select.lampada_zanzare_power_outage_memory"
+                }
+              ],
+              "title": "Lampada Zanzare"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "light",
+                  "entity": "light.wled"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    "select.wled_color_palette",
+                    "sensor.wled_estimated_current",
+                    "number.wled_intensity",
+                    "switch.wled_nightlight",
+                    "select.wled_playlist",
+                    "select.wled_preset",
+                    "number.wled_speed",
+                    "switch.wled_sync_receive",
+                    "switch.wled_sync_send"
+                  ]
+                }
+              ],
+              "state_color": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "binary_sensor.wled_firmware",
+                "sensor.wled_led_count",
+                "select.wled_live_override",
+                "sensor.wled_max_current",
+                "button.wled_restart",
+                "switch.wled_reverse",
+                "button.wled_update"
+              ]
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Interruttori",
+          "path": "interruttori",
+          "icon": "mdi:toggle-switch-outline",
+          "badges": [],
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.ciabattascrivania_l1",
+                  "icon": "mdi:harddisk"
+                },
+                {
+                  "entity": "switch.ciabattascrivania_l2",
+                  "icon": "mdi:power-plug"
+                },
+                {
+                  "entity": "switch.ciabattascrivania_l3",
+                  "icon": "mdi:printer"
+                },
+                {
+                  "entity": "sensor.ciabattascrivania_linkquality"
+                }
+              ],
+              "title": "Ciabatta Scrivania",
+              "show_header_toggle": false
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.carica_batterie",
+                  "icon": "mdi:battery-charging-low"
+                },
+                {
+                  "entity": "switch.presa_1",
+                  "icon": "mdi:power-socket-eu"
+                },
+                {
+                  "entity": "switch.presa_2",
+                  "icon": "mdi:power-socket-eu"
+                },
+                {
+                  "entity": "switch.usb_rm",
+                  "icon": "mdi:usb"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Studio Ciabatta 1",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.ferro_da_stiro",
+                  "icon": "mdi:tshirt-crew-outline"
+                },
+                {
+                  "entity": "switch.cicalino",
+                  "icon": "mdi:bell-ring-outline"
+                },
+                {
+                  "entity": "switch.massaggiatore",
+                  "icon": "mdi:sofa"
+                },
+                {
+                  "entity": "switch.presa_3",
+                  "icon": "mdi:power-socket-eu"
+                },
+                {
+                  "entity": "switch.usb_2",
+                  "icon": "mdi:usb-port"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Studio Ciabatta 2",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.forno_microonde",
+                  "icon": "mdi:microwave"
+                },
+                {
+                  "entity": "sensor.forno_microonde_potenza",
+                  "icon": "mdi:power"
+                },
+                {
+                  "entity": "sensor.forno_microonde_corrente",
+                  "icon": "mdi:current-ac"
+                },
+                {
+                  "entity": "sensor.forno_microonde_tensione",
+                  "icon": "mdi:radio-tower"
+                },
+                {
+                  "entity": "sensor.forno_microonde_energia",
+                  "icon": "mdi:transmission-tower"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Forno Microonde",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.forno",
+                  "icon": "mdi:stove"
+                },
+                {
+                  "entity": "sensor.forno_potenza",
+                  "icon": "mdi:power"
+                },
+                {
+                  "entity": "sensor.forno_corrente",
+                  "icon": "mdi:current-ac"
+                },
+                {
+                  "entity": "sensor.forno_tensione",
+                  "icon": "mdi:radio-tower"
+                },
+                {
+                  "entity": "sensor.forno_energia",
+                  "icon": "mdi:transmission-tower"
+                }
+              ],
+              "state_color": true,
+              "title": "Forno",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.lavatrice",
+                  "icon": "mdi:washing-machine"
+                },
+                {
+                  "entity": "sensor.lavatrice_potenza",
+                  "icon": "mdi:power"
+                },
+                {
+                  "entity": "sensor.lavatrice_corrente",
+                  "icon": "mdi:current-ac"
+                },
+                {
+                  "entity": "sensor.lavatrice_tensione",
+                  "icon": "mdi:radio-tower"
+                },
+                {
+                  "entity": "sensor.lavatrice_energia",
+                  "icon": "mdi:transmission-tower"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Lavatrice",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.scaldabagno",
+                  "icon": "mdi:radiator"
+                },
+                {
+                  "entity": "sensor.scaldabagno_potenza",
+                  "icon": "mdi:power"
+                },
+                {
+                  "entity": "sensor.scaldabagno_corrente",
+                  "icon": "mdi:current-ac"
+                },
+                {
+                  "entity": "sensor.scaldabagno_tensione",
+                  "icon": "mdi:radio-tower"
+                },
+                {
+                  "entity": "sensor.scaldabagno_energia",
+                  "icon": "mdi:transmission-tower"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Scaldabagno",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.lavastoviglie",
+                  "icon": "mdi:dishwasher"
+                },
+                {
+                  "entity": "sensor.lavastoviglie_potenza",
+                  "icon": "mdi:power"
+                },
+                {
+                  "entity": "sensor.lavastoviglie_corrente",
+                  "icon": "mdi:current-ac"
+                },
+                {
+                  "entity": "sensor.lavastoviglie_tensione",
+                  "icon": "mdi:radio-tower"
+                },
+                {
+                  "entity": "sensor.lavastoviglie_energia",
+                  "icon": "mdi:transmission-tower"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Lavastoviglie",
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.presa_selecline",
+                  "icon": "mdi:television"
+                },
+                {
+                  "entity": "sensor.presa_selecline_power"
+                },
+                {
+                  "entity": "sensor.presa_selecline_current"
+                },
+                {
+                  "entity": "sensor.presa_selecline_voltage"
+                },
+                {
+                  "entity": "sensor.presa_selecline_energy"
+                },
+                {
+                  "entity": "sensor.presa_selecline_linkquality"
+                },
+                {
+                  "entity": "sensor.presa_selecline_power_outage_memory"
+                },
+                {
+                  "entity": "select.presa_selecline_power_outage_memory"
+                }
+              ],
+              "title": "TV Cucina",
+              "state_color": true
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.portone",
+                  "icon": "mdi:door"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Portone",
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.presa_samsung",
+                  "icon": "mdi:television"
+                },
+                {
+                  "entity": "sensor.presa_samsung_power"
+                },
+                {
+                  "entity": "sensor.presa_samsung_current"
+                },
+                {
+                  "entity": "sensor.presa_samsung_voltage"
+                },
+                {
+                  "entity": "sensor.presa_samsung_energy"
+                },
+                {
+                  "entity": "sensor.presa_samsung_linkquality"
+                },
+                {
+                  "entity": "sensor.presa_samsung_power_outage_memory"
+                },
+                {
+                  "entity": "select.presa_samsung_power_outage_memory"
+                }
+              ],
+              "title": "TV Samsung",
+              "state_color": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.presa_onkyo",
+                  "icon": "mdi:amplifier"
+                },
+                {
+                  "entity": "sensor.presa_onkyo_power"
+                },
+                {
+                  "entity": "sensor.presa_onkyo_current"
+                },
+                {
+                  "entity": "sensor.presa_onkyo_voltage"
+                },
+                {
+                  "entity": "sensor.presa_onkyo_energy"
+                },
+                {
+                  "entity": "sensor.presa_onkyo_linkquality"
+                },
+                {
+                  "entity": "sensor.presa_onkyo_power_outage_memory"
+                },
+                {
+                  "entity": "select.presa_onkyo_power_outage_memory"
+                }
+              ],
+              "title": "Amplificatore",
+              "state_color": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.antenna_tv",
+                  "icon": "mdi:antenna"
+                },
+                {
+                  "entity": "sensor.antenna_tv_linkquality"
+                }
+              ],
+              "title": "Antenna TV",
+              "state_color": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.presa_phon",
+                  "icon": "mdi:hair-dryer"
+                },
+                {
+                  "entity": "sensor.presa_phon_power"
+                },
+                {
+                  "entity": "sensor.presa_phon_current"
+                },
+                {
+                  "entity": "sensor.presa_phon_voltage"
+                },
+                {
+                  "entity": "sensor.presa_phon_energy"
+                },
+                {
+                  "entity": "sensor.presa_phon_linkquality"
+                },
+                {
+                  "entity": "sensor.presa_phon_power_outage_memory"
+                },
+                {
+                  "entity": "select.presa_phon_power_outage_memory"
+                }
+              ],
+              "title": "Phon",
+              "state_color": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.presa_frigo",
+                  "icon": "mdi:fridge"
+                },
+                {
+                  "entity": "sensor.presa_frigo_power"
+                },
+                {
+                  "entity": "sensor.presa_frigo_current"
+                },
+                {
+                  "entity": "sensor.presa_frigo_voltage"
+                },
+                {
+                  "entity": "sensor.presa_frigo_energy"
+                },
+                {
+                  "entity": "sensor.presa_frigo_linkquality"
+                },
+                {
+                  "entity": "sensor.presa_frigo_power_outage_memory"
+                },
+                {
+                  "entity": "select.presa_frigo_power_outage_memory"
+                }
+              ],
+              "title": "Presa Frigo",
+              "state_color": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.presa_mediaplayer",
+                  "icon": "mdi:film"
+                },
+                {
+                  "entity": "sensor.presa_mediaplayer_power"
+                },
+                {
+                  "entity": "sensor.presa_mediaplayer_current"
+                },
+                {
+                  "entity": "sensor.presa_mediaplayer_voltage"
+                },
+                {
+                  "entity": "sensor.presa_mediaplayer_energy"
+                },
+                {
+                  "entity": "sensor.presa_mediaplayer_linkquality"
+                },
+                {
+                  "entity": "sensor.presa_mediaplayer_power_outage_memory"
+                },
+                {
+                  "entity": "select.presa_mediaplayer_power_outage_memory"
+                }
+              ],
+              "title": "Mediaplayer",
+              "state_color": true
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.ciabattameross_mss425e_main_channel",
+                  "icon": "mdi:power-socket-eu",
+                  "name": "Principale"
+                },
+                {
+                  "entity": "switch.ciabattameross_mss425e_compressore",
+                  "icon": "mdi:power-plug",
+                  "name": "Compressore"
+                },
+                {
+                  "entity": "switch.ciabattameross_mss425e_lampada",
+                  "icon": "mdi:desk-lamp",
+                  "name": "Lampada Box"
+                },
+                {
+                  "entity": "switch.ciabattameross_mss425e_presa",
+                  "icon": "mdi:power-socket-eu",
+                  "name": "Presa Box"
+                },
+                {
+                  "entity": "switch.ciabattameross_mss425e_usb_box",
+                  "icon": "mdi:usb-port",
+                  "name": "USB Box"
+                }
+              ],
+              "show_header_toggle": false,
+              "state_color": true,
+              "title": "Meross",
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.sonoff_10009bdd07",
+                  "name": "Deumidificatore"
+                },
+                {
+                  "entity": "sensor.sonoff_10009bdd07_rssi",
+                  "name": "Deumidificatore rssi",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "switch.sonoff_10009bdd07_led",
+                  "name": "Deumidificatore led"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.presa_jolly"
+                },
+                {
+                  "entity": "sensor.presa_jolly_power"
+                },
+                {
+                  "entity": "sensor.presa_jolly_current"
+                },
+                {
+                  "entity": "sensor.presa_jolly_voltage"
+                },
+                {
+                  "entity": "sensor.presa_jolly_energy"
+                },
+                {
+                  "entity": "sensor.presa_jolly_linkquality"
+                },
+                {
+                  "entity": "sensor.presa_jolly_power_outage_memory"
+                },
+                {
+                  "entity": "select.presa_jolly_power_outage_memory"
+                }
+              ],
+              "title": "Presa Jolly"
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Climatizzazione",
+          "path": "climatizzazione",
+          "icon": "mdi:home-thermometer-outline",
+          "visible": [
+            {
+              "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
+            }
+          ],
+          "badges": [],
+          "cards": [
+            {
+              "entities": [
+                "fan.ventilatore_letto",
+                "fan.ventilatore_silvia",
+                "fan.ventilatore_studio"
+              ],
+              "state_color": true,
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "select.netatmo_casa"
+              ]
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.netatmo_smart_thermostat",
+              "name": "Termostato"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.netatmo_valve_1",
+              "name": "Cucina"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.netatmo_valve_2",
+              "name": "Studio"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.netatmo_valve_3",
+              "name": "Ingresso"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.netatmo_valve_7",
+              "name": "Camera da Letto"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.netatmo_valve_4",
+              "name": "Bagno Grande"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.netatmo_valve_5",
+              "name": "Bagno Piccolo"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.bagno_grande_battery_percent"
+                },
+                {
+                  "entity": "sensor.bagno_piccolo_battery_percent"
+                },
+                {
+                  "entity": "sensor.camera_da_letto_battery_percent"
+                },
+                {
+                  "entity": "sensor.valvola_cucina_battery_percent"
+                },
+                {
+                  "entity": "sensor.ingresso_battery_percent"
+                },
+                {
+                  "entity": "sensor.valvola_studio_battery_percent"
+                },
+                {
+                  "entity": "sensor.termostato_battery_percent"
+                }
+              ],
+              "title": "Livello Batterie Valvole"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.netatmo_smart_thermostat_current_temperature"
+                },
+                {
+                  "entity": "sensor.netatmo_valve_1_current_temperature",
+                  "name": "Cucina"
+                },
+                {
+                  "entity": "sensor.netatmo_valve_2_current_temperature",
+                  "name": "Studio"
+                },
+                {
+                  "entity": "sensor.netatmo_valve_3_current_temperature",
+                  "name": "Ingresso"
+                },
+                {
+                  "entity": "sensor.netatmo_valve_4_current_temperature",
+                  "name": "Bagno Grande"
+                },
+                {
+                  "entity": "sensor.netatmo_valve_5_current_temperature",
+                  "name": "Bagno Piccolo"
+                },
+                {
+                  "entity": "sensor.netatmo_valve_7_current_temperature",
+                  "name": "Camera Letto"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "button.netatmo_relay_identify",
+                "button.netatmo_valve_1_identify",
+                "button.netatmo_smart_thermostat_identify",
+                "button.netatmo_valve_2_identify",
+                "button.netatmo_valve_3_identify",
+                "button.netatmo_valve_4_identify",
+                "button.netatmo_valve_5_identify",
+                "button.netatmo_valve_7_identify"
+              ]
+            },
+            {
+              "entity": "climate.coolix",
+              "type": "thermostat"
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Sensori",
+          "path": "sensori",
+          "icon": "mdi:gauge",
+          "visible": [
+            {
+              "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
+            }
+          ],
+          "badges": [],
+          "cards": [
+            {
+              "entities": [
+                {
+                  "entity": "sensor.casa_corrente",
+                  "icon": "mdi:current-ac",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.casa_potenza",
+                  "icon": "mdi:power",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.casa_tensione",
+                  "icon": "mdi:radio-tower",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.casa_consumo_di_oggi",
+                  "icon": "mdi:power-standby",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.casa_consumo_di_ieri",
+                  "icon": "mdi:power-settings",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.casa_energia",
+                  "icon": "mdi:transmission-tower",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "title": "Casa",
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "utility_meter.consumo_mensile",
+                  "name": "Fascia Consumo"
+                },
+                {
+                  "entity": "sensor.consumo_mensile_f1",
+                  "name": "Consumo Mensile F1"
+                },
+                {
+                  "entity": "sensor.consumo_mensile_f2",
+                  "name": "Consumo Mensile F2"
+                },
+                {
+                  "entity": "sensor.consumo_mensile_f3"
+                },
+                {
+                  "entity": "sensor.consumo_mensile_totale"
+                },
+                {
+                  "entity": "sensor.consumo_mensile_mese_precedente"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.frigo_temperature",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.frigo_humidity",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.frigo_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.frigo_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.temperatura_media_frigo",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "title": "Frigo"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "sensor.temperatura_studio",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.umidita_studio",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "title": "Sensore Studio",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "sensor.temperatura_silvia",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.umidita_silvia",
+                  "secondary_info": "last-updated",
+                  "icon": "mdi:water-percent"
+                },
+                {
+                  "entity": "sensor.punto_di_rugiada_silvia"
+                }
+              ],
+              "title": "Camera di Silvia",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "sensor.ble_temperature_4c65a8ddd248",
+                  "name": "Temperatura",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.ble_humidity_4c65a8ddd248",
+                  "name": "Umidità",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.ble_battery_4c65a8ddd248",
+                  "name": "Batteria",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.ble_rssi_4c65a8ddd248",
+                  "name": "RSSI"
+                }
+              ],
+              "title": "Camera da Letto",
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.lcd_bagnogrande_temperature"
+                },
+                {
+                  "entity": "sensor.lcd_bagnogrande_humidity"
+                },
+                {
+                  "entity": "sensor.lcd_bagnogrande_linkquality"
+                },
+                {
+                  "entity": "sensor.lcd_bagnogrande_battery"
+                },
+                {
+                  "entity": "sensor.lcd_bagnopiccolo_temperature"
+                },
+                {
+                  "entity": "sensor.lcd_bagnopiccolo_humidity"
+                },
+                {
+                  "entity": "sensor.lcd_bagnopiccolo_linkquality"
+                },
+                {
+                  "entity": "sensor.lcd_bagnopiccolo_battery"
+                }
+              ],
+              "title": "Bagni"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.balcone_temperature",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.balcone_humidity",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.balcone_pressure",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.balcone_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.balcone_battery",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "title": "Balcone"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.bagno_grande_device_temperature"
+                },
+                {
+                  "entity": "sensor.bagno_piccolo_device_temperature"
+                },
+                {
+                  "entity": "sensor.condizionatore_device_temperature"
+                },
+                {
+                  "entity": "sensor.pir_scale_device_temperature"
+                },
+                {
+                  "entity": "sensor.porta_casa_device_temperature"
+                },
+                {
+                  "entity": "sensor.porta_balcone_studio_device_temperature"
+                },
+                {
+                  "entity": "sensor.porta_balcone_ingresso_device_temperature"
+                },
+                {
+                  "entity": "sensor.porta_balcone_cucina_device_temperature"
+                },
+                {
+                  "entity": "sensor.finestra_silvia_device_temperature"
+                },
+                {
+                  "entity": "sensor.porta_balcone_letto_device_temperature"
+                }
+              ],
+              "title": "Temperature Aqara"
+            },
+            {
+              "title": "Consumi mensili in kWh",
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "input_number.mese_01",
+                  "name": "Gennaio"
+                },
+                {
+                  "entity": "input_number.mese_02",
+                  "name": "Febbraio"
+                },
+                {
+                  "entity": "input_number.mese_03",
+                  "name": "Marzo"
+                },
+                {
+                  "entity": "input_number.mese_04",
+                  "name": "Aprile"
+                },
+                {
+                  "entity": "input_number.mese_05",
+                  "name": "Maggio"
+                },
+                {
+                  "entity": "input_number.mese_06",
+                  "name": "Giugno"
+                },
+                {
+                  "entity": "input_number.mese_07",
+                  "name": "Luglio"
+                },
+                {
+                  "entity": "input_number.mese_08",
+                  "name": "Agosto"
+                },
+                {
+                  "entity": "input_number.mese_09",
+                  "name": "Settembre"
+                },
+                {
+                  "entity": "input_number.mese_10",
+                  "name": "Ottobre"
+                },
+                {
+                  "entity": "input_number.mese_11",
+                  "name": "Novembre"
+                },
+                {
+                  "entity": "input_number.mese_12",
+                  "name": "Dicembre"
+                }
+              ],
+              "theme": "Mushroom"
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Stati",
+          "path": "stati",
+          "icon": "mdi:motion-sensor",
+          "visible": [
+            {
+              "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
+            }
+          ],
+          "badges": [],
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.porta_casa_contact",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_casa_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_casa_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.porta_balcone_cucina_contact",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_balcone_cucina_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_balcone_cucina_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.porta_balcone_ingresso_contact",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_balcone_ingresso_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_balcone_ingresso_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.porta_balcone_studio_contact",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_balcone_studio_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_balcone_studio_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.porta_balcone_letto_contact",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_balcone_letto_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.porta_balcone_letto_linkquality",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "title": "Sensori Porte Zigbee"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.bagno_piccolo_contact",
+                  "secondary_info": "last-updated",
+                  "name": "Bagno Piccolo"
+                },
+                {
+                  "entity": "sensor.bagno_piccolo_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.bagno_piccolo_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.bagno_grande_contact",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.bagno_grande_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.bagno_grande_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.finestra_silvia_contact",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.finestra_silvia_battery",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.finestra_silvia_linkquality",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "title": "Sensori Finestre Zigbee"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "binary_sensor.pir_ingresso",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.pir_balcone",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.ikeapir1_occupancy"
+                },
+                {
+                  "entity": "binary_sensor.pir_scale_occupancy",
+                  "secondary_info": "last-updated",
+                  "name": "PIR Scale"
+                },
+                {
+                  "entity": "sensor.pir_scale_illuminance",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.pir_scale_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.pir_scale_illuminance_lux",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "state_color": true,
+              "title": "Sensori PIR",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "binary_sensor.cantina_grande",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.cantina_piccola",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "state_color": true,
+              "title": "Cantine",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "binary_sensor.box_davide",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.box_giovanna",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "state_color": true,
+              "title": "Box",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "binary_sensor.ex_camera_letto",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.ex_cucina",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.ex_ingresso",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.ex_studio",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.sotto_scala",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "state_color": true,
+              "title": "Sensori porte RF",
+              "type": "entities"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.condizionatore_contact",
+                  "name": "Stato Condizionatore",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.condizionatore_linkquality",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "sensor.condizionatore_battery",
+                  "secondary_info": "last-updated"
+                }
+              ]
+            },
+            {
+              "entities": [
+                {
+                  "entity": "input_boolean.sensore_tanica_clima",
+                  "icon": "mdi:cup-water",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "state_color": true,
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "binary_sensor.telecomando_a",
+                  "icon": "mdi:alpha-a-box-outline",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.telecomando_b",
+                  "icon": "mdi:alpha-b-box-outline",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.telecomando_c",
+                  "icon": "mdi:alpha-c-box-outline",
+                  "secondary_info": "last-updated"
+                },
+                {
+                  "entity": "binary_sensor.telecomando_d",
+                  "icon": "mdi:alpha-d-box-outline",
+                  "secondary_info": "last-updated"
+                }
+              ],
+              "state_color": true,
+              "title": "Telecomando",
+              "type": "entities"
+            },
+            {
+              "type": "conditional",
+              "conditions": [
+                {
+                  "entity": "sensor.zigbee2mqtt_unreachable",
+                  "state": "True"
+                }
+              ],
+              "card": {
+                "type": "custom:mushroom-template-card",
+                "title": "Irraggiungibili",
+                "subtitle": "{{ state_attr('sensor.zigbee2mqtt_unreachable', 'devices') }}"
+              }
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Cam",
+          "path": "cam",
+          "icon": "mdi:webcam",
+          "visible": [
+            {
+              "user": "64655bf0b0d24f4ca411d5fdd9db24e9"
+            }
+          ],
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:webrtc-camera",
+              "entity": "camera.ingresso"
+            },
+            {
+              "type": "custom:webrtc-camera",
+              "entity": "camera.box"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "script.sequenza_foto_ingresso"
+                },
+                {
+                  "entity": "script.sequenza_foto_box"
+                }
+              ],
+              "type": "entities"
+            }
+          ]
         }
+      ]
     }
+  }
 }
