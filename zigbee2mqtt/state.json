@@ -1,7 +1,7 @@
 {
     "0x842e14fffe366818": {
         "state": "ON",
-        "energy": 222.87,
+        "energy": 222.88,
         "power": 0,
         "current": 0,
         "voltage": 231,
@@ -10,7 +10,7 @@
     },
     "0x588e81fffeff5df4": {
         "state": "ON",
-        "energy": 48.07,
+        "energy": 48.17,
         "power": 0,
         "current": 0,
         "voltage": 232,
@@ -27,19 +27,19 @@
         "linkquality": 0
     },
     "0x00158d0005446d5f": {
-        "voltage": 3035,
+        "voltage": 3025,
         "battery": 100,
-        "temperature": 30.69,
-        "humidity": 50.84,
-        "pressure": 985.7,
+        "temperature": 29.22,
+        "humidity": 57.32,
+        "pressure": 986.7,
         "linkquality": 0,
         "power_outage_count": 4793
     },
     "0x00158d00054b38ec": {
         "voltage": 3055,
         "battery": 100,
-        "illuminance": 8,
-        "illuminance_lux": 8,
+        "illuminance": 7,
+        "illuminance_lux": 7,
         "occupancy": false,
         "temperature": 30,
         "device_temperature": 38,
@@ -78,7 +78,7 @@
         "battery": 100,
         "contact": true,
         "temperature": 32,
-        "device_temperature": 35,
+        "device_temperature": 38,
         "linkquality": 102,
         "power_outage_count": 32
     },
@@ -94,20 +94,20 @@
         "battery": 100,
         "voltage": 2900,
         "temperature": 32.2,
-        "humidity": 42.3,
+        "humidity": 43.6,
         "linkquality": 18
     },
     "0x5c0272fffecbe82f": {
         "battery": 100,
         "voltage": 3100,
-        "temperature": 32.4,
-        "humidity": 44.3,
+        "temperature": 32.1,
+        "humidity": 48.4,
         "linkquality": 0
     },
     "0x842e14fffe1262dd": {
         "state": "ON",
         "power_outage_memory": "restore",
-        "energy": 19.14,
+        "energy": 19.15,
         "power": 0,
         "current": 0,
         "voltage": 237,
@@ -116,7 +116,7 @@
     "0x842e14fffe1265ac": {
         "state": "OFF",
         "power_outage_memory": "restore",
-        "energy": 75.59,
+        "energy": 75.74,
         "power": 0,
         "current": 0,
         "voltage": 233,
@@ -134,18 +134,18 @@
     "0x588e81fffed393d7": {
         "state": "ON",
         "power": 82,
-        "current": 0.67,
+        "current": 0.68,
         "voltage": 235,
         "power_outage_memory": "on",
-        "energy": 521.04,
+        "energy": 523.05,
         "linkquality": 0
     },
     "0x842e14fffe3a42aa": {
         "state": "ON",
         "power_outage_memory": "restore",
-        "energy": 63.01,
+        "energy": 63.61,
         "power": 0,
-        "current": 0,
+        "current": 0.05,
         "voltage": 235,
         "linkquality": 0
     },
@@ -154,25 +154,25 @@
         "battery": 100,
         "contact": true,
         "temperature": 29,
-        "device_temperature": 33,
+        "device_temperature": 35,
         "linkquality": 10,
         "power_outage_count": 31
     },
     "0x00158d00028d39d9": {
         "voltage": 3075,
         "battery": 100,
-        "contact": true,
+        "contact": false,
         "temperature": 25,
-        "device_temperature": 30,
+        "device_temperature": 32,
         "linkquality": 0,
         "power_outage_count": 15
     },
     "0x00158d00028d3815": {
         "voltage": 3065,
         "battery": 100,
-        "contact": false,
+        "contact": true,
         "temperature": 28,
-        "device_temperature": 35,
+        "device_temperature": 34,
         "linkquality": 0,
         "power_outage_count": 27
     },
@@ -181,7 +181,7 @@
         "battery": 100,
         "contact": false,
         "temperature": 30,
-        "device_temperature": 35,
+        "device_temperature": 38,
         "linkquality": 21,
         "power_outage_count": 12
     },
@@ -223,8 +223,8 @@
     "0x00158d00063dd645": {
         "voltage": 2955,
         "battery": 95,
-        "temperature": 14.99,
-        "humidity": 43.36,
+        "temperature": 14.48,
+        "humidity": 39.6,
         "linkquality": 26,
         "power_outage_count": 43
     },
